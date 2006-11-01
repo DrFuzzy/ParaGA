@@ -1,0 +1,16 @@
+fitnesses.fig
+genes.mat
+init_genes16.mat
+init_genes8.mat
+seeds.mat
+seedsTSP.mat
+seeds_tsp.mat
+binary2integer.asv
+conv_integer.asv
+fit_evaluation.asv
+initial_fit_evaluation.asv
+initial_fit_evaluation_TSP.asv
+Schwefel.asv
+test.asv
+top.asv
+top_TSP.asv

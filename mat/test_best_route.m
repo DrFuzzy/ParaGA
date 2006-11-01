@@ -1,0 +1,13 @@
+   best_route=[1 4 6 7 5 3 2];
+    temp_fit = 0;
+    for l=1:num_towns-2
+        temp = sqrt(power(distance_map(best_route(l)+1,1)-distance_map(best_route(l+1)+1,1),2)...
+                  + power(distance_map(best_route(l)+1,2)-distance_map(best_route(l+1)+1,2),2));
+        temp_fit = temp_fit + temp;
+    end
+    
+    fitness = temp_fit + sqrt(power(distance_map(best_route(1)+1,1)- distance_map(1,1),2)...
+                             + power(distance_map(best_route(1)+1,2)- distance_map(1,2),2))...
+                        + sqrt(power(distance_map(best_route(num_towns-1)+1,1)-distance_map(1,1),2)...
+                             + power(distance_map(best_route(num_towns-1)+1,2)-distance_map(1,2),2));
+    fit = 10000/fitness
