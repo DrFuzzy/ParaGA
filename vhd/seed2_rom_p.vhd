@@ -31,7 +31,8 @@ use work.rom_pkg.all;
 -- ENTITY
 -------------------------------------------------------------------------------
 entity seed2_rom_p is
-  generic (townres   : integer);
+  generic (
+    townres : integer);
   port (
     addr     : in  integer;
     data_out : out std_logic_vector(2*townres-1 downto 0));
@@ -45,6 +46,6 @@ architecture rtl of seed2_rom_p is
 begin
 
   -- get data
-  	data_out <= seed2_rom(addr) when addr>=0 else
-  		    (others=>'0');
+  data_out <= seed2_rom(addr) when addr >= 0 else
+              (others => '0');
 end architecture rtl;

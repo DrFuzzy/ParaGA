@@ -6,7 +6,7 @@
 -- Author     : kyriakos deliparaschos, kdelip@mail.ntua.gr
 -- Company    : NTUA/IRAL
 -- Created    : 19/12/05
--- Last update: 19/12/05
+-- Last update: 2006-11-02
 -- Platform   : Modelsim, Synplify, ISE
 -------------------------------------------------------------------------------
 -- Description: contains the following arithmetic functions:
@@ -80,7 +80,7 @@ package arith_pkg is
     int1 : integer;
     int2 : integer) 
     return std_logic_vector;  -- clipping of the dynamic range of the input
-    
+  
 
 end arith_pkg;
 
@@ -108,19 +108,19 @@ package body arith_pkg is
 --    end loop;
 --    return i; -- i+1, to return signed number
 --  end log2;  
-  
+
 -- ceil the log2 result
 -- ex. log2(5) = 2.3219 ~= 3
-function log2(
-  no: integer) 
-  return integer is
-begin
-  for I in 1 to 30 loop  -- Works for up to 32 bit integers
-    if(2**I >= no) then return(I);
-    end if;
-  end loop;
-  return(30);
-end log2;
+  function log2(
+    no : integer) 
+    return integer is
+  begin
+    for I in 1 to 30 loop               -- Works for up to 32 bit integers
+      if(2**I >= no) then return(I);
+      end if;
+    end loop;
+    return(30);
+  end log2;
 
 -- floor (truncate) the log2 result
 -- ex. log2(5) = 2.3219 ~= 2
@@ -209,13 +209,13 @@ end log2;
   function rad2pi (
     small_prec : in integer) 
     return integer is
-    
+
     variable z : integer;
-  
+    
   begin
     z := (twopi_8 + 2**(big_prec-small_prec))/(2**(big_prec-small_prec));
     return (z);
-  
+    
   end rad2pi;
 
   -- purpose: implements clip block

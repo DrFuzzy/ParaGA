@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 08/08/06
--- Last update: 08/08/06
+-- Last update: 2006-11-02
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -36,20 +36,18 @@ use work.arith_pkg.all;
 -------------------------------------------------------------------------------
 entity fit_calc is
   generic(
-           genom_lngt  : positive; 
-           score_sz    : integer;
-           pop_sz      : positive
-           );  
-           
-  port ( clk         : in  std_logic;  -- clock
-         rst_n       : in  std_logic;  -- reset (active low)
-         decode      : in  std_logic;					       -- evaluation after rng_s or after mut_s
-         valid	     : in  std_logic;					       -- if H compute else if L don't 					       -- if H 
-	 in_genes    : in  std_logic_vector(2*genom_lngt-1 downto 0);          -- both mutation or rng fill evaluation block
- 	 gene_score  : out std_logic_vector(genom_lngt+score_sz-1 downto 0);   -- ingene and its fitness value
- 	 fit 	     : out std_logic_vector(score_sz-1 downto 0) := (others=>'0'); -- fitness of current gene ()
-	 ready_out   : out std_logic
-         );
+    genom_lngt : positive;
+    score_sz   : integer;
+    pop_sz     : positive);           
+  port (
+    clk        : in  std_logic;         -- clock
+    rst_n      : in  std_logic;         -- reset (active low)
+    decode     : in  std_logic;  -- evaluation after rng_s or after mut_s
+    valid      : in  std_logic;  -- if H compute else if L don't                                         -- if H 
+    in_genes   : in  std_logic_vector(2*genom_lngt-1 downto 0);  -- both mutation or rng fill evaluation block
+    gene_score : out std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- ingene and its fitness value
+    fit        : out std_logic_vector(score_sz-1 downto 0) := (others => '0');  -- fitness of current gene ()
+    ready_out  : out std_logic);
 end entity fit_calc;
 
 -------------------------------------------------------------------------------
@@ -57,89 +55,88 @@ end entity fit_calc;
 -------------------------------------------------------------------------------
 architecture rtl of fit_calc is
 
-
-  signal gene_scr          : std_logic_vector(genom_lngt+score_sz-1 downto 0) := (others=>'0');
-  signal temp              : std_logic_vector(genom_lngt+score_sz-1 downto 0) := (others=>'0');
-  signal gene	           : std_logic_vector(genom_lngt-1 downto 0):= (others=>'0');              
-  signal max_fit           : std_logic_vector(score_sz-1 downto 0)  := (others=>'1');
+  signal gene_scr : std_logic_vector(genom_lngt+score_sz-1 downto 0) := (others => '0');
+  signal temp     : std_logic_vector(genom_lngt+score_sz-1 downto 0) := (others => '0');
+  signal gene     : std_logic_vector(genom_lngt-1 downto 0)          := (others => '0');
+  signal max_fit  : std_logic_vector(score_sz-1 downto 0)            := (others => '1');
   --signal temp_fit          : std_logic_vector(score_sz-1 downto 0) ;
-  signal fit_p	           : std_logic_vector(score_sz-1 downto 0) ;
-  signal done              : std_logic;
-  signal done_p            : std_logic;
+  signal fit_p    : std_logic_vector(score_sz-1 downto 0);
+  signal done     : std_logic;
+  signal done_p   : std_logic;
 
 begin
 
-process (clk, rst_n)
+  process (clk, rst_n)
 
-begin
-	if rst_n = '0' then
-		--gene_score <= (others=>'0');
-		--fit <= (others=>'0');
-		temp <= (others=>'0');
-		--temp_fit <= (others=>'0');
-		--ready_out <= '0';
-		done_p <= '0';
-	elsif rising_edge(clk) then
-		done_p <= done;
-		temp <= gene_scr;
-		--temp_fit <= gene_scr(score_sz downto 0);
-		--if valid='1' and done_p /= '1' then 		
-		--	gene_score <= gene_scr;
-		--	ready_out <= done;
-		--elsif valid = '0' then
-		--	gene_score <= gene_scr;
-		--	ready_out<='0';
-		--else 					--if done_p = '1' and valid='1' then -- preserve same outputs
-		--	gene_score <= gene_scr;
-		--	ready_out <= done;			
-		--end if;
-	end if;
-end process;
+  begin
+    if rst_n = '0' then
+      --gene_score <= (others=>'0');
+      --fit <= (others=>'0');
+      temp   <= (others => '0');
+      --temp_fit <= (others=>'0');
+      --ready_out <= '0';
+      done_p <= '0';
+    elsif rising_edge(clk) then
+      done_p <= done;
+      temp   <= gene_scr;
+      --temp_fit <= gene_scr(score_sz downto 0);
+      --if valid='1' and done_p /= '1' then             
+      --        gene_score <= gene_scr;
+      --        ready_out <= done;
+      --elsif valid = '0' then
+      --        gene_score <= gene_scr;
+      --        ready_out<='0';
+      --else                                    --if done_p = '1' and valid='1' then -- preserve same outputs
+      --        gene_score <= gene_scr;
+      --        ready_out <= done;                      
+      --end if;
+    end if;
+  end process;
 -- Outputs
-fit <= temp(score_sz-1 downto 0);		-- maybe temp_fit
-gene_score <= temp; -- maybe temp
-ready_out <= done_p;
+  fit        <= temp(score_sz-1 downto 0);  -- maybe temp_fit
+  gene_score <= temp;                       -- maybe temp
+  ready_out  <= done_p;
 
-fit_calculation: process (in_genes,gene,decode,valid,done,done_p,temp)
+  fit_calculation : process (in_genes, gene, decode, valid, done, done_p, temp)
 
-begin	
+  begin
 
-	if valid='1' and done_p /= '1' then -- evaluate gene - calculate fitness
-		if decode = '1' then	 -- pick out the rng offspring
-			gene <= in_genes(2*genom_lngt -1 downto genom_lngt);
-		elsif decode = '0' then  -- pick out the mutation offspring
-			gene <= in_genes(genom_lngt -1 downto 0);
-		end if;
-		 
-		max_fit <= (others=>'1');
-		done <= '1';
-		fit_p <= shl(ext(gene,score_sz),"1"); -- simple fitness function (score = 2*gene)
-		--fit_p <= gene*gene;
-		gene_scr <= gene & shl(ext(gene,score_sz),"1");	-- change if u change the fit function		
+    if valid = '1' and done_p /= '1' then  -- evaluate gene - calculate fitness
+      if decode = '1' then                 -- pick out the rng offspring
+        gene <= in_genes(2*genom_lngt -1 downto genom_lngt);
+      elsif decode = '0' then              -- pick out the mutation offspring
+        gene <= in_genes(genom_lngt -1 downto 0);
+      end if;
 
-	elsif valid='1' and done_p = '1' then 
-		
-		gene <= (others=>'0');
-		fit_p <= temp(score_sz-1 downto 0);
-		gene_scr <= temp;
-		done <= '1';
-		-- do nothing, preserve same outputs
-		
-	elsif valid='0' then
-	 	fit_p <=temp(score_sz-1 downto 0);
-		gene <= (others=>'0');
-		gene_scr <= temp;
-		max_fit <= (others=>'1');
-		done <= '0';
-	else
-	 	fit_p <=temp(score_sz-1 downto 0);
-		gene <= (others=>'0');
-		gene_scr <= (others=>'0');
-		max_fit <= (others=>'1');
-		done <= '0';		
-	
-	end if; -- valid
+      max_fit  <= (others => '1');
+      done     <= '1';
+      fit_p    <= shl(ext(gene, score_sz), "1");  -- simple fitness function (score = 2*gene)
+      --fit_p <= gene*gene;
+      gene_scr <= gene & shl(ext(gene, score_sz), "1");  -- change if u change the fit function          
 
-end process fit_calculation;
+    elsif valid = '1' and done_p = '1' then
+      
+      gene     <= (others => '0');
+      fit_p    <= temp(score_sz-1 downto 0);
+      gene_scr <= temp;
+      done     <= '1';
+      -- do nothing, preserve same outputs
+      
+    elsif valid = '0' then
+      fit_p    <= temp(score_sz-1 downto 0);
+      gene     <= (others => '0');
+      gene_scr <= temp;
+      max_fit  <= (others => '1');
+      done     <= '0';
+    else
+      fit_p    <= temp(score_sz-1 downto 0);
+      gene     <= (others => '0');
+      gene_scr <= (others => '0');
+      max_fit  <= (others => '1');
+      done     <= '0';
+      
+    end if;  -- valid
+
+  end process fit_calculation;
 
 end rtl;

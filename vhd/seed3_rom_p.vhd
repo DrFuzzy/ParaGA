@@ -31,7 +31,8 @@ use work.rom_pkg.all;
 -- ENTITY
 -------------------------------------------------------------------------------
 entity seed3_rom_p is
-  generic (scaling_factor_res   : integer);
+  generic (
+    scaling_factor_res : integer);
   port (
     addr     : in  integer;
     data_out : out std_logic_vector(scaling_factor_res-1 downto 0));
@@ -45,6 +46,6 @@ architecture rtl of seed3_rom_p is
 begin
 
   -- get data
-  	data_out <= seed3_rom(addr) when addr>=0 else
-  		    (others=>'0');
+  data_out <= seed3_rom(addr) when addr >= 0 else
+              (others => '0');
 end architecture rtl;

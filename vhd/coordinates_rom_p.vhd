@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 14/09/2006
--- Last update: 14/09/2006
+-- Last update: 2006-11-02
 -- Platform   : Modelsim, Synplify, ISE
 -------------------------------------------------------------------------------
 -- Description: This block implements a parameterized wrapper for the coordinates_rom 
@@ -33,8 +33,8 @@ use work.rom_pkg.all;
 -------------------------------------------------------------------------------
 entity coordinates_rom_p is
   generic (
-    townres   : integer;
-    pop_sz    : integer);
+    townres : integer;
+    pop_sz  : integer);
   port (
     addr     : in  integer;
     data_out : out std_logic_vector(2*townres-1 downto 0));
@@ -48,6 +48,6 @@ architecture rtl of coordinates_rom_p is
 begin
 
   -- get data
-  	data_out <= coordinates_rom(addr) when addr<pop_sz+1 and addr>=0 else
-  		    (others=>'0');
+  data_out <= coordinates_rom(addr) when addr < pop_sz+1 and addr >= 0 else
+              (others => '0');
 end architecture rtl;

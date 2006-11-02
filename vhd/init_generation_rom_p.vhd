@@ -6,11 +6,11 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 14/09/2006
--- Last update: 14/09/2006
+-- Last update: 2006-11-02
 -- Platform   : Modelsim, Synplify, ISE
 -------------------------------------------------------------------------------
 -- Description: This block implements a parameterized wrapper for the 
--- 		initial generation ROM	
+--              initial generation ROM  
 -------------------------------------------------------------------------------
 -- Copyright (c) 2006 NTUA
 -------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ entity init_generation_rom_p is
     num_towns : integer);
   port (
     addr     : in  integer;
-    data_out : out std_logic_vector((num_towns-1)*townres-1 downto 0)); -- Length = genomlngt
+    data_out : out std_logic_vector((num_towns-1)*townres-1 downto 0));  -- Length = genomlngt
 end entity init_generation_rom_p;
 
 -------------------------------------------------------------------------------
@@ -50,6 +50,6 @@ architecture rtl of init_generation_rom_p is
 begin
 
   -- get data
-  	data_out <= init_generation_rom(addr) when addr<pop_sz+1 and addr>0 else
-  		    (others=>'Z');
+  data_out <= init_generation_rom(addr) when addr < pop_sz+1 and addr > 0 else
+              (others => 'Z');
 end architecture rtl;

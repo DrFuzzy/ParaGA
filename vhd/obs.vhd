@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 02/11/06
+-- Last update: 2006-11-02
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -39,11 +39,12 @@ entity obs is
   generic(
     score_sz  : positive;
     fit_limit : positive); 
-  port(clk        : in  std_logic;  -- clock
-        rst_n     : in  std_logic;  -- reset (active low)
-        max_fit   : in  std_logic_vector(score_sz-1 downto 0);  -- produced by fit_eval block
-        fitlim_rd : out std_logic;  -- fitness limit reached (done signal in state machine)
-        rd        : out std_logic); -- obs block ready signal
+  port(
+    clk       : in  std_logic;          -- clock
+    rst_n     : in  std_logic;          -- reset (active low)
+    max_fit   : in  std_logic_vector(score_sz-1 downto 0);  -- produced by fit_eval block
+    fitlim_rd : out std_logic;  -- fitness limit reached (done signal in state machine)
+    rd        : out std_logic);         -- obs block ready signal
 
 end entity obs;
 
@@ -73,8 +74,8 @@ begin
     
     if max_fit < conv_std_logic_vector(fit_limit, score_sz) then
       done <= '0';
-    elsif max_fit = conv_std_logic_vector(fit_limit, score_sz) or 
-          max_fit > conv_std_logic_vector(fit_limit, score_sz) then
+    elsif max_fit = conv_std_logic_vector(fit_limit, score_sz) or
+      max_fit > conv_std_logic_vector(fit_limit, score_sz) then
       done <= '1';
     end if;
     

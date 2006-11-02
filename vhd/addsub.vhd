@@ -6,7 +6,7 @@
 -- Author     : Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 01/11/06
--- Last update: 01/11/06
+-- Last update: 2006-11-02
 -- Platform   : Modelsim, Synplify, ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -30,26 +30,23 @@ use work.arith_pkg.all;
 
 entity addsub is
   generic(
-           genom_lngt  : positive; 
-           score_sz    : integer;
-           pop_sz      : positive;
-           elite       : positive
-           );          
-  
+    genom_lngt : positive;
+    score_sz   : integer;
+    pop_sz     : positive;
+    elite      : positive);          
   port(
-  in_array  : in  array (natural range 0 to elite-1) of std_logic_vector( score_sz-1 downto 0 );
-  result    : out std_logic_vector( score_sz + log2(elite)-1 downto 0 )  
-  );
+    in_array : in  array (natural range 0 to elite-1) of std_logic_vector(score_sz-1 downto 0);
+    result   : out std_logic_vector(score_sz + log2(elite)-1 downto 0));
 end entity addsub;
 
-ARCHITECTURE rtl OF addsub IS
+architecture rtl of addsub is
 
 
-BEGIN
-  PROCESS (in_array)
-  BEGIN
-    
-      
-    
-  END PROCESS;
-END rtl;
+begin
+  process (in_array)
+  begin
+
+
+
+  end process;
+end rtl;

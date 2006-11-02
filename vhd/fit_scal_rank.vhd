@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 23/03/06
+-- Last update: 2006-11-02
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -32,15 +32,14 @@ use work.dhga_pkg.all;
 -------------------------------------------------------------------------------
 entity fit_scal_rank is
   generic(
-           RamSize   : positive;
-           nParents  : integer
-           );          
-  port ( clk           : in  std_logic;  -- clock
-         rst_n         : in  std_logic;  -- reset (active low)
-	 scores        : in  intarray;        
-         ranks         : out intarray;
-         scaledScores  : out intarray      
-         );
+    RamSize  : positive;
+    nParents : integer);          
+  port (
+    clk          : in  std_logic;       -- clock
+    rst_n        : in  std_logic;       -- reset (active low)
+    scores       : in  intarray;
+    ranks        : out intarray;
+    scaledScores : out intarray);
 end entity fit_scal_rank;
 
 -------------------------------------------------------------------------------
