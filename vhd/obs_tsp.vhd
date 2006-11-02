@@ -50,8 +50,8 @@ end entity obs_tsp;
 -------------------------------------------------------------------------------
 architecture rtl of obs_tsp is
 
-  signal done  : std_logic := '0';
-  signal done2 : std_logic := '0';
+  constant high  : std_logic := '1';
+  signal done : std_logic;
   signal temp  : std_logic_vector(score_sz-1 downto 0);
 begin
 
@@ -61,8 +61,8 @@ begin
       rd        <= '0';
       fitlim_rd <= '0';
     elsif clk = '1' and clk'event then
-      rd        <= done;
-      fitlim_rd <= done2;
+      rd        <= high;
+      fitlim_rd <= done;
     end if;
   end process;
 
@@ -72,11 +72,10 @@ begin
     
     temp <= conv_std_logic_vector(fit_limit, score_sz);
     if max_fit < conv_std_logic_vector(fit_limit, score_sz) then
-      done2 <= '0';
+      done <= '0';
     elsif max_fit = conv_std_logic_vector(fit_limit, score_sz) or max_fit > conv_std_logic_vector(fit_limit, score_sz) then
-      done2 <= '1';
+      done <= '1';
     end if;
-    done <= '1';
     
   end process;
 
