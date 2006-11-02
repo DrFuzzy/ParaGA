@@ -46,8 +46,8 @@ entity rng is
     load         : in  std_logic;  -- load (active high)
     seed         : in  std_logic_vector(n-1 downto 0);  -- parallel seed input
     run          : in  std_logic;  -- if 1 run else output=high-Z
-    parallel_out : out std_logic_vector(n-1 downto 0)  -- parallel data out
-    --serial_out   : out std_logic -- serial data out); (from last shift register)
+    parallel_out : out std_logic_vector(n-1 downto 0));  -- parallel data out
+    --serial_out   : out std_logic -- serial data out (from last shift register)
     end entity rng;
 
 -------------------------------------------------------------------------------
