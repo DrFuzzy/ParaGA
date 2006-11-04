@@ -74,19 +74,14 @@ begin
   process (clk, rst_n)
   begin
     if (rst_n = '0') then
-      --mutOffspr <= (others=>'0');
       mutout_p1 <= (others => '0');
       count     <= (others => '0');
-      --rd <= '0';
       done_p    <= '0';
     elsif clk = '1' and clk'event then
-      --mutOffspr <= mutout;
       mutout_p1 <= mutout;
       if flag = '1' then
-        --rd<='0';
         done_p <= '0';
       else
-        --rd <= done;
         done_p <= done;
       end if;
 
@@ -104,13 +99,14 @@ begin
   mutation_v2 : process (mutMethod, mutPoint, rng, inGene, mutout_p1, count, cont, flag, done_p)
   begin
 
+  case done_p is
+  
+  when '0' => 
     case cont is
       
       when '1' =>                       -- mutation block enabled
         
-        
-
-        case mutMethod is
+          case mutMethod is
           
           when "00" =>                  -- one Point mutation 
 
@@ -167,12 +163,7 @@ begin
         end case;
 
 
-      when '0' =>                       -- mutation block disabled
-
-
-        --mask  <= (others=>'0');
-        --maskUnif  <= (others=>'0');   
-        --inGene_mut  <= (others=>'0');    
+      when '0' =>                       -- mutation block disabled   
         mutout <= mutout_p1;
         if flag = '1' then
           done <= '0';
@@ -182,14 +173,17 @@ begin
 
       when others =>
 
-        --mask  <= (others=>'0');
-        --maskUnif  <= (others=>'0');   
-        --inGene_mut  <= (others=>'0');    
-        --mutout <= mutout_p1;
-        --done<=done_p;
-
     end case;
-
+  
+  
+  when '1' => 
+   
+	mutout <= mutout_p1;
+	done<=done_p;
+  
+  when others =>
+  
+  end case;
   end process mutation_v2;
 
 end rtl;
