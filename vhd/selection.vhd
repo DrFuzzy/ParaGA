@@ -59,10 +59,13 @@ architecture rtl of selection is
   --signal  selout     : std_logic_vector(genom_lngt-1 downto 0) := (others=>'0');
   signal done         : std_logic                                                             := '0';
   signal done_t       : std_logic;
-  --signal  rd_p1            : std_logic;
+  signal  rd_p1            : std_logic;
+  signal temp_rd      : std_logic;
   signal cumSum_p1    : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
   signal scalFitSum   : std_logic_vector(score_sz+log2(pop_sz)+scaling_factor_res-1 downto 0) := (others => '0');
   signal scalFitSum_p : std_logic_vector(score_sz+log2(pop_sz)+scaling_factor_res-1 downto 0) := (others => '0');
+  signal selParent_p  : std_logic_vector(genom_lngt-1 downto 0);
+  signal sel_gene     : std_logic_vector(genom_lngt-1 downto 0);
   signal count        : std_logic;
 
 begin
@@ -74,7 +77,10 @@ begin
       cumSum_p1    <= (others => '0');  -- Previous accumulated sum of fitnesses
       done_t       <= '0';  -- Notifies if selection block needs to continue with another gene from ram 1
       scalFitSum_p <= (others => '0');
+      temp_rd <= '0';
+      selParent_p <= (others=> '0');
     elsif clk = '1' and clk'event then
+      temp_rd <= rd_p1;
       if data_valid = '1' then
         count <= '1';
       else
@@ -89,15 +95,17 @@ begin
       end if;
       done_t       <= done;
       scalFitSum_p <= scalFitSum;
+      selParent_p <= sel_gene;
     end if;
   end process;
 
-
-  selection : process (fitSum, rng, cumSum_p1, scalFitSum, scalFitSum_p, inGene, done_t, data_valid, count)
+rd<=rd_p1;
+selParent <= sel_gene;
+  selection : process (fitSum, rng, cumSum_p1, scalFitSum, scalFitSum_p, inGene, done_t, data_valid, count, temp_rd, selParent_p)
   begin
 
 
-    if data_valid = '1' then
+    if data_valid = '1' and temp_rd = '0' then
 
       --score <= inGene(score_sz-1 downto 0);
       --cumSum <= cumSum_p1 + inGene(score_sz-1 downto 0);
@@ -112,22 +120,27 @@ begin
       end if;
 
       if cumSum_p1 < scalFitSum or cumSum_p1 = scalFitSum then
-        selParent <= (others => '0');
+        sel_gene <= (others => '0');
         if count = '0' then
           done <= '0';
         else
           done <= '1';
         end if;
-        rd <= '0';
+        rd_p1 <= '0';
       else
-        selParent <= inGene(genom_lngt+score_sz-1 downto score_sz);
+        sel_gene <= inGene(genom_lngt+score_sz-1 downto score_sz);
         done      <= '0';
-        rd        <= '1';
+        rd_p1        <= '1';
       end if;
       
+    elsif data_valid = '0' then
+      rd_p1         <= '0';
+      sel_gene  <= (others => '0');
+      scalFitSum <= scalFitSum_p;
+      done       <= done_t;    	
     else
-      rd         <= '0';
-      selParent  <= (others => '0');
+      rd_p1         <= temp_rd;
+      sel_gene  <= selParent_p;
       scalFitSum <= scalFitSum_p;
       done       <= done_t;
     end if;
