@@ -83,13 +83,23 @@ begin
   process (clk, rst_n)
   begin
     if (rst_n = '0') then
-
+	
+        done            <= '0';
+        cont1           <= 0;
+        cross_point_int <= 0;
+        temp1           <= (others => '0');
+        temp2           <= (others => '0');
+        town            <= (others => '0');
+        ind             <= 1;
+        counter         <= 0;
+        for i in num_towns-1 downto 1 loop
+          index(i) <= 0;
+          pool_int(i-1) <= 0;
+        end loop;
     elsif clk = '1' and clk'event then
-      
-      
+            
       if cont = '1' then
-        
-        
+                
         if cont1 = 0 then  -- Left part from Parent A , right part from Parent B
           pool_int                                                                                                         <= pool;
           cross_point_int                                                                                                  <= conv_integer(crossPoints(2*log2(num_towns)-1 downto log2(num_towns)));
@@ -122,9 +132,6 @@ begin
           else
             counter <= counter-1;
           end if;
-
-          
-          
         end if;
 
         if cont1 = 3 then  -- Find which towns in the left and right part are the same and replace them with zeros
