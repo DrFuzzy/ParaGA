@@ -96,10 +96,12 @@ architecture str of ga_tsp is
   signal data_in_1_dummy      : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal data_out_1_dummy     : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal addr_1_dummy         : integer;
+  signal addr_1_vec           : std_logic_vector(log2(pop_sz) downto 0);
   signal we1_dummy            : std_logic;
   signal data_in_2_dummy      : std_logic_vector(genom_lngt-1 downto 0);
   signal data_out_2_dummy     : std_logic_vector(genom_lngt-1 downto 0);
   signal addr_2_dummy         : integer;
+  signal addr_2_vec           : std_logic_vector(log2(2*(pop_sz-elite)) downto 0);
   signal we2_dummy            : std_logic;
   signal flag_dummy           : std_logic;
   signal count_parents_dummy  : integer;
@@ -285,7 +287,7 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      add      => addr_1_dummy,         -- address (integer instead of std_vec)
+      add      => addr_1_vec,         -- address (integer instead of std_vec)
       data_in  => data_in_1_dummy,      -- from fitness evaluation
       data_out => data_out_1_dummy,     -- to selection block
       wr       => we1_dummy,
@@ -303,7 +305,7 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      add      => addr_2_dummy,         -- address (integer instead of std_vec)
+      add      => addr_2_vec,         -- address (integer instead of std_vec)
       data_in  => data_in_2_dummy,      -- from selection
       data_out => data_out_2_dummy,     -- to control_v4  
       wr       => we2_dummy,
@@ -467,7 +469,9 @@ begin
       run_ga <= run_ga_i;
     end if;
   end process;
-
+  
+  addr_2_vec        <= conv_std_logic_vector(addr_2_dummy, addr_2_vec'length);
+  addr_1_vec        <= conv_std_logic_vector(addr_1_dummy, addr_1_vec'length);
   best_gene_i <= data_out_1_dummy(genom_lngt+score_sz -1 downto score_sz);
   best_fit_i  <= max_fit_dummy;
 
