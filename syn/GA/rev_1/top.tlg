@@ -1,0 +1,376 @@
+@N: CD630 :"D:\Designs\GA_eval\vhd\top.vhd":35:7:35:8|Synthesizing work.ga.str 
+@N: CD630 :"D:\Designs\GA_eval\vhd\delay_regs.vhd":33:7:33:16|Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\delay_regs.vhd":33:7:33:16|Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\delay_regs.vhd":33:7:33:16|Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\delay_regs.vhd":33:7:33:16|Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\delay_regs.vhd":33:7:33:16|Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\control_v5.vhd":37:7:37:16|Synthesizing work.control_v5.rtl 
+@N: CD231 :"D:\Designs\GA_eval\vhd\control_v5.vhd":88:17:88:18|Using onehot encoding for type type_sreg (clear_ram_s="100000000")
+Post processing for work.control_v5.rtl
+@W: CL169 :"D:\Designs\GA_eval\vhd\control_v5.vhd":158:4:158:5|Pruning Register mut_rd_p1  
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(4) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(5) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(6) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(7) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(8) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(9) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(10) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(11) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(12) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(13) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(14) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(15) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(16) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(17) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(18) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(19) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(20) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(21) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(22) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(23) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(24) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(25) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(26) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(27) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(28) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(29) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(30) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(31) assign '0', register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 4 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 5 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 6 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 7 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 8 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 9 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 10 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 11 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 12 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 13 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 14 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 15 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 16 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 17 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 18 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 19 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 20 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 21 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 22 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 23 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 24 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 25 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 26 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 27 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 28 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 29 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 30 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 31 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(4) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(5) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(6) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(7) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(8) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(9) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(10) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(11) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(12) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(13) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(14) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(15) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(16) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(17) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(18) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(19) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(20) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(21) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(22) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(23) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(24) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(25) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(26) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(27) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(28) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(29) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(30) to a constant 0
+@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(31) to a constant 0
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <31> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <30> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <29> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <28> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <27> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <26> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <25> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <24> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <23> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <22> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <21> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <20> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <19> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <18> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <17> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <16> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <15> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <14> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <13> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <12> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <11> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <10> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <9> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <8> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <7> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <6> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <5> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <4> of addr_2(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <31> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <30> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <29> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <28> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <27> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <26> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <25> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <24> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <23> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <22> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <21> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <20> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <19> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <18> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <17> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <16> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <15> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <14> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <13> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <12> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <11> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <10> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <9> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <8> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <7> of index(31 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <6> of index(31 downto 0)  
+@W: CL189 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Register bit index(5) is always 0, optimizing ...
+@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <5> of index(5 downto 0)  
+@N: CL201 :"D:\Designs\GA_eval\vhd\control_v5.vhd":158:4:158:5|Trying to extract state machine for register notify_cnt_p
+Extracted state machine for register notify_cnt_p
+State machine has 8 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0101
+   0110
+   0111
+   1000
+@N: CL201 :"D:\Designs\GA_eval\vhd\control_v5.vhd":149:4:149:5|Trying to extract state machine for register sreg
+Extracted state machine for register sreg
+State machine has 9 reachable states with original encodings of:
+   000000001
+   000000010
+   000000100
+   000001000
+   000010000
+   000100000
+   001000000
+   010000000
+   100000000
+@N: CD630 :"D:\Designs\GA_eval\vhd\spram1.vhd":33:7:33:12|Synthesizing work.spram1.rtl 
+Post processing for work.spram1.rtl
+@W: CL209 :"D:\Designs\GA_eval\vhd\spram1.vhd":40:4:40:6|Input port bit <4> of add(4 downto 0) is unused 
+@N: CD630 :"D:\Designs\GA_eval\vhd\spram1.vhd":33:7:33:12|Synthesizing work.spram1.rtl 
+Post processing for work.spram1.rtl
+@W: CL209 :"D:\Designs\GA_eval\vhd\spram1.vhd":40:4:40:6|Input port bit <3> of add(3 downto 0) is unused 
+@N: CD630 :"D:\Designs\GA_eval\vhd\obs.vhd":37:7:37:9|Synthesizing work.obs.rtl 
+Post processing for work.obs.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\mutation_v2.vhd":37:7:37:17|Synthesizing work.mutation_v2.rtl 
+Post processing for work.mutation_v2.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\crossover_v2.vhd":36:7:36:18|Synthesizing work.crossover_v2.rtl 
+Post processing for work.crossover_v2.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\selection.vhd":36:7:36:15|Synthesizing work.selection.rtl 
+Post processing for work.selection.rtl
+@N: CD630 :"D:\Designs\GA_eval\vhd\top_fit_eval.vhd":35:7:35:17|Synthesizing work.fit_eval_ga.str 
+@N: CD630 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":37:7:37:15|Synthesizing work.fix_elite.rtl 
+Post processing for work.fix_elite.rtl
+@W: CL169 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":92:4:92:5|Pruning Register temp_indexs_1_0(31 downto 0)  
+@W: CL169 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":92:4:92:5|Pruning Register temp1_0(7 downto 0)  
+@N: CL201 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":92:4:92:5|Trying to extract state machine for register count_cycle
+Extracted state machine for register count_cycle
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CD630 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":37:7:37:14|Synthesizing work.fit_calc.rtl 
+Post processing for work.fit_calc.rtl
+@W: CL190 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Optimizing register bit temp(0) to a constant 0
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <0> of temp(15 downto 0)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <14> of temp(15 downto 1)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <13> of temp(15 downto 1)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <12> of temp(15 downto 1)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <11> of temp(15 downto 1)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <10> of temp(15 downto 1)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <9> of temp(15 downto 1)  
+@W: CL171 :"D:\Designs\GA_eval\vhd\fit_calc.vhd":72:4:72:5|Pruning Register bit <8> of temp(15 downto 1)  
+Post processing for work.fit_eval_ga.str
+@N: CD630 :"D:\Designs\GA_eval\vhd\rng.vhd":40:7:40:9|Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <31> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <30> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <29> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <28> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <27> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <26> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <25> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <24> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <23> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <22> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <21> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <20> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <19> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <18> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <17> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <16> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <15> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <14> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <13> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <12> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <11> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <10> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <9> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <8> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <7> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <6> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <5> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <4> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <3> of LFSR.taps_array_4_1(31 downto 0) - not in use ... 
+@W: CL113 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Feedback mux created for signal lfsr_reg[3:0].
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_4(1) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_4(2) assign '0', register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 1 of taps_array_4(2 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 2 of taps_array_4(2 downto 0) assign 0, register removed by optimization
+@W: CL212 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Register taps_array_4(0) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... 
+@N: CD630 :"D:\Designs\GA_eval\vhd\rng.vhd":40:7:40:9|Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <31> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <30> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <29> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <28> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <27> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <26> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <25> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <24> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <23> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <22> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <21> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <20> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <19> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <18> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <17> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <16> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <15> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <14> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <13> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <12> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <11> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <10> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <9> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <8> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <7> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <6> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <5> of LFSR.taps_array_6_1(31 downto 0) - not in use ... 
+@W: CL113 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Feedback mux created for signal lfsr_reg[5:0].
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_6(1) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_6(2) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_6(3) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_6(4) assign '0', register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 1 of taps_array_6(4 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 2 of taps_array_6(4 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 3 of taps_array_6(4 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 4 of taps_array_6(4 downto 0) assign 0, register removed by optimization
+@W: CL212 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Register taps_array_6(0) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... 
+@N: CD630 :"D:\Designs\GA_eval\vhd\rng.vhd":40:7:40:9|Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <31> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <30> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <29> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <28> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <27> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <26> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <25> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <24> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <23> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <22> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <21> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <20> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <19> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <18> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <17> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <16> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <15> of LFSR.taps_array_16_1(31 downto 0) - not in use ... 
+@W: CL113 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Feedback mux created for signal lfsr_reg[15:0].
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(0) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(3) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(5) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(6) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(7) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(8) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(9) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(10) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(11) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(12) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(13) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_16(14) assign '0', register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 0 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 3 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 5 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 6 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 7 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 8 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 9 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 10 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 11 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 12 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 13 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 14 of taps_array_16(14 downto 0) assign 0, register removed by optimization
+@W: CL212 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Register taps_array_16(4) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... 
+@W: CL212 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Register taps_array_16(2 downto 1) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... 
+@N: CD630 :"D:\Designs\GA_eval\vhd\rng.vhd":40:7:40:9|Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <31> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <30> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <29> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <28> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <27> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <26> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <25> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <24> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <23> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <22> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <21> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <20> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <19> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <18> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <17> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <16> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <15> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <14> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <13> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <12> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <11> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <10> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <9> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <8> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL170 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Pruning bit <7> of LFSR.taps_array_8_1(31 downto 0) - not in use ... 
+@W: CL113 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Feedback mux created for signal lfsr_reg[7:0].
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_8(0) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_8(4) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_8(5) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to taps_array_8(6) assign '0', register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 0 of taps_array_8(6 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 4 of taps_array_8(6 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 5 of taps_array_8(6 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|All reachable assignments to bit 6 of taps_array_8(6 downto 0) assign 0, register removed by optimization
+@W: CL212 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Register taps_array_8(3 downto 1) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... 
+Post processing for work.ga.str

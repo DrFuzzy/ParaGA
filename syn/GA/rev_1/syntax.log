@@ -1,0 +1,73 @@
+$ Start of Compile
+#Mon Oct 30 20:20:04 2006
+
+Synplicity VHDL Compiler, version 3.4.1, Build 137R, built Apr  7 2006
+Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
+
+@I:: "D:/Designs/GA_eval/vhd/top.vhd"
+@W: CD643 :"D:/Designs/GA_eval/vhd/top.vhd":29:21:29:21|Ignoring use clause - dhga_pkg not found ...
+@W: CD643 :"D:/Designs/GA_eval/vhd/top.vhd":30:22:30:22|Ignoring use clause - arith_pkg not found ...
+@E: CD255 :"D:/Designs/GA_eval/vhd/top.vhd":53:44:53:44|No identifier "log2" in scope
+@E: CD632 :"D:/Designs/GA_eval/vhd/top.vhd":62:13:62:13|duplicate entity name ga
+@E: CD255 :"D:/Designs/GA_eval/vhd/top.vhd":78:50:78:50|No identifier "log2" in scope
+@E: CD415 :"D:/Designs/GA_eval/vhd/top.vhd":505:20:505:20|Expecting keyword of
+4 errors parsing file D:/Designs/GA_eval/vhd/top.vhd
+@END
+@E|Parse errors encountered - exiting
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Oct 30 20:20:05 2006
+
+$ Start of Compile
+#Mon Oct 30 20:20:26 2006
+
+Synplicity VHDL Compiler, version 3.4.1, Build 137R, built Apr  7 2006
+Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
+
+@I:: "D:/Designs/GA_eval/vhd/top.vhd"
+@W: CD643 :"D:/Designs/GA_eval/vhd/top.vhd":29:21:29:21|Ignoring use clause - dhga_pkg not found ...
+@W: CD643 :"D:/Designs/GA_eval/vhd/top.vhd":30:22:30:22|Ignoring use clause - arith_pkg not found ...
+@E: CD255 :"D:/Designs/GA_eval/vhd/top.vhd":53:44:53:44|No identifier "log2" in scope
+@E: CD632 :"D:/Designs/GA_eval/vhd/top.vhd":62:13:62:13|duplicate entity name ga
+@E: CD255 :"D:/Designs/GA_eval/vhd/top.vhd":78:50:78:50|No identifier "log2" in scope
+@E: CD415 :"D:/Designs/GA_eval/vhd/top.vhd":505:20:505:20|Expecting keyword of
+4 errors parsing file D:/Designs/GA_eval/vhd/top.vhd
+@END
+@E|Parse errors encountered - exiting
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Oct 30 20:20:27 2006
+
+$ Start of Compile
+#Mon Oct 30 20:20:40 2006
+
+Synplicity VHDL Compiler, version 3.4.1, Build 137R, built Apr  7 2006
+Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
+
+@I:: "D:/Designs/GA_eval/vhd/top.vhd"
+@W: CD643 :"D:/Designs/GA_eval/vhd/top.vhd":29:21:29:21|Ignoring use clause - dhga_pkg not found ...
+@W: CD643 :"D:/Designs/GA_eval/vhd/top.vhd":30:22:30:22|Ignoring use clause - arith_pkg not found ...
+@E: CD255 :"D:/Designs/GA_eval/vhd/top.vhd":53:44:53:44|No identifier "log2" in scope
+@E: CD632 :"D:/Designs/GA_eval/vhd/top.vhd":62:13:62:13|duplicate entity name ga
+@E: CD255 :"D:/Designs/GA_eval/vhd/top.vhd":78:50:78:50|No identifier "log2" in scope
+@E: CD415 :"D:/Designs/GA_eval/vhd/top.vhd":505:20:505:20|Expecting keyword of
+4 errors parsing file D:/Designs/GA_eval/vhd/top.vhd
+@END
+@E|Parse errors encountered - exiting
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Oct 30 20:20:41 2006
+
+$ Start of Compile
+#Mon Oct 30 20:21:17 2006
+
+Synplicity VHDL Compiler, version 3.4.1, Build 137R, built Apr  7 2006
+Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
+
+@I:: "D:/Designs/GA_eval/vhd/dhga_pkg.vhd"
+@W: CD643 :"D:/Designs/GA_eval/vhd/dhga_pkg.vhd":33:22:33:22|Ignoring use clause - arith_pkg not found ...
+@E: CD255 :"D:/Designs/GA_eval/vhd/dhga_pkg.vhd":81:51:81:51|No identifier "log2" in scope
+@E: CD428 :"D:/Designs/GA_eval/vhd/dhga_pkg.vhd":610:20:610:20|Duplicate definition of package dhga_pkg
+2 errors parsing file D:/Designs/GA_eval/vhd/dhga_pkg.vhd
+@END
+@E|Parse errors encountered - exiting
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Oct 30 20:21:17 2006
+

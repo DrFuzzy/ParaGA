@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="unknown" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="535" delta="unknown" >The following Virtex BUFG(s) is/are being retargetted to Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+<arg fmt="%s" index="1">BUFGP symbol &quot;clk_ibuf&quot; (output signal=clk_c)</arg>
+</msg>
+
+<msg type="info" file="MapLib" num="331" delta="unknown" >Block RAM optimization summary:
+</msg>
+
+<msg type="info" file="MapLib" num="333" delta="unknown" >No optimization performed
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="unknown" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs in the schematic.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="unknown" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celcius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celcius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="unknown" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="unknown" >Map created a placed design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367">The signal &lt;U5/scalFitSum_0[5]_REPLICA_20&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367">The signal &lt;U5/scalFitSum_0[4]_REPLICA_23&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367">The signal &lt;U5/scalFitSum(7)_REPLICA_27&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367">The signal &lt;U5/scalFitSum_0[6]_REPLICA_11&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+</messages>

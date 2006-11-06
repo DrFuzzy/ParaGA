@@ -1,0 +1,63 @@
+--------------------------------------------------------------------------------
+Release 8.1.03i Trace I.27
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+C:\EDA\Xilinx_ISE_8.1i\bin\nt\trce.exe -ise GA.ise -intstyle ise -e 3 -l 3 -s 4
+-xml ga ga.ncd -o ga.twr ga.pcf
+
+
+Design file:              ga.ncd
+Physical constraint file: ga.pcf
+Device,speed:             xc3s1500,-4 (PRODUCTION 1.37 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH 50%;
+
+ 77601 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  12.771ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   12.771|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 77601 paths, 0 nets, and 5990 connections
+
+Design statistics:
+   Minimum period:  12.771ns (Maximum frequency:  78.302MHz)
+
+
+Analysis completed Fri Nov 03 20:25:31 2006
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 136 MB

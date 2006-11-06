@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 2006-11-02
+-- Last update: 2006-11-06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -55,32 +55,32 @@ end entity crossover_v2;
 architecture rtl of crossover_v2 is
 
   
-  signal mask      : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal mask1     : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal mask2     : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal temp      : std_logic_vector(log2(genom_lngt) downto 0) := (others => '0');
-  signal temp_int  : integer                                     := 0;  -- range 1 to 7; 
-  signal temp1     : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal temp2     : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal crossout1 : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal mask        : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal mask1       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal mask2       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal temp        : std_logic_vector(log2(genom_lngt) downto 0) := (others => '0');
+  signal temp_int    : integer                                     := 0;  -- range 1 to 7; 
+  signal temp1       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal temp2       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal crossout1   : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
   signal crossout1_t : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal done      : std_logic                                   := '0';
-  signal done_t    : std_logic                                   := '0'; 
+  signal done        : std_logic                                   := '0';
+  signal done_t      : std_logic                                   := '0';
 begin
 
   process (clk, rst_n)
   begin
     if (rst_n = '0') then
       crossout1_t <= (others => '0');
-      done_t           <= '0';
+      done_t      <= '0';
     elsif clk = '1' and clk'event then
       crossout1_t <= crossout1;
-      done_t           <= done;
+      done_t      <= done;
     end if;
   end process;
 
-rd <= done_t;
-crossOffspr1 <= crossout1_t;
+  rd           <= done_t;
+  crossOffspr1 <= crossout1_t;
 
   crossover_v2 : process (crossMethod, crossout1_t, mask, mask1, mask2, inGene1, inGene2, temp_int, temp1, temp2, temp, rng, crossPoints, cont, done_t)
   begin
@@ -91,9 +91,9 @@ crossOffspr1 <= crossout1_t;
         when "00" =>                    -- one Point crossover 
           mask <= (others => '1');
 
-          mask1 <= shr(mask, conv_std_logic_vector(genom_lngt-1, log2(genom_lngt)) - crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)));
-          temp1 <= inGene1 and mask1;
-          temp2 <= inGene2 and (not mask1);
+          mask1     <= shr(mask, conv_std_logic_vector(genom_lngt-1, log2(genom_lngt)) - crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)));
+          temp1     <= inGene1 and mask1;
+          temp2     <= inGene2 and (not mask1);
           crossout1 <= (temp1 xor temp2);
           done      <= '1';
           mask2     <= (others => '0');
@@ -116,8 +116,8 @@ crossOffspr1 <= crossout1_t;
           elsif crossPoints(log2(genom_lngt)-1 downto 0) = crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)) then
             mask2 <= shl(mask1, crossPoints(log2(genom_lngt)-1 downto 0));
           end if;
-          temp1 <= inGene1 and mask2;
-          temp2 <= inGene2 and (not mask2);
+          temp1     <= inGene1 and mask2;
+          temp2     <= inGene2 and (not mask2);
           crossout1 <= (temp1 xor temp2);
           done      <= '1';
 
@@ -126,11 +126,11 @@ crossOffspr1 <= crossout1_t;
           temp2     <= inGene2 and rng;
           crossout1 <= (temp1 xor temp2);
           done      <= '1';
-          temp     <= (others => '0');
-          mask     <= (others => '0');
-          mask1    <= (others => '0');
-          mask2    <= (others => '0');
-          temp_int <= 0;
+          temp      <= (others => '0');
+          mask      <= (others => '0');
+          mask1     <= (others => '0');
+          mask2     <= (others => '0');
+          temp_int  <= 0;
           
         when others =>
           mask      <= (others => '0');
@@ -143,26 +143,26 @@ crossOffspr1 <= crossout1_t;
           done      <= '0';
           crossout1 <= (others => '0');
       end case;
-    elsif done_t= '1' then
-          mask      <= (others => '0');
-          mask1     <= (others => '0');
-          mask2     <= (others => '0');
-          temp_int  <= 0;
-          temp      <= (others => '0');
-          temp1     <= (others => '0');
-          temp2     <= (others => '0');
-          done      <= '0';
-     	  crossout1 <= crossout1_t; 
+    elsif done_t = '1' then
+      mask      <= (others => '0');
+      mask1     <= (others => '0');
+      mask2     <= (others => '0');
+      temp_int  <= 0;
+      temp      <= (others => '0');
+      temp1     <= (others => '0');
+      temp2     <= (others => '0');
+      done      <= '0';
+      crossout1 <= crossout1_t;
     else
-          mask      <= (others => '0');
-          mask1     <= (others => '0');
-          mask2     <= (others => '0');
-          temp_int  <= 0;
-          temp      <= (others => '0');
-          temp1     <= (others => '0');
-          temp2     <= (others => '0');
-          done      <= '0';
-          crossout1 <= (others => '0');      
+      mask      <= (others => '0');
+      mask1     <= (others => '0');
+      mask2     <= (others => '0');
+      temp_int  <= 0;
+      temp      <= (others => '0');
+      temp1     <= (others => '0');
+      temp2     <= (others => '0');
+      done      <= '0';
+      crossout1 <= (others => '0');
     end if;
   end process crossover_v2;
 

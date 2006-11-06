@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="XdmHelpers" num="681" delta="unknown" >UCF definition of specification &quot;<arg fmt="%s" index="1">TS_clk</arg>&quot; overrides the definition found in the netlist or NCF file:
+UCF: <arg fmt="%s" index="2">PERIOD &quot;clk&quot; 13000.000000 pS HIGH 50.000000 %</arg>
+netlist/NCF: <arg fmt="%s" index="3">PERIOD:clk:10000.000000:pS:HIGH:50.000000%</arg>
+</msg>
+
+</messages>

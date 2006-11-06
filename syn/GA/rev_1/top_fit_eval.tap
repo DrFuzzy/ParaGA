@@ -1,0 +1,2845 @@
+
+d U0;
+
+gi parallel_out_1[2];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 4.372 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[2];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[3];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 4.372 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[3];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[4];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 4.372 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[4];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[5];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[5];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[6];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[6];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[7];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[7];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[0];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 5.748 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[0];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[1];
+ai .slack_logic 4.250 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[1];
+gp C;
+ap .is_clock 1;
+
+d U1;
+
+gi parallel_out_1[2];
+ai .slack_logic 0.306 ;
+gp Q[0];
+ap .slack_logic 0.306 ;
+gp D[0];
+ap .slack_logic 4.372 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[2];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[3];
+ai .slack_logic 0.306 ;
+gp Q[0];
+ap .slack_logic 0.306 ;
+gp D[0];
+ap .slack_logic 4.372 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[3];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[5];
+ai .slack_logic 1.236 ;
+gp Q[0];
+ap .slack_logic 1.236 ;
+gp D[0];
+ap .slack_logic 4.372 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[5];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[4];
+ai .slack_logic 1.236 ;
+gp Q[0];
+ap .slack_logic 1.236 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[4];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[6];
+ai .slack_logic 1.236 ;
+gp Q[0];
+ap .slack_logic 1.236 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[6];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[7];
+ai .slack_logic 2.165 ;
+gp Q[0];
+ap .slack_logic 2.165 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[7];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[8];
+ai .slack_logic 2.343 ;
+gp Q[0];
+ap .slack_logic 2.343 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[8];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[9];
+ai .slack_logic 0.967 ;
+gp Q[0];
+ap .slack_logic 0.967 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[9];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[10];
+ai .slack_logic -0.409 ;
+gp Q[0];
+ap .slack_logic -0.409 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[10];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[11];
+ai .slack_logic 0.521 ;
+gp Q[0];
+ap .slack_logic 0.521 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[11];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[12];
+ai .slack_logic 2.695 ;
+gp Q[0];
+ap .slack_logic 2.695 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[12];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[13];
+ai .slack_logic 1.770 ;
+gp Q[0];
+ap .slack_logic 1.770 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[13];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[14];
+ai .slack_logic 2.695 ;
+gp Q[0];
+ap .slack_logic 2.695 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[14];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[15];
+ai .slack_logic 2.695 ;
+gp Q[0];
+ap .slack_logic 2.695 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[15];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[0];
+ai .slack_logic 0.354 ;
+gp Q[0];
+ap .slack_logic 0.354 ;
+gp D[0];
+ap .slack_logic 5.748 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[0];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[1];
+ai .slack_logic 0.306 ;
+gp Q[0];
+ap .slack_logic 0.306 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[1];
+gp C;
+ap .is_clock 1;
+
+d U2;
+
+gi parallel_out_1[1];
+ai .slack_logic -3.993 ;
+gp Q[0];
+ap .slack_logic -3.175 ;
+gp D[0];
+ap .slack_logic 4.300 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[1];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[2];
+ai .slack_logic -4.012 ;
+gp Q[0];
+ap .slack_logic -2.968 ;
+gp D[0];
+ap .slack_logic 5.763 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[2];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[3];
+ai .slack_logic -3.984 ;
+gp Q[0];
+ap .slack_logic -2.977 ;
+gp D[0];
+ap .slack_logic 5.763 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[3];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[4];
+ai .slack_logic -3.945 ;
+gp Q[0];
+ap .slack_logic -3.175 ;
+gp D[0];
+ap .slack_logic 5.753 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[4];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[5];
+ai .slack_logic -4.003 ;
+gp Q[0];
+ap .slack_logic -3.130 ;
+gp D[0];
+ap .slack_logic 5.763 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[5];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[0];
+ai .slack_logic -3.993 ;
+gp Q[0];
+ap .slack_logic -2.986 ;
+gp D[0];
+ap .slack_logic 5.753 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[0];
+gp C;
+ap .is_clock 1;
+
+d U3;
+
+gi parallel_out_1[1];
+ai .slack_logic -1.491 ;
+gp Q[0];
+ap .slack_logic -1.491 ;
+gp D[0];
+ap .slack_logic 4.386 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[1];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[2];
+ai .slack_logic -1.482 ;
+gp Q[0];
+ap .slack_logic -1.482 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[2];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[3];
+ai .slack_logic -1.491 ;
+gp Q[0];
+ap .slack_logic -1.491 ;
+gp D[0];
+ap .slack_logic 5.782 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[3];
+gp C;
+ap .is_clock 1;
+
+gi parallel_out_1[0];
+ai .slack_logic -1.491 ;
+gp Q[0];
+ap .slack_logic -1.491 ;
+gp D[0];
+ap .slack_logic 5.763 ;
+gp C;
+ap .is_clock 1;
+
+gi LFSR.lfsr_reg[0];
+gp C;
+ap .is_clock 1;
+
+d U4.U0;
+
+gi done_p;
+ai .slack_logic 3.551 ;
+gp Q[0];
+ap .slack_logic 3.551 ;
+gp C;
+ap .is_clock 1;
+
+gi done;
+gp C;
+ap .is_clock 1;
+
+gi gene[7:0];
+ai .slack_logic 4.069 ;
+gp Q[7];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic 4.069 ;
+gp C;
+ap .is_clock 1;
+
+gi gene_score_1[8:1];
+ai .slack_logic 3.459 ;
+gp Q[0];
+ap .slack_logic 4.396 ;
+gp Q[1];
+ap .slack_logic 4.396 ;
+gp Q[2];
+ap .slack_logic 4.396 ;
+gp Q[3];
+ap .slack_logic 4.396 ;
+gp Q[4];
+ap .slack_logic 4.396 ;
+gp Q[5];
+ap .slack_logic 4.396 ;
+gp Q[6];
+ap .slack_logic 4.396 ;
+gp Q[7];
+ap .slack_logic 4.396 ;
+gp D[0];
+ap .slack_logic 5.725 ;
+gp D[1];
+ap .slack_logic 5.734 ;
+gp D[2];
+ap .slack_logic 5.734 ;
+gp D[3];
+ap .slack_logic 5.734 ;
+gp D[4];
+ap .slack_logic 5.734 ;
+gp D[5];
+ap .slack_logic 5.734 ;
+gp D[6];
+ap .slack_logic 5.734 ;
+gp D[7];
+ap .slack_logic 5.734 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.459 ;
+
+gi gene_score_1[23:16];
+gp C;
+ap .is_clock 1;
+
+gi ready_out;
+ai .slack_logic -1.316 ;
+gp Q[0];
+ap .slack_logic -1.316 ;
+gp D[0];
+ap .slack_logic 5.107 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.755 ;
+
+gi fit_1[8:1];
+gp C;
+ap .is_clock 1;
+
+gi gene_scr[8:1];
+gp C;
+ap .is_clock 1;
+
+gi gene_scr[23:16];
+ai .slack_logic -1.438 ;
+gp D[6];
+ap .slack_logic -1.438 ;
+gp D[7];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+d U4.U1;
+
+gi un18_valid;
+ai .slack_logic 2.134 ;
+gp I1[0];
+ap .slack_logic 2.134 ;
+
+gi cont2;
+gp C;
+ap .is_clock 1;
+
+gi cont;
+ai .slack_logic 2.134 ;
+gp Q[0];
+ap .slack_logic 2.134 ;
+gp D[0];
+ap .slack_logic 5.107 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.755 ;
+
+gi fin;
+gp C;
+ap .is_clock 1;
+
+gi rd;
+gp C;
+ap .is_clock 1;
+
+gi max_fit[15:0];
+ai .slack_logic 0.339 ;
+gp Q[0];
+ap .slack_logic 5.571 ;
+gp Q[1];
+ap .slack_logic 4.432 ;
+gp Q[2];
+ap .slack_logic 4.432 ;
+gp Q[3];
+ap .slack_logic 4.432 ;
+gp Q[4];
+ap .slack_logic 4.432 ;
+gp Q[5];
+ap .slack_logic 4.432 ;
+gp Q[6];
+ap .slack_logic 4.432 ;
+gp Q[7];
+ap .slack_logic 4.432 ;
+gp Q[8];
+ap .slack_logic 4.432 ;
+gp Q[9];
+ap .slack_logic 4.432 ;
+gp Q[10];
+ap .slack_logic 4.432 ;
+gp Q[11];
+ap .slack_logic 4.432 ;
+gp Q[12];
+ap .slack_logic 4.432 ;
+gp Q[13];
+ap .slack_logic 4.432 ;
+gp Q[14];
+ap .slack_logic 4.432 ;
+gp Q[15];
+ap .slack_logic 4.432 ;
+gp D[0];
+ap .slack_logic 2.939 ;
+gp D[1];
+ap .slack_logic 2.939 ;
+gp D[2];
+ap .slack_logic 2.939 ;
+gp D[3];
+ap .slack_logic 2.939 ;
+gp D[4];
+ap .slack_logic 2.939 ;
+gp D[5];
+ap .slack_logic 2.939 ;
+gp D[6];
+ap .slack_logic 2.939 ;
+gp D[7];
+ap .slack_logic 2.939 ;
+gp D[8];
+ap .slack_logic 2.939 ;
+gp D[9];
+ap .slack_logic 2.939 ;
+gp D[10];
+ap .slack_logic 2.939 ;
+gp D[11];
+ap .slack_logic 2.939 ;
+gp D[12];
+ap .slack_logic 2.939 ;
+gp D[13];
+ap .slack_logic 2.939 ;
+gp D[14];
+ap .slack_logic 2.939 ;
+gp D[15];
+ap .slack_logic 2.939 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 0.339 ;
+
+gi counter[0];
+gp C;
+ap .is_clock 1;
+
+gi best_fit_0[15:0];
+gp C;
+ap .is_clock 1;
+
+gi best_fit_prev_gen_0[15:0];
+ai .slack_logic -0.109 ;
+gp Q[0];
+ap .slack_logic -0.109 ;
+gp Q[1];
+ap .slack_logic 0.398 ;
+gp Q[2];
+ap .slack_logic 0.458 ;
+gp Q[3];
+ap .slack_logic 0.518 ;
+gp Q[4];
+ap .slack_logic 0.578 ;
+gp Q[5];
+ap .slack_logic 0.638 ;
+gp Q[6];
+ap .slack_logic 0.698 ;
+gp Q[7];
+ap .slack_logic 0.758 ;
+gp Q[8];
+ap .slack_logic 0.818 ;
+gp Q[9];
+ap .slack_logic 0.878 ;
+gp Q[10];
+ap .slack_logic 0.938 ;
+gp Q[11];
+ap .slack_logic 1.440 ;
+gp Q[12];
+ap .slack_logic 1.500 ;
+gp Q[13];
+ap .slack_logic 1.560 ;
+gp Q[14];
+ap .slack_logic 1.620 ;
+gp Q[15];
+ap .slack_logic 1.680 ;
+gp D[0];
+ap .slack_logic 2.939 ;
+gp D[1];
+ap .slack_logic 2.939 ;
+gp D[2];
+ap .slack_logic 2.939 ;
+gp D[3];
+ap .slack_logic 2.939 ;
+gp D[4];
+ap .slack_logic 2.939 ;
+gp D[5];
+ap .slack_logic 2.939 ;
+gp D[6];
+ap .slack_logic 2.939 ;
+gp D[7];
+ap .slack_logic 2.939 ;
+gp D[8];
+ap .slack_logic 2.939 ;
+gp D[9];
+ap .slack_logic 2.939 ;
+gp D[10];
+ap .slack_logic 2.939 ;
+gp D[11];
+ap .slack_logic 2.939 ;
+gp D[12];
+ap .slack_logic 2.939 ;
+gp D[13];
+ap .slack_logic 2.939 ;
+gp D[14];
+ap .slack_logic 2.939 ;
+gp D[15];
+ap .slack_logic 2.939 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 0.341 ;
+
+gi best_fit_prev_gen_1[15:0];
+gp C;
+ap .is_clock 1;
+
+gi elite_indexs_0[31:0];
+gp C;
+ap .is_clock 1;
+
+gi elite_offs_0[31:0];
+gp C;
+ap .is_clock 1;
+
+gi elite_offs_1[31:0];
+gp C;
+ap .is_clock 1;
+
+gi temp1_1[15:0];
+gp C;
+ap .is_clock 1;
+
+gi temp2_0[15:0];
+ai .slack_logic -1.181 ;
+gp Q[0];
+ap .slack_logic -1.181 ;
+gp Q[1];
+ap .slack_logic -1.159 ;
+gp Q[2];
+ap .slack_logic -1.099 ;
+gp Q[3];
+ap .slack_logic -1.039 ;
+gp Q[4];
+ap .slack_logic -0.979 ;
+gp Q[5];
+ap .slack_logic -0.919 ;
+gp Q[6];
+ap .slack_logic -0.859 ;
+gp Q[7];
+ap .slack_logic -0.799 ;
+gp Q[8];
+ap .slack_logic -0.739 ;
+gp Q[9];
+ap .slack_logic -0.660 ;
+gp Q[10];
+ap .slack_logic -0.600 ;
+gp Q[11];
+ap .slack_logic -0.540 ;
+gp Q[12];
+ap .slack_logic -0.480 ;
+gp Q[13];
+ap .slack_logic -0.420 ;
+gp Q[14];
+ap .slack_logic -0.360 ;
+gp Q[15];
+ap .slack_logic -0.300 ;
+gp D[0];
+ap .slack_logic 4.315 ;
+gp D[1];
+ap .slack_logic 4.315 ;
+gp D[2];
+ap .slack_logic 4.315 ;
+gp D[3];
+ap .slack_logic 4.315 ;
+gp D[4];
+ap .slack_logic 4.315 ;
+gp D[5];
+ap .slack_logic 3.828 ;
+gp D[6];
+ap .slack_logic 3.828 ;
+gp D[7];
+ap .slack_logic 3.828 ;
+gp D[8];
+ap .slack_logic 3.828 ;
+gp D[9];
+ap .slack_logic 4.315 ;
+gp D[10];
+ap .slack_logic 4.315 ;
+gp D[11];
+ap .slack_logic 4.315 ;
+gp D[12];
+ap .slack_logic 4.315 ;
+gp D[13];
+ap .slack_logic 4.315 ;
+gp D[14];
+ap .slack_logic 4.315 ;
+gp D[15];
+ap .slack_logic 4.315 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.335 ;
+
+gi temp_indexs_1_1[31:0];
+gp C;
+ap .is_clock 1;
+
+gi temp_indexs_2_0[31:0];
+ai .slack_logic 3.335 ;
+gp Q[0];
+ap .slack_logic 5.896 ;
+gp Q[1];
+ap .slack_logic 5.896 ;
+gp D[0];
+ap .slack_logic 4.315 ;
+gp D[1];
+ap .slack_logic 4.315 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.335 ;
+
+gi un1_sum_p[18:0];
+ai .slack_logic -0.786 ;
+gp D0[9];
+ap .slack_logic -0.786 ;
+gp D0[10];
+ap .slack_logic -0.284 ;
+gp D0[11];
+ap .slack_logic -0.224 ;
+gp D0[12];
+ap .slack_logic -0.164 ;
+gp D0[13];
+ap .slack_logic -0.104 ;
+gp D0[14];
+ap .slack_logic -0.044 ;
+gp D0[15];
+ap .slack_logic 0.017 ;
+gp D0[16];
+ap .slack_logic 0.730 ;
+
+gi best_fit_1[15:0];
+gp C;
+ap .is_clock 1;
+
+gi elite_indexs_1[31:0];
+gp C;
+ap .is_clock 1;
+
+gi temp2_1[15:0];
+ai .slack_logic -0.644 ;
+gp Q[0];
+ap .slack_logic -0.615 ;
+gp Q[1];
+ap .slack_logic -0.644 ;
+gp Q[2];
+ap .slack_logic -0.584 ;
+gp Q[3];
+ap .slack_logic -0.584 ;
+gp Q[4];
+ap .slack_logic -0.524 ;
+gp Q[5];
+ap .slack_logic -0.524 ;
+gp Q[6];
+ap .slack_logic -0.464 ;
+gp Q[7];
+ap .slack_logic -0.464 ;
+gp Q[8];
+ap .slack_logic -0.404 ;
+gp Q[9];
+ap .slack_logic -0.385 ;
+gp Q[10];
+ap .slack_logic -0.325 ;
+gp Q[11];
+ap .slack_logic -0.325 ;
+gp Q[12];
+ap .slack_logic -0.265 ;
+gp Q[13];
+ap .slack_logic -0.265 ;
+gp Q[14];
+ap .slack_logic -0.205 ;
+gp Q[15];
+ap .slack_logic -0.205 ;
+gp D[0];
+ap .slack_logic 0.039 ;
+gp D[1];
+ap .slack_logic -0.474 ;
+gp D[2];
+ap .slack_logic -0.474 ;
+gp D[3];
+ap .slack_logic -0.474 ;
+gp D[4];
+ap .slack_logic -0.474 ;
+gp D[5];
+ap .slack_logic -0.474 ;
+gp D[6];
+ap .slack_logic -0.474 ;
+gp D[7];
+ap .slack_logic -0.474 ;
+gp D[8];
+ap .slack_logic -0.474 ;
+gp D[9];
+ap .slack_logic 0.039 ;
+gp D[10];
+ap .slack_logic 0.039 ;
+gp D[11];
+ap .slack_logic 0.039 ;
+gp D[12];
+ap .slack_logic 0.039 ;
+gp D[13];
+ap .slack_logic 0.039 ;
+gp D[14];
+ap .slack_logic 0.039 ;
+gp D[15];
+ap .slack_logic 0.039 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.335 ;
+
+gi temp_indexs_2_1[31:0];
+gp C;
+ap .is_clock 1;
+
+gi fit_sum[18:0];
+ai .slack_logic -1.933 ;
+gp Q[0];
+ap .slack_logic -1.396 ;
+gp Q[1];
+ap .slack_logic -1.396 ;
+gp Q[2];
+ap .slack_logic -1.396 ;
+gp Q[3];
+ap .slack_logic -1.396 ;
+gp Q[4];
+ap .slack_logic -1.396 ;
+gp Q[5];
+ap .slack_logic -1.396 ;
+gp Q[6];
+ap .slack_logic -1.396 ;
+gp Q[7];
+ap .slack_logic -1.396 ;
+gp Q[8];
+ap .slack_logic -1.396 ;
+gp Q[9];
+ap .slack_logic -1.396 ;
+gp Q[10];
+ap .slack_logic -1.396 ;
+gp Q[11];
+ap .slack_logic -1.396 ;
+gp Q[12];
+ap .slack_logic -1.396 ;
+gp Q[13];
+ap .slack_logic -1.396 ;
+gp Q[14];
+ap .slack_logic -1.396 ;
+gp Q[15];
+ap .slack_logic -1.396 ;
+gp Q[16];
+ap .slack_logic -1.396 ;
+gp Q[17];
+ap .slack_logic -1.118 ;
+gp D[0];
+ap .slack_logic 1.320 ;
+gp D[1];
+ap .slack_logic -1.333 ;
+gp D[2];
+ap .slack_logic -1.393 ;
+gp D[3];
+ap .slack_logic -1.453 ;
+gp D[4];
+ap .slack_logic -1.513 ;
+gp D[5];
+ap .slack_logic -1.573 ;
+gp D[6];
+ap .slack_logic -1.633 ;
+gp D[7];
+ap .slack_logic -1.693 ;
+gp D[8];
+ap .slack_logic -1.753 ;
+gp D[9];
+ap .slack_logic -1.813 ;
+gp D[10];
+ap .slack_logic -1.873 ;
+gp D[11];
+ap .slack_logic -1.933 ;
+gp D[12];
+ap .slack_logic -1.191 ;
+gp D[13];
+ap .slack_logic -1.251 ;
+gp D[14];
+ap .slack_logic -1.311 ;
+gp D[15];
+ap .slack_logic -1.371 ;
+gp D[16];
+ap .slack_logic -1.431 ;
+gp D[17];
+ap .slack_logic -1.491 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 0.339 ;
+
+gi sum_p[18:0];
+ai .slack_logic -1.933 ;
+gp Q[0];
+ap .slack_logic 1.219 ;
+gp Q[1];
+ap .slack_logic -1.352 ;
+gp Q[2];
+ap .slack_logic -1.254 ;
+gp Q[3];
+ap .slack_logic -1.194 ;
+gp Q[4];
+ap .slack_logic -1.134 ;
+gp Q[5];
+ap .slack_logic -1.074 ;
+gp Q[6];
+ap .slack_logic -1.014 ;
+gp Q[7];
+ap .slack_logic -0.954 ;
+gp Q[8];
+ap .slack_logic -0.894 ;
+gp Q[9];
+ap .slack_logic -0.786 ;
+gp Q[10];
+ap .slack_logic -0.284 ;
+gp Q[11];
+ap .slack_logic -0.224 ;
+gp Q[12];
+ap .slack_logic -0.164 ;
+gp Q[13];
+ap .slack_logic -0.104 ;
+gp Q[14];
+ap .slack_logic -0.044 ;
+gp Q[15];
+ap .slack_logic 0.017 ;
+gp Q[16];
+ap .slack_logic 0.730 ;
+gp D[0];
+ap .slack_logic 1.320 ;
+gp D[1];
+ap .slack_logic -1.333 ;
+gp D[2];
+ap .slack_logic -1.393 ;
+gp D[3];
+ap .slack_logic -1.453 ;
+gp D[4];
+ap .slack_logic -1.513 ;
+gp D[5];
+ap .slack_logic -1.573 ;
+gp D[6];
+ap .slack_logic -1.633 ;
+gp D[7];
+ap .slack_logic -1.693 ;
+gp D[8];
+ap .slack_logic -1.753 ;
+gp D[9];
+ap .slack_logic -1.813 ;
+gp D[10];
+ap .slack_logic -1.873 ;
+gp D[11];
+ap .slack_logic -1.933 ;
+gp D[12];
+ap .slack_logic -1.191 ;
+gp D[13];
+ap .slack_logic -1.251 ;
+gp D[14];
+ap .slack_logic -1.311 ;
+gp D[15];
+ap .slack_logic -1.371 ;
+gp D[16];
+ap .slack_logic -1.431 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.324 ;
+
+d U5;
+
+gi done_t;
+ai .slack_logic 2.080 ;
+gp Q[0];
+ap .slack_logic 2.080 ;
+gp D[0];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+gi scalFitSum_p[22:0];
+ai .slack_logic 3.833 ;
+gp Q[0];
+ap .slack_logic 4.250 ;
+gp Q[1];
+ap .slack_logic 4.250 ;
+gp Q[2];
+ap .slack_logic 4.250 ;
+gp Q[3];
+ap .slack_logic 4.250 ;
+gp Q[4];
+ap .slack_logic 4.250 ;
+gp Q[5];
+ap .slack_logic 4.250 ;
+gp Q[6];
+ap .slack_logic 4.250 ;
+gp Q[7];
+ap .slack_logic 4.250 ;
+gp Q[8];
+ap .slack_logic 4.250 ;
+gp Q[9];
+ap .slack_logic 4.250 ;
+gp Q[10];
+ap .slack_logic 4.250 ;
+gp Q[11];
+ap .slack_logic 4.250 ;
+gp Q[12];
+ap .slack_logic 4.250 ;
+gp Q[13];
+ap .slack_logic 3.833 ;
+gp Q[14];
+ap .slack_logic 3.893 ;
+gp Q[15];
+ap .slack_logic 3.953 ;
+gp Q[16];
+ap .slack_logic 4.013 ;
+gp Q[17];
+ap .slack_logic 4.073 ;
+gp Q[18];
+ap .slack_logic 4.786 ;
+gp Q[19];
+ap .slack_logic 4.250 ;
+gp Q[20];
+ap .slack_logic 4.250 ;
+gp Q[21];
+ap .slack_logic 4.250 ;
+gp Q[22];
+ap .slack_logic 4.250 ;
+gp D[0];
+ap .slack_logic 5.810 ;
+gp D[1];
+ap .slack_logic 5.782 ;
+gp D[2];
+ap .slack_logic 5.782 ;
+gp D[3];
+ap .slack_logic 5.782 ;
+gp D[4];
+ap .slack_logic 5.782 ;
+gp D[5];
+ap .slack_logic 5.782 ;
+gp D[6];
+ap .slack_logic 5.782 ;
+gp D[7];
+ap .slack_logic 5.782 ;
+gp D[8];
+ap .slack_logic 5.782 ;
+gp D[9];
+ap .slack_logic 5.782 ;
+gp D[10];
+ap .slack_logic 5.782 ;
+gp D[11];
+ap .slack_logic 5.782 ;
+gp D[12];
+ap .slack_logic 5.782 ;
+gp D[13];
+ap .slack_logic 5.782 ;
+gp D[14];
+ap .slack_logic 5.782 ;
+gp D[15];
+ap .slack_logic 5.782 ;
+gp D[16];
+ap .slack_logic 5.782 ;
+gp D[17];
+ap .slack_logic 5.782 ;
+gp D[18];
+ap .slack_logic 5.782 ;
+gp D[19];
+ap .slack_logic 5.801 ;
+gp D[20];
+ap .slack_logic 5.801 ;
+gp D[21];
+ap .slack_logic 5.801 ;
+gp D[22];
+ap .slack_logic 5.801 ;
+gp C;
+ap .is_clock 1;
+
+gi count[1:0];
+ai .slack_logic 0.884 ;
+gp Q[0];
+ap .slack_logic 2.071 ;
+gp D[0];
+ap .slack_logic 0.884 ;
+gp C;
+ap .is_clock 1;
+
+gi selParent[7:0];
+ai .slack_logic 3.921 ;
+gp D[6];
+ap .slack_logic 4.310 ;
+gp D[7];
+ap .slack_logic 3.921 ;
+gp C;
+ap .is_clock 1;
+
+gi cumSum_p1[18:0];
+gp C;
+ap .is_clock 1;
+
+gi scalFitSum[22:0];
+ai .slack_logic -2.437 ;
+gp Q[0];
+ap .slack_logic 5.810 ;
+gp Q[1];
+ap .slack_logic 5.782 ;
+gp Q[2];
+ap .slack_logic 5.782 ;
+gp Q[3];
+ap .slack_logic 5.782 ;
+gp Q[4];
+ap .slack_logic 5.782 ;
+gp Q[5];
+ap .slack_logic 5.782 ;
+gp Q[6];
+ap .slack_logic 5.782 ;
+gp Q[7];
+ap .slack_logic 5.782 ;
+gp Q[8];
+ap .slack_logic 5.782 ;
+gp Q[9];
+ap .slack_logic 5.782 ;
+gp Q[10];
+ap .slack_logic 5.782 ;
+gp Q[11];
+ap .slack_logic 5.782 ;
+gp Q[12];
+ap .slack_logic 5.782 ;
+gp Q[13];
+ap .slack_logic 5.782 ;
+gp Q[14];
+ap .slack_logic 5.782 ;
+gp Q[15];
+ap .slack_logic 5.782 ;
+gp Q[16];
+ap .slack_logic 5.782 ;
+gp Q[17];
+ap .slack_logic 5.782 ;
+gp Q[18];
+ap .slack_logic 5.782 ;
+gp Q[19];
+ap .slack_logic 5.801 ;
+gp Q[20];
+ap .slack_logic 5.801 ;
+gp Q[21];
+ap .slack_logic 5.801 ;
+gp Q[22];
+ap .slack_logic 5.801 ;
+gp D[21];
+ap .slack_logic 5.801 ;
+gp D[22];
+ap .slack_logic 4.036 ;
+gp C;
+ap .is_clock 1;
+
+gi done;
+ai .slack_logic 5.682 ;
+gp Q[0];
+ap .slack_logic 5.896 ;
+gp D[0];
+ap .slack_logic 5.682 ;
+gp C;
+ap .is_clock 1;
+
+gi rd_1;
+gp C;
+ap .is_clock 1;
+
+d U6;
+
+gi crossOffspr1[7:0];
+ai .slack_logic 4.033 ;
+gp Q[0];
+ap .slack_logic 4.033 ;
+gp Q[1];
+ap .slack_logic 4.033 ;
+gp Q[2];
+ap .slack_logic 4.033 ;
+gp Q[3];
+ap .slack_logic 4.033 ;
+gp Q[4];
+ap .slack_logic 4.033 ;
+gp Q[5];
+ap .slack_logic 4.033 ;
+gp Q[6];
+ap .slack_logic 4.033 ;
+gp Q[7];
+ap .slack_logic 4.033 ;
+gp D[0];
+ap .slack_logic 5.896 ;
+gp D[1];
+ap .slack_logic 5.896 ;
+gp D[2];
+ap .slack_logic 5.896 ;
+gp D[3];
+ap .slack_logic 5.896 ;
+gp D[4];
+ap .slack_logic 5.896 ;
+gp D[5];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+gi rd;
+ai .slack_logic 0.475 ;
+gp Q[0];
+ap .slack_logic 0.475 ;
+gp D[0];
+ap .slack_logic 0.565 ;
+gp C;
+ap .is_clock 1;
+
+gi crossout1[7:0];
+ai .slack_logic -4.012 ;
+gp Q[0];
+ap .slack_logic 5.896 ;
+gp Q[1];
+ap .slack_logic 5.896 ;
+gp Q[2];
+ap .slack_logic 5.896 ;
+gp Q[3];
+ap .slack_logic 5.896 ;
+gp Q[4];
+ap .slack_logic 5.896 ;
+gp Q[5];
+ap .slack_logic 5.896 ;
+gp Q[6];
+ap .slack_logic 5.896 ;
+gp Q[7];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic -3.755 ;
+gp C;
+ap .is_clock 1;
+
+d U7;
+
+gi un10_clk;
+ai .slack_logic 3.861 ;
+gp I1[0];
+ap .slack_logic 3.861 ;
+
+gi done_p;
+ai .slack_logic 5.848 ;
+gp Q[0];
+ap .slack_logic 5.896 ;
+gp D[0];
+ap .slack_logic 5.848 ;
+gp C;
+ap .is_clock 1;
+
+gi mask[0];
+gp C;
+ap .is_clock 1;
+
+gi done;
+ai .slack_logic 3.861 ;
+gp Q[0];
+ap .slack_logic 3.861 ;
+gp D[0];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+gi maskUnif[7:0];
+gp C;
+ap .is_clock 1;
+
+gi count[3:0];
+ai .slack_logic 1.004 ;
+gp Q[0];
+ap .slack_logic 1.004 ;
+gp Q[1];
+ap .slack_logic 1.009 ;
+gp Q[2];
+ap .slack_logic 1.023 ;
+gp Q[3];
+ap .slack_logic 1.042 ;
+gp D[0];
+ap .slack_logic 2.031 ;
+gp D[1];
+ap .slack_logic 2.031 ;
+gp D[2];
+ap .slack_logic 2.031 ;
+gp D[3];
+ap .slack_logic 2.031 ;
+gp C;
+ap .is_clock 1;
+
+gi inGene_mut[7:0];
+gp C;
+ap .is_clock 1;
+
+gi mutout[7:0];
+gp C;
+ap .is_clock 1;
+
+gi mutout_p1[7:0];
+ai .slack_logic 4.033 ;
+gp Q[0];
+ap .slack_logic 4.033 ;
+gp Q[1];
+ap .slack_logic 4.033 ;
+gp Q[2];
+ap .slack_logic 4.033 ;
+gp Q[3];
+ap .slack_logic 4.033 ;
+gp Q[4];
+ap .slack_logic 4.033 ;
+gp Q[5];
+ap .slack_logic 4.033 ;
+gp Q[6];
+ap .slack_logic 4.033 ;
+gp Q[7];
+ap .slack_logic 4.033 ;
+gp D[0];
+ap .slack_logic 5.896 ;
+gp D[1];
+ap .slack_logic 5.896 ;
+gp D[2];
+ap .slack_logic 5.896 ;
+gp D[3];
+ap .slack_logic 5.896 ;
+gp D[4];
+ap .slack_logic 5.896 ;
+gp D[5];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+d U8;
+
+gi rd;
+ai .slack_logic 5.896 ;
+gp Q[0];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+gi fitlim_rd;
+ai .slack_logic 4.432 ;
+gp Q[0];
+ap .slack_logic 5.571 ;
+gp D[0];
+ap .slack_logic 4.432 ;
+gp C;
+ap .is_clock 1;
+
+d U9;
+
+gi data_out_cl[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_1[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_2[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_3[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_4[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_5[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_6[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_7[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_8[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_9[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_10[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_11[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_12[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_13[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_14[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_15[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_16[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_17[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_18[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_19[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_20[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_21[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_22[23];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_23[23];
+gp C;
+ap .is_clock 1;
+
+gi data_0_3[23:0];
+ai .slack_logic 4.396 ;
+gp A[1];
+ap .slack_logic 4.396 ;
+gp A[2];
+ap .slack_logic 4.396 ;
+gp A[3];
+ap .slack_logic 4.396 ;
+gp A[4];
+ap .slack_logic 4.396 ;
+gp A[5];
+ap .slack_logic 4.396 ;
+gp A[6];
+ap .slack_logic 4.396 ;
+gp A[7];
+ap .slack_logic 4.396 ;
+gp A[8];
+ap .slack_logic 4.396 ;
+
+gi data_out_1[0];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[1];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[2];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[3];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[4];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[5];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[6];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[8];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[9];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[10];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[11];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[12];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[13];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[14];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[15];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[16];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[17];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[18];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[19];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[20];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[21];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[22];
+gp C;
+ap .is_clock 1;
+
+gi data_out_1[23];
+gp C;
+ap .is_clock 1;
+
+gi data_0[23:0];
+ai .slack_logic -1.980 ;
+gp Q[16];
+ap .slack_logic 5.896 ;
+gp Q[17];
+ap .slack_logic 5.896 ;
+gp Q[18];
+ap .slack_logic 5.896 ;
+gp Q[19];
+ap .slack_logic 5.896 ;
+gp Q[20];
+ap .slack_logic 5.896 ;
+gp Q[21];
+ap .slack_logic 5.896 ;
+gp Q[22];
+ap .slack_logic 5.896 ;
+gp Q[23];
+ap .slack_logic 5.896 ;
+gp D[16];
+ap .slack_logic 2.484 ;
+gp D[17];
+ap .slack_logic 2.484 ;
+gp D[18];
+ap .slack_logic 2.484 ;
+gp D[19];
+ap .slack_logic 2.484 ;
+gp D[20];
+ap .slack_logic 2.484 ;
+gp D[21];
+ap .slack_logic 2.484 ;
+gp D[22];
+ap .slack_logic 2.484 ;
+gp D[23];
+ap .slack_logic 2.484 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.980 ;
+
+gi data_1[23:0];
+ai .slack_logic -1.980 ;
+gp Q[16];
+ap .slack_logic 5.896 ;
+gp Q[17];
+ap .slack_logic 5.896 ;
+gp Q[18];
+ap .slack_logic 5.896 ;
+gp Q[19];
+ap .slack_logic 5.896 ;
+gp Q[20];
+ap .slack_logic 5.896 ;
+gp Q[21];
+ap .slack_logic 5.896 ;
+gp Q[22];
+ap .slack_logic 5.896 ;
+gp Q[23];
+ap .slack_logic 5.896 ;
+gp D[16];
+ap .slack_logic 2.484 ;
+gp D[17];
+ap .slack_logic 2.484 ;
+gp D[18];
+ap .slack_logic 2.484 ;
+gp D[19];
+ap .slack_logic 2.484 ;
+gp D[20];
+ap .slack_logic 2.484 ;
+gp D[21];
+ap .slack_logic 2.484 ;
+gp D[22];
+ap .slack_logic 2.484 ;
+gp D[23];
+ap .slack_logic 2.484 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.980 ;
+
+gi data_2[23:0];
+ai .slack_logic -1.980 ;
+gp Q[16];
+ap .slack_logic 5.896 ;
+gp Q[17];
+ap .slack_logic 5.896 ;
+gp Q[18];
+ap .slack_logic 5.896 ;
+gp Q[19];
+ap .slack_logic 5.896 ;
+gp Q[20];
+ap .slack_logic 5.896 ;
+gp Q[21];
+ap .slack_logic 5.896 ;
+gp Q[22];
+ap .slack_logic 5.896 ;
+gp Q[23];
+ap .slack_logic 5.896 ;
+gp D[16];
+ap .slack_logic 2.484 ;
+gp D[17];
+ap .slack_logic 2.484 ;
+gp D[18];
+ap .slack_logic 2.484 ;
+gp D[19];
+ap .slack_logic 2.484 ;
+gp D[20];
+ap .slack_logic 2.484 ;
+gp D[21];
+ap .slack_logic 2.484 ;
+gp D[22];
+ap .slack_logic 2.484 ;
+gp D[23];
+ap .slack_logic 2.484 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.980 ;
+
+gi data_3[23:0];
+ai .slack_logic -1.980 ;
+gp Q[16];
+ap .slack_logic 5.896 ;
+gp Q[17];
+ap .slack_logic 5.896 ;
+gp Q[18];
+ap .slack_logic 5.896 ;
+gp Q[19];
+ap .slack_logic 5.896 ;
+gp Q[20];
+ap .slack_logic 5.896 ;
+gp Q[21];
+ap .slack_logic 5.896 ;
+gp Q[22];
+ap .slack_logic 5.896 ;
+gp Q[23];
+ap .slack_logic 5.896 ;
+gp D[16];
+ap .slack_logic 2.484 ;
+gp D[17];
+ap .slack_logic 2.484 ;
+gp D[18];
+ap .slack_logic 2.484 ;
+gp D[19];
+ap .slack_logic 2.484 ;
+gp D[20];
+ap .slack_logic 2.484 ;
+gp D[21];
+ap .slack_logic 2.484 ;
+gp D[22];
+ap .slack_logic 2.484 ;
+gp D[23];
+ap .slack_logic 2.484 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.980 ;
+
+d U10;
+
+gi data_out_cl[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_1[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_2[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_3[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_4[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_5[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_6[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cl_7[7];
+gp C;
+ap .is_clock 1;
+
+gi data_out_2_1[7:0];
+ai .slack_logic 4.959 ;
+gp D0[1];
+ap .slack_logic 5.016 ;
+gp D0[3];
+ap .slack_logic 5.016 ;
+gp D0[4];
+ap .slack_logic 5.016 ;
+gp D0[5];
+ap .slack_logic 5.016 ;
+gp D0[6];
+ap .slack_logic 5.016 ;
+gp D0[7];
+ap .slack_logic 5.016 ;
+gp D0[8];
+ap .slack_logic 5.016 ;
+gp D1[2];
+ap .slack_logic 5.016 ;
+gp D1[3];
+ap .slack_logic 5.016 ;
+gp D1[4];
+ap .slack_logic 5.016 ;
+gp D1[5];
+ap .slack_logic 5.016 ;
+gp D1[6];
+ap .slack_logic 5.016 ;
+gp D2[1];
+ap .slack_logic 4.959 ;
+gp D2[6];
+ap .slack_logic 4.959 ;
+gp D2[7];
+ap .slack_logic 4.959 ;
+gp D3[1];
+ap .slack_logic 4.959 ;
+gp D3[3];
+ap .slack_logic 4.959 ;
+gp D3[4];
+ap .slack_logic 4.959 ;
+gp D3[6];
+ap .slack_logic 4.959 ;
+gp D3[7];
+ap .slack_logic 4.959 ;
+gp D3[8];
+ap .slack_logic 4.959 ;
+gp D4[2];
+ap .slack_logic 5.016 ;
+gp D5[1];
+ap .slack_logic 5.016 ;
+gp D5[7];
+ap .slack_logic 5.016 ;
+gp D5[8];
+ap .slack_logic 5.016 ;
+gp D6[2];
+ap .slack_logic 4.959 ;
+gp D6[3];
+ap .slack_logic 4.959 ;
+gp D6[4];
+ap .slack_logic 4.959 ;
+gp D6[5];
+ap .slack_logic 4.959 ;
+gp D6[8];
+ap .slack_logic 4.959 ;
+gp D7[2];
+ap .slack_logic 4.959 ;
+gp D7[5];
+ap .slack_logic 4.959 ;
+
+gi data_out_1[0];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+gi data_out_1[1];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+gi data_out_1[2];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+gi data_out_1[3];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+gi data_out_1[4];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+gi data_out_1[5];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+gi data_out_1[6];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+gi data_0[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 5.016 ;
+gp Q[1];
+ap .slack_logic 5.016 ;
+gp Q[2];
+ap .slack_logic 5.016 ;
+gp Q[3];
+ap .slack_logic 5.016 ;
+gp Q[4];
+ap .slack_logic 5.016 ;
+gp Q[5];
+ap .slack_logic 5.016 ;
+gp Q[6];
+ap .slack_logic 5.016 ;
+gp Q[7];
+ap .slack_logic 5.016 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_1[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 5.016 ;
+gp Q[1];
+ap .slack_logic 5.016 ;
+gp Q[2];
+ap .slack_logic 5.016 ;
+gp Q[3];
+ap .slack_logic 5.016 ;
+gp Q[4];
+ap .slack_logic 5.016 ;
+gp Q[5];
+ap .slack_logic 5.016 ;
+gp Q[6];
+ap .slack_logic 5.016 ;
+gp Q[7];
+ap .slack_logic 5.016 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_2[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 4.959 ;
+gp Q[1];
+ap .slack_logic 4.959 ;
+gp Q[2];
+ap .slack_logic 4.959 ;
+gp Q[3];
+ap .slack_logic 4.959 ;
+gp Q[4];
+ap .slack_logic 4.959 ;
+gp Q[5];
+ap .slack_logic 4.959 ;
+gp Q[6];
+ap .slack_logic 4.959 ;
+gp Q[7];
+ap .slack_logic 4.959 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_3[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 4.959 ;
+gp Q[1];
+ap .slack_logic 4.959 ;
+gp Q[2];
+ap .slack_logic 4.959 ;
+gp Q[3];
+ap .slack_logic 4.959 ;
+gp Q[4];
+ap .slack_logic 4.959 ;
+gp Q[5];
+ap .slack_logic 4.959 ;
+gp Q[6];
+ap .slack_logic 4.959 ;
+gp Q[7];
+ap .slack_logic 4.959 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_4[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 5.016 ;
+gp Q[1];
+ap .slack_logic 5.016 ;
+gp Q[2];
+ap .slack_logic 5.016 ;
+gp Q[3];
+ap .slack_logic 5.016 ;
+gp Q[4];
+ap .slack_logic 5.016 ;
+gp Q[5];
+ap .slack_logic 5.016 ;
+gp Q[6];
+ap .slack_logic 5.016 ;
+gp Q[7];
+ap .slack_logic 5.016 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_5[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 5.016 ;
+gp Q[1];
+ap .slack_logic 5.016 ;
+gp Q[2];
+ap .slack_logic 5.016 ;
+gp Q[3];
+ap .slack_logic 5.016 ;
+gp Q[4];
+ap .slack_logic 5.016 ;
+gp Q[5];
+ap .slack_logic 5.016 ;
+gp Q[6];
+ap .slack_logic 5.016 ;
+gp Q[7];
+ap .slack_logic 5.016 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_6[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 4.959 ;
+gp Q[1];
+ap .slack_logic 4.959 ;
+gp Q[2];
+ap .slack_logic 4.959 ;
+gp Q[3];
+ap .slack_logic 4.959 ;
+gp Q[4];
+ap .slack_logic 4.959 ;
+gp Q[5];
+ap .slack_logic 4.959 ;
+gp Q[6];
+ap .slack_logic 4.959 ;
+gp Q[7];
+ap .slack_logic 4.959 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_7[7:0];
+ai .slack_logic -1.520 ;
+gp Q[0];
+ap .slack_logic 4.959 ;
+gp Q[1];
+ap .slack_logic 4.959 ;
+gp Q[2];
+ap .slack_logic 4.959 ;
+gp Q[3];
+ap .slack_logic 4.959 ;
+gp Q[4];
+ap .slack_logic 4.959 ;
+gp Q[5];
+ap .slack_logic 4.959 ;
+gp Q[6];
+ap .slack_logic 4.959 ;
+gp Q[7];
+ap .slack_logic 4.959 ;
+gp D[0];
+ap .slack_logic 2.422 ;
+gp D[1];
+ap .slack_logic 2.422 ;
+gp D[2];
+ap .slack_logic 2.422 ;
+gp D[3];
+ap .slack_logic 2.422 ;
+gp D[4];
+ap .slack_logic 2.422 ;
+gp D[5];
+ap .slack_logic 2.422 ;
+gp D[6];
+ap .slack_logic 2.422 ;
+gp D[7];
+ap .slack_logic 2.422 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic -1.520 ;
+
+gi data_out_1[7];
+ai .slack_logic -0.208 ;
+gp Q[0];
+ap .slack_logic 5.848 ;
+gp D[0];
+ap .slack_logic -0.208 ;
+gp C;
+ap .is_clock 1;
+gp E;
+ap .slack_logic 3.478 ;
+
+d U11;
+
+gi term_rd_p1;
+ai .slack_logic 0.711 ;
+gp Q[0];
+ap .slack_logic 0.711 ;
+gp D[0];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+gi data_out_cross1[7:0];
+ai .slack_logic -0.447 ;
+gp Q[0];
+ap .slack_logic 3.273 ;
+gp Q[1];
+ap .slack_logic 0.929 ;
+gp Q[2];
+ap .slack_logic -0.447 ;
+gp Q[3];
+ap .slack_logic 0.483 ;
+gp Q[4];
+ap .slack_logic 3.624 ;
+gp Q[5];
+ap .slack_logic 2.700 ;
+gp Q[6];
+ap .slack_logic 2.657 ;
+gp Q[7];
+ap .slack_logic 2.657 ;
+gp D[0];
+ap .slack_logic 5.896 ;
+gp D[1];
+ap .slack_logic 5.896 ;
+gp D[2];
+ap .slack_logic 5.896 ;
+gp D[3];
+ap .slack_logic 5.896 ;
+gp D[4];
+ap .slack_logic 5.896 ;
+gp D[5];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+gi data_out_cross2[7:0];
+ai .slack_logic -0.447 ;
+gp Q[0];
+ap .slack_logic 3.273 ;
+gp Q[1];
+ap .slack_logic 0.929 ;
+gp Q[2];
+ap .slack_logic -0.447 ;
+gp Q[3];
+ap .slack_logic 0.483 ;
+gp Q[4];
+ap .slack_logic 3.624 ;
+gp Q[5];
+ap .slack_logic 2.700 ;
+gp Q[6];
+ap .slack_logic 2.657 ;
+gp Q[7];
+ap .slack_logic 2.657 ;
+gp D[0];
+ap .slack_logic 5.896 ;
+gp D[1];
+ap .slack_logic 5.896 ;
+gp D[2];
+ap .slack_logic 5.896 ;
+gp D[3];
+ap .slack_logic 5.896 ;
+gp D[4];
+ap .slack_logic 5.896 ;
+gp D[5];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic 5.896 ;
+gp C;
+ap .is_clock 1;
+
+gi sreg[0:7];
+ai .slack_logic -1.943 ;
+gp I[22];
+ap .slack_logic 0.711 ;
+gp C;
+ap .is_clock 1;
+
+gi notify_cnt_p[0:5];
+gp C;
+ap .is_clock 1;
+
+gi index_1[3:0];
+ai .slack_logic 1.825 ;
+gp D[2];
+ap .slack_logic 2.707 ;
+gp D[3];
+ap .slack_logic 5.748 ;
+gp C;
+ap .is_clock 1;
+
+gi index_1[4];
+ai .slack_logic 1.825 ;
+gp Q[0];
+ap .slack_logic 1.825 ;
+gp C;
+ap .is_clock 1;
+
+gi count_offs_p1[2:0];
+gp C;
+ap .is_clock 1;
+
+gi data_out_cross1_p1[7:0];
+ai .slack_logic 5.848 ;
+gp Q[0];
+ap .slack_logic 5.896 ;
+gp Q[1];
+ap .slack_logic 5.896 ;
+gp Q[2];
+ap .slack_logic 5.896 ;
+gp Q[3];
+ap .slack_logic 5.896 ;
+gp Q[4];
+ap .slack_logic 5.896 ;
+gp Q[5];
+ap .slack_logic 5.896 ;
+gp Q[6];
+ap .slack_logic 5.896 ;
+gp Q[7];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic 5.848 ;
+gp C;
+ap .is_clock 1;
+
+gi data_out_cross2_p1[7:0];
+ai .slack_logic 5.848 ;
+gp Q[0];
+ap .slack_logic 5.896 ;
+gp Q[1];
+ap .slack_logic 5.896 ;
+gp Q[2];
+ap .slack_logic 5.896 ;
+gp Q[3];
+ap .slack_logic 5.896 ;
+gp Q[4];
+ap .slack_logic 5.896 ;
+gp Q[5];
+ap .slack_logic 5.896 ;
+gp Q[6];
+ap .slack_logic 5.896 ;
+gp Q[7];
+ap .slack_logic 5.896 ;
+gp D[6];
+ap .slack_logic 5.896 ;
+gp D[7];
+ap .slack_logic 5.848 ;
+gp C;
+ap .is_clock 1;
+
+gi decode;
+ai .slack_logic -1.933 ;
+gp Q[0];
+ap .slack_logic -1.933 ;
+gp D[0];
+ap .slack_logic 3.038 ;
+gp C;
+ap .is_clock 1;
+
+gi addr_2_1[4:0];
+ai .slack_logic 0.426 ;
+gp D1[2];
+ap .slack_logic 0.426 ;
+
+gi count_parents_p1[4:0];
+ai .slack_logic 0.142 ;
+gp Q[0];
+ap .slack_logic 1.018 ;
+gp Q[1];
+ap .slack_logic 0.426 ;
+gp Q[2];
+ap .slack_logic 1.090 ;
+gp Q[3];
+ap .slack_logic 1.246 ;
+gp Q[4];
+ap .slack_logic 1.959 ;
+gp D[0];
+ap .slack_logic 3.587 ;
+gp D[1];
+ap .slack_logic 2.874 ;
+gp D[2];
+ap .slack_logic 2.814 ;
+gp D[3];
+ap .slack_logic 2.754 ;
+gp D[4];
+ap .slack_logic 2.694 ;
+gp C;
+ap .is_clock 1;
+
+gi count_sel_wr_p1[4:0];
+gp C;
+ap .is_clock 1;
+
+gi count_sel_rd_p1[4:0];
+gp C;
+ap .is_clock 1;
+
+gi count_cross_offs_p1[2:0];
+gp C;
+ap .is_clock 1;
+
+d U16;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.2.ilatency.0.idin.intern_0[2];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.3.ilatency.0.idin.intern_0[3];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.4.ilatency.0.idin.intern_0[4];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.5.ilatency.0.idin.intern_0[5];
+gp C;
+ap .is_clock 1;
+
+d U17;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.2.ilatency.0.idin.intern_0[2];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.3.ilatency.0.idin.intern_0[3];
+gp C;
+ap .is_clock 1;
+
+n work ga str;
+
+gi fit_limit_reach;
+gp C;
+ap .is_clock 1;
+
+gi ga_fin;
+gp C;
+ap .is_clock 1;
+
+gi run_ga;
+gp C;
+ap .is_clock 1;
+av syn_information_type logic;
+
+d U19;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+d U18;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+d U15;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.2.ilatency.0.idin.intern_0[2];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.3.ilatency.0.idin.intern_0[3];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.4.ilatency.0.idin.intern_0[4];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.5.ilatency.0.idin.intern_0[5];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.6.ilatency.0.idin.intern_0[6];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.7.ilatency.0.idin.intern_0[7];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.8.ilatency.0.idin.intern_0[8];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.9.ilatency.0.idin.intern_0[9];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.10.ilatency.0.idin.intern_0[10];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.11.ilatency.0.idin.intern_0[11];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.12.ilatency.0.idin.intern_0[12];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.13.ilatency.0.idin.intern_0[13];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.14.ilatency.0.idin.intern_0[14];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.15.ilatency.0.idin.intern_0[15];
+gp C;
+ap .is_clock 1;
+
+d U13;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.2.ilatency.0.idin.intern_0[2];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.3.ilatency.0.idin.intern_0[3];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.4.ilatency.0.idin.intern_0[4];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.5.ilatency.0.idin.intern_0[5];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.6.ilatency.0.idin.intern_0[6];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.7.ilatency.0.idin.intern_0[7];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.8.ilatency.0.idin.intern_0[8];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.9.ilatency.0.idin.intern_0[9];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.10.ilatency.0.idin.intern_0[10];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.11.ilatency.0.idin.intern_0[11];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.12.ilatency.0.idin.intern_0[12];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.13.ilatency.0.idin.intern_0[13];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.14.ilatency.0.idin.intern_0[14];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.15.ilatency.0.idin.intern_0[15];
+gp C;
+ap .is_clock 1;
+
+d U14;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.2.ilatency.0.idin.intern_0[2];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.3.ilatency.0.idin.intern_0[3];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.4.ilatency.0.idin.intern_0[4];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.5.ilatency.0.idin.intern_0[5];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.6.ilatency.0.idin.intern_0[6];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.7.ilatency.0.idin.intern_0[7];
+gp C;
+ap .is_clock 1;
+
+d U12;
+
+gi case1.iwidth.0.ilatency.0.idin.intern_0[0];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.1.ilatency.0.idin.intern_0[1];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.2.ilatency.0.idin.intern_0[2];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.3.ilatency.0.idin.intern_0[3];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.4.ilatency.0.idin.intern_0[4];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.5.ilatency.0.idin.intern_0[5];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.6.ilatency.0.idin.intern_0[6];
+gp C;
+ap .is_clock 1;
+
+gi case1.iwidth.7.ilatency.0.idin.intern_0[7];
+gp C;
+ap .is_clock 1;

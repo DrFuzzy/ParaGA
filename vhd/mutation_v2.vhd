@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 2006-11-02
+-- Last update: 2006-11-06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -60,13 +60,13 @@ architecture rtl of mutation_v2 is
   constant WeirdTRUE : std_logic_vector(1 downto 0)                := "01";
   --signal mask       : std_logic_vector(genom_lngt-1 downto 0):= (others=>'0');
   --signal maskUnif   : std_logic_vector(genom_lngt-1 downto 0):= (others=>'0');
-  signal   mutout    : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal   mutout_p1 : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal mutout      : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal mutout_p1   : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
   --signal inGene_mut : std_logic_vector(genom_lngt-1 downto 0):= (others=>'0');
   --signal rng1     : std_logic_vector(mut_res-1 downto 0):= (others=>'0');
-  signal   count     : std_logic_vector(log2(genom_lngt) downto 0) := (others => '0');  -- count'length = log2(genom_lngt)+1
-  signal   done      : std_logic                                   := '0';
-  signal   done_p    : std_logic                                   := '0';
+  signal count       : std_logic_vector(log2(genom_lngt) downto 0) := (others => '0');  -- count'length = log2(genom_lngt)+1
+  signal done        : std_logic                                   := '0';
+  signal done_p      : std_logic                                   := '0';
 
 
 begin
@@ -99,91 +99,90 @@ begin
   mutation_v2 : process (mutMethod, mutPoint, rng, inGene, mutout_p1, count, cont, flag, done_p)
   begin
 
-  case done_p is
-  
-  when '0' => 
-    case cont is
+    case done_p is
       
-      when '1' =>                       -- mutation block enabled
-        
-          case mutMethod is
+      when '0' =>
+        case cont is
           
-          when "00" =>                  -- one Point mutation 
-
-            --mask <= ext(WeirdTRUE, genom_lngt); -- initial mask creation
-            --inGene_mut <= inGene xor shl(mask, mutPoint);
-            if rng(mut_res-1 downto 0) > conv_std_logic_vector(mr, mut_res) then
-              mutout <= inGene;
-              done   <= '1';
-            else
-              mutout <= inGene xor shl(ext(WeirdTRUE, genom_lngt), mutPoint);
-              done   <= '1';
-            end if;
-
-            --maskUnif <= (others=>'0');
+          when '1' =>                   -- mutation block enabled
             
-          when "01" =>                  -- XOR (masked) mutation
+            case mutMethod is
+              
+              when "00" =>              -- one Point mutation 
 
-            --inGene_mut <= inGene xor rng(genom_lngt+mut_res-1 downto mut_res);        
-            if rng(mut_res-1 downto 0) > conv_std_logic_vector(mr, mut_res) then
-              mutout <= inGene;
-              done   <= '1';
-            else
-              mutout <= inGene xor rng(genom_lngt+mut_res-1 downto mut_res);
-              done   <= '1';
-            end if;
+                --mask <= ext(WeirdTRUE, genom_lngt); -- initial mask creation
+                --inGene_mut <= inGene xor shl(mask, mutPoint);
+                if rng(mut_res-1 downto 0) > conv_std_logic_vector(mr, mut_res) then
+                  mutout <= inGene;
+                  done   <= '1';
+                else
+                  mutout <= inGene xor shl(ext(WeirdTRUE, genom_lngt), mutPoint);
+                  done   <= '1';
+                end if;
 
-            --maskUnif <= (others=>'0');
-            --mask <= (others=>'0');
-            
-          when "10" =>                  -- uniform mutation
+                --maskUnif <= (others=>'0');
+                
+              when "01" =>              -- XOR (masked) mutation
 
-            --mask <= ext(WeirdTRUE, genom_lngt);
-            --maskUnif <= shl(mask, count);
+                --inGene_mut <= inGene xor rng(genom_lngt+mut_res-1 downto mut_res);        
+                if rng(mut_res-1 downto 0) > conv_std_logic_vector(mr, mut_res) then
+                  mutout <= inGene;
+                  done   <= '1';
+                else
+                  mutout <= inGene xor rng(genom_lngt+mut_res-1 downto mut_res);
+                  done   <= '1';
+                end if;
 
-            if rng(mut_res-1 downto 0) < conv_std_logic_vector(mr, mut_res) and count = ext("00", count'length) then
-              mutout <= inGene xor shl(ext(WeirdTRUE, genom_lngt), count);
-            elsif rng(mut_res-1 downto 0) < conv_std_logic_vector(mr, mut_res) and count /= ext("00", count'length) then
-              mutout <= mutout_p1 xor shl(ext(WeirdTRUE, genom_lngt), count);
-            elsif rng(mut_res-1 downto 0) >= conv_std_logic_vector(mr, mut_res) and count = ext("00", count'length) then
-              mutout <= inGene;
-            else
-              mutout <= mutout_p1;
-            end if;
+                --maskUnif <= (others=>'0');
+                --mask <= (others=>'0');
+                
+              when "10" =>              -- uniform mutation
 
-            if count = conv_std_logic_vector(genom_lngt, log2(genom_lngt)+1)-1 then
-              done <= '1';
-            else
+                --mask <= ext(WeirdTRUE, genom_lngt);
+                --maskUnif <= shl(mask, count);
+
+                if rng(mut_res-1 downto 0) < conv_std_logic_vector(mr, mut_res) and count = ext("00", count'length) then
+                  mutout <= inGene xor shl(ext(WeirdTRUE, genom_lngt), count);
+                elsif rng(mut_res-1 downto 0) < conv_std_logic_vector(mr, mut_res) and count /= ext("00", count'length) then
+                  mutout <= mutout_p1 xor shl(ext(WeirdTRUE, genom_lngt), count);
+                elsif rng(mut_res-1 downto 0) >= conv_std_logic_vector(mr, mut_res) and count = ext("00", count'length) then
+                  mutout <= inGene;
+                else
+                  mutout <= mutout_p1;
+                end if;
+
+                if count = conv_std_logic_vector(genom_lngt, log2(genom_lngt)+1)-1 then
+                  done <= '1';
+                else
+                  done <= '0';
+                end if;
+
+              when others =>
+                mutout <= mutout_p1;
+                done   <= '0';
+            end case;
+
+
+          when '0' =>                   -- mutation block disabled   
+            mutout <= mutout_p1;
+            if flag = '1' then
               done <= '0';
+            else
+              done <= done_p;
             end if;
 
           when others =>
-            mutout <= mutout_p1;
-            done   <= '0';
+
         end case;
-
-
-      when '0' =>                       -- mutation block disabled   
+        
+        
+      when '1' =>
         mutout <= mutout_p1;
-        if flag = '1' then
-          done <= '0';
-        else
-          done <= done_p;
-        end if;
-
+        done   <= done_p;
+        
       when others =>
-
+        
     end case;
-  
-  
-  when '1' => 
-   
-	mutout <= mutout_p1;
-	done<=done_p;
-  
-  when others =>
-  
-  end case;
   end process mutation_v2;
 
 end rtl;

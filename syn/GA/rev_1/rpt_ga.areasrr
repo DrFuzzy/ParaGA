@@ -1,0 +1,1133 @@
+#### START OF AREA REPORT #####[
+
+Part:			XC3S1500FG676-4 (Xilinx)
+
+------------------------------------------------------------------
+########   Utilization report for  Top level view:   ga   ########
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     908                100 %                
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga:	908 (35.17 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     1217               100 %                
+MUXCY                    113                100 %                
+XORCY                    35                 100 %                
+MULT18x18/MULT18x18S     1                  100 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga:	1366 (52.90 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     59                 100 %                
+=================================================
+Total IO PADS in the block ga:	59 (2.29 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   control_v5   ########
+Instance path:   ga.control_v5                                  
+================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     148                16.3 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.control_v5:	148 (5.73 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     345                28.3 %               
+MUXCY                    38                 33.6 %               
+XORCY                    7                  20. %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.control_v5:	390 (15.10 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.control_v5:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.control_v5:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   crossover_v2   ########
+Instance path:   ga.crossover_v2                                  
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     48                 5.29 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.crossover_v2:	48 (1.86 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     75                 6.16 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.crossover_v2:	75 (2.90 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.crossover_v2:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.crossover_v2:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ0   ########
+Instance path:   ga.delay_regsZ0                                  
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     2                  0.220 %              
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0:	2 (0.08 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ0:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ0_1   ########
+Instance path:   ga.delay_regsZ0_1                                  
+====================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     2                  0.220 %              
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0_1:	2 (0.08 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ0_1:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ0_1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ0_1:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ1   ########
+Instance path:   ga.delay_regsZ1                                  
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     4                  0.4410 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ1:	4 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ1:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ1:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ2   ########
+Instance path:   ga.delay_regsZ2                                  
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     6                  0.6610 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ2:	6 (0.23 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ2:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ2:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ2:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ3   ########
+Instance path:   ga.delay_regsZ3                                  
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     16                 1.76 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ3:	16 (0.62 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ3:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ3:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ3:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ4   ########
+Instance path:   ga.delay_regsZ4                                  
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  0.8810 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ4:	8 (0.31 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ4:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ4:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ4:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ4_1   ########
+Instance path:   ga.delay_regsZ4_1                                  
+====================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  0.8810 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ4_1:	8 (0.31 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ4_1:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ4_1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ4_1:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ4_2   ########
+Instance path:   ga.delay_regsZ4_2                                  
+====================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  0.8810 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ4_2:	8 (0.31 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.delay_regsZ4_2:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.delay_regsZ4_2:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.delay_regsZ4_2:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   fit_eval_ga   ########
+Instance path:   ga.fit_eval_ga                                  
+=================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     284                31.3 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.fit_eval_ga:	284 (11.00 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     309                25.4 %               
+MUXCY                    49                 43.4 %               
+XORCY                    19                 54.3 %               
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.fit_eval_ga:	377 (14.60 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.fit_eval_ga:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.fit_eval_ga:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   fit_calc   ########
+Instance path:   fit_eval_ga.fit_calc                         
+==============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     9                  0.9910 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block fit_eval_ga.fit_calc:	9 (0.35 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     9                  0.740 %              
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block fit_eval_ga.fit_calc:	9 (0.35 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block fit_eval_ga.fit_calc:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block fit_eval_ga.fit_calc:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   fix_elite   ########
+Instance path:   fit_eval_ga.fix_elite                         
+===============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     275                30.3 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block fit_eval_ga.fix_elite:	275 (10.65 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     300                24.7 %               
+MUXCY                    49                 43.4 %               
+XORCY                    19                 54.3 %               
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block fit_eval_ga.fix_elite:	368 (14.25 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block fit_eval_ga.fix_elite:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block fit_eval_ga.fix_elite:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   mutation_v2   ########
+Instance path:   ga.mutation_v2                                  
+=================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     52                 5.73 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.mutation_v2:	52 (2.01 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     61                 5.01 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.mutation_v2:	61 (2.36 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.mutation_v2:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.mutation_v2:	0 (0.00 % Utilization)
+
+---------------------------------------------------------
+########   Utilization report for  cell:   obs   ########
+Instance path:   ga.obs                                  
+=========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     2                  0.220 %              
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.obs:	2 (0.08 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     2                  0.1640 %             
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.obs:	2 (0.08 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.obs:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.obs:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------
+########   Utilization report for  cell:   rngZ0   ########
+Instance path:   ga.rngZ0                                  
+===========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  0.8810 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ0:	8 (0.31 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     26                 2.14 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.rngZ0:	26 (1.01 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.rngZ0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.rngZ0:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------
+########   Utilization report for  cell:   rngZ1   ########
+Instance path:   ga.rngZ1                                  
+===========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     12                 1.32 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ1:	12 (0.46 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     39                 3.2 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.rngZ1:	39 (1.51 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.rngZ1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.rngZ1:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------
+########   Utilization report for  cell:   rngZ2   ########
+Instance path:   ga.rngZ2                                  
+===========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     32                 3.52 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ2:	32 (1.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     104                8.55 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.rngZ2:	104 (4.03 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.rngZ2:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.rngZ2:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------
+########   Utilization report for  cell:   rngZ3   ########
+Instance path:   ga.rngZ3                                  
+===========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     16                 1.76 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ3:	16 (0.62 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     53                 4.35 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.rngZ3:	53 (2.05 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.rngZ3:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.rngZ3:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   selection   ########
+Instance path:   ga.selection                                  
+===============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     41                 4.52 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.selection:	41 (1.59 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     50                 4.11 %               
+MUXCY                    26                 23. %                
+XORCY                    9                  25.7 %               
+MULT18x18/MULT18x18S     1                  100 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.selection:	86 (3.33 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.selection:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.selection:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   spram1Z0   ########
+Instance path:   ga.spram1Z0                                  
+==============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     136                15. %                
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.spram1Z0:	136 (5.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     96                 7.89 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.spram1Z0:	96 (3.72 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.spram1Z0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.spram1Z0:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   spram1Z1   ########
+Instance path:   ga.spram1Z1                                  
+==============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     72                 7.93 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga.spram1Z1:	72 (2.79 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     52                 4.27 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga.spram1Z1:	52 (2.01 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga.spram1Z1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga.spram1Z1:	0 (0.00 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 06/04/06
--- Last update: 2006-11-02
+-- Last update: 2006-11-06
 -- Platform   : Modelsim, Synplify, ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -211,7 +211,7 @@ begin
           elsif count_offs_p1+incr_p1 /= elite_offs(i) and i = elite-1 then
             incr        <= incr_p1;
             cnt_adapted <= '1';
-          else 
+          else
             incr        <= incr_p1;
             cnt_adapted <= '0';
           end if;
@@ -232,24 +232,24 @@ begin
     next_sreg <= fill_ram_s;
     case sreg is
       when clear_ram_s =>
-        next_generation    <= '0';
-        dummy_cnt_adapt    <= '0';
+        next_generation  <= '0';
+        dummy_cnt_adapt  <= '0';
         --Counters
-        count_offs         <= 0;
-        count_parents      <= 0;
-        count_sel_wr       <= 0;
-        count_sel_rd       <= 0;
-        count_cross_offs   <= 0;
-        count_gen          <= 0;
+        count_offs       <= 0;
+        count_parents    <= 0;
+        count_sel_wr     <= 0;
+        count_sel_rd     <= 0;
+        count_cross_offs <= 0;
+        count_gen        <= 0;
         -- Outputs
-        cross_out_c        <= '0';
-        mut_out_c          <= '0';
-        sel_out_c          <= '0';
+        cross_out_c      <= '0';
+        mut_out_c        <= '0';
+        sel_out_c        <= '0';
         case term_rd_p1 is
           when '1' =>
-             term_out_c <= '1';
-          when '0' => 
-             term_out_c <= '0';
+            term_out_c <= '1';
+          when '0' =>
+            term_out_c <= '0';
           when others =>
         end case;
         run1_c             <= '0';
@@ -266,33 +266,31 @@ begin
         index_c            <= 0;
         data_out_cross1_p1 <= (others => '0');
         data_out_cross2_p1 <= (others => '0');
-        case run_ga is 
-          when  '1' =>
-          next_sreg    <= fill_ram_s;
-          run_c        <= '1';
-          clear_c      <= '1';
-          --term_out_c   <= '0';
-          load_c       <= '1';
-          elite_null_c <= '1';
-          addr_1_c     <= 0;
-          ga_fin_r     <= '0';
-          notify_cnt   <= 0;
-          when  '0' =>
-          next_sreg    <= clear_ram_s;
-          run_c        <= '0';
-          clear_c      <= '0';
-          --term_out_c   <= '1';
-          load_c       <= '0';
-          elite_null_c <= '0';
-          addr_1_c     <= elite_offs(0);
-          if notify_cnt_p = 1 then
-            ga_fin_r   <= '1';
-            notify_cnt <= 1;
-          else
-            ga_fin_r   <= '0';
-            notify_cnt <= 0;
-          end if;
-        when others => -- empty
+        case run_ga is
+          when '1' =>
+            next_sreg    <= fill_ram_s;
+            run_c        <= '1';
+            clear_c      <= '1';
+            load_c       <= '1';
+            elite_null_c <= '1';
+            addr_1_c     <= 0;
+            ga_fin_r     <= '0';
+            notify_cnt   <= 0;
+          when '0' =>
+            next_sreg    <= clear_ram_s;
+            run_c        <= '0';
+            clear_c      <= '0';
+            load_c       <= '0';
+            elite_null_c <= '0';
+            addr_1_c     <= elite_offs(0);
+            if notify_cnt_p = 1 then
+              ga_fin_r   <= '1';
+              notify_cnt <= 1;
+            else
+              ga_fin_r   <= '0';
+              notify_cnt <= 0;
+            end if;
+          when others =>                -- empty
         end case;
 
       when fill_ram_s =>
@@ -621,20 +619,20 @@ begin
         data_out_cross1_p1 <= (others => '0');
         data_out_cross2_p1 <= (others => '0');
         index_c            <= 0;
-        case sel_rd is 
-        when '1' => 
-          next_sreg    <= read_write_ram_2_s;
-          count_sel_rd <= 0;
-          we2_c        <= '1';
-          addr_2_c     <= count_sel_wr_p1;
-          addr_1_c     <= count_sel_rd_p1;
-        when '0' =>       -- new gene is needed to be read from ram1 
-          next_sreg    <= read_write_ram_1_s;
-          count_sel_rd <= count_sel_rd_p1;
-          we2_c        <= '0';
-          addr_1_c     <= count_sel_rd_p1;
-          addr_2_c     <= count_sel_wr_p1;
-        when others => -- empty
+        case sel_rd is
+          when '1' =>
+            next_sreg    <= read_write_ram_2_s;
+            count_sel_rd <= 0;
+            we2_c        <= '1';
+            addr_2_c     <= count_sel_wr_p1;
+            addr_1_c     <= count_sel_rd_p1;
+          when '0' =>             -- new gene is needed to be read from ram1 
+            next_sreg    <= read_write_ram_1_s;
+            count_sel_rd <= count_sel_rd_p1;
+            we2_c        <= '0';
+            addr_1_c     <= count_sel_rd_p1;
+            addr_2_c     <= count_sel_wr_p1;
+          when others =>                -- empty
         end case;
         
       when read_write_ram_2_s =>
@@ -703,7 +701,7 @@ begin
           run3_c             <= '0';
           addr_1_c           <= count_sel_rd_p1;
           addr_2_c           <= count_parents_p1;
-          data_out_cross1_p1 <= (others => '0'); --data_in_ram2;
+          data_out_cross1_p1 <= (others => '0');  --data_in_ram2;
           data_out_cross2_p1 <= (others => '0');
         elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 2) then
           next_sreg          <= read_write_ram_2_s;
@@ -713,16 +711,16 @@ begin
           count_cross_offs   <= count_cross_offs_p1 + 1;
           cross_out_c        <= '0';
           sel_out_c          <= '1';
-          run1_c             <= '0'; -- changed
-          run2_c             <= '0'; -- changed
+          run1_c             <= '0';    -- changed
+          run2_c             <= '0';    -- changed
           run3_c             <= '0';
           addr_1_c           <= count_sel_rd_p1;
           addr_2_c           <= count_parents_p1;
           --data_out_cross1_p1 <= temp1;
           --data_out_cross2_p1 <= data_in_ram2;
           data_out_cross1_p1 <= data_in_ram2;
-          data_out_cross2_p1 <= (others=> '0');
-        elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 3) then -- new if statement
+          data_out_cross2_p1 <= (others => '0');
+        elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 3) then  -- new if statement
           next_sreg          <= read_write_ram_2_s;
           count_sel_wr       <= count_sel_wr_p1;
           notify_cnt         <= 7;
@@ -731,7 +729,7 @@ begin
           cross_out_c        <= '0';
           sel_out_c          <= '1';
           run1_c             <= '1';
-          run2_c             <= '1';  
+          run2_c             <= '1';
           run3_c             <= '0';
           addr_1_c           <= count_sel_rd_p1;
           addr_2_c           <= count_parents_p1;
@@ -745,7 +743,7 @@ begin
           count_cross_offs   <= count_cross_offs_p1;
           cross_out_c        <= '1';
           sel_out_c          <= '0';
-          run1_c             <= '0'; -- changed
+          run1_c             <= '0';    -- changed
           run2_c             <= '0';
           run3_c             <= '0';
           addr_1_c           <= count_sel_rd_p1;
@@ -770,26 +768,26 @@ begin
         end if;
         
       when cross_s =>
-        notify_cnt         <= 0;
-        dummy_cnt_adapt    <= '0';
-        next_generation    <= '0';
+        notify_cnt       <= 0;
+        dummy_cnt_adapt  <= '0';
+        next_generation  <= '0';
         -- Counters
-        count_offs         <= count_offs_p1;
-        count_parents      <= count_parents_p1;
-        count_sel_wr       <= count_sel_wr_p1;
-        count_cross_offs   <= 0;
-        count_gen          <= count_gen_p1;
-        count_sel_rd       <= count_sel_rd_p1;
+        count_offs       <= count_offs_p1;
+        count_parents    <= count_parents_p1;
+        count_sel_wr     <= count_sel_wr_p1;
+        count_cross_offs <= 0;
+        count_gen        <= count_gen_p1;
+        count_sel_rd     <= count_sel_rd_p1;
         -- Outputs 
-        run_c              <= '0';
-        clear_c            <= '0';
-        sel_out_c          <= '0';
-        term_out_c         <= '0';
+        run_c            <= '0';
+        clear_c          <= '0';
+        sel_out_c        <= '0';
+        term_out_c       <= '0';
         if mut_method = "10" then
           run1_c <= '1';
         else
           run1_c <= '0';
-        end if;       
+        end if;
         run2_c             <= '0';
         run3_c             <= '0';
         load_c             <= '0';
@@ -807,17 +805,17 @@ begin
         data_out_cross1_p1 <= temp1;
         data_out_cross2_p1 <= temp2;
         index_c            <= 0;
-        case cross_rd is 
-        when '1' =>        -- crossover ready
-          next_sreg   <= mut_s;
-          cross_out_c <= '0';
-          mut_out_c   <= '1';
-	when '0' => 
-          next_sreg   <= cross_s;
-          cross_out_c <= '1';
-          mut_out_c   <= '0';
+        case cross_rd is
+          when '1' =>                   -- crossover ready
+            next_sreg   <= mut_s;
+            cross_out_c <= '0';
+            mut_out_c   <= '1';
+          when '0' =>
+            next_sreg   <= cross_s;
+            cross_out_c <= '1';
+            mut_out_c   <= '0';
           --run1_c      <= '0';
-        when others => 
+          when others =>
         end case;
         
       when mut_s =>

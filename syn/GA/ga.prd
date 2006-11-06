@@ -1,0 +1,24 @@
+#-- Synplicity, Inc.
+#-- Version Synplify Pro 8.5.1
+#-- Project file D:\Designs\GA_eval\syn\GA\ga.prd
+#-- Written on Mon Nov 06 14:48:50 2006
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear { ga Register bits (Non I/O) } {  clk - Estimated Frequency } {  clk - Requested Frequency } {  clk - Slack } { ga Total Luts } { ga I/O Register bits } { ga I/O primitives }
+
+#HDL Parameters
+set_option -hdl_param -add genom_lngt ga
+set_option -hdl_param -add score_sz ga
+set_option -hdl_param -add scaling_factor_res ga
+set_option -hdl_param -add pop_sz ga
+set_option -hdl_param -add elite ga
+set_option -hdl_param -add mr ga
+set_option -hdl_param -add mut_res ga
+set_option -hdl_param -add fit_limit ga
+set_option -hdl_param -add max_gen ga

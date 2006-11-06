@@ -1,0 +1,1343 @@
+<html>
+<body><samp><pre>
+<!@TC:1162818279>
+#Build: Synplify Pro 8.5.1, Build 001R, Mar  7 2006
+#install: C:\EDA\Synplicity\fpga_85
+#OS: Windows XP 5.1
+#Hostname: GEORGEDOYAMIS
+
+#Mon Nov 06 15:04:39 2006
+
+<a name=compilerReport56>$ Start of Compile
+#Mon Nov 06 15:04:39 2006
+
+Synplicity VHDL Compiler, version 3.4.1, Build 137R, built Apr  7 2006
+Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
+
+@I:: "D:\Designs\GA_eval\vhd\arith_pkg.vhd"
+@I:: "D:\Designs\GA_eval\vhd\dhga_pkg.vhd"
+@I:: "D:\Designs\GA_eval\vhd\delay_regs.vhd"
+@I:: "D:\Designs\GA_eval\vhd\control_v5.vhd"
+@I:: "D:\Designs\GA_eval\vhd\crossover_v2.vhd"
+@I:: "D:\Designs\GA_eval\vhd\fit_calc.vhd"
+@I:: "D:\Designs\GA_eval\vhd\fit_eval_elite3.vhd"
+@I:: "D:\Designs\GA_eval\vhd\fix_elite.vhd"
+@I:: "D:\Designs\GA_eval\vhd\mutation_v2.vhd"
+@I:: "D:\Designs\GA_eval\vhd\obs.vhd"
+@I:: "D:\Designs\GA_eval\vhd\rng.vhd"
+@I:: "D:\Designs\GA_eval\vhd\selection.vhd"
+@I:: "D:\Designs\GA_eval\vhd\spram1.vhd"
+@I:: "D:\Designs\GA_eval\vhd\top_fit_eval.vhd"
+@I:: "D:\Designs\GA_eval\vhd\top.vhd"
+@N: : <!@TM:1162818279> | Setting default value for generic genom_lngt to 8; 
+@N: : <!@TM:1162818279> | Setting default value for generic score_sz to 8; 
+@N: : <!@TM:1162818279> | Setting default value for generic scaling_factor_res to 4; 
+@N: : <!@TM:1162818279> | Setting default value for generic pop_sz to 8; 
+@N: : <!@TM:1162818279> | Setting default value for generic elite to 2; 
+@N: : <!@TM:1162818279> | Setting default value for generic mr to 150; 
+@N: : <!@TM:1162818279> | Setting default value for generic mut_res to 8; 
+@N: : <!@TM:1162818279> | Setting default value for generic fit_limit to 510; 
+@N: : <!@TM:1162818279> | Setting default value for generic max_gen to 100; 
+VHDL syntax check successful!
+File D:\Designs\GA_eval\syn\GA\rev_1\syntmp\hdlparams.dat changed - recompiling
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\top.vhd:35:7:35:9:@N:CD630:@XP_MSG">top.vhd(35)</a><!@TM:1162818287> | Synthesizing work.ga.str 
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\delay_regs.vhd:33:7:33:17:@N:CD630:@XP_MSG">delay_regs.vhd(33)</a><!@TM:1162818287> | Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\delay_regs.vhd:33:7:33:17:@N:CD630:@XP_MSG">delay_regs.vhd(33)</a><!@TM:1162818287> | Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\delay_regs.vhd:33:7:33:17:@N:CD630:@XP_MSG">delay_regs.vhd(33)</a><!@TM:1162818287> | Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\delay_regs.vhd:33:7:33:17:@N:CD630:@XP_MSG">delay_regs.vhd(33)</a><!@TM:1162818287> | Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\delay_regs.vhd:33:7:33:17:@N:CD630:@XP_MSG">delay_regs.vhd(33)</a><!@TM:1162818287> | Synthesizing work.delay_regs.rtl 
+Post processing for work.delay_regs.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:37:7:37:17:@N:CD630:@XP_MSG">control_v5.vhd(37)</a><!@TM:1162818287> | Synthesizing work.control_v5.rtl 
+@N:<a href="@N:CD231:@XP_HELP">CD231</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:88:17:88:19:@N:CD231:@XP_MSG">control_v5.vhd(88)</a><!@TM:1162818287> | Using onehot encoding for type type_sreg (clear_ram_s="100000000")
+Post processing for work.control_v5.rtl
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:158:4:158:6:@W:CL169:@XP_MSG">control_v5.vhd(158)</a><!@TM:1162818287> | Pruning Register mut_rd_p1  </font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(4) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(5) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(6) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(7) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(8) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(9) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(10) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(11) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(12) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(13) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(14) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(15) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(16) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(17) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(18) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(19) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(20) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(21) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(22) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(23) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(24) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(25) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(26) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(27) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(28) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(29) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(30) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL111:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to cnt_parents(31) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 4 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 5 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 6 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 7 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 8 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 9 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 10 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 11 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 12 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 13 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 14 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 15 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 16 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 17 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 18 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 19 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 20 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 21 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 22 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 23 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 24 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 25 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 26 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 27 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 28 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 29 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 30 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL208:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | All reachable assignments to bit 31 of cnt_parents(31 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(4) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(5) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(6) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(7) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(8) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(9) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(10) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(11) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(12) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(13) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(14) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(15) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(16) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(17) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(18) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(19) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(20) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(21) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(22) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(23) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(24) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(25) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(26) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(27) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(28) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(29) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(30) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL190:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Optimizing register bit addr_2(31) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <31> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <30> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <29> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <28> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <27> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <26> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <25> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <24> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <23> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <22> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <21> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <20> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <19> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <18> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <17> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <16> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <15> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <14> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <13> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <12> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <11> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <10> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <9> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <8> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <7> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <6> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <5> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <4> of addr_2(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <31> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <30> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <29> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <28> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <27> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <26> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <25> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <24> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <23> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <22> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <21> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <20> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <19> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <18> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <17> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <16> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <15> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <14> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <13> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <12> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <11> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <10> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <9> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <8> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <7> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <6> of index(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL189:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Register bit index(5) is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:CL171:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Pruning Register bit <5> of index(5 downto 0)  </font>
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:158:4:158:6:@N:CL201:@XP_MSG">control_v5.vhd(158)</a><!@TM:1162818287> | Trying to extract state machine for register notify_cnt_p
+Extracted state machine for register notify_cnt_p
+State machine has 8 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0101
+   0110
+   0111
+   1000
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:149:4:149:6:@N:CL201:@XP_MSG">control_v5.vhd(149)</a><!@TM:1162818287> | Trying to extract state machine for register sreg
+Extracted state machine for register sreg
+State machine has 9 reachable states with original encodings of:
+   000000001
+   000000010
+   000000100
+   000001000
+   000010000
+   000100000
+   001000000
+   010000000
+   100000000
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:33:7:33:13:@N:CD630:@XP_MSG">spram1.vhd(33)</a><!@TM:1162818287> | Synthesizing work.spram1.rtl 
+Post processing for work.spram1.rtl
+<font color=#A52A2A>@W:<a href="@W:CL209:@XP_HELP">CL209</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:40:4:40:7:@W:CL209:@XP_MSG">spram1.vhd(40)</a><!@TM:1162818287> | Input port bit <4> of add(4 downto 0) is unused </font>
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:33:7:33:13:@N:CD630:@XP_MSG">spram1.vhd(33)</a><!@TM:1162818287> | Synthesizing work.spram1.rtl 
+Post processing for work.spram1.rtl
+<font color=#A52A2A>@W:<a href="@W:CL209:@XP_HELP">CL209</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:40:4:40:7:@W:CL209:@XP_MSG">spram1.vhd(40)</a><!@TM:1162818287> | Input port bit <3> of add(3 downto 0) is unused </font>
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\obs.vhd:37:7:37:10:@N:CD630:@XP_MSG">obs.vhd(37)</a><!@TM:1162818287> | Synthesizing work.obs.rtl 
+Post processing for work.obs.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:37:7:37:18:@N:CD630:@XP_MSG">mutation_v2.vhd(37)</a><!@TM:1162818287> | Synthesizing work.mutation_v2.rtl 
+Post processing for work.mutation_v2.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\crossover_v2.vhd:36:7:36:19:@N:CD630:@XP_MSG">crossover_v2.vhd(36)</a><!@TM:1162818287> | Synthesizing work.crossover_v2.rtl 
+Post processing for work.crossover_v2.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\selection.vhd:36:7:36:16:@N:CD630:@XP_MSG">selection.vhd(36)</a><!@TM:1162818287> | Synthesizing work.selection.rtl 
+Post processing for work.selection.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\top_fit_eval.vhd:35:7:35:18:@N:CD630:@XP_MSG">top_fit_eval.vhd(35)</a><!@TM:1162818287> | Synthesizing work.fit_eval_ga.str 
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:37:7:37:16:@N:CD630:@XP_MSG">fix_elite.vhd(37)</a><!@TM:1162818287> | Synthesizing work.fix_elite.rtl 
+Post processing for work.fix_elite.rtl
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:CL169:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Pruning Register temp_indexs_1_0(31 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:CL169:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Pruning Register temp1_0(7 downto 0)  </font>
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@N:CL201:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Trying to extract state machine for register count_cycle
+Extracted state machine for register count_cycle
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:37:7:37:15:@N:CD630:@XP_MSG">fit_calc.vhd(37)</a><!@TM:1162818287> | Synthesizing work.fit_calc.rtl 
+Post processing for work.fit_calc.rtl
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL190:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Optimizing register bit temp(0) to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <0> of temp(15 downto 0)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <14> of temp(15 downto 1)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <13> of temp(15 downto 1)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <12> of temp(15 downto 1)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <11> of temp(15 downto 1)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <10> of temp(15 downto 1)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <9> of temp(15 downto 1)  </font>
+<font color=#A52A2A>@W:<a href="@W:CL171:@XP_HELP">CL171</a> : <a href="d:\designs\ga_eval\vhd\fit_calc.vhd:72:4:72:6:@W:CL171:@XP_MSG">fit_calc.vhd(72)</a><!@TM:1162818287> | Pruning Register bit <8> of temp(15 downto 1)  </font>
+Post processing for work.fit_eval_ga.str
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:40:7:40:10:@N:CD630:@XP_MSG">rng.vhd(40)</a><!@TM:1162818287> | Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <31> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <30> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <29> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <28> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <27> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <26> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <25> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <24> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <23> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <22> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <21> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <20> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <19> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <18> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <17> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <16> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <15> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <14> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <13> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <12> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <11> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <10> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <9> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <8> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <7> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <6> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <5> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <4> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <3> of LFSR.taps_array_4_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL113:@XP_HELP">CL113</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL113:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Feedback mux created for signal lfsr_reg[3:0].</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_4(1) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_4(2) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 1 of taps_array_4(2 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 2 of taps_array_4(2 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL212:@XP_HELP">CL212</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL212:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Register taps_array_4(0) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... </font>
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:40:7:40:10:@N:CD630:@XP_MSG">rng.vhd(40)</a><!@TM:1162818287> | Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <31> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <30> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <29> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <28> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <27> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <26> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <25> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <24> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <23> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <22> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <21> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <20> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <19> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <18> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <17> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <16> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <15> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <14> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <13> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <12> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <11> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <10> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <9> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <8> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <7> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <6> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <5> of LFSR.taps_array_6_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL113:@XP_HELP">CL113</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL113:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Feedback mux created for signal lfsr_reg[5:0].</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_6(1) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_6(2) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_6(3) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_6(4) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 1 of taps_array_6(4 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 2 of taps_array_6(4 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 3 of taps_array_6(4 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 4 of taps_array_6(4 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL212:@XP_HELP">CL212</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL212:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Register taps_array_6(0) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... </font>
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:40:7:40:10:@N:CD630:@XP_MSG">rng.vhd(40)</a><!@TM:1162818287> | Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <31> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <30> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <29> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <28> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <27> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <26> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <25> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <24> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <23> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <22> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <21> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <20> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <19> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <18> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <17> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <16> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <15> of LFSR.taps_array_16_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL113:@XP_HELP">CL113</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL113:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Feedback mux created for signal lfsr_reg[15:0].</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(0) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(3) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(5) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(6) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(7) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(8) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(9) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(10) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(11) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(12) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(13) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_16(14) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 0 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 3 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 5 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 6 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 7 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 8 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 9 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 10 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 11 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 12 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 13 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 14 of taps_array_16(14 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL212:@XP_HELP">CL212</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL212:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Register taps_array_16(4) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL212:@XP_HELP">CL212</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL212:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Register taps_array_16(2 downto 1) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... </font>
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:40:7:40:10:@N:CD630:@XP_MSG">rng.vhd(40)</a><!@TM:1162818287> | Synthesizing work.rng.rtl 
+Post processing for work.rng.rtl
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <31> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <30> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <29> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <28> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <27> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <26> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <25> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <24> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <23> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <22> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <21> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <20> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <19> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <18> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <17> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <16> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <15> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <14> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <13> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <12> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <11> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <10> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <9> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <8> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL170:@XP_HELP">CL170</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL170:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Pruning bit <7> of LFSR.taps_array_8_1(31 downto 0) - not in use ... </font>
+<font color=#A52A2A>@W:<a href="@W:CL113:@XP_HELP">CL113</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL113:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Feedback mux created for signal lfsr_reg[7:0].</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_8(0) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_8(4) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_8(5) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL111:@XP_HELP">CL111</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL111:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to taps_array_8(6) assign '0', register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 0 of taps_array_8(6 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 4 of taps_array_8(6 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 5 of taps_array_8(6 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL208:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | All reachable assignments to bit 6 of taps_array_8(6 downto 0) assign 0, register removed by optimization</font>
+<font color=#A52A2A>@W:<a href="@W:CL212:@XP_HELP">CL212</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@W:CL212:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Register taps_array_8(3 downto 1) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... </font>
+Post processing for work.ga.str
+@END
+Process took 0h:00m:07s realtime, 0h:00m:07s cputime
+# Mon Nov 06 15:04:47 2006
+
+###########################################################[
+<a name=mapperReport57>Synplicity Xilinx Technology Mapper, Version 8.5.0.p, Build 022R, Built Apr  7 2006
+Copyright (C) 1994-2006, Synplicity Inc.  All Rights Reserved
+Version 8.5.1
+Reading constraint file: D:\Designs\GA_eval\syn\GA\ga.sdc
+Adding property syn_reference_clock1, value "clk,r=0.0,f=4.16666666666,u=0.0,p=8.33333333333,clockgroup=default_clkgroup_0,rd=0.0,fd=0.0,v=0" to view:work.ga(str)
+Adding property syn_useioff, value 1 to view:work.ga(str)
+Adding property syn_multstyle, value "block_mult" to view:work.ga(str)
+Adding property syn_netlist_hierarchy, value 1 to view:work.ga(str)
+Reading constraint file: D:\Designs\GA_eval\syn\GA\rev_1\top_fsm.sdc
+@N: : <!@TM:1162818287> | Using encoding styles selected by FSM Explorer. 
+Data created on Sat Oct 28 18:37:04 2006
+@N:<a href="@N:MF249:@XP_HELP">MF249</a> : <!@TM:1162818287> | Running in 32-bit mode. 
+@N: : <!@TM:1162818287> | Gated clock conversion enabled  
+Adding property syn_clock, value "rise_offset=0.0,fall_offset=0.0,rs=0.0,fs=0.0,improve=0.0,route=0.0,rref=clk:r,fref=clk:f", to port clk
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[7]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[6]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[5]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[4]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[3]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[2]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[1]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[0]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[5]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[4]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[3]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[2]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[1]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[0]
+Reading Xilinx I/O pad type table from file &ltC:\EDA\Synplicity\fpga_85\lib/xilinx/x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file &ltC:\EDA\Synplicity\fpga_85\lib/xilinx/gttype.txt> 
+
+
+Automatic dissolve at startup in view:work.fit_eval_ga(str) of U0(fit_calc)
+Automatic dissolve at startup in view:work.ga(str) of U19(delay_regsZ0)
+Automatic dissolve at startup in view:work.ga(str) of U18(delay_regsZ0)
+Automatic dissolve at startup in view:work.ga(str) of U17(delay_regsZ1)
+Automatic dissolve at startup in view:work.ga(str) of U16(delay_regsZ2)
+Automatic dissolve at startup in view:work.ga(str) of U15(delay_regsZ3)
+Automatic dissolve at startup in view:work.ga(str) of U14(delay_regsZ4)
+Automatic dissolve at startup in view:work.ga(str) of U13(delay_regsZ4)
+Automatic dissolve at startup in view:work.ga(str) of U12(delay_regsZ4)
+Automatic dissolve at startup in view:work.ga(str) of U8(obs)
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN132:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.temp_indexs_1_1[31:0],  because it is equivalent to instance U4.U1.temp_indexs_2_0[31:0]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN132:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.temp1_1[7:0],  because it is equivalent to instance U4.U1.temp2_0[7:0]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_14[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_13[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_12[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_11[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_10[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_9[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_8[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_7[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_6[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_5[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_4[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_3[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_2[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_1[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl[15],  because it is equivalent to instance U9.data_out_cl_15[15]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl_6[7],  because it is equivalent to instance U10.data_out_cl_7[7]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl_5[7],  because it is equivalent to instance U10.data_out_cl_7[7]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl_4[7],  because it is equivalent to instance U10.data_out_cl_7[7]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl_3[7],  because it is equivalent to instance U10.data_out_cl_7[7]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl_2[7],  because it is equivalent to instance U10.data_out_cl_7[7]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl_1[7],  because it is equivalent to instance U10.data_out_cl_7[7]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl[7],  because it is equivalent to instance U10.data_out_cl_7[7]</font>
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[7]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[6]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[5]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[4]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[3]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[2]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[1]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[0]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[5]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[4]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[3]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[2]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[1]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[0]
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\crossover_v2.vhd:68:70:68:73:@W:BN116:@XP_MSG">crossover_v2.vhd(68)</a><!@TM:1162818287> | Removing sequential instance crossout1_t[7:0] of view:PrimLib.dffre(prim) because there are no references to its outputs </font>
+NRtlRetiming done on crossout1_t[7:0]
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <!@TM:1162818287> | Removing sequential instance done_t of view:PrimLib.dffre(prim) because there are no references to its outputs </font> 
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <!@TM:1162818287> | Removing sequential instance cumSum_p1[10:0] of view:PrimLib.dffre(prim) because there are no references to its outputs </font> 
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <!@TM:1162818287> | Removing sequential instance temp_rd of view:PrimLib.dffr(prim) because there are no references to its outputs </font> 
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\selection.vhd:75:4:75:6:@W:BN116:@XP_MSG">selection.vhd(75)</a><!@TM:1162818287> | Removing sequential instance selParent_p[7:0] of view:PrimLib.dffre(prim) because there are no references to its outputs </font>
+NRtlRetiming done on selParent_p[7:0]
+RTL optimization done.
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[7]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[6]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[5]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[4]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[3]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[2]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[1]
+Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[0]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[5]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[4]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[3]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[2]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[1]
+Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[0]
+
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 33MB peak: 33MB)
+Encoding state machine work.fix_elite(rtl)-count_cycle[0:3]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N:<a href="@N:MF179:@XP_HELP">MF179</a> : <a href="d:\designs\ga_eval\vhd\selection.vhd:122:35:122:57:@N:MF179:@XP_MSG">selection.vhd(122)</a><!@TM:1162818287> | Found 15 bit by 15 bit '==' comparator, 'selection.un17_data_valid'
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\selection.vhd:75:4:75:6:@W:BN132:@XP_MSG">selection.vhd(75)</a><!@TM:1162818287> | Removing instance U5.scalFitSum_p[13],  because it is equivalent to instance U5.scalFitSum_p[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\selection.vhd:75:4:75:6:@W:BN132:@XP_MSG">selection.vhd(75)</a><!@TM:1162818287> | Removing instance U5.scalFitSum_p[12],  because it is equivalent to instance U5.scalFitSum_p[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\selection.vhd:75:4:75:6:@W:BN132:@XP_MSG">selection.vhd(75)</a><!@TM:1162818287> | Removing instance U5.scalFitSum_p[11],  because it is equivalent to instance U5.scalFitSum_p[14]</font>
+Encoding state machine work.control_v5(rtl)-notify_cnt_p[0:7]
+original code -> new code
+   0000 -> 00000001
+   0001 -> 00000010
+   0010 -> 00000100
+   0011 -> 00001000
+   0101 -> 00010000
+   0110 -> 00100000
+   0111 -> 01000000
+   1000 -> 10000000
+Encoding state machine work.control_v5(rtl)-sreg[0:8]
+original code -> new code
+   000000001 -> 000000001
+   000000010 -> 000000010
+   000000100 -> 000000100
+   000001000 -> 000001000
+   000010000 -> 000010000
+   000100000 -> 000100000
+   001000000 -> 001000000
+   010000000 -> 010000000
+   100000000 -> 100000000
+@N: : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:158:4:158:6:@N::@XP_MSG">control_v5.vhd(158)</a><!@TM:1162818287> | Found counter in view:work.control_v5(rtl) inst count_gen_p1[6:0]
+@N:<a href="@N:MF179:@XP_HELP">MF179</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:207:13:207:50:@N:MF179:@XP_MSG">control_v5.vhd(207)</a><!@TM:1162818287> | Found 32 bit by 32 bit '==' comparator, 'loop1.un20_dummy_cnt_adapt'
+@N:<a href="@N:MF179:@XP_HELP">MF179</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:207:13:207:50:@N:MF179:@XP_MSG">control_v5.vhd(207)</a><!@TM:1162818287> | Found 32 bit by 32 bit '==' comparator, 'loop0.un7_dummy_cnt_adapt'
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\selection.vhd:75:4:75:6:@W:BN116:@XP_MSG">selection.vhd(75)</a><!@TM:1162818287> | Removing sequential instance scalFitSum_p[14] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+Automatic dissolve during optimization of view:work.crossover_v2(rtl) of un1_mask(PM_RSH__8_8_3_11111111_xc3s1500)
+Automatic dissolve during optimization of view:work.mutation_v2(rtl) of mutation_v2.un18_mutout(PM_LSH__8_8_4_10000000_xc3s1500)
+Automatic dissolve during optimization of view:work.mutation_v2(rtl) of mutation_v2.un3_mutout(PM_LSH__8_8_3_10000000_xc3s1500)
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_0[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_2[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_3[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_4[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_5[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_6[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance data_7[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+Automatic dissolve during optimization of view:work.ga(str) of U4(fit_eval_ga)
+Auto Dissolve of U9 (inst of view:work.spram1Z1(rtl))
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_7[7],  because it is equivalent to instance U9.data_7[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_6[7],  because it is equivalent to instance U9.data_6[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_7[6],  because it is equivalent to instance U9.data_7[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_5[7],  because it is equivalent to instance U9.data_5[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_6[6],  because it is equivalent to instance U9.data_6[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_7[5],  because it is equivalent to instance U9.data_7[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_4[7],  because it is equivalent to instance U9.data_4[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_5[6],  because it is equivalent to instance U9.data_5[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_6[5],  because it is equivalent to instance U9.data_6[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_7[4],  because it is equivalent to instance U9.data_7[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_3[7],  because it is equivalent to instance U9.data_3[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_4[6],  because it is equivalent to instance U9.data_4[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_5[5],  because it is equivalent to instance U9.data_5[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_6[4],  because it is equivalent to instance U9.data_6[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_7[3],  because it is equivalent to instance U9.data_7[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_2[7],  because it is equivalent to instance U9.data_2[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_3[6],  because it is equivalent to instance U9.data_3[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_4[5],  because it is equivalent to instance U9.data_4[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_5[4],  because it is equivalent to instance U9.data_5[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_6[3],  because it is equivalent to instance U9.data_6[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_7[2],  because it is equivalent to instance U9.data_7[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_1[7],  because it is equivalent to instance U9.data_1[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_2[6],  because it is equivalent to instance U9.data_2[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_3[5],  because it is equivalent to instance U9.data_3[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_4[4],  because it is equivalent to instance U9.data_4[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_5[3],  because it is equivalent to instance U9.data_5[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_6[2],  because it is equivalent to instance U9.data_6[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_7[1],  because it is equivalent to instance U9.data_7[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_0[7],  because it is equivalent to instance U9.data_0[14]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_1[6],  because it is equivalent to instance U9.data_1[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_2[5],  because it is equivalent to instance U9.data_2[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_3[4],  because it is equivalent to instance U9.data_3[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_4[3],  because it is equivalent to instance U9.data_4[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_5[2],  because it is equivalent to instance U9.data_5[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_6[1],  because it is equivalent to instance U9.data_6[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_0[6],  because it is equivalent to instance U9.data_0[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_1[5],  because it is equivalent to instance U9.data_1[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_2[4],  because it is equivalent to instance U9.data_2[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_3[3],  because it is equivalent to instance U9.data_3[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_4[2],  because it is equivalent to instance U9.data_4[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_5[1],  because it is equivalent to instance U9.data_5[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_0[5],  because it is equivalent to instance U9.data_0[12]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_1[4],  because it is equivalent to instance U9.data_1[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_2[3],  because it is equivalent to instance U9.data_2[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_3[2],  because it is equivalent to instance U9.data_3[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_4[1],  because it is equivalent to instance U9.data_4[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_0[4],  because it is equivalent to instance U9.data_0[11]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_1[3],  because it is equivalent to instance U9.data_1[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_2[2],  because it is equivalent to instance U9.data_2[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_3[1],  because it is equivalent to instance U9.data_3[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_0[3],  because it is equivalent to instance U9.data_0[10]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_1[2],  because it is equivalent to instance U9.data_1[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_2[1],  because it is equivalent to instance U9.data_2[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_0[2],  because it is equivalent to instance U9.data_0[9]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_1[1],  because it is equivalent to instance U9.data_1[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_0[1],  because it is equivalent to instance U9.data_0[8]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_out_1[8],  because it is equivalent to instance U9.data_out_1[1]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_out_1[9],  because it is equivalent to instance U9.data_out_1[2]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_out_1[10],  because it is equivalent to instance U9.data_out_1[3]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_out_1[11],  because it is equivalent to instance U9.data_out_1[4]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_out_1[12],  because it is equivalent to instance U9.data_out_1[5]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_out_1[13],  because it is equivalent to instance U9.data_out_1[6]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN132:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing instance U9.data_out_1[14],  because it is equivalent to instance U9.data_out_1[7]</font>
+
+Finished factoring (Time elapsed 0h:00m:06s; Memory used current: 37MB peak: 38MB)
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[17] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[16] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[15] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[14] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[13] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[12] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[11] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[10] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[9] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[8] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[7] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[6] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[5] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[4] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[3] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[31] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[30] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[29] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[28] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[27] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[26] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[25] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[24] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[23] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[22] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[21] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[20] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[19] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[18] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U10.data_out_cl_7[7] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\spram1.vhd:68:4:68:6:@W:BN116:@XP_MSG">spram1.vhd(68)</a><!@TM:1162818287> | Removing sequential instance U9.data_out_cl_15[15] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:06s; Memory used current: 38MB peak: 39MB)
+
+Clock Buffers:
+  Inserting Clock buffer for port clk,	TNM=clk
+
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:08s; Memory used current: 38MB peak: 39MB)
+@N:<a href="@N:FA196:@XP_HELP">FA196</a> : <a href="d:\designs\ga_eval\vhd\rng.vhd:74:28:74:30:@N:FA196:@XP_MSG">rng.vhd(74)</a><!@TM:1162818287> | Found addmux in view:work.ga(str) inst U4.U1.fit_sum_6_0[10:0]  
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:08s; Memory used current: 39MB peak: 39MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:09s; Memory used current: 39MB peak: 40MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:09s; Memory used current: 38MB peak: 40MB)
+
+Finished preparing to map (Time elapsed 0h:00m:10s; Memory used current: 39MB peak: 40MB)
+
+Finished technology mapping (Time elapsed 0h:00m:12s; Memory used current: 49MB peak: 50MB)
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:12s		    -2.45ns		1215 /       932
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.best_fit_prev_gen_3[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.best_fit_prev_gen_2[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.best_fit_prev_gen[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.counter_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.counter_0[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:199:4:199:6:@W:BN116:@XP_MSG">control_v5.vhd(199)</a><!@TM:1162818287> | Removing sequential instance U11.incr[3] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:199:4:199:6:@W:BN116:@XP_MSG">control_v5.vhd(199)</a><!@TM:1162818287> | Removing sequential instance U11.incr[2] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:199:4:199:6:@W:BN116:@XP_MSG">control_v5.vhd(199)</a><!@TM:1162818287> | Removing sequential instance U11.incr[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[2] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\control_v5.vhd:993:4:993:6:@W:BN116:@XP_MSG">control_v5.vhd(993)</a><!@TM:1162818287> | Removing sequential instance U11.addr_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[7] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[6] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[5] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[4] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[3] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[2] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\mutation_v2.vhd:76:4:76:6:@W:BN116:@XP_MSG">mutation_v2.vhd(76)</a><!@TM:1162818287> | Removing sequential instance U7.mutout_p1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.best_fit_prev_gen_0[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.best_fit_prev_gen_1[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+<font color=#A52A2A>@W:<a href="@W:BN116:@XP_HELP">BN116</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:92:4:92:6:@W:BN116:@XP_MSG">fix_elite.vhd(92)</a><!@TM:1162818287> | Removing sequential instance U4.U1.counter[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs </font>
+   2		0h:00m:12s		    -2.35ns		1214 /       898
+   3		0h:00m:12s		    -2.35ns		1214 /       898
+   4		0h:00m:12s		    -2.35ns		1218 /       898
+------------------------------------------------------------
+
+Timing driven replication report
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[10]" with 2 loads has been replicated 1 time(s) to improve timing 
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[9]" with 2 loads has been replicated 1 time(s) to improve timing 
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[8]" with 2 loads has been replicated 1 time(s) to improve timing 
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[7]" with 2 loads has been replicated 1 time(s) to improve timing 
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[6]" with 2 loads has been replicated 1 time(s) to improve timing 
+Added 0 Registers via timing driven replication
+Added 5 LUTs via timing driven replication
+
+Timing driven replication report
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[5]" with 2 loads has been replicated 1 time(s) to improve timing 
+Added 0 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
+
+Timing driven replication report
+No replication required.
+
+Timing driven replication report
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\top.vhd:343:2:343:5:@N:FX271:@XP_MSG">top.vhd(343)</a><!@TM:1162818287> | Instance "U11.notify_cnt_p[3]" with 30 loads has been replicated 2 time(s) to improve timing 
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[4]" with 2 loads has been replicated 1 time(s) to improve timing 
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="d:\designs\ga_eval\vhd\fix_elite.vhd:112:6:112:8:@N:FX271:@XP_MSG">fix_elite.vhd(112)</a><!@TM:1162818287> | Instance "U4.U1.fit_sum_6[3]" with 2 loads has been replicated 1 time(s) to improve timing 
+Added 2 Registers via timing driven replication
+Added 2 LUTs via timing driven replication
+
+xct_reducefodelay set to FALSE
+Timing driven replication report
+No replication required.
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:14s		    -1.66ns		1231 /       908
+   2		0h:00m:14s		    -1.61ns		1231 /       908
+   3		0h:00m:14s		    -1.61ns		1231 /       908
+Timing driven replication report
+No replication required.
+
+   4		0h:00m:14s		    -1.61ns		1231 /       908
+   5		0h:00m:14s		    -1.61ns		1231 /       908
+   6		0h:00m:14s		    -1.61ns		1231 /       908
+------------------------------------------------------------
+
+Timing driven replication report
+No replication required.
+
+Timing driven replication report
+No replication required.
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:14s		    -1.61ns		1229 /       908
+   2		0h:00m:14s		    -1.58ns		1229 /       908
+   3		0h:00m:14s		    -1.58ns		1229 /       908
+Timing driven replication report
+No replication required.
+
+   4		0h:00m:14s		    -1.58ns		1229 /       908
+   5		0h:00m:14s		    -1.58ns		1229 /       908
+   6		0h:00m:14s		    -1.58ns		1229 /       908
+------------------------------------------------------------
+
+Net buffering Report for view:work.ga(str):
+No nets needed buffering.
+
+@N:<a href="@N:MF197:@XP_HELP">MF197</a> : <!@TM:1162818287> | Retiming summary : 52 registers retimed to 164  
+
+		#####  BEGIN RETIMING REPORT  #####
+
+Retiming summary : 52 registers retimed to 164
+
+Original and Pipelined registers replaced by retiming :
+		U4.U1.best_fit_prev_gen_0[1]
+		U4.U1.best_fit_prev_gen_1[1]
+		U4.U1.counter[0]
+		U5.cumSum_p1[0]
+		U5.cumSum_p1[1]
+		U5.cumSum_p1[2]
+		U5.cumSum_p1[3]
+		U5.cumSum_p1[4]
+		U5.cumSum_p1[5]
+		U5.cumSum_p1[6]
+		U5.cumSum_p1[7]
+		U5.cumSum_p1[8]
+		U5.cumSum_p1[9]
+		U5.cumSum_p1[10]
+		U5.done_t
+		U5.scalFitSum_p[14]
+		U5.selParent_p[0]
+		U5.selParent_p[1]
+		U5.selParent_p[2]
+		U5.selParent_p[3]
+		U5.selParent_p[4]
+		U5.selParent_p[5]
+		U5.selParent_p[6]
+		U5.selParent_p[7]
+		U5.temp_rd
+		U6.crossout1_t[0]
+		U6.crossout1_t[1]
+		U6.crossout1_t[2]
+		U6.crossout1_t[3]
+		U6.crossout1_t[4]
+		U6.crossout1_t[5]
+		U6.crossout1_t[6]
+		U6.crossout1_t[7]
+		U7.mutout_p1[0]
+		U7.mutout_p1[1]
+		U7.mutout_p1[2]
+		U7.mutout_p1[3]
+		U7.mutout_p1[4]
+		U7.mutout_p1[5]
+		U7.mutout_p1[6]
+		U7.mutout_p1[7]
+		U11.addr_1[0]
+		U11.addr_1[1]
+		U11.addr_1[2]
+		U11.cnt_adapted
+		U11.count_offs_p1[2]
+		U11.count_offs_p1[3]
+		U11.incr[0]
+		U11.incr[1]
+		U11.incr[2]
+		U11.incr[3]
+		U11.index_1[3]
+
+New registers created by retiming :
+		U4.U1.best_fit_prev_gen_0_ret
+		U4.U1.best_fit_prev_gen_0_ret_1
+		U4.U1.best_fit_prev_gen_0_ret_2
+		U4.U1.best_fit_prev_gen_0_ret_3
+		U5.cumSum_p1_ret
+		U5.cumSum_p1_ret_11
+		U5.selParent_p_ret
+		U5.selParent_p_ret_1
+		U5.selParent_p_ret_2
+		U5.selParent_p_ret_3
+		U5.selParent_p_ret_4
+		U5.selection.done_t_ret
+		U5.selection.done_t_ret_2
+		U5.selection.done_t_ret_3
+		U5.temp_rd_ret_1
+		U5.temp_rd_ret_2
+		U5.temp_rd_ret_3
+		U6.crossout1_t_ret
+		U6.crossout1_t_ret_17_0
+		U6.crossout1_t_ret_40
+		U6.crossout1_t_ret_48
+		U6.crossout1_t_ret_49
+		U6.crossout1_t_ret_50
+		U6.crossout1_t_ret_51
+		U6.crossout1_t_ret_52
+		U6.crossout1_t_ret_53
+		U6.crossout1_t_ret_54
+		U6.crossout1_t_ret_55
+		U6.crossover_v2.crossout1_t_ret_80
+		U6.crossover_v2.crossout1_t_ret_81
+		U6.crossover_v2.crossout1_t_ret_82
+		U6.crossover_v2.crossout1_t_ret_83
+		U6.crossover_v2.crossout1_t_ret_84
+		U6.crossover_v2.crossout1_t_ret_85
+		U6.crossover_v2.crossout1_t_ret_86
+		U6.crossover_v2.crossout1_t_ret_87
+		U6.crossover_v2.crossout1_t_ret_112
+		U6.crossover_v2.crossout1_t_ret_113
+		U6.crossover_v2.crossout1_t_ret_114
+		U6.crossover_v2.crossout1_t_ret_115
+		U6.crossover_v2.crossout1_t_ret_116
+		U6.crossover_v2.crossout1_t_ret_117
+		U6.crossover_v2.crossout1_t_ret_118
+		U6.crossover_v2.crossout1_t_ret_119
+		U6.crossover_v2.crossout1_t_ret_120
+		U6.crossover_v2.crossout1_t_ret_121
+		U6.crossover_v2.crossout1_t_ret_122
+		U6.crossover_v2.crossout1_t_ret_123
+		U6.crossover_v2.crossout1_t_ret_124
+		U6.crossover_v2.crossout1_t_ret_125
+		U6.crossover_v2.crossout1_t_ret_126
+		U6.crossover_v2.crossout1_t_ret_127
+		U6.mutout_p1_ret
+		U6.mutout_p1_ret_1
+		U6.mutout_p1_ret_2
+		U6.mutout_p1_ret_3
+		U6.mutout_p1_ret_4
+		U6.mutout_p1_ret_5
+		U6.mutout_p1_ret_6
+		U6.mutout_p1_ret_7
+		U7.mutation_v2.un18_mutout.mutout_p1_ret
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_1
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_2
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_3
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_4
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_5
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_6
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_7
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_8
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_9
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_10
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_11
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_12
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_13
+		U7.mutation_v2.un18_mutout.mutout_p1_ret_14
+		U7.mutout_p1_ret
+		U7.mutout_p1_ret_1
+		U7.mutout_p1_ret_2
+		U7.mutout_p1_ret_3
+		U7.mutout_p1_ret_4
+		U7.mutout_p1_ret_5
+		U7.mutout_p1_ret_6
+		U7.mutout_p1_ret_7
+		U7.mutout_p1_ret_8
+		U7.mutout_p1_ret_9
+		U7.mutout_p1_ret_10
+		U7.mutout_p1_ret_11
+		U7.mutout_p1_ret_12
+		U7.mutout_p1_ret_13
+		U7.mutout_p1_ret_14
+		U7.mutout_p1_ret_15
+		U7.mutout_p1_ret_16
+		U7.mutout_p1_ret_17
+		U7.mutout_p1_ret_18
+		U7.mutout_p1_ret_19
+		U7.mutout_p1_ret_20
+		U7.mutout_p1_ret_21
+		U7.mutout_p1_ret_22
+		U7.mutout_p1_ret_23
+		U7.mutout_p1_ret_24
+		U7.mutout_p1_ret_25
+		U7.mutout_p1_ret_26
+		U7.mutout_p1_ret_27
+		U7.mutout_p1_ret_28
+		U7.mutout_p1_ret_29
+		U7.mutout_p1_ret_30
+		U7.mutout_p1_ret_31
+		U11.addr_1_ret
+		U11.addr_1_ret_1
+		U11.addr_1_ret_2
+		U11.addr_1_ret_3
+		U11.addr_1_ret_4
+		U11.addr_1_ret_5
+		U11.addr_1_ret_6
+		U11.addr_1_ret_7
+		U11.addr_1_ret_8
+		U11.addr_1_ret_9
+		U11.addr_1_ret_10
+		U11.addr_1_ret_11
+		U11.cnt_adapted_ret
+		U11.count_gen_p1_ret_1
+		U11.count_offs_p1_ret
+		U11.count_offs_p1_ret_0
+		U11.count_offs_p1_ret_1
+		U11.count_offs_p1_ret_2
+		U11.count_offs_p1_ret_3
+		U11.count_offs_p1_ret_4
+		U11.count_offs_p1_ret_5
+		U11.count_offs_p1_ret_6
+		U11.incr_ret
+		U11.incr_ret_1
+		U11.incr_ret_3
+		U11.incr_ret_5
+		U11.incr_ret_6
+		U11.incr_ret_7
+		U11.incr_ret_10
+		U11.index_1_ret
+		U11.index_1_ret_1
+		U11.index_1_ret_2
+		U11.index_1_ret_3
+		U11.loop0.incr_ret
+		U11.loop1.incr_ret
+		U11.loop1.un20_dummy_cnt_adapt_0.incr_ret_4
+		U11.term_rd_p1_ret_1
+
+
+		#####   END RETIMING REPORT  #####
+
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:14s; Memory used current: 49MB peak: 51MB)
+
+Finished restoring hierarchy (Time elapsed 0h:00m:14s; Memory used current: 49MB peak: 51MB)
+@N:<a href="@N:BN191:@XP_HELP">BN191</a> : <!@TM:1162818287> | Writing property annotation file D:\Designs\GA_eval\syn\GA\rev_1\top.tap. 
+Writing Analyst data base D:\Designs\GA_eval\syn\GA\rev_1\top.srm
+@N:<a href="@N:BN225:@XP_HELP">BN225</a> : <!@TM:1162818306> | Writing default property annotation file D:\Designs\GA_eval\syn\GA\rev_1\top.map. 
+Writing EDIF Netlist and constraint files
+Version 8.5.1
+Found clock clk with period 8.33ns 
+
+
+<a name=timingReport58>##### START OF TIMING REPORT #####[
+# Timing Report written on Mon Nov 06 15:05:06 2006
+#
+
+
+Top view:               ga
+Requested Frequency:    120.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    D:\Designs\GA_eval\syn\GA\ga.sdc
+                       D:\Designs\GA_eval\syn\GA\rev_1\top_fsm.sdc
+                       
+@N:<a href="@N:MT195:@XP_HELP">MT195</a> : <!@TM:1162818306> | This timing report estimates place and route data. Please look at the place and route timing report for final timing.. 
+
+@N:<a href="@N:MT197:@XP_HELP">MT197</a> : <!@TM:1162818306> | Clock constraints cover only FF-to-FF paths associated with the clock.. 
+
+
+
+<a name=performanceSummary59>Performance Summary 
+*******************
+
+
+Worst slack in design: -1.657
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock             
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group             
+---------------------------------------------------------------------------------------------------------------------
+clk                120.0 MHz     100.1 MHz     8.333         9.990         -1.657     declared     default_clkgroup_0
+=====================================================================================================================
+
+
+
+
+
+<a name=clockRelationships60>Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------
+clk       clk     |  8.333       -1.657  |  No paths    -      |  No paths    -      |  No paths    -    
+=========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+<a name=interfaceInfo61>Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+<a name=clockReport62>Detailed Report for Clock: clk
+====================================
+
+
+
+<a name=startingSlack63>Starting Points with Worst Slack
+********************************
+
+                     Starting                                            Arrival           
+Instance             Reference     Type     Pin     Net                  Time        Slack 
+                     Clock                                                                 
+-------------------------------------------------------------------------------------------
+U4.U1.fit_sum[0]     clk           FDCE     Q       fit_sum_dummy[0]     0.720       -1.657
+U4.U1.fit_sum[1]     clk           FDCE     Q       fit_sum_dummy[1]     0.720       -1.657
+U4.U1.fit_sum[2]     clk           FDCE     Q       fit_sum_dummy[2]     0.720       -1.657
+U4.U1.fit_sum[3]     clk           FDCE     Q       fit_sum_dummy[3]     0.720       -1.657
+U4.U1.fit_sum[4]     clk           FDCE     Q       fit_sum_dummy[4]     0.720       -1.657
+U4.U1.fit_sum[5]     clk           FDCE     Q       fit_sum_dummy[5]     0.720       -1.657
+U4.U1.fit_sum[6]     clk           FDCE     Q       fit_sum_dummy[6]     0.720       -1.657
+U4.U1.fit_sum[7]     clk           FDCE     Q       fit_sum_dummy[7]     0.720       -1.657
+U4.U1.fit_sum[8]     clk           FDCE     Q       fit_sum_dummy[8]     0.720       -1.657
+U4.U1.fit_sum[9]     clk           FDCE     Q       fit_sum_dummy[9]     0.720       -1.657
+===========================================================================================
+
+
+<a name=endingSlack64>Ending Points with Worst Slack
+******************************
+
+                              Starting                                                  Required           
+Instance                      Reference     Type     Pin     Net                        Time         Slack 
+                              Clock                                                                        
+-----------------------------------------------------------------------------------------------------------
+U5.selParent_p_ret_2          clk           FDCE     D       un17_data_valid            8.130        -1.657
+U5.selParent_p_ret_3          clk           FDCE     D       un20_data_valid            8.130        -1.657
+U5.selection.done_t_ret_2     clk           FDCE     D       un17_data_valid            8.130        -1.657
+U5.selection.done_t_ret_3     clk           FDCE     D       un20_data_valid            8.130        -1.657
+U5.temp_rd_ret_1              clk           FDC      D       un17_data_valid            8.130        -1.657
+U5.temp_rd_ret_2              clk           FDC      D       un20_data_valid            8.130        -1.657
+U11.count_offs_p1[1]          clk           FDC      D       count_offs[1]              8.223        -1.300
+U4.U1.fit_sum[10]             clk           FDCE     D       fit_sum_6_10_rep1          8.223        -0.851
+U4.U1.sum_p[10]               clk           FDCE     D       fit_sum_6[10]              8.223        -0.851
+U11.count_offs_p1_ret_3       clk           FDC      D       un1_count_offs_p1_2_c1     8.130        -0.813
+===========================================================================================================
+
+
+
+<a name=worstPaths65>Worst Path Information
+<a href="D:\Designs\GA_eval\syn\GA\rev_1\top.srr:fp:97050:98670:@XP_NAMES">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+    Requested Period:                        8.333
+    - Setup time:                            0.203
+    = Required time:                         8.130
+
+    - Propagation time:                      9.787
+    = Slack (critical) :                     -1.657
+
+    Number of logic level(s):                4
+    Starting point:                          U4.U1.fit_sum[0] / Q
+    Ending point:                            U5.selParent_p_ret_2 / D
+    The start point is clocked by            clk [rising] on pin C
+    The end   point is clocked by            clk [rising] on pin C
+
+Instance / Net                                          Pin       Pin               Arrival     No. of    
+Name                                      Type          Name      Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+U4.U1.fit_sum[0]                          FDCE          Q         Out     0.720     0.720       -         
+fit_sum_dummy[0]                          Net           -         -       0.842     -           1         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     A[0]      In      -         1.562       -         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     P[14]     Out     4.123     5.684       -         
+scalfitsum[14]                            Net           -         -       0.781     -           2         
+U5.scalFitSum_0[10]                       LUT3          I2        In      -         6.465       -         
+U5.scalFitSum_0[10]                       LUT3          O         Out     0.580     7.045       -         
+scalFitSum[10]                            Net           -         -       0.842     -           3         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
+N_21_i                                    Net           -         -       0.000     -           1         
+U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+un17_data_valid                           Net           -         -       0.842     -           3         
+U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
+==========================================================================================================
+Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3.305(33.1%) route.
+
+
+Path information for path number 2: 
+    Requested Period:                        8.333
+    - Setup time:                            0.203
+    = Required time:                         8.130
+
+    - Propagation time:                      9.787
+    = Slack (critical) :                     -1.657
+
+    Number of logic level(s):                4
+    Starting point:                          U4.U1.fit_sum[1] / Q
+    Ending point:                            U5.selParent_p_ret_2 / D
+    The start point is clocked by            clk [rising] on pin C
+    The end   point is clocked by            clk [rising] on pin C
+
+Instance / Net                                          Pin       Pin               Arrival     No. of    
+Name                                      Type          Name      Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+U4.U1.fit_sum[1]                          FDCE          Q         Out     0.720     0.720       -         
+fit_sum_dummy[1]                          Net           -         -       0.842     -           1         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     A[1]      In      -         1.562       -         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     P[14]     Out     4.123     5.684       -         
+scalfitsum[14]                            Net           -         -       0.781     -           2         
+U5.scalFitSum_0[10]                       LUT3          I2        In      -         6.465       -         
+U5.scalFitSum_0[10]                       LUT3          O         Out     0.580     7.045       -         
+scalFitSum[10]                            Net           -         -       0.842     -           3         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
+N_21_i                                    Net           -         -       0.000     -           1         
+U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+un17_data_valid                           Net           -         -       0.842     -           3         
+U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
+==========================================================================================================
+Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3.305(33.1%) route.
+
+
+Path information for path number 3: 
+    Requested Period:                        8.333
+    - Setup time:                            0.203
+    = Required time:                         8.130
+
+    - Propagation time:                      9.787
+    = Slack (critical) :                     -1.657
+
+    Number of logic level(s):                4
+    Starting point:                          U4.U1.fit_sum[2] / Q
+    Ending point:                            U5.selParent_p_ret_2 / D
+    The start point is clocked by            clk [rising] on pin C
+    The end   point is clocked by            clk [rising] on pin C
+
+Instance / Net                                          Pin       Pin               Arrival     No. of    
+Name                                      Type          Name      Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+U4.U1.fit_sum[2]                          FDCE          Q         Out     0.720     0.720       -         
+fit_sum_dummy[2]                          Net           -         -       0.842     -           1         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     A[2]      In      -         1.562       -         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     P[14]     Out     4.123     5.684       -         
+scalfitsum[14]                            Net           -         -       0.781     -           2         
+U5.scalFitSum_0[10]                       LUT3          I2        In      -         6.465       -         
+U5.scalFitSum_0[10]                       LUT3          O         Out     0.580     7.045       -         
+scalFitSum[10]                            Net           -         -       0.842     -           3         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
+N_21_i                                    Net           -         -       0.000     -           1         
+U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+un17_data_valid                           Net           -         -       0.842     -           3         
+U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
+==========================================================================================================
+Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3.305(33.1%) route.
+
+
+Path information for path number 4: 
+    Requested Period:                        8.333
+    - Setup time:                            0.203
+    = Required time:                         8.130
+
+    - Propagation time:                      9.787
+    = Slack (critical) :                     -1.657
+
+    Number of logic level(s):                4
+    Starting point:                          U4.U1.fit_sum[3] / Q
+    Ending point:                            U5.selParent_p_ret_2 / D
+    The start point is clocked by            clk [rising] on pin C
+    The end   point is clocked by            clk [rising] on pin C
+
+Instance / Net                                          Pin       Pin               Arrival     No. of    
+Name                                      Type          Name      Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+U4.U1.fit_sum[3]                          FDCE          Q         Out     0.720     0.720       -         
+fit_sum_dummy[3]                          Net           -         -       0.842     -           1         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     A[3]      In      -         1.562       -         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     P[14]     Out     4.123     5.684       -         
+scalfitsum[14]                            Net           -         -       0.781     -           2         
+U5.scalFitSum_0[10]                       LUT3          I2        In      -         6.465       -         
+U5.scalFitSum_0[10]                       LUT3          O         Out     0.580     7.045       -         
+scalFitSum[10]                            Net           -         -       0.842     -           3         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
+N_21_i                                    Net           -         -       0.000     -           1         
+U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+un17_data_valid                           Net           -         -       0.842     -           3         
+U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
+==========================================================================================================
+Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3.305(33.1%) route.
+
+
+Path information for path number 5: 
+    Requested Period:                        8.333
+    - Setup time:                            0.203
+    = Required time:                         8.130
+
+    - Propagation time:                      9.787
+    = Slack (critical) :                     -1.657
+
+    Number of logic level(s):                4
+    Starting point:                          U4.U1.fit_sum[4] / Q
+    Ending point:                            U5.selParent_p_ret_2 / D
+    The start point is clocked by            clk [rising] on pin C
+    The end   point is clocked by            clk [rising] on pin C
+
+Instance / Net                                          Pin       Pin               Arrival     No. of    
+Name                                      Type          Name      Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+U4.U1.fit_sum[4]                          FDCE          Q         Out     0.720     0.720       -         
+fit_sum_dummy[4]                          Net           -         -       0.842     -           1         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     A[4]      In      -         1.562       -         
+U5.selection.scalfitsum_0[14:0]           MULT18X18     P[14]     Out     4.123     5.684       -         
+scalfitsum[14]                            Net           -         -       0.781     -           2         
+U5.scalFitSum_0[10]                       LUT3          I2        In      -         6.465       -         
+U5.scalFitSum_0[10]                       LUT3          O         Out     0.580     7.045       -         
+scalFitSum[10]                            Net           -         -       0.842     -           3         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
+U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
+N_21_i                                    Net           -         -       0.000     -           1         
+U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+un17_data_valid                           Net           -         -       0.842     -           3         
+U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
+==========================================================================================================
+Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3.305(33.1%) route.
+
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+<a name=resourceUsage66>Resource Usage Report for ga 
+
+Mapping to part: xc3s1500fg676-4
+Cell usage:
+FDC             188 uses
+FDCE            638 uses
+FDCP            34 uses
+FDCPE           34 uses
+FDP             2 uses
+FDPE            12 uses
+GND             4 uses
+MULT18X18       1 use
+MULT_AND        17 uses
+MUXCY           7 uses
+MUXCY_L         106 uses
+MUXF5           82 uses
+MUXF6           24 uses
+MUXF7           8 uses
+VCC             6 uses
+XORCY           35 uses
+LUT1            5 uses
+LUT2            363 uses
+LUT3            441 uses
+LUT4            408 uses
+
+I/O primitives: 58
+IBUF           40 uses
+OBUF           18 uses
+
+BUFGP          1 use
+
+I/O Register bits:                  57
+Register bits not including I/Os:   851 (3%)
+
+Block Multipliers: 1 of 32 (3%)
+
+Global Clock Buffers: 1 of 8 (12%)
+
+
+Mapping Summary:
+Total  LUTs: 1217 (4%)
+
+Mapper successful!
+Process took 0h:00m:18s realtime, 0h:00m:17s cputime
+# Mon Nov 06 15:05:06 2006
+
+###########################################################]
