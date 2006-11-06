@@ -65,33 +65,35 @@ architecture rtl of mutation_tsp is
   signal rng1       : std_logic_vector(mut_res-1 downto 0)         := (others => '0');
   signal done       : std_logic                                    := '0';
   signal done_p     : std_logic                                    := '0';
-  signal reduce_1   : integer                                      := 0;
-  signal reduce_2   : integer                                      := 0;
+  --signal reduce_1   : integer                                      := 0;
+  --signal reduce_2   : integer                                      := 0;
 begin
 
   process (clk, rst_n)
   begin
     if (rst_n = '0') then
-      mutOffspr <= (others => '0');
+      --mutOffspr <= (others => '0');
       mutout_p1 <= (others => '0');
-      rd        <= '0';
+      --rd        <= '0';
       done_p    <= '0';
       
     elsif clk = '1' and clk'event then
-      mutOffspr <= mutout;
+      --mutOffspr <= mutout;
       mutout_p1 <= mutout;
       if flag = '1' then
-        rd     <= '0';
+        --rd     <= '0';
         done_p <= '0';
       else
-        rd     <= done;
+        --rd     <= done;
         done_p <= done;
       end if;
       
     end if;
   end process;
 
-  mutation_tsp : process (mutPoint, rng1, rng, inGene, inGene_mut, mutout_p1, cont, flag, done, done_p, temp1, temp2, reduce_1, reduce_2)
+mutOffspr <= mutout_p1;
+rd <= done_p;
+  mutation_tsp : process (mutPoint, rng1, rng, inGene, inGene_mut, mutout_p1, cont, flag, done, done_p, temp1, temp2)
   begin
 
     case cont is
