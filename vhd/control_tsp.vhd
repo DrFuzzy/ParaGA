@@ -53,9 +53,7 @@ entity control_tsp is
     flag            : out std_logic;
     decode          : out std_logic;
     sel_out         : out std_logic;
-    --rng               : out std_logic;
     addr_rom        : out integer;
-    --addr_seed        : out integer;
     run1            : out std_logic;
     run2            : out std_logic;
     run3            : out std_logic;
@@ -68,14 +66,13 @@ architecture rtl of control_tsp is
 
   signal sreg, next_sreg     : type_sreg;
   signal mut_rd_p1           : std_logic;
-  signal rng_rd_p1           : std_logic;
-  signal rng_rd              : std_logic;
   signal data_out_cross1_p1  : std_logic_vector(genom_lngt-1 downto 0);
   signal data_out_cross2_p1  : std_logic_vector(genom_lngt-1 downto 0);
-  --signal temp_cross1     : std_logic_vector(genom_lngt-1 downto 0);
+  signal temp1               : std_logic_vector(genom_lngt-1 downto 0);
+  signal temp2               : std_logic_vector(genom_lngt-1 downto 0);
   signal incr_p1             : integer;
   signal count_offs          : integer;
-  signal count2              : integer;
+  signal count_gen_p1        : integer;
   signal count_offs_p1       : integer;
   signal count_gen           : integer;
   signal count_sel_wr_p1     : integer;
@@ -86,97 +83,100 @@ architecture rtl of control_tsp is
   signal count_sel_rd        : integer;
   signal count_parents       : integer;
   signal count_cross_offs    : integer;
-  signal dummy_eval1_p1      : std_logic;
-  signal dummy_eval2_p1      : std_logic;
-  signal dummy_eval3_p1      : std_logic;
-  signal dummy_sel_p1        : std_logic;
-  signal dummy_ram1_p1       : std_logic;
-  signal dummy_ram2_p1       : std_logic;
-  signal dummy_mut_p1        : std_logic;
-  signal dummy_eval1         : std_logic;
-  signal dummy_eval2         : std_logic;
-  signal dummy_eval3         : std_logic;
-  signal dummy_sel           : std_logic;
-  signal dummy_ram1          : std_logic;
-  signal dummy_ram2          : std_logic;
+  
+  signal notify_cnt          : integer range 0 to 9;
+  signal notify_cnt_p        : integer range 0 to 9;
   signal dummy_cnt_adapt     : std_logic;
-  signal dummy_mut           : std_logic;
-  signal dummy_obs_p1        : std_logic;
-  signal dummy_obs           : std_logic;
   signal cnt_adapted         : std_logic;
   signal ga_fin_r            : std_logic;
   signal incr                : integer;
-  signal nParents            : integer;
   signal next_generation     : std_logic;
+
+  -- reg'd outputs
+--  signal data_out_cross1_c   : std_logic_vector(genom_lngt-1 downto 0);
+--  signal data_out_cross2_c   : std_logic_vector(genom_lngt-1 downto 0);
+--  signal addr_1_c            : integer;
+--  signal addr_2_c            : integer;
+--  signal cnt_parents_c       : integer;
+--  signal we1_c               : std_logic;
+--  signal we2_c               : std_logic;
+--  signal data_valid_c        : std_logic;
+--  signal next_gene_c         : std_logic;
+--  signal clear_c             : std_logic;
+--  signal ga_fin_c            : std_logic;
+--  signal cross_out_c         : std_logic;
+--  signal valid_c             : std_logic;
+--  signal elite_null_c        : std_logic;
+--  signal index_c             : integer;
+--  signal mut_out_c           : std_logic;
+--  signal flag_c              : std_logic;
+--  signal decode_c            : std_logic;
+--  signal sel_out_c           : std_logic;
+--  signal addr_rom_c          : integer;
+--  signal run1_c              : std_logic;
+--  signal run2_c              : std_logic;
+--  signal run3_c              : std_logic;
+--  signal load_c              : std_logic;
 
 begin
   process (clk, rst_n)
   begin
     if (rst_n = '0') then
-      sreg                <= clear_ram_s;
-      mut_rd_p1           <= '0';
-      rng_rd_p1           <= '0';
-      data_out_cross1     <= (others => '0');
-      data_out_cross2     <= (others => '0');
-      dummy_eval1_p1      <= '0';
-      dummy_eval2_p1      <= '0';
-      dummy_eval3_p1      <= '0';
-      dummy_sel_p1        <= '0';
-      dummy_ram1_p1       <= '0';
-      dummy_ram2_p1       <= '0';
-      dummy_mut_p1        <= '0';
-      dummy_obs_p1        <= '0';
-      count_offs_p1       <= 0;
-      count_gen           <= 0;
-      count_sel_wr_p1     <= 0;
-      count_sel_rd_p1     <= 0;
-      count_parents_p1    <= 0;
-      count_cross_offs_p1 <= 0;
-      cnt_parents         <= 0;
-      ga_fin              <= '0';
-      
-    elsif clk = '1' and clk'event then
+      sreg <= clear_ram_s;
+    elsif rising_edge(clk) then
       sreg <= next_sreg;
-
-      mut_rd_p1           <= mut_rd;
-      rng_rd_p1           <= rng_rd;
-      data_out_cross1     <= data_out_cross1_p1;
-      data_out_cross2     <= data_out_cross2_p1;
-      dummy_eval1_p1      <= dummy_eval1;
-      dummy_eval2_p1      <= dummy_eval2;
-      dummy_eval3_p1      <= dummy_eval3;
-      dummy_sel_p1        <= dummy_sel;
-      dummy_ram1_p1       <= dummy_ram1;
-      dummy_ram2_p1       <= dummy_ram2;
-      dummy_mut_p1        <= dummy_mut;
-      dummy_obs_p1        <= dummy_obs;
-      count_offs_p1       <= count_offs;
-      --index <= count_offs;
-      count_gen           <= count2;
-      count_sel_wr_p1     <= count_sel_wr;
-      count_sel_rd_p1     <= count_sel_rd;
-      count_parents_p1    <= count_parents;
-      count_cross_offs_p1 <= count_cross_offs;
-      cnt_parents         <= count_parents;
-      ga_fin              <= ga_fin_r;
-      --addr_ram1 <= addr_1;
-      --addr_ram2 <= addr_2;
-
     end if;
   end process;
 
+  process (clk, rst_n)                  -- Registered counters
+  begin
+    if (rst_n = '0') then
+      notify_cnt_p        <= 0;     
+      mut_rd_p1           <= '0';
+      count_offs_p1       <= 0;
+      count_parents_p1    <= 0;
+      count_sel_wr_p1     <= 0;
+      count_sel_rd_p1     <= 0;
+      count_cross_offs_p1 <= 0;
+      count_gen_p1        <= 0;
+      
+    elsif rising_edge(clk) then
+      notify_cnt_p        <= notify_cnt;
+      mut_rd_p1           <= mut_rd;
+      count_offs_p1       <= count_offs;
+      count_parents_p1    <= count_parents;
+      count_sel_wr_p1     <= count_sel_wr;
+      count_sel_rd_p1     <= count_sel_rd;
+      count_cross_offs_p1 <= count_cross_offs;
+      count_gen_p1        <= count_gen;
+    end if;
+  end process;
+
+  process (clk, rst_n)                  -- Registered outputs
+  begin
+    if (rst_n = '0') then
+      temp1 <= (others => '0');
+      temp2 <= (others => '0');
+    elsif rising_edge(clk) then
+      temp1 <= data_out_cross1_p1;
+      temp2 <= data_out_cross2_p1;
+    end if;
+  end process;
+
+  data_out_cross1 <= temp1;
+  data_out_cross2 <= temp2;
+  cnt_parents     <= count_parents_p1;
+  ga_fin          <= ga_fin_r;
 
   process (clk, rst_n)
 
   begin
     if rst_n = '0' then
       cnt_adapted <= '0';
-      --equal <= '0';
       incr        <= 0;
       incr_p1     <= 0;
     elsif rising_edge(clk) then
       incr_p1 <= incr;
-      --((fit_eval_rd = '1') and (mut_rd_p1 = '1')) or
       if (dummy_cnt_adapt = '1') then
         
         for i in 0 to elite-1 loop
@@ -192,10 +192,9 @@ begin
           end if;
         end loop;
       else
-        --cnt_adapted <= '0'; 
       end if;
 
-      if dummy_eval2 = '1' then
+      if notify_cnt_p = 3 then
         incr        <= 0;
         cnt_adapted <= '0';
       end if;
@@ -206,629 +205,699 @@ begin
 
 
   -- sensitivity list needs update -- 
-  process (sreg, sel_rd, cross_rd, mut_rd, mut_rd_p1, rng_rd_p1, fit_eval_rd, dummy_obs,
-           dummy_eval1_p1, dummy_eval2_p1, dummy_eval3_p1, dummy_sel_p1, dummy_ram1_p1, dummy_ram2_p1, nParents,
-           count_offs_p1, count_gen, count_sel_wr_p1, count_sel_rd_p1, count_parents_p1, count_cross_offs_p1,
-           data_in_ram2, incr_p1, cnt_adapted, dummy_cnt_adapt, incr, dummy_mut_p1, elite_offs, run_ga, next_generation)
+  process (sreg, sel_rd, cross_rd, mut_rd, mut_rd_p1, fit_eval_rd, notify_cnt_p,
+           count_offs_p1, count_gen_p1, count_sel_wr_p1, count_sel_rd_p1, count_parents_p1, count_cross_offs_p1,
+           data_in_ram2, incr_p1, cnt_adapted, dummy_cnt_adapt, incr, elite_offs, run_ga, next_generation)
 
   begin
     
     next_sreg <= fill_ram_s;
-    nParents  <= 2*(pop_sz-elite);
 
     case sreg is
       
       when clear_ram_s =>
-        
-        if run_ga = '1' then
-          next_generation <= '0';
-          clear           <= '1';
-          ga_fin_r        <= '0';
-          load            <= '1';
-          flag            <= '0';
-          cross_out       <= '0';
-          valid           <= '0';       -- to fitness evaluation
-          dummy_cnt_adapt <= '0';
-          index           <= 0;
-          mut_out         <= '0';
-          sel_out         <= '0';
-          we1             <= '0';
-          we2             <= '0';
-          run1            <= '0';
-          run2            <= '0';
-          run3            <= '0';
-          elite_null      <= '1';
+        next_generation  <= '0';
+        dummy_cnt_adapt  <= '0';
+        --Counters
+        count_offs       <= 0;
+        count_parents    <= 0;
+        count_sel_wr     <= 0;
+        count_sel_rd     <= 0;
+        count_cross_offs <= 0;
+        count_gen        <= 0;
+        -- Outputs
+        cross_out      <= '0';
+        mut_out        <= '0';
+        sel_out        <= '0';
 
-          dummy_eval1 <= '0';
-          dummy_eval2 <= '0';
-          dummy_eval3 <= '0';
-          dummy_sel   <= '0';
-          dummy_ram1  <= '0';
-          dummy_ram2  <= '0';
-          dummy_mut   <= '0';
-          dummy_obs   <= '0';
+        run1             <= '0';
+        run2             <= '0';
+        run3             <= '0';
+        flag             <= '0';
+        decode           <= '0';
+        valid            <= '0';
+        next_gene        <= '0';
+        data_valid       <= '0';
+        we1              <= '0';
+        we2              <= '0';
+        addr_2           <= 0;
+        index            <= 0;
+        data_out_cross1_p1 <= (others => '0');
+        data_out_cross2_p1 <= (others => '0');
 
-          data_out_cross1_p1 <= (others => '0');
-          data_out_cross2_p1 <= (others => '0');
+        case run_ga is
+          when '1' =>
+            next_sreg    <= fill_ram_s;
+            addr_rom         <= count_offs_p1 + 1;
+            clear      <= '1';
+            load       <= '1';
+            elite_null <= '1';
+            addr_1     <= 0;
+            ga_fin_r     <= '0';
+            notify_cnt   <= 0;
+          when '0' =>
+            next_sreg    <= clear_ram_s;
+            addr_rom         <= 0;
+            clear      <= '0';
+            load       <= '0';
+            elite_null <= '0';
+            addr_1     <= elite_offs(0);
+            if notify_cnt_p = 1 then
+              ga_fin_r   <= '1';
+              notify_cnt <= 1;
+            else
+              ga_fin_r   <= '0';
+              notify_cnt <= 0;
+            end if;
+          when others =>                -- empty
+        end case;        
 
-          count2           <= 0;        -- generation counter (count_gen)
-          count_offs       <= 0;        -- offspring counter
-          count_sel_wr     <= 0;  -- counts the addresses where the selected offs. must written (so it simultaneously counts how many parents I have selected and written)
-          count_sel_rd     <= 0;  -- counts the addresses from where the offs. for selection must be read
-          count_parents    <= 0;        -- counter of the selected parents
-          count_cross_offs <= 0;  -- counter which notifies that I have selected 2 offs. in order to proceed to crossover
-          addr_rom         <= count_offs_p1 + 1;  -- read ROM / read first initial gene
-          rng_rd           <= '0';
-          next_sreg        <= fill_ram_s;
-
-          decode     <= '0';
-          data_valid <= '0';
-          next_gene  <= '0';
-          addr_1     <= 0;
-          addr_2     <= 0;
-        else
-          next_generation <= '0';
-          clear           <= '0';
-          load            <= '0';
-          flag            <= '0';
-          cross_out       <= '0';
-          valid           <= '0';       -- to fitness evaluation
-          dummy_cnt_adapt <= '0';
-          index           <= 0;
-          mut_out         <= '0';
-          sel_out         <= '0';
-          we1             <= '0';
-          we2             <= '0';
-          run1            <= '0';
-          run2            <= '0';
-          run3            <= '0';
-          elite_null      <= '0';
-          dummy_eval1     <= '0';
-          dummy_eval2     <= '0';
-          dummy_eval3     <= '0';
-          dummy_sel       <= '0';
-          dummy_ram1      <= '0';
-          dummy_ram2      <= '0';
-          dummy_mut       <= '0';
-          dummy_obs       <= '0';
-
-          data_out_cross1_p1 <= (others => '0');
-          data_out_cross2_p1 <= (others => '0');
-
-          count2           <= 0;
-          count_offs       <= 0;
-          count_sel_wr     <= 0;
-          count_sel_rd     <= 0;
-          count_parents    <= 0;
-          count_cross_offs <= 0;
-          addr_rom         <= 0;        -- ROM output is Z   
-          rng_rd           <= '0';
-
-          next_sreg <= clear_ram_s;
-
-          decode     <= '0';
-          data_valid <= '0';
-          next_gene  <= '0';
-          addr_2     <= 0;
-          addr_1     <= elite_offs(0);
-          
-        end if;
         
       when fill_ram_s =>
-        next_generation <= '0';
-        clear           <= '0';
-        ga_fin_r        <= '0';
-        cross_out       <= '0';
-        elite_null      <= '0';
-        dummy_obs       <= '0';
-        load            <= '0';
+        next_sreg          <= fit_eval_s;
+        next_generation    <= '0';
+        notify_cnt         <= 1;
+        dummy_cnt_adapt    <= '0';
+        -- Counters
+        count_offs         <= count_offs_p1;
+        count_parents      <= count_parents_p1;
+        count_sel_wr       <= count_sel_wr_p1;
+        count_sel_rd       <= count_sel_rd_p1;
+        count_cross_offs   <= count_cross_offs_p1;
+        count_gen          <= count_gen_p1;
+        -- Outputs 
         addr_rom        <= count_offs_p1 + 1;  -- Read ROM (where the initial generation is stored)
-        run1            <= '0';         -- prepei na kratithei toul 3 clocks
-        run2            <= '0';
-        run3            <= '0';
-        mut_out         <= '0';
-        sel_out         <= '0';
-        we1             <= '0';
-        we2             <= '0';
-        rng_rd          <= '1';  -- notify --
-        next_sreg       <= fit_eval_s;
-        --eval <= '1';
-        decode          <= '1';
-        valid           <= '1';
-        index           <= count_offs_p1;
-        
-      when fit_eval_s =>
-        next_generation <= '0';
-        clear           <= '0';
-        ga_fin_r        <= '0';
-        cross_out       <= '0';
-        --eval <= '1';
-        run1            <= '0';
-        run2            <= '0';
-        run3            <= '0';
-        mut_out         <= '0';  -- to mutation de tha ypologisei alla tha kratisei previous results
-        sel_out         <= '0';
-        we2             <= '0';
-        dummy_sel       <= '0';
-        dummy_ram1      <= '0';
-        dummy_ram2      <= '0';
-        dummy_obs       <= '0';
-        elite_null      <= '0';
-        --rng_rd <= '0';
+        clear            <= '0';
+        cross_out        <= '0';
+        mut_out          <= '0';
+        sel_out          <= '0';
+        load             <= '0';
+        run1             <= '0';
+        run2             <= '0';
+        run3             <= '0';
+        flag             <= '0';
+        decode           <= '1';
+        elite_null       <= '0';
+        valid            <= '1';
+        ga_fin_r           <= '0';
+        next_gene        <= '0';
+        data_valid       <= '0';
+        we1              <= '0';
+        we2              <= '0';
+        addr_1           <= 0;
+        addr_2           <= 0;
+        index            <= count_offs_p1;
+        data_out_cross1_p1 <= (others => '0');
+        data_out_cross2_p1 <= (others => '0');
 
-        if (fit_eval_rd = '1') and (rng_rd_p1 = '1') then  -- 1st generation's evaluation     ok
-          next_sreg   <= read_write_ram_1_s;               -- write to ram1 
-          we1         <= '1';
-          addr_1      <= count_offs_p1;
-          dummy_eval1 <= '1';           -- notify 
-          dummy_eval2 <= '0';
-          valid       <= '0';
-          flag        <= '0';
-        end if;
-
-        if (fit_eval_rd = '1') and (mut_rd_p1 = '1') then  -- evaluate new offspring 
-          rng_rd <= '0';
-          flag   <= '1';
-          if cnt_adapted = '1' then
-            next_sreg <= read_write_ram_1_s;
-            if (count_offs_p1 + incr_p1) < pop_sz then
-              addr_1          <= count_offs_p1 + incr;
-              count_offs      <= count_offs_p1 + incr_p1 + 1;  -- increment of produced offsprings
-              we1             <= '1';
-                                        --valid <= '0';
-              dummy_eval2     <= '1';
-              dummy_eval1     <= '0';
-              dummy_eval3     <= '0';
-              dummy_cnt_adapt <= '0';
-                                        --mut_out <= '0';
-            else
-              addr_1      <= 0;
-              we1         <= '0';
-              valid       <= '0';
-              count_offs  <= pop_sz;
-              dummy_eval2 <= '1';
-              dummy_eval1 <= '0';
-              dummy_eval3 <= '0';
-                                        --mut_out <= '0';
-            end if;
-
+     when fit_eval_s =>
+        dummy_cnt_adapt    <= '0';
+        next_generation    <= '0';
+        next_gene        <= '0';
+        data_valid       <= '0';
+        -- Counters
+        count_parents      <= count_parents_p1;
+        count_sel_wr       <= count_sel_wr_p1;
+        count_sel_rd       <= count_sel_rd_p1;
+        count_cross_offs   <= count_cross_offs_p1;
+        count_gen          <= count_gen_p1;
+        -- Outputs 
+        clear            <= '0';
+        cross_out        <= '0';
+        mut_out          <= '0';  -- doesnot calculate but holds latest results
+        sel_out          <= '0';
+        load             <= '0';
+        run1             <= '0';
+        run2             <= '0';
+        run3             <= '0';
+        elite_null       <= '0';
+        ga_fin_r           <= '0';
+        we2              <= '0';
+        data_out_cross1_p1 <= (others => '0');
+        data_out_cross2_p1 <= (others => '0');
+	--addr_rom        <= 0;			 check if correct
+        if (fit_eval_rd = '1') and (notify_cnt_p = 1) then  -- 1st generation's evaluation     ok
+          next_sreg  <= read_write_ram_1_s;                 -- write to ram1 
+          addr_1   <= count_offs_p1;
+          addr_2   <= 0;
+          we1      <= '1';
+          notify_cnt <= 2;
+          valid    <= '0';
+          flag     <= '0';
+          count_offs <= count_offs_p1;
+          decode   <= '1';
+          index    <= count_offs_p1;
+        elsif (fit_eval_rd = '1') and (notify_cnt_p = 8) then  -- evaluate new offspring           
+          next_sreg  <= read_write_ram_1_s;
+          notify_cnt <= 3;
+          flag     <= '1';
+          decode   <= '0';
+          addr_2   <= 0;
+          index    <= count_offs_p1 + incr_p1;
+          if (count_offs_p1+incr_p1) < pop_sz then
+            count_offs <= count_offs_p1 + incr_p1 + 1;
+            valid    <= '1';
+            we1      <= '1';
+            addr_1   <= count_offs_p1 + incr;
           else
-            next_sreg   <= fit_eval_s;
-            we1         <= '0';
-            dummy_eval2 <= '0';
-            dummy_eval1 <= '0';
-            dummy_eval3 <= '1';         -- notify
-            valid       <= '1';
-                                        --mut_out <= '0';
-            
+            count_offs <= pop_sz;
+            valid    <= '0';
+            we1      <= '0';
+            addr_1   <= 0;
+          end if;
+        elsif (fit_eval_rd = '0') then  -- fitness evaluation not ready yet
+          next_sreg  <= fit_eval_s;
+          we1      <= '0';
+          notify_cnt <= notify_cnt_p;
+          flag     <= '0';
+          valid    <= '1';
+          count_offs <= count_offs_p1;
+          addr_1   <= 0;
+          addr_2   <= 0;
+          if notify_cnt_p = 1 then
+            decode <= '1';
+            index  <= count_offs_p1;
+          else
+            decode <= '0';
+            index  <= count_offs_p1 + incr_p1;
+          end if;
+        else
+          next_sreg  <= fit_eval_s;
+          we1      <= '0';
+          notify_cnt <= notify_cnt_p;
+          flag     <= '0';
+          valid    <= '1';
+          count_offs <= count_offs_p1;
+          addr_1   <= 0;
+          addr_2   <= 0;
+          if notify_cnt_p = 1 then
+            decode <= '1';
+            index  <= count_offs_p1;
+          else
+            decode <= '0';
+            index  <= count_offs_p1 + incr_p1;
           end if;
         end if;
 
-        if (dummy_eval3_p1 = '1') and (cnt_adapted = '0') then
-          next_sreg   <= fit_eval_s;
-          we1         <= '0';
-          rng_rd      <= '0';
-          dummy_eval2 <= '0';
-          dummy_eval1 <= '0';
-          dummy_eval3 <= '1';           -- notify
-          valid       <= '1';
-                                        --mut_out <= '0';
-          
-        elsif (dummy_eval3_p1 = '1') and (cnt_adapted = '1') then
-          next_sreg <= read_write_ram_1_s;
-
-          if (count_offs_p1 + incr_p1) < pop_sz then
-            addr_1          <= count_offs_p1 + incr;
-            count_offs      <= count_offs_p1 + incr_p1 + 1;  -- increment of produced offsprings
-            we1             <= '1';
-            rng_rd          <= '0';
-            valid           <= '0';
-            dummy_eval2     <= '1';
-            dummy_eval1     <= '0';
-            dummy_eval3     <= '0';
-            dummy_cnt_adapt <= '0';
-          else
-            addr_1      <= 0;
-            we1         <= '0';
-            rng_rd      <= '0';
-            valid       <= '0';
-            count_offs  <= pop_sz;
-            dummy_eval2 <= '1';
-            dummy_eval1 <= '0';
-            dummy_eval3 <= '0';
-          end if;
-          
-        end if;
-
-
-
-        if (fit_eval_rd = '0') and (dummy_eval3_p1 = '0') then  -- fitness evaluation not ready yet
-          next_sreg   <= fit_eval_s;
-                                        --rng_rd <= '0';
-          we1         <= '0';
-          dummy_eval2 <= '0';
-          dummy_eval1 <= '0';
-          dummy_eval3 <= '0';
-          valid       <= '1';
-        end if;
         
       when read_write_ram_1_s =>
-        
-        clear       <= '0';
-        ga_fin_r    <= '0';
-        cross_out   <= '0';
-        --eval <= '1';
-        valid       <= '0';
-        mut_out     <= '0';
-        flag        <= '0';
-        we2         <= '0';
-        we1         <= '0';
-        run1        <= '0';
-        run2        <= '0';
-        dummy_eval1 <= '0';
-        dummy_eval2 <= '0';
-        dummy_eval3 <= '0';
-        dummy_sel   <= '0';
-        dummy_ram2  <= '0';
-        dummy_obs   <= '0';
-        rng_rd      <= '0';
-        if (dummy_eval1_p1 = '1') and (count_offs_p1 /= pop_sz-1) then
-          next_sreg       <= fill_ram_s;  -- produce and evaluate new gene of first generation
-          addr_1          <= count_offs_p1;
-          run3            <= '0';
-          count_offs      <= count_offs_p1 + 1;
-          sel_out         <= '0';
-          dummy_ram1      <= '0';
-          next_generation <= '0';
-        end if;
-        if (dummy_eval1_p1 = '1') and (count_offs_p1 = pop_sz-1) then
-          addr_rom        <= 0;         -- ok
-          next_sreg       <= read_write_ram_1_s;  -- read first gene for selection block (Parents selection)
-          addr_1          <= count_sel_rd_p1;  -- address of the gene needed for selection
-          count_offs      <= 0;  -- initialize counter_offs for evaluation of this generation has ended 
-          run3            <= '1';       -- alaksa
-          sel_out         <= '0';
-          dummy_ram1      <= '1';       -- notify state that I was here
-          next_generation <= '0';
-        end if;
-
-        if (dummy_ram1_p1 = '1') then
-          next_sreg       <= sel_s;  -- I already have read one gene from ram 1 and go to selection   -- ok
-          count_sel_rd    <= count_sel_rd_p1 + 1;  -- next gene for reading if needed
-          sel_out         <= '1';
-          data_valid      <= '1';
-          run3            <= '0';       -- allaksa
-          dummy_ram1      <= '0';
-          next_gene       <= '0';
-          next_generation <= '0';
-        end if;
-
-
-        if (dummy_sel_p1 = '1') then
-          next_sreg <= sel_s;  -- have read next gene needed for selection  -- ok
+        dummy_cnt_adapt    <= '0';
+        -- Counters
+        count_sel_wr       <= count_sel_wr_p1;
+        count_gen          <= count_gen_p1;
+        -- Outputs 
+        clear            <= '0';
+        cross_out        <= '0';
+        mut_out          <= '0';
+        run1             <= '0';
+        run2             <= '0';
+        load             <= '0';      -- SOS
+        flag             <= '0';
+        elite_null       <= '0';
+        valid            <= '0';
+        ga_fin_r           <= '0';
+        we1              <= '0';
+        we2              <= '0';
+        data_out_cross1_p1 <= (others => '0');
+        data_out_cross2_p1 <= (others => '0');
+        index            <= 0;
+        if (notify_cnt_p = 2) then  -- write 1st pop / need more genes          
+          if (count_offs_p1 /= pop_sz-1) then
+            next_sreg  <= fill_ram_s;
+            notify_cnt <= notify_cnt_p;
+            count_offs <= count_offs_p1 + 1;
+            run3     <= '0';
+            addr_1   <= count_offs_p1;
+            addr_rom <= 0;
+          else
+            next_sreg  <= read_write_ram_1_s;
+            notify_cnt <= 5;
+            count_offs <= 0;
+            run3     <= '1';
+            addr_1   <= count_sel_rd_p1;
+            addr_rom <= 0;
+          end if;
+          next_generation  <= '0';
+          count_parents    <= count_parents_p1;
+          count_cross_offs <= count_cross_offs_p1;
+          count_sel_rd     <= count_sel_rd_p1;
+          sel_out        <= '0';
+          decode         <= '1';
+          next_gene      <= '0';
+          data_valid     <= '0';
+          addr_2         <= 0;
+        elsif (notify_cnt_p = 5) then
+          next_sreg        <= sel_s;
+          next_generation  <= '0';
+          notify_cnt       <= notify_cnt_p;
+          count_offs       <= count_offs_p1;
+          count_parents    <= count_parents_p1;
+          count_cross_offs <= count_cross_offs_p1;
+          count_sel_rd     <= count_sel_rd_p1 + 1;
+          sel_out        <= '1';
+          run3           <= '0';
+          decode         <= '1';
+          next_gene      <= '0';
+          data_valid     <= '1';
+          addr_1         <= 0;
+          addr_2         <= 0;
+          addr_rom <= 0;
+        elsif (notify_cnt_p = 6) then
+          next_sreg        <= sel_s;
+          next_generation  <= '0';
+          notify_cnt       <= notify_cnt_p;
+          count_offs       <= count_offs_p1;
+          count_parents    <= count_parents_p1;
+          count_cross_offs <= count_cross_offs_p1;
           if count_sel_rd_p1 /= pop_sz - 1 then
             count_sel_rd <= count_sel_rd_p1 + 1;  -- next gene for reading if needed
           else
             count_sel_rd <= 0;
           end if;
-          sel_out         <= '1';
-          data_valid      <= '1';
-          run3            <= '0';       -- changed to 0
-          dummy_ram1      <= '0';
-          next_gene       <= '1';
-          next_generation <= '0';
-          
-        end if;
-
-        if (dummy_ram2_p1 = '1') then
-          next_sreg       <= sel_s;  -- have read next gene from ram1 in order to be fed in selection block
-          count_sel_rd    <= count_sel_rd_p1 + 1;
-          data_valid      <= '1';
-          sel_out         <= '1';
-          run3            <= '0';
-          dummy_ram1      <= '0';
-          next_generation <= '0';
-        end if;
-
-        if (dummy_ram2_p1 = '0') and (dummy_eval2_p1 = '0') and (dummy_eval1_p1 = '0') and (dummy_obs_p1 = '1') then  --ALLAGI 
-          next_sreg       <= sel_s;  -- came here from done_s because max num of generations and fitness limit have   
-                                     -- not been reached and so we continue with selection of the new generation
-          count_sel_rd    <= count_sel_rd_p1 + 1;
-          sel_out         <= '1';
-          data_valid      <= '1';
-          run3            <= '0';       -- allaksa
-          dummy_ram1      <= '0';
-          load            <= '0';
-          next_generation <= '0';
-        end if;
-
-        if (dummy_eval2_p1 = '1') and (count_parents_p1 /= nParents) then  -- from fitness evaluation 
-          next_sreg        <= read_write_ram_2_s;  -- read next parent from ram2
-          addr_2           <= count_parents_p1;
-          we2              <= '0';
-          count_parents    <= count_parents_p1 +1;
-                                                   --count_offs <= count_offs_p1 + incr_p1 + 1; -- increment of produced offsprings
-          run3             <= '0';
-          sel_out          <= '0';
-          dummy_ram2       <= '1';  -- notify -- was dummy ram 1
-          count_cross_offs <= count_cross_offs_p1 +1;  --- TORA MPIKE
+          sel_out    <= '1';
+          run3       <= '0';
+          decode     <= '0';          -- prepei na meinei opos prin
+          next_gene  <= '1';
+          data_valid <= '1';
+          addr_1     <= count_sel_rd_p1;
+          addr_2     <= count_sel_wr_p1;
+          addr_rom <= 0;
+        elsif (notify_cnt_p = 7) then
+          next_sreg        <= sel_s;
           next_generation  <= '0';
-        end if;
-
-        if (dummy_eval2_p1 = '1') and (count_parents_p1 = nParents) then
-          next_sreg       <= done_s;
-          run3            <= '0';
-          addr_1          <= elite_offs(0);
-                                        --count_offs <= 0;  -- counter initialized
-                                        --count_parents <= 0; -- counter initialized
-          sel_out         <= '0';
-          dummy_ram1      <= '0';
-          next_generation <= '1';
-        end if;
-        
-        
+          notify_cnt       <= notify_cnt_p;
+          count_offs       <= count_offs_p1;
+          count_parents    <= count_parents_p1;
+          count_cross_offs <= count_cross_offs_p1;
+          count_sel_rd     <= count_sel_rd_p1 + 1;
+          sel_out        <= '1';
+          run3           <= '0';
+          decode         <= '0';
+          next_gene      <= '0';
+          data_valid     <= '1';
+          addr_1         <= count_sel_rd_p1;
+          addr_2         <= count_sel_wr_p1;
+          addr_rom <= 0;
+        elsif (notify_cnt_p /= 2) and (notify_cnt_p /= 3) and (notify_cnt_p /= 7) and (notify_cnt_p = 9) then
+          next_sreg        <= sel_s;    -- came here from done_s 
+          next_generation  <= '0';
+          notify_cnt       <= notify_cnt_p;
+          count_offs       <= count_offs_p1;
+          count_parents    <= count_parents_p1;
+          count_cross_offs <= count_cross_offs_p1;
+          count_sel_rd     <= count_sel_rd_p1 + 1;
+          sel_out        <= '1';
+          run3           <= '0';
+          decode         <= '0';
+          next_gene      <= '0';
+          data_valid     <= '1';
+          addr_1         <= count_sel_rd_p1;
+          addr_2         <= count_sel_wr_p1;
+          addr_rom <= 0;
+        elsif (notify_cnt_p = 3) then
+          if (count_parents_p1 /= 2*(pop_sz-elite)) then
+            next_sreg        <= read_write_ram_2_s;
+            next_generation  <= '0';
+            notify_cnt       <= 7;
+            count_parents    <= count_parents_p1+1;
+            count_cross_offs <= count_cross_offs_p1+1;
+            addr_1         <= 0;
+          else
+            next_sreg        <= done_s;
+            next_generation  <= '1';
+            notify_cnt       <= notify_cnt_p;
+            count_parents    <= count_parents_p1;
+            count_cross_offs <= count_cross_offs_p1;
+            addr_1         <= elite_offs(0);
+          end if;
+          count_offs   <= count_offs_p1;
+          count_sel_rd <= count_sel_rd_p1;
+          sel_out    <= '0';
+          run3       <= '0';
+          decode     <= '0';
+          next_gene  <= '0';
+          data_valid <= '0';
+          addr_2     <= count_parents_p1;
+          addr_rom <= 0;
+        else
+          next_sreg        <= read_write_ram_1_s;
+          next_generation  <= '0';
+          notify_cnt       <= notify_cnt_p;
+          count_offs       <= count_offs_p1;
+          count_parents    <= count_parents_p1;
+          count_cross_offs <= count_cross_offs_p1;
+          count_sel_rd     <= count_sel_rd_p1;
+          sel_out        <= '1';
+          run3           <= '0';
+          decode         <= '0';
+          next_gene      <= '0';
+          data_valid     <= '1';
+          addr_1         <= count_sel_rd_p1;
+          addr_2         <= count_sel_wr_p1;
+          addr_rom <= 0;
+        end if;        
       when sel_s =>
-        next_generation <= '0';
-        clear           <= '0';
-        ga_fin_r        <= '0';
-        cross_out       <= '0';
-        --eval <= '0';
-        valid           <= '0';
-        run1            <= '0';
-        run2            <= '0';
-        --run3 <= '0'; -- alakse
-        mut_out         <= '0';
-        we1             <= '0';
-        dummy_eval1     <= '0';
-        dummy_eval2     <= '0';
-        dummy_eval3     <= '0';
-        dummy_ram1      <= '0';
-        dummy_ram2      <= '0';
-        dummy_obs       <= '0';
-        rng_rd          <= '0';
-
-        if (sel_rd = '1') then  -- the parent is ready to be written in ram 2   ok
-          next_sreg    <= read_write_ram_2_s;
-          addr_2       <= count_sel_wr_p1;  -- where to write the parent in ram2   
-          count_sel_rd <= 0;  -- initialize counter of reading genes for selection
-                              --run3 <= '0';
-          we2          <= '1';          -- write enable 
-                                        --dummy_sel <= '0';
-                                        --next_gene <= '0';
-          sel_out      <= '1';          --changed
-          
-        elsif (sel_rd = '0') then  -- new gene is needed to be read from ram1 
-          next_sreg <= read_write_ram_1_s;
-          we2       <= '0';
-                                        --run3 <= '1';
-          addr_1    <= count_sel_rd_p1;
-          dummy_sel <= '1';        -- notify write_ram1 state that I was here
-          sel_out   <= '1';             -- selection block remains enabled
-          next_gene <= '0';
-                                   --data_valid <= '0';-- but does affect any of its previous outputs/signals
-        end if;
+        dummy_cnt_adapt    <= '0';
+        next_generation    <= '0';
+        -- Counters
+        notify_cnt         <= 6;        -- What is happening here?
+        count_parents      <= count_parents_p1;
+        count_sel_wr       <= count_sel_wr_p1;
+        count_cross_offs   <= count_cross_offs_p1;
+        count_gen          <= count_gen_p1;
+        count_offs         <= count_offs_p1;
+        -- Outputs 
+        clear            <= '0';
+        cross_out        <= '0';
+        mut_out          <= '0';
+        sel_out          <= '1';
+        run1             <= '0';
+        run2             <= '0';
+        run3             <= '0';
+        load             <= '0';
+        flag             <= '0';
+        decode           <= '0';
+        elite_null       <= '0';
+        valid            <= '0';
+        ga_fin_r           <= '0';
+        we1              <= '0';
+        next_gene        <= '0';
+        data_valid       <= '1';
+        data_out_cross1_p1 <= (others => '0');
+        data_out_cross2_p1 <= (others => '0');
+        index            <= 0;
+        addr_rom <= 0;
+        case sel_rd is
+          when '1' =>
+            next_sreg    <= read_write_ram_2_s;
+            count_sel_rd <= 0;
+            we2        <= '1';
+            addr_2     <= count_sel_wr_p1;
+            addr_1     <= count_sel_rd_p1;
+          when '0' =>             -- new gene is needed to be read from ram1 
+            next_sreg    <= read_write_ram_1_s;
+            count_sel_rd <= count_sel_rd_p1;
+            we2        <= '0';
+            addr_1     <= count_sel_rd_p1;
+            addr_2     <= count_sel_wr_p1;
+          when others =>                -- empty
+        end case;               
         
-      when read_write_ram_2_s =>
+        
+   when read_write_ram_2_s =>
+        dummy_cnt_adapt <= '0';
         next_generation <= '0';
-        clear           <= '0';
+        -- Counters
+        count_offs      <= count_offs_p1;
+        count_gen       <= count_gen_p1;
+        count_sel_rd    <= count_sel_rd_p1;
+        -- Outputs 
+        clear         <= '0';
+        mut_out       <= '0';
+        load          <= '0';
+        flag          <= '0';
+        decode        <= '0';
+        elite_null    <= '0';
+        valid         <= '0';
         ga_fin_r        <= '0';
-        mut_out         <= '0';
-        --eval <= '0';
-        valid           <= '0';
-        --sel_out <= '0'; 
-        data_valid      <= '0';
-        we1             <= '0';
-        --run3 <= '0'; changed
-
-        dummy_eval1 <= '0';
-        dummy_eval2 <= '0';
-        dummy_eval3 <= '0';
-        dummy_sel   <= '0';
-        dummy_ram1  <= '0';
-        dummy_obs   <= '0';
-        rng_rd      <= '0';
-
-        if count_sel_wr_p1 /= nParents-1 and (dummy_ram1_p1 = '0') and (dummy_ram2_p1 = '0') then  -- nParents not selected yet    ok
-          next_sreg    <= read_write_ram_1_s;  -- read again from the beginning genes for next selection
-          addr_1       <= count_sel_rd_p1;  -- counter has been already initialized
-          count_sel_wr <= count_sel_wr_p1 + 1;  -- where the new selected parent must be written in ram2 
-          cross_out    <= '0';
-          next_gene    <= '0';
-          run1         <= '0';
-          run2         <= '0';
-          run3         <= '1';
-          we2          <= '0';
-          dummy_ram2   <= '1';  -- notify write_ram1 state that I was here
-        end if;
-
-        if count_sel_wr_p1 = nParents-1 and (count_cross_offs_p1 /= 2) and (dummy_ram2_p1 = '0') then  -- nParents selected 
-          next_sreg        <= read_write_ram_2_s;  -- must read 1st parent for crossover
-          addr_2           <= count_parents_p1;    -- must be zero
-          count_parents    <= count_parents_p1 +1;  -- increment of counter for 2nd (next) parent
+        next_gene     <= '0';
+        data_valid    <= '0';
+        we1           <= '0';
+        we2           <= '0';
+        index         <= 0;
+        addr_rom <= 0;
+        if (count_sel_wr_p1 /= 2*(pop_sz-elite)-1) and (notify_cnt_p /= 5) and (notify_cnt_p /= 7) then
+          next_sreg          <= read_write_ram_1_s;
+          count_sel_wr       <= count_sel_wr_p1 + 1;
+          notify_cnt         <= 7;
+          count_parents      <= count_parents_p1;
+          count_cross_offs   <= count_cross_offs_p1;
           cross_out        <= '0';
+          sel_out          <= '1';
           run1             <= '0';
           run2             <= '0';
-          run3             <= '0';      -- changed 30/9
-          we2              <= '0';
-          dummy_ram2       <= '1';  -- notify I was here and have selected the 1st parent
-          count_cross_offs <= count_cross_offs_p1 +1;  -- increment of counter that counts the parents been driven to crossover
-        end if;
-
-        if (dummy_ram2_p1 = '1') and (count_cross_offs_p1 = 1) then
-          next_sreg          <= read_write_ram_2_s;  -- read ram 2 (parents) again because you have to pick 2 parents for crossover
-          addr_2             <= count_parents_p1;  -- here lies the next parent
-          data_out_cross1_p1 <= data_in_ram2;
-          count_parents      <= count_parents_p1 +1;  -- increment of counter for next parent 
-          cross_out          <= '0';
-          run1               <= '0';
-          run2               <= '0';
-          run3               <= '0';
-          we2                <= '0';
-          dummy_ram2         <= '1';  -- notify I was here and have picked a parent from ram2 
-          count_cross_offs   <= count_cross_offs_p1 +1;  -- increment of counter that counts the parents been driven to crossover
-        end if;
-
-        if (dummy_ram2_p1 = '1') and (count_cross_offs_p1 = 2) then
-          next_sreg          <= read_write_ram_2_s;  -- read ram 2 (parents) again because you have to pick 2 parents for crossover
-                                      --addr_2 <= count_parents_p1; -- here lies the next parent
+          run3             <= '1';
+          addr_1           <= count_sel_rd_p1;
+          addr_2           <= count_sel_wr_p1;
+          data_out_cross1_p1 <= (others => '0');
+          data_out_cross2_p1 <= (others => '0');
+        elsif count_sel_wr_p1 = 2*(pop_sz-elite)-1 and (count_cross_offs_p1 /= 2) and (notify_cnt_p /= 7) then  -- nParents selected         
+          next_sreg          <= read_write_ram_2_s;
+          count_sel_wr       <= count_sel_wr_p1;
+          notify_cnt         <= 7;
+          count_parents      <= count_parents_p1+1;
+          count_cross_offs   <= count_cross_offs_p1 + 1;
+          cross_out        <= '0';
+          sel_out          <= '1';
+          run1             <= '0';
+          run2             <= '0';
+          run3             <= '0';
+          addr_1           <= count_sel_rd_p1;
+          addr_2           <= count_parents_p1;
+          data_out_cross1_p1 <= (others => '0');
+          data_out_cross2_p1 <= (others => '0');
+        elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 1) then
+          next_sreg          <= read_write_ram_2_s;
+          count_sel_wr       <= count_sel_wr_p1;
+          notify_cnt         <= 7;
+          count_parents      <= count_parents_p1+1;
+          count_cross_offs   <= count_cross_offs_p1 + 1;
+          cross_out        <= '0';
+          sel_out          <= '1';
+          run1             <= '0';
+          run2             <= '0';
+          run3             <= '0';
+          addr_1           <= count_sel_rd_p1;
+          addr_2           <= count_parents_p1;
+          data_out_cross1_p1 <= data_in_ram2;             -- change it to '0' after registering the outputs
+          data_out_cross2_p1 <= (others => '0');
+        elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 2) then
+          next_sreg          <= read_write_ram_2_s;
+          count_sel_wr       <= count_sel_wr_p1;
+          notify_cnt         <= 7;
+          count_parents      <= count_parents_p1;
+          count_cross_offs   <= count_cross_offs_p1 + 1;
+          cross_out        <= '0';
+          sel_out          <= '1';
+          run1             <= '1';    -- changed
+          run2             <= '1';    -- changed
+          run3             <= '0';
+          addr_1           <= count_sel_rd_p1;
+          addr_2           <= count_parents_p1;
+          data_out_cross1_p1 <= temp1;
           data_out_cross2_p1 <= data_in_ram2;
-                                      --count_parents <= count_parents_p1 +1; -- increment of counter for next parent 
-          cross_out          <= '0';
-          run1               <= '1';    -- changed
-          run2               <= '1';    -- changed
-          run3               <= '0';
-          we2                <= '0';
-          dummy_ram2         <= '1';  -- notify I was here and have picked a parent from ram2 
-          count_cross_offs   <= count_cross_offs_p1 +1;  -- increment of counter that counts the parents been driven to crossover
-        end if;
-
-
-        if (dummy_ram2_p1 = '1') and (count_cross_offs_p1 = 3) then
-          next_sreg    <= cross_s;  -- already picked 2 parents and ready to continue to crossover
-          count_sel_wr <= 0;  -- initialize counter where selected genes are written (selection has already ended)
-          cross_out    <= '1';
-                              --data_out_cross1 <= data_out_cross1_p1;
-                              --data_out_cross2 <= data_in_ram2(genom_lngt+score_sz-1 downto score_sz);
-          run1         <= '0';
-          run2         <= '0';          -- changed
-          run3         <= '0';
-          we2          <= '0';
-          dummy_ram2   <= '0';
+          --data_out_cross1_p1 <= data_in_ram2;
+          --data_out_cross2_p1 <= (others => '0');
+  --      elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 3) then  -- new if statement
+  --        next_sreg          <= read_write_ram_2_s;
+  --        count_sel_wr       <= count_sel_wr_p1;
+  --        notify_cnt         <= 7;
+  --        count_parents      <= count_parents_p1;
+  --        count_cross_offs   <= count_cross_offs_p1 + 1;
+  --        cross_out_c        <= '0';
+  --        sel_out_c          <= '1';
+  --        run1_c             <= '1';
+  --        run2_c             <= '1';
+  --        run3_c             <= '0';
+  --        addr_1_c           <= count_sel_rd_p1;
+  --        addr_2_c           <= count_parents_p1;
+  --        data_out_cross1_p1 <= temp1;
+  --        data_out_cross2_p1 <= data_in_ram2;
+        elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 3) then
+          next_sreg          <= cross_s;
+          count_sel_wr       <= 0;
+          notify_cnt         <= notify_cnt_p;
+          count_parents      <= count_parents_p1;
+          count_cross_offs   <= count_cross_offs_p1;
+          cross_out        <= '1';
+          sel_out          <= '0';
+          run1             <= '0';    -- changed
+          run2             <= '0';
+          run3             <= '0';
+          addr_1           <= count_sel_rd_p1;
+          addr_2           <= count_parents_p1;
+          data_out_cross1_p1 <= temp1;
+          data_out_cross2_p1 <= temp2;
+        else
+          next_sreg          <= read_write_ram_2_s;
+          count_sel_wr       <= count_sel_wr_p1;
+          notify_cnt         <= notify_cnt_p;
+          count_parents      <= count_parents_p1;
+          count_cross_offs   <= count_cross_offs_p1;
+          cross_out        <= '0';
+          sel_out          <= '1';
+          run1             <= '0';
+          run2             <= '0';
+          run3             <= '0';
+          addr_1           <= count_sel_rd_p1;
+          addr_2           <= count_parents_p1;
+          data_out_cross1_p1 <= temp1;
+          data_out_cross2_p1 <= temp2;
         end if;
 
         
       when cross_s =>
+        notify_cnt       <= 0;
+        dummy_cnt_adapt  <= '0';
         next_generation  <= '0';
-        clear            <= '0';
-        ga_fin_r         <= '0';
-        --eval <= '0';
+        -- Counters
+        count_offs       <= count_offs_p1;
+        count_parents    <= count_parents_p1;
+        count_sel_wr     <= count_sel_wr_p1;
+        count_cross_offs <= 0;
+        count_gen        <= count_gen_p1;
+        count_sel_rd     <= count_sel_rd_p1;
+        -- Outputs       
+        clear          <= '0';
+        sel_out        <= '0';
+        run1 		<= '0';
+        run2             <= '0';
+        run3             <= '0';
+        load             <= '0';
+        flag             <= '0';
+        decode           <= '0';
+        elite_null       <= '0';
         valid            <= '0';
-        sel_out          <= '0';
+        ga_fin_r           <= '0';
+        next_gene        <= '0';
+        data_valid       <= '0';
         we1              <= '0';
         we2              <= '0';
-        run2             <= '0';        -- changed
-        run3             <= '0';
-        count_cross_offs <= 0;  -- initialize counter which counts how many parents have picked for crossover & mutation....
-
-        dummy_eval1 <= '0';
-        dummy_eval2 <= '0';
-        dummy_eval3 <= '0';
-        dummy_sel   <= '0';
-        dummy_ram1  <= '0';
-        dummy_ram2  <= '0';
-        dummy_obs   <= '0';
-        rng_rd      <= '0';
-
-        if (cross_rd = '1') then        -- crossover ready
-          next_sreg <= mut_s;
-          mut_out   <= '1';
-          cross_out <= '0';
-          run1      <= '0';  -- EXEI idi ginei 1 apo pio pano - Enan aithmo xreiazomai sto tsp mono gia mutation
-        end if;
-
-        if (cross_rd = '0') then
-          next_sreg <= cross_s;
-          mut_out   <= '0';
-          cross_out <= '1';
-          run1      <= '0';
-        end if;
+        addr_1           <= 0;
+        addr_2           <= 0;
+        data_out_cross1_p1 <= temp1;
+        data_out_cross2_p1 <= temp2;
+        index            <= 0;
+        case cross_rd is
+          when '1' =>                   -- crossover ready
+            next_sreg   <= mut_s;
+            cross_out <= '0';
+            mut_out   <= '1';
+          when '0' =>
+            next_sreg   <= cross_s;
+            cross_out <= '1';
+            mut_out   <= '0';
+          when others =>
+        end case;
         
       when mut_s =>
-        next_generation <= '0';
-        clear           <= '0';
-        ga_fin_r        <= '0';
-        cross_out       <= '0';
-        sel_out         <= '0';
-        we2             <= '0';
-        we1             <= '0';
-        run2            <= '0';
-        run3            <= '0';
-
-        dummy_eval1 <= '0';
-        dummy_eval2 <= '0';
-        dummy_eval3 <= '0';
-        dummy_sel   <= '0';
-        dummy_ram1  <= '0';
-        dummy_ram2  <= '0';
-        dummy_obs   <= '0';
-        rng_rd      <= '0';
-
-        if (mut_rd = '1') or (dummy_mut_p1 = '1') then  -- mutation ready
+        next_generation    <= '0';
+        -- Counters
+        count_offs         <= count_offs_p1;
+        count_parents      <= count_parents_p1;
+        count_sel_wr       <= count_sel_wr_p1;
+        count_cross_offs   <= count_cross_offs_p1;
+        count_gen          <= count_gen_p1;
+        count_sel_rd       <= count_sel_rd_p1;
+        -- Outputs 
+        clear            <= '0';
+        cross_out        <= '0';
+        sel_out          <= '0';
+        run2             <= '0';
+        run3             <= '0';
+        load             <= '0';
+        flag             <= '0';
+        decode           <= '0';
+        elite_null       <= '0';
+        ga_fin_r           <= '0';
+        next_gene        <= '0';
+        data_valid       <= '0';
+        we1              <= '0';
+        we2              <= '0';
+        addr_1           <= 0;
+        addr_2           <= 0;
+        data_out_cross1_p1 <= temp1;
+        data_out_cross2_p1 <= temp2;
+        if (mut_rd = '1') or (notify_cnt_p = 8) then  -- mutation ready          
           if cnt_adapted = '1' then
             next_sreg       <= fit_eval_s;
-            index           <= count_offs_p1 + incr;
+            notify_cnt      <= notify_cnt_p;
             dummy_cnt_adapt <= '0';
-            valid           <= '1';
-            decode          <= '0';
-            mut_out         <= '0';
-            dummy_mut       <= '0';
-            run1            <= '0';
+            mut_out       <= '0';
+            valid         <= '1';
+            index         <= count_offs_p1 + incr;
+            run1          <= '0';
           else
             next_sreg       <= mut_s;
-            index           <= count_offs_p1;
+            notify_cnt      <= 8;
             dummy_cnt_adapt <= '1';
-            valid           <= '0';
-            decode          <= '0';
-            mut_out         <= '0';
-            dummy_mut       <= '1';
-            run1            <= '0';
+            mut_out       <= '0';
+            valid         <= '0';
+            index         <= count_offs_p1;
+            run1          <= '0';
           end if;
-        end if;
-        if (mut_rd = '0') and (dummy_mut_p1 = '0') then
+        elsif (mut_rd = '0') and (notify_cnt_p = 0) then
           next_sreg       <= mut_s;
+          notify_cnt      <= notify_cnt_p;
           dummy_cnt_adapt <= '0';
-          mut_out         <= '1';
-          valid           <= '0';
-          decode          <= '0';
-          run1            <= '1';
+          mut_out       <= '1';
+          run1 <= '1';
+          valid <= '0';
+          index <= 0;
+        else
+          next_sreg       <= mut_s;
+          notify_cnt      <= notify_cnt_p;
+          dummy_cnt_adapt <= '0';
+          mut_out       <= '1';
+          run1          <= '0';
+          valid         <= '0';
+          index         <= 0;
         end if;
         
       when done_s =>
-        
-        cross_out <= '0';
-        mut_out   <= '0';
-        sel_out   <= '0';
-        --eval <= '0';
-        valid     <= '0';
-        we1       <= '0';
-        we2       <= '0';
-        run1      <= '0';
-        run2      <= '0';
-
-        dummy_eval1 <= '0';
-        dummy_eval2 <= '0';
-        dummy_eval3 <= '0';
-        dummy_sel   <= '0';
-        dummy_ram1  <= '0';
-        dummy_ram2  <= '0';
-        rng_rd      <= '0';
-
-        if (count_gen = max_gen-1) then  -- max gen reached
-          next_sreg       <= clear_ram_s;
-          next_generation <= '0';
-          ga_fin_r        <= '1';
+        dummy_cnt_adapt    <= '0';
+        next_generation    <= '0';
+        -- Counters
+        notify_cnt         <= 1;  -- notify yto clear_c ram to hold ga_fin_r = 1
+        count_sel_wr       <= count_sel_wr_p1;
+        count_cross_offs   <= count_cross_offs_p1;
+        count_sel_rd       <= count_sel_rd_p1;
+        -- Outputs 
+        cross_out        <= '0';
+        mut_out          <= '0';
+        sel_out          <= '0';
+        run1             <= '0';
+        run2             <= '0';
+        flag             <= '0';
+        elite_null       <= '0';
+        valid            <= '0';
+        next_gene        <= '0';
+        data_valid       <= '0';
+        decode           <= '0';
+        we1              <= '0';
+        we2              <= '0';
+        addr_1           <= 0;
+        addr_2           <= 0;
+        data_out_cross1_p1 <= (others => '0');
+        data_out_cross2_p1 <= (others => '0');
+        index            <= 0;
+        if (count_gen_p1 = max_gen-1) then  -- max gen reached
+          next_sreg     <= clear_ram_s;
+          count_offs    <= count_offs_p1;
+          count_parents <= count_parents_p1;
+          count_gen     <= count_gen_p1;
+          notify_cnt    <= 1;
+          ga_fin_r      <= '1';
           if run_ga = '1' then
             clear <= '1';
           else
             clear <= '0';
           end if;
-          load      <= '1';
-          run3      <= '0';
-          dummy_obs <= '0';
-        end if;
+          load     <= '1';
+          run3     <= '0';
 
-        if (count_gen /= max_gen-1) then
-          next_sreg       <= read_write_ram_1_s;
-          next_generation <= '0';
-          ga_fin_r        <= '0';
-          addr_1          <= count_sel_rd_p1;
-          count_offs      <= 0;         -- counter initialized
-          count_parents   <= 0;         -- counter initialized
-          clear           <= '0';
-          load            <= '1';
-          run3            <= '1';
-          count2          <= count_gen + 1;
-          dummy_obs       <= '1';
+        else
+          next_sreg     <= read_write_ram_1_s;
+          count_offs    <= 0;
+          count_parents <= 0;
+          count_gen     <= count_gen_p1+1;
+          notify_cnt    <= 9;
+          clear       <= '0';
+          load        <= '1';
+          run3        <= '1';
+          ga_fin_r      <= '0';
+          addr_1      <= count_sel_rd_p1;
+
         end if;
 
       when others =>
