@@ -6,8 +6,8 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 2006-11-06
--- Platform   : Modelsim & Synplify & Xilinx ISE
+-- Last update: 07/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
 -- Description: This block implements the selection algorithm block 
@@ -16,6 +16,7 @@
 -------------------------------------------------------------------------------
 -- revisions  :
 -- date        version  author  description
+-- 07/11/06    1.0      kdelip  Created
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -56,14 +57,13 @@ end entity selection;
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
 architecture rtl of selection is
-  --signal  selout     : std_logic_vector(genom_lngt-1 downto 0) := (others=>'0');
-  signal done         : std_logic                                                             := '0';
+  signal done         : std_logic;
   signal done_t       : std_logic;
   signal rd_p1        : std_logic;
   signal temp_rd      : std_logic;
   signal cumSum_p1    : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
-  signal scalFitSum   : std_logic_vector(score_sz+log2(pop_sz)+scaling_factor_res-1 downto 0) := (others => '0');
-  signal scalFitSum_p : std_logic_vector(score_sz+log2(pop_sz)+scaling_factor_res-1 downto 0) := (others => '0');
+  signal scalFitSum   : std_logic_vector(score_sz+log2(pop_sz)+scaling_factor_res-1 downto 0);
+  signal scalFitSum_p : std_logic_vector(score_sz+log2(pop_sz)+scaling_factor_res-1 downto 0);
   signal selParent_p  : std_logic_vector(genom_lngt-1 downto 0);
   signal sel_gene     : std_logic_vector(genom_lngt-1 downto 0);
   signal count        : std_logic;
@@ -73,12 +73,12 @@ begin
   process (clk, rst_n)
   begin
     if (rst_n = '0') then
-      count        <= '0';              -- 1st cycle of selection..??
-      cumSum_p1    <= (others => '0');  -- Previous accumulated sum of fitnesses
-      done_t       <= '0';  -- Notifies if selection block needs to continue with another gene from ram 1
-      scalFitSum_p <= (others => '0');
-      temp_rd      <= '0';
-      selParent_p  <= (others => '0');
+      count       <= '0';               -- 1st cycle of selection..??
+      cumSum_p1   <= (others => '0');  -- Previous accumulated sum of fitnesses
+      done_t      <= '0';  -- Notifies if selection block needs to continue with another gene from ram 1
+      --scalFitSum_p <= (others => '0');
+      temp_rd     <= '0';
+      selParent_p <= (others => '0');
     elsif clk = '1' and clk'event then
       temp_rd <= rd_p1;
       if data_valid = '1' then
@@ -87,20 +87,21 @@ begin
         count <= '0';
       end if;
       if data_valid = '1' and next_gene = '0' and count = '1' then
-      --cumSum_p1 <= cumSum_p1;
+        --cumSum_p1 <= cumSum_p1;
       elsif (data_valid = '1' and next_gene = '1') or (data_valid = '1' and next_gene = '0' and count = '0')then
         cumSum_p1 <= cumSum_p1 + inGene(score_sz-1 downto 0);
       else
         cumSum_p1 <= (others => '0');
       end if;
-      done_t       <= done;
-      scalFitSum_p <= scalFitSum;
-      selParent_p  <= sel_gene;
+      done_t      <= done;
+      --scalFitSum_p <= scalFitSum;
+      selParent_p <= sel_gene;
     end if;
   end process;
 
   rd        <= temp_rd;
   selParent <= selParent_p;
+
   selection : process (fitSum, rng, cumSum_p1, scalFitSum, scalFitSum_p, inGene, done_t, data_valid, count, temp_rd, selParent_p)
   begin
 
@@ -110,9 +111,11 @@ begin
       --score <= inGene(score_sz-1 downto 0);
       --cumSum <= cumSum_p1 + inGene(score_sz-1 downto 0);
       if done_t = '0' then
-        scalFitSum <= shr(fitSum * rng(scaling_factor_res-1 downto 0), conv_std_logic_vector(scaling_factor_res, scaling_factor_res));
+        scalFitSum <= shr(fitSum * rng(scaling_factor_res-1 downto 0),
+                          conv_std_logic_vector(scaling_factor_res, scaling_factor_res));
       elsif done_t = '1' and count = '0' then
-        scalFitSum <= shr(fitSum * rng(scaling_factor_res-1 downto 0), conv_std_logic_vector(scaling_factor_res, scaling_factor_res));
+        scalFitSum <= shr(fitSum * rng(scaling_factor_res-1 downto 0),
+                          conv_std_logic_vector(scaling_factor_res, scaling_factor_res));
       elsif done_t = '1' and count = '1' then
         scalFitSum <= scalFitSum_p;
       else
@@ -146,5 +149,20 @@ begin
     end if;
     
   end process selection;
+
+  -- purpose: force synplify to invoke mult18x18s
+  -- type   : sequential
+  -- inputs : clk, rst_n, scalFitSum
+  -- outputs: scalFitSum_p
+  mult18x18s : process (clk) is
+  begin  -- process mult18x18s
+    if rising_edge(clk) then            -- rising clock edge
+      if rst_n = '0' then               -- synchronous reset (active low)
+        scalFitSum_p <= (others => '0');
+      else
+        scalFitSum_p <= scalFitSum;
+      end if;
+    end if;
+  end process mult18x18s;
 
 end rtl;
