@@ -1,22 +1,24 @@
+--------------------------------Mutation block for tsp-------------------------------------
+-- Title      : Mutation block for tsp
+-- Project    : GA
 -------------------------------------------------------------------------------
--- Title      : Mutation block for tsp 
--- Project    : Genetic Algorithm
--------------------------------------------------------------------------------
--- File       : mutation_v2.vhd
--- Author     : George Doyamis & Kyriakos Deliparaschos 
+-- File       : mutation_tsp.vhd
+-- Author     :   <George Doyamis@GEORGEDOYAMIS>
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 2006-11-02
--- Platform   : Modelsim & Synplify & Xilinx ISE
+-- Last update: 07/11/06
+-- Platform   : Modelsim 6.1d, Synplify Pro 8.5.1, ISE 8.1.03i
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
 -- Description: This block implements the mutation algorithm block 
 -------------------------------------------------------------------------------
--- Copyright (c) 2006 NTUA
+-- Copyright (c) 2006 NTUA/IRAL
 -------------------------------------------------------------------------------
--- revisions  :
--- date        version  author  description
+-- Revisions  :
+-- Date        Version  Author  Description
+-- 07/11/06     1.0     geod    Created
 -------------------------------------------------------------------------------
+
 
 -------------------------------------------------------------------------------
 -- LIBRARIES
@@ -57,84 +59,107 @@ end entity mutation_tsp;
 -------------------------------------------------------------------------------
 architecture rtl of mutation_tsp is
 
-  signal mutout     : std_logic_vector(genom_lngt-1 downto 0)      := (others => '0');
-  signal mutout_p1  : std_logic_vector(genom_lngt-1 downto 0)      := (others => '0');
-  signal inGene_mut : std_logic_vector(genom_lngt-1 downto 0)      := (others => '0');
-  signal temp1      : std_logic_vector(log2(num_towns)-1 downto 0) := (others => '0');
-  signal temp2      : std_logic_vector(log2(num_towns)-1 downto 0) := (others => '0');
-  signal rng1       : std_logic_vector(mut_res-1 downto 0)         := (others => '0');
-  signal done       : std_logic                                    := '0';
-  signal done_p     : std_logic                                    := '0';
-  --signal reduce_1   : integer                                      := 0;
-  --signal reduce_2   : integer                                      := 0;
+  signal mutout    : std_logic_vector(genom_lngt-1 downto 0) := (others => '0');
+  signal mutout_p1 : std_logic_vector(genom_lngt-1 downto 0) := (others => '0');
+  signal done      : std_logic                               := '0';
+  signal done_p    : std_logic                               := '0';
 begin
 
   process (clk, rst_n)
   begin
     if (rst_n = '0') then
-      --mutOffspr <= (others => '0');
       mutout_p1 <= (others => '0');
-      --rd        <= '0';
       done_p    <= '0';
-      
     elsif clk = '1' and clk'event then
-      --mutOffspr <= mutout;
       mutout_p1 <= mutout;
       if flag = '1' then
-        --rd     <= '0';
         done_p <= '0';
       else
-        --rd     <= done;
         done_p <= done;
       end if;
-      
     end if;
   end process;
 
-mutOffspr <= mutout_p1;
-rd <= done_p;
-  mutation_tsp : process (mutPoint, rng1, rng, inGene, inGene_mut, mutout_p1, cont, flag, done, done_p, temp1, temp2)
+  mutOffspr <= mutout_p1;
+  rd        <= done_p;
+
+  mutation_tsp : process (mutPoint, rng, inGene, mutout_p1, cont, flag, done_p)
   begin
 
     case cont is
       
       when '1' =>                       -- mutation block enabled
         
-        rng1       <= rng(mut_res-1 downto 0);
-        inGene_mut <= inGene;
-        if conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) = num_towns-1 then  -- When num_towns-1 which does not exist mutate the num_towns-2
-          
-          temp1                                                                                                                                                                                                <= inGene((conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))+1-1)*log2(num_towns)-1 downto (conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))-1)*log2(num_towns));
-          inGene_mut((conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))+1-1)*log2(num_towns)-1 downto (conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))-1)*log2(num_towns)) <= temp2;
-        else
-          temp1                                                                                                                                                                                          <= inGene((conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))+1)*log2(num_towns)-1 downto conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))*log2(num_towns));
-          inGene_mut((conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))+1)*log2(num_towns)-1 downto conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))*log2(num_towns)) <= temp2;
-        end if;
-
-
-        if conv_integer(mutPoint(log2(num_towns)-1 downto 0)) = num_towns-1 then
-          
-          temp2                                                                                                                                                                <= inGene((conv_integer(mutPoint(log2(num_towns)-1 downto 0))+1-1)*log2(num_towns)-1 downto (conv_integer(mutPoint(log2(num_towns)-1 downto 0))-1)*log2(num_towns));
-          inGene_mut((conv_integer(mutPoint(log2(num_towns)-1 downto 0))+1-1)*log2(num_towns)-1 downto (conv_integer(mutPoint(log2(num_towns)-1 downto 0))-1)*log2(num_towns)) <= temp1;
-        else
-          temp2                                                                                                                                                          <= inGene((conv_integer(mutPoint(log2(num_towns)-1 downto 0))+1)*log2(num_towns)-1 downto conv_integer(mutPoint(log2(num_towns)-1 downto 0))*log2(num_towns));
-          inGene_mut((conv_integer(mutPoint(log2(num_towns)-1 downto 0))+1)*log2(num_towns)-1 downto conv_integer(mutPoint(log2(num_towns)-1 downto 0))*log2(num_towns)) <= temp1;
-        end if;
-
-        if rng1 > conv_std_logic_vector(mr, mut_res) then
+        if rng(mut_res-1 downto 0) > conv_std_logic_vector(mr, mut_res) or ((rng(mut_res-1 downto 0) < conv_std_logic_vector(mr, mut_res)) and (mutPoint(2*log2(num_towns)-1 downto log2(num_towns)) = mutPoint(log2(num_towns)-1 downto 0))) then
           mutout <= inGene;
+          done   <= '1';
         else
-          mutout <= inGene_mut;
+          if conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) = num_towns-1 then
+            for i in 0 to num_towns-2 loop
+              for j in 0 to num_towns-2 loop
+                if i /= conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))-1 and i /= conv_integer(mutPoint(log2(num_towns)-1 downto 0)) then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((i+1)*log2(num_towns)-1 downto i*log2(num_towns));
+                  exit;
+                -- i=mutPoint(1) and j=mutPoint(2)
+                elsif i = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((num_towns-1)*log2(num_towns)-1 downto (num_towns-2)*log2(num_towns));
+                  exit;
+                -- i=mutPoint(2) and j=mutPoint(1)
+                elsif j = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) and i = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))-1 then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
+                  exit;
+                else
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= (others => '1');
+                end if;
+              end loop;
+            end loop;
+            done <= '1';
+          elsif conv_integer(mutPoint(log2(num_towns)-1 downto 0)) = num_towns-1 then
+            for i in 0 to num_towns-2 loop
+              for j in 0 to num_towns-2 loop
+                if i /= conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) and i /= conv_integer(mutPoint(log2(num_towns)-1 downto 0))-1 then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((i+1)*log2(num_towns)-1 downto i*log2(num_towns));
+                  exit;
+                -- i=mutPoint(1) and j=mutPoint(2)
+                elsif i = conv_integer(mutPoint(log2(num_towns)-1 downto 0))-1 and j = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
+                  exit;
+                -- i=mutPoint(2) and j=mutPoint(1)
+                elsif i = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((num_towns-1)*log2(num_towns)-1 downto (num_towns-2)*log2(num_towns));
+                  exit;
+                else
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= (others => '1');
+                end if;
+              end loop;
+            end loop;
+            done <= '1';
+          else
+            for i in 0 to num_towns-2 loop
+              for j in 0 to num_towns-2 loop
+                if i /= conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) and i /= conv_integer(mutPoint(log2(num_towns)-1 downto 0)) then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((i+1)*log2(num_towns)-1 downto i*log2(num_towns));
+                  exit;
+                -- i=mutPoint(1) and j=mutPoint(2)
+                elsif i = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) and j = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
+                  exit;
+                -- i=mutPoint(2) and j=mutPoint(1)
+                elsif j = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) and i = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
+                  exit;
+                else
+                  mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= (others => '1');
+                end if;
+              end loop;
+            end loop;
+            done <= '1';
+          end if;
         end if;
-        done <= '1';
 
       when '0' =>                       -- mutation block disabled
 
-        rng1       <= (others => '0');
-        inGene_mut <= (others => '0');
-        temp1      <= (others => '0');
-        temp2      <= (others => '0');
-        mutout     <= mutout_p1;
+        mutout <= mutout_p1;
         if flag = '1' then
           done <= '0';
         else
