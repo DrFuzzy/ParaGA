@@ -72,26 +72,10 @@ architecture rtl of fix_elite_tsp is
   signal elite_indexs      : int_array(0 to elite-1)                            := (others => 0);
   signal temp_indexs_1     : int_array(0 to elite-1)                            := (others => 0);
   signal temp_indexs_2     : int_array(0 to elite-1)                            := (others => 0);
-  signal cont              : std_logic                                          := '0';
-  signal cont2             : std_logic;
-  signal fin               : std_logic;
-  signal done_p            : std_logic;
-  signal done              : std_logic;
-  signal equal             : std_logic;
-  signal nParents          : integer;
-  signal counter           : integer;
+  signal count_cycle              : integer range 0 to 3;
+  signal counter           : integer range 0 to elite-1;
   
 begin
-
-  process (clk, rst_n)
-
-  begin
-    if rst_n = '0' then
-      done_p <= '0';
-    elsif rising_edge(clk) then
-      done_p <= done;
-    end if;
-  end process;
 
   fix_sum : process (sum, fit, valid, sum_p, ready_in)
 
@@ -111,10 +95,7 @@ begin
   begin
     if rst_n = '0' then
       rd      <= '0';
-      equal   <= '0';
-      cont    <= '0';
-      cont2   <= '0';
-      fin     <= '0';
+      count_cycle    <= 0;
       counter <= 0;
       max_fit <= (others => '0');
       fit_sum <= (others => '0');
@@ -133,15 +114,11 @@ begin
       end loop;
       
     elsif rising_edge(clk) then
-      nParents <= 2*(pop_sz-elite);
       if valid = '1' and ready_in = '1' then
 
         -- 1st clock cycle      
-        if cont = '0' and fin = '0' then
+        if count_cycle = 0 then
           for i in elite-1 downto 1 loop
-            if fit = best_fit(i) or fit = best_fit(i-1)then
-              equal <= '1';
-            end if;
             temp1(i)         <= best_fit(i-1);
             temp2(i)         <= best_fit(i);
             temp_indexs_1(i) <= elite_indexs(i-1);
@@ -151,15 +128,16 @@ begin
               temp2(0)         <= best_fit(0);
               temp_indexs_1(0) <= 0;
               temp_indexs_2(0) <= elite_indexs(0);
-              cont             <= '1';
+              count_cycle             <= 1;
             else
-              cont <= '0';
+              count_cycle <= 0;
             end if;
           end loop;
+          rd  <= '0';
         end if;
 
         -- 2nd clock cycle
-        if cont = '1' and cont2 = '0' and fin = '0' then  --  and equal = '0'
+        if count_cycle = 1 then 
           for i in elite-1 downto 1 loop  -- for more than one elite child !!!!!!!!!
 
             if temp1(i) < fit and temp2(i) < fit and temp1(i) /= temp2(i) then
@@ -189,22 +167,18 @@ begin
                 best_fit(0)     <= temp2(0);
                 elite_indexs(0) <= temp_indexs_2(0);
               end if;
-              cont2 <= '1';
-              cont  <= '0';
+              count_cycle  <= 2;
             else
-              cont2 <= '0';
+              count_cycle <= 1;
             end if;
+            rd  <= '0';
           end loop;
 
-          -- elsif cont='1' and  cont2='0'  and equal = '1' then 
-          -- nothing -- this gene doesnot affect
-          --    cont2 <= '1';
         end if;
 
         -- 3rd clock cycle
-        if cont2 = '1' then
-          rd      <= '1';
-          done    <= '1';
+        if count_cycle = 2 then
+          
           max_fit <= best_fit(0);
 
           if count_parents < 2*elite+1 and decode = '0' then
@@ -223,24 +197,20 @@ begin
             counter <= 0;
           end if;
 
-          if decode = '0' and valid = '1' and count_parents = nParents then  --  produce new elite indexes only at the last mut offs
+          if decode = '0' and valid = '1' and count_parents = 2*(pop_sz-elite) then  --  produce new elite indexes only at the last mut offs
             elite_offs        <= elite_indexs;
             best_fit_prev_gen <= best_fit;
           elsif decode = '1' and valid = '1' then  -- rng offs evaluation
             elite_offs        <= elite_indexs;
             best_fit_prev_gen <= best_fit;
           end if;
-          cont2 <= '0';
-          fin   <= '1';
+          count_cycle <= 3;
+          rd      <= '1';
         end if;
         
       else
-        cont  <= '0';
-        fin   <= '0';
-        cont2 <= '0';
+        count_cycle  <= 0;
         rd    <= '0';
-        done  <= '0';
-        equal <= '0';
         if (count_parents = 0 and decode = '0') or (decode = '1' and valid = '0' and index = pop_sz - 1) then
           sum_p <= (others => '0');
         end if;
