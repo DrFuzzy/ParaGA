@@ -1,0 +1,25 @@
+#-- Synplicity, Inc.
+#-- Version Synplify Pro 8.5.1
+#-- Project file D:\Designs\GA_eval\syn\GA_TSP\ga_tsp.prd
+#-- Written on Tue Nov 07 20:31:03 2006
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear {  clk - Estimated Frequency } {  Worst Slack }
+
+#HDL Parameters
+set_option -hdl_param -add genom_lngt ga_tsp
+set_option -hdl_param -add score_sz ga_tsp
+set_option -hdl_param -add scaling_factor_res ga_tsp
+set_option -hdl_param -add pop_sz ga_tsp
+set_option -hdl_param -add elite ga_tsp
+set_option -hdl_param -add num_towns ga_tsp
+set_option -hdl_param -add townres ga_tsp
+set_option -hdl_param -add mr ga_tsp
+set_option -hdl_param -add mut_res ga_tsp
+set_option -hdl_param -add max_gen ga_tsp

@@ -1,0 +1,12 @@
+@P:  Worst Slack : -2.462
+@P:  clk - Estimated Frequency : 80.2 MHz
+@P:  clk - Requested Frequency : 100.0 MHz
+@P:  clk - Estimated Period : 12.461
+@P:  clk - Requested Period : 10.000
+@P:  clk - Slack : -2.462
+@P: ga_tsp Part : xc3s1500fg676-4
+@P: ga_tsp I/O primitives : 58
+@P: ga_tsp I/O Register bits : 57
+@P: ga_tsp Register bits (Non I/O) : 2414 (9%)
+@P: ga_tsp Total Luts : 2516 (9%)
+@P:  CPU Time : 0h:00m:43s

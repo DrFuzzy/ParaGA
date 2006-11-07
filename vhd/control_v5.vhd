@@ -6,9 +6,9 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 06/04/06
--- Last update: 2006-11-06
+-- Last update: 07/11/06
 -- Platform   : Modelsim, Synplify, ISE
--- Standard   : VHDL'93
+-- Standard   : VHDL'93 
 -------------------------------------------------------------------------------
 -- Description: This block implements the control module for the GA
 -------------------------------------------------------------------------------
@@ -89,7 +89,7 @@ architecture rtl of control_v5 is
                      read_write_ram_1_s, read_write_ram_2_s);
 
   signal sreg, next_sreg     : type_sreg;
-  signal mut_rd_p1           : std_logic;
+  --signal mut_rd_p1           : std_logic;
   signal term_rd_p1          : std_logic;
   signal data_out_cross1_p1  : std_logic_vector(genom_lngt-1 downto 0);
   signal data_out_cross2_p1  : std_logic_vector(genom_lngt-1 downto 0);
@@ -158,7 +158,7 @@ begin
     if (rst_n = '0') then
       notify_cnt_p        <= 0;
       term_rd_p1          <= '0';
-      mut_rd_p1           <= '0';
+      --mut_rd_p1           <= '0';
       count_offs_p1       <= 0;
       count_parents_p1    <= 0;
       count_sel_wr_p1     <= 0;
@@ -169,7 +169,7 @@ begin
     elsif rising_edge(clk) then
       notify_cnt_p        <= notify_cnt;
       term_rd_p1          <= term_rd;
-      mut_rd_p1           <= mut_rd;
+      --mut_rd_p1           <= mut_rd;
       count_offs_p1       <= count_offs;
       count_parents_p1    <= count_parents;
       count_sel_wr_p1     <= count_sel_wr;

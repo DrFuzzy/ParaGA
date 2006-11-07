@@ -1,0 +1,937 @@
+#### START OF AREA REPORT #####[
+
+Part:			XC3S1500FG676-4 (Xilinx)
+
+----------------------------------------------------------------------
+########   Utilization report for  Top level view:   ga_tsp   ########
+======================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     2471               100 %                
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp:	2471 (39.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     2516               100 %                
+MUXCY                    247                100 %                
+XORCY                    110                100 %                
+MULT18x18/MULT18x18S     4                  100 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp:	2877 (45.52 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     59                 100 %                
+=================================================
+Total IO PADS in the block ga_tsp:	59 (0.93 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   control_tsp   ########
+Instance path:   ga_tsp.control_tsp                              
+=================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     205                8.3 %                
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.control_tsp:	205 (3.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     384                15.3 %               
+MUXCY                    61                 24.7 %               
+XORCY                    31                 28.2 %               
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.control_tsp:	476 (7.53 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.control_tsp:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.control_tsp:	0 (0.00 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   crossover_TSP   ########
+Instance path:   ga_tsp.crossover_TSP                              
+===================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     128                5.18 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.crossover_TSP:	128 (2.03 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     342                13.6 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.crossover_TSP:	342 (5.41 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.crossover_TSP:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.crossover_TSP:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ0   ########
+Instance path:   ga_tsp.delay_regsZ0                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     4                  0.1620 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ0:	4 (0.06 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.delay_regsZ0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.delay_regsZ0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.delay_regsZ0:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ1   ########
+Instance path:   ga_tsp.delay_regsZ1                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     6                  0.2430 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ1:	6 (0.09 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.delay_regsZ1:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.delay_regsZ1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.delay_regsZ1:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ2   ########
+Instance path:   ga_tsp.delay_regsZ2                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  0.3240 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ2:	8 (0.13 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.delay_regsZ2:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.delay_regsZ2:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.delay_regsZ2:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ3   ########
+Instance path:   ga_tsp.delay_regsZ3                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     16                 0.6480 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ3:	16 (0.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.delay_regsZ3:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.delay_regsZ3:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.delay_regsZ3:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ4   ########
+Instance path:   ga_tsp.delay_regsZ4                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     21                 0.850 %              
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ4:	21 (0.33 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.delay_regsZ4:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.delay_regsZ4:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.delay_regsZ4:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   fit_eval_tsp   ########
+Instance path:   ga_tsp.fit_eval_tsp                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     539                21.8 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.fit_eval_tsp:	539 (8.53 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     550                21.9 %               
+MUXCY                    106                42.9 %               
+XORCY                    35                 31.8 %               
+MULT18x18/MULT18x18S     2                  50. %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.fit_eval_tsp:	693 (10.97 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.fit_eval_tsp:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.fit_eval_tsp:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   fit_calc_tsp   ########
+Instance path:   fit_eval_tsp.fit_calc_tsp                        
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     127                5.14 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block fit_eval_tsp.fit_calc_tsp:	127 (2.01 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     165                6.56 %               
+MUXCY                    15                 6.07 %               
+XORCY                    16                 14.5 %               
+MULT18x18/MULT18x18S     2                  50. %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block fit_eval_tsp.fit_calc_tsp:	198 (3.13 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block fit_eval_tsp.fit_calc_tsp:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block fit_eval_tsp.fit_calc_tsp:	0 (0.00 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   fix_elite_tsp   ########
+Instance path:   fit_eval_tsp.fix_elite_tsp                        
+===================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     381                15.4 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block fit_eval_tsp.fix_elite_tsp:	381 (6.03 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     385                15.3 %               
+MUXCY                    91                 36.8 %               
+XORCY                    19                 17.3 %               
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block fit_eval_tsp.fix_elite_tsp:	495 (7.83 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block fit_eval_tsp.fix_elite_tsp:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block fit_eval_tsp.fix_elite_tsp:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   init_generation_rom_p   ########
+Instance path:   ga_tsp.init_generation_rom_p                              
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     0                  0.0 %                
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.init_generation_rom_p:	0 (0.00 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     21                 0.8350 %             
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.init_generation_rom_p:	21 (0.33 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.init_generation_rom_p:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.init_generation_rom_p:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   mutation_tsp   ########
+Instance path:   ga_tsp.mutation_tsp                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     52                 2.1 %                
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.mutation_tsp:	52 (0.82 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     201                7.99 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.mutation_tsp:	201 (3.18 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.mutation_tsp:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.mutation_tsp:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------
+########   Utilization report for  cell:   rngZ0   ########
+Instance path:   ga_tsp.rngZ0                              
+===========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  0.3240 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ0:	8 (0.13 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     26                 1.03 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ0:	26 (0.41 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.rngZ0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.rngZ0:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------
+########   Utilization report for  cell:   rngZ1   ########
+Instance path:   ga_tsp.rngZ1                              
+===========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     12                 0.4860 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ1:	12 (0.19 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     39                 1.55 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ1:	39 (0.62 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.rngZ1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.rngZ1:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------
+########   Utilization report for  cell:   rngZ2   ########
+Instance path:   ga_tsp.rngZ2                              
+===========================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     16                 0.6480 %             
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ2:	16 (0.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     53                 2.11 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ2:	53 (0.84 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.rngZ2:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.rngZ2:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   selection   ########
+Instance path:   ga_tsp.selection                              
+===============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     92                 3.72 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.selection:	92 (1.46 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     108                4.29 %               
+MUXCY                    61                 24.7 %               
+XORCY                    25                 22.7 %               
+MULT18x18/MULT18x18S     2                  50. %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.selection:	196 (3.10 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.selection:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.selection:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   spram1Z0   ########
+Instance path:   ga_tsp.spram1Z0                              
+==============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     693                28. %                
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.spram1Z0:	693 (10.97 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     400                15.9 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.spram1Z0:	400 (6.33 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.spram1Z0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.spram1Z0:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   spram1Z1   ########
+Instance path:   ga_tsp.spram1Z1                              
+==============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     650                26.3 %               
+LATCHES       0                  0.0 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.spram1Z1:	650 (10.28 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     354                14.1 %               
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.spram1Z1:	354 (5.60 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.spram1Z1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.spram1Z1:	0 (0.00 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

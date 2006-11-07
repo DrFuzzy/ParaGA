@@ -151,6 +151,19 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Compiling entity control_tsp
 -- Compiling architecture rtl of control_tsp
 
+} {} {}} D:/Designs/GA_eval/vhd/mutation_tsp.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/mutation_tsp.vhd
+Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package std_logic_signed
+-- Loading package arith_pkg
+-- Loading package dhga_pkg
+-- Compiling entity mutation_tsp
+-- Compiling architecture rtl of mutation_tsp
+
 } {} {}} D:/Designs/GA_eval/vhd/rom_pkg.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/rom_pkg.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package standard
@@ -252,19 +265,6 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading architecture bench of ga_tsp_tb
 -- Loading entity ga_tsp
 
-} {} {}} D:/Designs/GA_eval/vhd/fitness_calc_TSP.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/fitness_calc_TSP.vhd
-Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Loading package std_logic_signed
--- Loading package arith_pkg
--- Loading package dhga_pkg
--- Compiling entity fit_calc_tsp
--- Compiling architecture rtl of fit_calc_tsp
-
 } {} {}} D:/Designs/GA_eval/vhd/top_fit_eval.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/top_fit_eval.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package standard
@@ -314,6 +314,19 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Compiling entity selection
 -- Compiling architecture rtl of selection
 
+} {} {}} D:/Designs/GA_eval/vhd/fix_elite_tsp.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/fix_elite_tsp.vhd
+Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package std_logic_signed
+-- Loading package arith_pkg
+-- Loading package dhga_pkg
+-- Compiling entity fix_elite_tsp
+-- Compiling architecture rtl of fix_elite_tsp
+
 } {} {}} D:/Designs/GA_eval/vhd/mutation_v1.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/mutation_v1.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package standard
@@ -346,18 +359,5 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package rom_pkg
 -- Compiling entity coordinates_rom_p
 -- Compiling architecture rtl of coordinates_rom_p
-
-} {} {}} D:/Designs/GA_eval/vhd/fix_elite_tsp.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/fix_elite_tsp.vhd
-Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Loading package std_logic_signed
--- Loading package arith_pkg
--- Loading package dhga_pkg
--- Compiling entity fix_elite_tsp
--- Compiling architecture rtl of fix_elite_tsp
 
 } {} {}}

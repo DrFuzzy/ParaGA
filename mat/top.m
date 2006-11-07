@@ -23,7 +23,7 @@ factor = 4;
 mut_prob = 150; % according to mut_res from VHDL design
 mut_res = 8;
 cross_method =2;
-mut_method =1;
+mut_method =2;
 %% Produce random seeds
 [seed,seed1,seed2,seed3] = seeds_generator();
 %load seeds_tsp
@@ -165,12 +165,12 @@ else % mut_method == 2
         LFSR_reg_3 = temp_masks((nParents/2)*(genomlngt+2)+1,:);
         zero = 1;
     end
-    for i=1:(nParents/2)*(genomlngt+2) + 1 % According to VHDL rng [+1 is for seed]
+    for i=1:(nParents/2)*(genomlngt+3) + 1 % According to VHDL rng [+1 is for seed]
         [temp_masks(i,:)] = rng(load_var,run,seed3{index},genomlngt + mut_res,LFSR_reg_3);
         LFSR_reg_3 = temp_masks(i,:);         
         load_var = 0;
     end
-    for j=1:genomlngt+2:(nParents/2 - 1)*(genomlngt+2) + 1 
+    for j=1:genomlngt+3:(nParents/2 - 1)*(genomlngt+3) + 1 
         cross_mask{index}(ind,:) = temp_masks(j+1,1:genomlngt);
         ind=ind+1;
         for k=1:genomlngt

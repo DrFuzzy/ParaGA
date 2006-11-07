@@ -92,20 +92,120 @@ add wave -noupdate -format Logic /ga_tb/u_bench/u4/u0/decode
 add wave -noupdate -format Logic /ga_tb/u_bench/u4/u0/valid
 add wave -noupdate -format Literal /ga_tb/u_bench/u4/u0/in_genes
 add wave -noupdate -format Literal /ga_tb/u_bench/u4/u0/gene_score
-add wave -noupdate -format Literal /ga_tb/u_bench/u4/u0/fit
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u0/fit
 add wave -noupdate -format Logic /ga_tb/u_bench/u4/u0/ready_out
 add wave -noupdate -format Literal /ga_tb/u_bench/u4/u0/gene_scr
-add wave -noupdate -format Literal /ga_tb/u_bench/u4/u0/gene
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u0/gene
 add wave -noupdate -format Literal /ga_tb/u_bench/u4/u0/max_fit
 add wave -noupdate -format Logic /ga_tb/u_bench/u4/u0/done
 add wave -noupdate -format Logic /ga_tb/u_bench/u4/u0/done_p
+add wave -noupdate -divider {FIX ELITE}
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/clk
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/rst_n
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/decode
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/valid
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/elite_null
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/index
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u1/fit
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/count_parents
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/ready_in
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/elite_offs
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u1/fit_sum
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/max_fit
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/rd
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u1/sum
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u1/sum_p
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u1/best_fit
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u4/u1/best_fit_prev_gen
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/temp1
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/temp2
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/elite_indexs
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/temp_indexs_1
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/temp_indexs_2
+add wave -noupdate -format Logic /ga_tb/u_bench/u4/u1/fin
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/count_cycle
+add wave -noupdate -format Literal /ga_tb/u_bench/u4/u1/counter
+add wave -noupdate -divider {POPULATION RAM}
+add wave -noupdate -format Literal /ga_tb/u_bench/u11/sreg
+add wave -noupdate -format Literal /ga_tb/u_bench/u11/next_sreg
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u9/add
+add wave -noupdate -format Logic /ga_tb/u_bench/u9/clk
+add wave -noupdate -format Logic /ga_tb/u_bench/u9/rst_n
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u9/add
+add wave -noupdate -format Literal /ga_tb/u_bench/u9/data_in
+add wave -noupdate -format Literal /ga_tb/u_bench/u9/data_out
+add wave -noupdate -format Logic /ga_tb/u_bench/u9/wr
+add wave -noupdate -format Logic /ga_tb/u_bench/u9/clear
+add wave -noupdate -format Literal /ga_tb/u_bench/u9/data
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(0)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(1)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(2)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(3)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(4)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(5)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(6)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u9/data(7)
+add wave -noupdate -divider {RNG SELECTION}
+add wave -noupdate -format Logic /ga_tb/u_bench/u3/clk
+add wave -noupdate -format Logic /ga_tb/u_bench/u3/rst_n
+add wave -noupdate -format Logic /ga_tb/u_bench/u3/load
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u3/seed
+add wave -noupdate -format Logic /ga_tb/u_bench/u3/run
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u3/parallel_out
+add wave -noupdate -format Literal /ga_tb/u_bench/u3/taps
+add wave -noupdate -divider SELECTION
+add wave -noupdate -format Literal /ga_tb/u_bench/u11/sreg
+add wave -noupdate -format Literal /ga_tb/u_bench/u11/next_sreg
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/clk
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/rst_n
+add wave -noupdate -format Literal /ga_tb/u_bench/u5/ingene
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u5/rng
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u5/fitsum
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/data_valid
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/next_gene
+add wave -noupdate -format Literal /ga_tb/u_bench/u5/sel_gene
+add wave -noupdate -format Literal -radix binary /ga_tb/u_bench/u5/selparent
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/rd
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/rd_p1
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/temp_rd
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/done
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/done_t
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u5/cumsum_p1
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u5/scalfitsum
+add wave -noupdate -format Literal -radix unsigned /ga_tb/u_bench/u5/scalfitsum_p
+add wave -noupdate -format Logic /ga_tb/u_bench/u5/count
+add wave -noupdate -divider {PARENTS RAM}
+add wave -noupdate -format Logic /ga_tb/u_bench/u10/clk
+add wave -noupdate -format Logic /ga_tb/u_bench/u10/rst_n
+add wave -noupdate -format Literal /ga_tb/u_bench/u10/add
+add wave -noupdate -format Literal /ga_tb/u_bench/u10/data_in
+add wave -noupdate -format Literal /ga_tb/u_bench/u10/data_out
+add wave -noupdate -format Logic /ga_tb/u_bench/u10/wr
+add wave -noupdate -format Logic /ga_tb/u_bench/u10/clear
+add wave -noupdate -format Literal /ga_tb/u_bench/u10/data
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(0)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(1)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(2)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(3)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(4)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(5)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(6)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(7)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(8)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(9)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(10)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(11)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(12)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(13)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(14)
+add wave -noupdate -format Literal -height 15 /ga_tb/u_bench/u10/data(15)
 add wave -noupdate -divider CROSSOVER
 add wave -noupdate -format Logic /ga_tb/u_bench/u6/clk
 add wave -noupdate -format Logic /ga_tb/u_bench/u6/rst_n
 add wave -noupdate -format Logic /ga_tb/u_bench/u6/cont
 add wave -noupdate -format Literal /ga_tb/u_bench/u6/crosspoints
 add wave -noupdate -format Literal /ga_tb/u_bench/u6/crossmethod
-add wave -noupdate -format Literal /ga_tb/u_bench/u6/rng
+add wave -noupdate -format Literal -radix binary /ga_tb/u_bench/u6/rng
 add wave -noupdate -format Literal /ga_tb/u_bench/u6/ingene1
 add wave -noupdate -format Literal /ga_tb/u_bench/u6/ingene2
 add wave -noupdate -format Logic /ga_tb/u_bench/u6/rd
@@ -120,6 +220,8 @@ add wave -noupdate -format Literal /ga_tb/u_bench/u6/temp2
 add wave -noupdate -format Literal /ga_tb/u_bench/u6/crossout1
 add wave -noupdate -format Logic /ga_tb/u_bench/u6/done
 add wave -noupdate -divider MUTATION
+add wave -noupdate -format Literal /ga_tb/u_bench/u11/sreg
+add wave -noupdate -format Literal /ga_tb/u_bench/u11/next_sreg
 add wave -noupdate -format Logic /ga_tb/u_bench/u7/clk
 add wave -noupdate -format Logic /ga_tb/u_bench/u7/rst_n
 add wave -noupdate -format Literal /ga_tb/u_bench/u7/mutpoint
@@ -135,28 +237,18 @@ add wave -noupdate -format Literal /ga_tb/u_bench/u7/mutout_p1
 add wave -noupdate -format Literal /ga_tb/u_bench/u7/count
 add wave -noupdate -format Logic /ga_tb/u_bench/u7/done
 add wave -noupdate -format Logic /ga_tb/u_bench/u7/done_p
-add wave -noupdate -divider SELECTION
-add wave -noupdate -format Literal /ga_tb/u_bench/u11/sreg
-add wave -noupdate -format Literal /ga_tb/u_bench/u11/next_sreg
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/clk
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/rst_n
-add wave -noupdate -format Literal /ga_tb/u_bench/u5/ingene
-add wave -noupdate -format Literal /ga_tb/u_bench/u5/rng
-add wave -noupdate -format Literal -radix decimal /ga_tb/u_bench/u5/fitsum
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/data_valid
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/next_gene
-add wave -noupdate -format Literal /ga_tb/u_bench/u5/selparent
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/rd
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/done
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/done_t
-add wave -noupdate -format Literal /ga_tb/u_bench/u5/cumsum_p1
-add wave -noupdate -format Literal /ga_tb/u_bench/u5/scalfitsum
-add wave -noupdate -format Literal /ga_tb/u_bench/u5/scalfitsum_p
-add wave -noupdate -format Logic /ga_tb/u_bench/u5/count
+add wave -noupdate -divider {MASK + MUT RNG}
+add wave -noupdate -format Logic /ga_tb/u_bench/u1/clk
+add wave -noupdate -format Logic /ga_tb/u_bench/u1/rst_n
+add wave -noupdate -format Logic /ga_tb/u_bench/u1/load
+add wave -noupdate -format Literal /ga_tb/u_bench/u1/seed
+add wave -noupdate -format Logic /ga_tb/u_bench/u1/run
+add wave -noupdate -format Literal /ga_tb/u_bench/u1/parallel_out
+add wave -noupdate -format Literal /ga_tb/u_bench/u1/taps
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {504964 ps} 0}
-configure wave -namecolwidth 283
-configure wave -valuecolwidth 100
+WaveRestoreCursors {{Cursor 1} {55119 ps} 0}
+configure wave -namecolwidth 271
+configure wave -valuecolwidth 40
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -168,4 +260,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {474480 ps} {535520 ps}
+WaveRestoreZoom {70294 ps} {172834 ps}
