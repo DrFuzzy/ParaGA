@@ -28,12 +28,12 @@ for i=1:(popSz-elite)
 %     x=offsprings(i,1:genomlngt);
 %     x_dec=(1/(2^genomlngt - 1))*binary2integer(x);
 %     fit(i) =abs((1-x_dec)*(x_dec^2)*sin(200*pi*x_dec));
-       
+%        
     % ----------- Benchmark function: F2 Zhang Zhang max=1.0485 -----------------------
 %     x=offsprings(i,1:genomlngt);
 %     x_dec=(1/(2^genomlngt - 1))*binary2integer(x);
 %     fit(i) =((1 - 2*(sin(3*pi*x_dec))^20 + (sin(20*pi*x_dec))^20)^20)/10^6;
-%     
+    
     % ----------- Benchmark function: F3 Griewangk  --------------------------
 %     x=offsprings(i,1:genomlngt/2);
 %     y=offsprings(i,(genomlngt/2) + 1:genomlngt);
@@ -49,8 +49,8 @@ for i=1:(popSz-elite)
 %     y=offsprings(i,(genomlngt/2) + 1:genomlngt);
 %     x_dec=binary2integer(x);
 %     y_dec=binary2integer(y);
-%     x_dec_trans = (200/(2^(genomlngt/2) - 1))*x_dec - 100;
-%     y_dec_trans = (200/(2^(genomlngt/2) - 1))*y_dec - 100;
+%     x_dec_trans = (40/(2^(genomlngt/2) - 1))*x_dec - 20;
+%     y_dec_trans = (40/(2^(genomlngt/2) - 1))*y_dec - 20;
 %     fit(i) =(cos(x_dec_trans)*cos(y_dec_trans))*exp(-((x_dec_trans-pi)^2+(y_dec_trans-pi)^2))+1;    
 
     % ----------- Benchmark function: F5 Michalewicz max=1.7997 but depends on the ------
@@ -63,15 +63,15 @@ for i=1:(popSz-elite)
 %     y_dec_trans = (pi/(2^(genomlngt/2) - 1))*y_dec;
 %     fit(i) = sin(x_dec_trans)*(sin((x_dec_trans^2)/pi))^20 + sin(y_dec_trans)*(sin((2/pi)*y_dec_trans^2))^20;
 
-    % ----------- Benchmark function: F6 Ragistrin max= 119.84  ----------------
+%     % ----------- Benchmark function: F6 Ragistrin max= 119.84  ----------------
 %     x=offsprings(i,1:genomlngt/2);
 %     y=offsprings(i,(genomlngt/2) + 1:genomlngt);
 %     x_dec=binary2integer(x);
 %     y_dec=binary2integer(y);
-%     x_dec_trans = (10.24/(2^(genomlngt/2) - 1))*x_dec - 5.12;
-%     y_dec_trans = (10.24/(2^(genomlngt/2) - 1))*y_dec - 5.12;
+%     x_dec_trans = (10.24/(2^(genomlngt/2)))*x_dec - 5.12;
+%     y_dec_trans = (10.24/(2^(genomlngt/2)))*y_dec - 5.12;
 %     fit(i) = 100 - (x_dec_trans^2)- (y_dec_trans^2) +10*cos(2*pi*x_dec_trans) + 10*cos(2*pi*y_dec_trans);
-
+% 
     offsprings(i,genomlngt+1) = fit(i);
     fit_sum = fit_sum + fit(i);
     addr = addr +1;

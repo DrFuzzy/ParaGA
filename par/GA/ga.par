@@ -1,7 +1,7 @@
 Release 8.1.03i par I.27
 Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
 
-GEORGEDOYAMIS::  Fri Nov 03 20:25:03 2006
+GEORGEDOYAMIS::  Mon Nov 13 20:25:09 2006
 
 par -w -intstyle ise -ol high -t 1 ga_map.ncd ga.ncd ga.pcf 
 
@@ -26,7 +26,7 @@ Device Utilization Summary:
       Number of LOCed IOBs             0 out of 59      0%
 
    Number of MULT18X18s                1 out of 32      3%
-   Number of Slices                 1142 out of 13312   8%
+   Number of Slices                  885 out of 13312   6%
       Number of SLICEMs               16 out of 6656    1%
 
 
@@ -34,34 +34,31 @@ Device Utilization Summary:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 7 secs 
-Finished initial Timing Analysis.  REAL time: 7 secs 
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
 
-WARNING:Par:288 - The signal U5/scalFitSum_0[5]_REPLICA_20 has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal U5/scalFitSum_0[4]_REPLICA_23 has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal U5/scalFitSum(7)_REPLICA_27 has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal U5/scalFitSum_0[6]_REPLICA_11 has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal U5/scalFitSum_0[8]_REPLICA_8 has no load.  PAR will not attempt to route this signal.
 Starting Router
 
-Phase 1: 7635 unrouted;       REAL time: 7 secs 
+Phase 1: 6487 unrouted;       REAL time: 7 secs 
 
-Phase 2: 6677 unrouted;       REAL time: 9 secs 
+Phase 2: 5758 unrouted;       REAL time: 8 secs 
 
-Phase 3: 1481 unrouted;       REAL time: 11 secs 
+Phase 3: 1452 unrouted;       REAL time: 9 secs 
 
-Phase 4: 1481 unrouted; (485)      REAL time: 11 secs 
+Phase 4: 1452 unrouted; (140)      REAL time: 10 secs 
 
-Phase 5: 1486 unrouted; (0)      REAL time: 11 secs 
+Phase 5: 1452 unrouted; (0)      REAL time: 10 secs 
 
-Phase 6: 1486 unrouted; (0)      REAL time: 11 secs 
+Phase 6: 1452 unrouted; (0)      REAL time: 10 secs 
 
-Phase 7: 0 unrouted; (0)      REAL time: 14 secs 
+Phase 7: 0 unrouted; (0)      REAL time: 12 secs 
 
-Phase 8: 0 unrouted; (0)      REAL time: 15 secs 
+Phase 8: 0 unrouted; (0)      REAL time: 13 secs 
 
 
-Total REAL time to Router completion: 15 secs 
-Total CPU time to Router completion: 15 secs 
+Total REAL time to Router completion: 13 secs 
+Total CPU time to Router completion: 12 secs 
 
 Generating "PAR" statistics.
 
@@ -72,7 +69,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|               clk_c |      BUFGMUX3| No   |  909 |  0.532     |  1.277      |
+|               clk_c |      BUFGMUX3| No   |  699 |  0.545     |  1.281      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -86,15 +83,15 @@ the minimum and maximum path delays which includes logic delays.
 
 The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
 
-   The AVERAGE CONNECTION DELAY for this design is:        1.769
-   The MAXIMUM PIN DELAY IS:                               9.169
-   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   5.310
+   The AVERAGE CONNECTION DELAY for this design is:        1.728
+   The MAXIMUM PIN DELAY IS:                              11.819
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   5.321
 
    Listing Pin Delays by value: (nsec)
 
-    d < 2.00   < d < 4.00  < d < 6.00  < d < 8.00  < d < 10.00  d >= 10.00
+    d < 2.00   < d < 4.00  < d < 6.00  < d < 8.00  < d < 12.00  d >= 12.00
    ---------   ---------   ---------   ---------   ---------   ---------
-        5668        1067         508         385          18           0
+        4740        1061         622          56          41           0
 
 Timing Score: 0
 
@@ -105,7 +102,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                | Requested  | Actual     | Logic  | Absolute   |Number of  
                                             |            |            | Levels | Slack      |errors     
 ------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH  | 13.000ns   | 12.771ns   | 5      | 0.229ns    | 0         
+  TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH  | 13.000ns   | 12.444ns   | 4      | 0.556ns    | 0         
   50%                                       |            |            |        |            |           
 ------------------------------------------------------------------------------------------------------
 
@@ -115,20 +112,20 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:284 - There are 4 sourceless or loadless signals in this design. This design will not pass the DRC check run
+WARNING:Par:284 - There are 1 sourceless or loadless signals in this design. This design will not pass the DRC check run
    by Bitgen.
 
-Total REAL time to PAR completion: 20 secs 
-Total CPU time to PAR completion: 19 secs 
+Total REAL time to PAR completion: 17 secs 
+Total CPU time to PAR completion: 16 secs 
 
-Peak Memory Usage:  179 MB
+Peak Memory Usage:  174 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 5
+Number of warning messages: 2
 Number of info messages: 1
 
 Writing design to file ga.ncd

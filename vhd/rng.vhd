@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 2006-11-02
+-- Last update: 08/11/06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -116,39 +116,37 @@ entity rng is
                                             
                                             if seed(index) = '1' then
                                                   LFSR_reg := seed;
-                                                end if;
+                                             end if;
                                                       
-                                                end loop;
-                                                      parallel_out <= LFSR_reg;
-                                                      -- construct linear feedback shift register network only if run = 1 
-                                                elsif rising_edge(clk) and (run = '1') then
+                                      end loop;
+                                      parallel_out <= LFSR_reg;
+                                -- construct linear feedback shift register network only if run = 1 
+                                elsif rising_edge(clk) and (run = '1') then
                                                       
-                                                      feedback := LFSR_reg(n-1);
+                                     feedback := LFSR_reg(n-1);
 
-                                                          for N in n-1 downto 1 loop
+                                     for N in n-1 downto 1 loop
 
-                                                                if (Taps(N-1) = '1') then
-                                                                      LFSR_reg(N) := LFSR_reg(N-1) xor feedback;
-                                                                    else
-                                                                          LFSR_reg(N) := LFSR_reg(N-1);
-
-                                                                        end if;
-
-                                                                        end loop;
-                                                                              LFSR_reg(0)  := feedback;
-                                                                              parallel_out <= LFSR_reg;
+                                          if (Taps(N-1) = '1') then
+                                              LFSR_reg(N) := LFSR_reg(N-1) xor feedback;
+                                          else
+                                              LFSR_reg(N) := LFSR_reg(N-1);
+                                          end if;
+                                     end loop;
+                                     LFSR_reg(0)  := feedback;
+                                     parallel_out <= LFSR_reg;
                                                                               
-                                                                        elsif (run = '0') then              -- same output
+                               elsif (run = '0') then              -- same output
                                                                               
-                                                                              for N in n-1 downto 0 loop
-                                                                                    --LFSR_reg(N) := LFSR_reg(N);
-                                                                                  end loop;
-                                                                                      parallel_out <= LFSR_reg;
-                                                                                  end if;
+                                     --for N in n-1 downto 0 loop
+                                     --LFSR_reg(N) := LFSR_reg(N);
+                                     --end loop;
+                                     parallel_out <= LFSR_reg;
+                                     end if;
 
-                                                                                  --parallel_out <= LFSR_reg;           -- parallel data out
-                                                                                  --serial_out   <= LFSR_reg(n-1);      -- serial data out
+                                     --parallel_out <= LFSR_reg;           -- parallel data out
+                                     --serial_out   <= LFSR_reg(n-1);      -- serial data out
 
-                                                                              end process;
+                               end process;
 
-                                                                        end rtl;
+end rtl;

@@ -6,6 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 16/5/2006
+-- Last update: 13/11/06
 -- Platform   : Modelsim, Synplicity, ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -35,7 +36,7 @@ use work.arith_pkg.all;
 entity ga is
   generic (
     genom_lngt         : positive := 8;
-    score_sz           : integer  := 8;
+    score_sz           : integer  := 9;
     scaling_factor_res : integer  := 4;
     pop_sz             : integer  := 8;
     elite              : integer  := 2;
@@ -79,7 +80,7 @@ architecture str of ga is
   --signal eval                   : std_logic;
   signal valid1               : std_logic;
   signal elite_null_dummy     : std_logic;
-  signal index                : integer;
+  signal index                : integer range 0 to pop_sz+1; 
   signal elite_offs_dummy     : int_array(0 to elite-1);
   signal fit_eval_rd_dummy    : std_logic;
   signal inGene_fiteval_dummy : std_logic_vector(2*genom_lngt-1 downto 0);
@@ -100,7 +101,6 @@ architecture str of ga is
   signal term_out             : std_logic;
   signal fitlim_rd_dummy      : std_logic;
   signal obs_rd_dummy         : std_logic;
-  signal clear_dummy          : std_logic;
   signal data_in_1_dummy      : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal data_out_1_dummy     : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal addr_1_dummy         : integer;
@@ -314,9 +314,10 @@ begin
       add      => addr_1_vec,
       data_in  => data_in_1_dummy,      -- from fitness evaluation
       data_out => data_out_1_dummy,     -- to selection block
-      wr       => we1_dummy,
-      clear    => clear_dummy
+      wr       => we1_dummy
       );
+
+
 -------------------------------------------------------------------------------
 -- RAM 2 : writes/reads selected Parents
 ------------------------------------------------------------------------------- 
@@ -332,10 +333,10 @@ begin
       add      => addr_2_vec,
       data_in  => data_in_2_dummy,      -- from selection
       data_out => data_out_2_dummy,     -- to control_v4  
-      wr       => we2_dummy,
-      clear    => clear_dummy
+      wr       => we2_dummy
       );
 
+  
 -------------------------------------------------------------------------------
 -- CONTROL (version 4) : controls all the signals of the design
 ------------------------------------------------------------------------------- 
@@ -366,14 +367,14 @@ begin
 
       data_out_cross1 => inGene1_cross_dummy,
       data_out_cross2 => inGene2_cross_dummy,
-      addr_1          => addr_1_dummy,
-      addr_2          => addr_2_dummy,
+      addr_1_c          => addr_1_dummy,
+      addr_2_c          => addr_2_dummy,
       cnt_parents     => count_parents_dummy,
-      we1             => we1_dummy,
-      we2             => we2_dummy,
+      we1_c             => we1_dummy,
+      we2_c             => we2_dummy,
       data_valid      => data_valid_dummy,
       next_gene       => next_gene_dummy,
-      clear           => clear_dummy,
+      --clear           => clear_dummy,
       ga_fin          => ga_fin_i,
       cross_out       => cross_out,
       --eval              => eval,

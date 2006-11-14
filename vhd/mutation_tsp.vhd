@@ -1,12 +1,12 @@
---------------------------------Mutation block for tsp-------------------------------------
+--------------------------------Mutation block for tsp-------------------------
 -- Title      : Mutation block for tsp
 -- Project    : GA
 -------------------------------------------------------------------------------
 -- File       : mutation_tsp.vhd
--- Author     :   <George Doyamis@GEORGEDOYAMIS>
+-- Author     : George Doyamis gdoyamis@ieee.org
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 07/11/06
+-- Last update: 08/11/06
 -- Platform   : Modelsim 6.1d, Synplify Pro 8.5.1, ISE 8.1.03i
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------

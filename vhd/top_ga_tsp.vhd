@@ -5,7 +5,8 @@
 -- File       : top.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
--- Created    : 16/5/2006
+-- Created    : 16/05/06
+-- Last update: 08/11/06
 -- Platform   : Modelsim, Synplicity, ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -38,13 +39,13 @@ entity ga_tsp is
     genom_lngt         : positive := 21;
     score_sz           : integer  := 16;
     scaling_factor_res : integer  := 4;
-    pop_sz             : integer  := 16;
+    pop_sz             : integer  := 32;
     elite              : integer  := 2;
     num_towns          : integer  := 8;
     townres            : integer  := 3;
-    mr                 : integer  := 200;
+    mr                 : integer  := 100;
     mut_res            : integer  := 8;  -- max for mutation rate is 255
-    max_gen            : positive := 200);
+    max_gen            : positive := 50);
   port (
     clk       : in  std_logic;
     rst_n     : in  std_logic;
@@ -92,7 +93,7 @@ architecture str of ga_tsp is
   signal crossOffspr_dummy    : std_logic_vector(genom_lngt-1 downto 0);
   signal mut_out              : std_logic;
   signal mutation_rd_dummy    : std_logic;
-  signal clear_dummy          : std_logic;
+  --signal clear_dummy          : std_logic;
   signal data_in_1_dummy      : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal data_out_1_dummy     : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal addr_1_dummy         : integer;
@@ -290,8 +291,7 @@ begin
       add      => addr_1_vec,         -- address (integer instead of std_vec)
       data_in  => data_in_1_dummy,      -- from fitness evaluation
       data_out => data_out_1_dummy,     -- to selection block
-      wr       => we1_dummy,
-      clear    => clear_dummy
+      wr       => we1_dummy
       );
 -------------------------------------------------------------------------------
 -- RAM 2 : writes/reads selected Parents
@@ -308,8 +308,7 @@ begin
       add      => addr_2_vec,         -- address (integer instead of std_vec)
       data_in  => data_in_2_dummy,      -- from selection
       data_out => data_out_2_dummy,     -- to control_v4  
-      wr       => we2_dummy,
-      clear    => clear_dummy
+      wr       => we2_dummy
       );
 
 -------------------------------------------------------------------------------
@@ -338,14 +337,14 @@ begin
       data_in_ram2    => data_out_2_dummy,
       data_out_cross1 => inGene1_cross_dummy,
       data_out_cross2 => inGene2_cross_dummy,
-      addr_1          => addr_1_dummy,
-      addr_2          => addr_2_dummy,
+      addr_1_c          => addr_1_dummy,
+      addr_2_c          => addr_2_dummy,
       cnt_parents     => count_parents_dummy,
-      we1             => we1_dummy,
-      we2             => we2_dummy,
+      we1_c             => we1_dummy,
+      we2_c             => we2_dummy,
       data_valid      => data_valid_dummy,
       next_gene       => next_gene_dummy,
-      clear           => clear_dummy,
+      --clear           => clear_dummy,
       ga_fin          => ga_fin_i,
       cross_out       => cross_out,
       --eval              => eval,

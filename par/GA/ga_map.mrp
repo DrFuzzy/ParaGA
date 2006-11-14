@@ -10,32 +10,32 @@ D:/Designs/GA_eval/par/GA/GA.ise -intstyle ise -p xc3s1500-fg676-4 -timing
 Target Device  : xc3s1500
 Target Package : fg676
 Target Speed   : -4
-Mapper Version : spartan3 -- $Revision: 1.1 $
-Mapped Date    : Fri Nov 03 20:21:06 2006
+Mapper Version : spartan3 -- $Revision: 1.2 $
+Mapped Date    : Mon Nov 13 20:23:46 2006
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    4
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:       1,104 out of  26,624    4%
-  Number of 4 input LUTs:           1,447 out of  26,624    5%
+  Number of Slice Flip Flops:         866 out of  26,624    3%
+  Number of 4 input LUTs:           1,219 out of  26,624    4%
 Logic Distribution:
-  Number of occupied Slices:                        1,142 out of  13,312    8%
-    Number of Slices containing only related logic:   1,142 out of   1,142  100%
-    Number of Slices containing unrelated logic:          0 out of   1,142    0%
+  Number of occupied Slices:                          885 out of  13,312    6%
+    Number of Slices containing only related logic:     885 out of     885  100%
+    Number of Slices containing unrelated logic:          0 out of     885    0%
       *See NOTES below for an explanation of the effects of unrelated logic
-Total Number 4 input LUTs:          1,459 out of  26,624    5%
-  Number used as logic:              1,447
-  Number used as a route-thru:          12
+Total Number 4 input LUTs:          1,224 out of  26,624    4%
+  Number used as logic:              1,219
+  Number used as a route-thru:           5
   Number of bonded IOBs:               59 out of     487   12%
     IOB Flip Flops:                    57
   Number of MULT18X18s:                1 out of      32    3%
   Number of GCLKs:                     1 out of       8   12%
 
-Total equivalent gate count for design:  22,818
+Total equivalent gate count for design:  19,617
 Additional JTAG gate count for IOBs:  2,832
-Peak Memory Usage:  239 MB
+Peak Memory Usage:  223 MB
 
 Table of Contents
 -----------------
@@ -58,13 +58,7 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:367 - The signal <U5/scalFitSum_0[5]_REPLICA_20> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <U5/scalFitSum_0[4]_REPLICA_23> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <U5/scalFitSum(7)_REPLICA_27> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <U5/scalFitSum_0[6]_REPLICA_11> is
+WARNING:PhysDesignRules:367 - The signal <U5/scalFitSum_0[8]_REPLICA_8> is
    incomplete. The signal does not drive any load pins in the design.
 
 Section 3 - Informational
@@ -87,22 +81,21 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   9 block(s) optimized away
+   8 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
 
 Optimized Block(s):
 TYPE 		BLOCK
-GND 		GND
 GND 		U11/GND
 VCC 		U11/VCC
 GND 		U4/U1/GND
 VCC 		U4/U1/VCC
 GND 		U5/GND
 VCC 		U5/VCC
+VCC 		U6/VCC
 VCC 		U8/VCC
-VCC 		VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -199,7 +192,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                | Requested  | Actual     | Logic  | Absolute   |Number of  
                                             |            |            | Levels | Slack      |errors     
 ------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH  | 13.000ns   | 11.491ns   | 13     | 1.509ns    | 0         
+  TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH  | 13.000ns   | 11.291ns   | 9      | 1.709ns    | 0         
   50%                                       |            |            |        |            |           
 ------------------------------------------------------------------------------------------------------
 
@@ -213,7 +206,7 @@ Use the "-detail" map option to print out Configuration Strings
 Section 13 - Additional Device Resource Counts
 ----------------------------------------------
 Number of JTAG Gates for IOBs = 59
-Number of Equivalent Gates for Design = 22,818
+Number of Equivalent Gates for Design = 19,617
 Number of RPM Macros = 0
 Number of Hard Macros = 0
 DCIRESETs = 0
@@ -225,21 +218,21 @@ GCLKs = 1
 ICAPs = 0
 18X18 Multipliers = 1
 Block RAMs = 0
-Total Registers (Flops & Latches in Slices & IOBs) not driven by LUTs = 406
+Total Registers (Flops & Latches in Slices & IOBs) not driven by LUTs = 345
 IOB Dual-Rate Flops not driven by LUTs = 0
 IOB Dual-Rate Flops = 0
 IOB Slave Pads = 0
 IOB Master Pads = 0
 IOB Latches not driven by LUTs = 0
 IOB Latches = 0
-IOB Flip Flops not driven by LUTs = 56
+IOB Flip Flops not driven by LUTs = 57
 IOB Flip Flops = 57
 Unbonded IOBs = 0
 Bonded IOBs = 59
-XORs = 28
-CARRY_INITs = 57
+XORs = 36
+CARRY_INITs = 62
 CARRY_SKIPs = 0
-CARRY_MUXes = 107
+CARRY_MUXes = 113
 Shift Registers = 0
 Static Shift Registers = 0
 Dynamic Shift Registers = 0
@@ -247,27 +240,27 @@ Dynamic Shift Registers = 0
 16x1 RAMs = 0
 32x1 RAMs = 0
 Dual Port RAMs = 0
-MUXFs = 140
-MULT_ANDs = 10
-4 input LUTs used as Route-Thrus = 12
-4 input LUTs = 1447
+MUXFs = 146
+MULT_ANDs = 17
+4 input LUTs used as Route-Thrus = 5
+4 input LUTs = 1219
 Slice Latches not driven by LUTs = 0
 Slice Latches = 0
-Slice Flip Flops not driven by LUTs = 350
-Slice Flip Flops = 1104
+Slice Flip Flops not driven by LUTs = 288
+Slice Flip Flops = 866
 SliceMs = 16
-SliceLs = 1126
-Slices = 1142
+SliceLs = 869
+Slices = 885
 Multiplier(11,4) = 1
 F6 Muxes = 24
-F5 Muxes = 108
+F5 Muxes = 114
 F8 Muxes = 0
 F7 Muxes = 8
-Number of LUT signals with 4 loads = 30
-Number of LUT signals with 3 loads = 71
-Number of LUT signals with 2 loads = 265
-Number of LUT signals with 1 load = 942
-NGM Average fanout of LUT = 2.65
-NGM Maximum fanout of LUT = 112
-NGM Average fanin for LUT = 3.1663
-Number of LUT symbols = 1437
+Number of LUT signals with 4 loads = 26
+Number of LUT signals with 3 loads = 66
+Number of LUT signals with 2 loads = 126
+Number of LUT signals with 1 load = 901
+NGM Average fanout of LUT = 2.30
+NGM Maximum fanout of LUT = 149
+NGM Average fanin for LUT = 3.1256
+Number of LUT symbols = 1218

@@ -3,10 +3,10 @@
 #OS: Windows XP 5.1
 #Hostname: GEORGEDOYAMIS
 
-#Mon Nov 06 15:04:39 2006
+#Tue Nov 14 19:36:42 2006
 
 $ Start of Compile
-#Mon Nov 06 15:04:39 2006
+#Tue Nov 14 19:36:42 2006
 
 Synplicity VHDL Compiler, version 3.4.1, Build 137R, built Apr  7 2006
 Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
@@ -37,7 +37,7 @@ Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
 @N: Setting default value for generic max_gen to 100;
 VHDL syntax check successful!
 File D:\Designs\GA_eval\syn\GA\rev_1\syntmp\hdlparams.dat changed - recompiling
-@N: CD630 :"D:\Designs\GA_eval\vhd\top.vhd":35:7:35:8|Synthesizing work.ga.str 
+@N: CD630 :"D:\Designs\GA_eval\vhd\top.vhd":36:7:36:8|Synthesizing work.ga.str 
 @N: CD630 :"D:\Designs\GA_eval\vhd\delay_regs.vhd":33:7:33:16|Synthesizing work.delay_regs.rtl 
 Post processing for work.delay_regs.rtl
 @N: CD630 :"D:\Designs\GA_eval\vhd\delay_regs.vhd":33:7:33:16|Synthesizing work.delay_regs.rtl 
@@ -51,147 +51,62 @@ Post processing for work.delay_regs.rtl
 @N: CD630 :"D:\Designs\GA_eval\vhd\control_v5.vhd":37:7:37:16|Synthesizing work.control_v5.rtl 
 @N: CD231 :"D:\Designs\GA_eval\vhd\control_v5.vhd":88:17:88:18|Using onehot encoding for type type_sreg (clear_ram_s="100000000")
 Post processing for work.control_v5.rtl
-@W: CL169 :"D:\Designs\GA_eval\vhd\control_v5.vhd":158:4:158:5|Pruning Register mut_rd_p1  
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(4) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(5) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(6) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(7) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(8) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(9) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(10) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(11) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(12) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(13) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(14) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(15) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(16) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(17) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(18) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(19) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(20) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(21) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(22) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(23) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(24) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(25) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(26) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(27) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(28) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(29) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(30) assign '0', register removed by optimization
-@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to cnt_parents(31) assign '0', register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 4 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 5 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 6 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 7 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 8 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 9 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 10 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 11 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 12 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 13 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 14 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 15 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 16 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 17 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 18 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 19 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 20 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 21 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 22 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 23 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 24 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 25 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 26 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 27 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 28 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 29 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 30 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|All reachable assignments to bit 31 of cnt_parents(31 downto 0) assign 0, register removed by optimization
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(4) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(5) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(6) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(7) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(8) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(9) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(10) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(11) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(12) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(13) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(14) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(15) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(16) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(17) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(18) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(19) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(20) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(21) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(22) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(23) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(24) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(25) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(26) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(27) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(28) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(29) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(30) to a constant 0
-@W: CL190 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Optimizing register bit addr_2(31) to a constant 0
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <31> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <30> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <29> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <28> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <27> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <26> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <25> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <24> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <23> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <22> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <21> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <20> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <19> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <18> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <17> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <16> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <15> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <14> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <13> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <12> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <11> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <10> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <9> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <8> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <7> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <6> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <5> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <4> of addr_2(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <31> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <30> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <29> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <28> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <27> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <26> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <25> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <24> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <23> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <22> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <21> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <20> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <19> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <18> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <17> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <16> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <15> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <14> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <13> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <12> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <11> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <10> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <9> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <8> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <7> of index(31 downto 0)  
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <6> of index(31 downto 0)  
-@W: CL189 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Register bit index(5) is always 0, optimizing ...
-@W: CL171 :"D:\Designs\GA_eval\vhd\control_v5.vhd":993:4:993:5|Pruning Register bit <5> of index(5 downto 0)  
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(4) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(5) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(6) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(7) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(8) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(9) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(10) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(11) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(12) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(13) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(14) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(15) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(16) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(17) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(18) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(19) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(20) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(21) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(22) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(23) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(24) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(25) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(26) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(27) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(28) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(29) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(30) assign '0', register removed by optimization
+@W: CL111 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to cnt_parents(31) assign '0', register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 4 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 5 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 6 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 7 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 8 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 9 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 10 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 11 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 12 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 13 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 14 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 15 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 16 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 17 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 18 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 19 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 20 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 21 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 22 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 23 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 24 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 25 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 26 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 27 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 28 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 29 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 30 of cnt_parents(31 downto 0) assign 0, register removed by optimization
+@W: CL208 :"D:\Designs\GA_eval\vhd\control_v5.vhd":991:4:991:5|All reachable assignments to bit 31 of cnt_parents(31 downto 0) assign 0, register removed by optimization
 @N: CL201 :"D:\Designs\GA_eval\vhd\control_v5.vhd":158:4:158:5|Trying to extract state machine for register notify_cnt_p
 Extracted state machine for register notify_cnt_p
 State machine has 8 reachable states with original encodings of:
@@ -215,25 +130,29 @@ State machine has 9 reachable states with original encodings of:
    001000000
    010000000
    100000000
-@N: CD630 :"D:\Designs\GA_eval\vhd\spram1.vhd":33:7:33:12|Synthesizing work.spram1.rtl 
+@N: CD630 :"D:\Designs\GA_eval\vhd\spram1.vhd":37:7:37:12|Synthesizing work.spram1.rtl 
 Post processing for work.spram1.rtl
-@W: CL209 :"D:\Designs\GA_eval\vhd\spram1.vhd":40:4:40:6|Input port bit <4> of add(4 downto 0) is unused 
-@N: CD630 :"D:\Designs\GA_eval\vhd\spram1.vhd":33:7:33:12|Synthesizing work.spram1.rtl 
+@W: CL170 :"D:\Designs\GA_eval\vhd\spram1.vhd":86:4:86:5|Pruning bit <4> of add_r(4 downto 0) - not in use ... 
+@N: CL134 :"D:\Designs\GA_eval\vhd\spram1.vhd":57:9:57:12|Found RAM data, depth=16, width=8
+@W: CL209 :"D:\Designs\GA_eval\vhd\spram1.vhd":44:4:44:6|Input port bit <4> of add(4 downto 0) is unused 
+@N: CD630 :"D:\Designs\GA_eval\vhd\spram1.vhd":37:7:37:12|Synthesizing work.spram1.rtl 
 Post processing for work.spram1.rtl
-@W: CL209 :"D:\Designs\GA_eval\vhd\spram1.vhd":40:4:40:6|Input port bit <3> of add(3 downto 0) is unused 
+@W: CL170 :"D:\Designs\GA_eval\vhd\spram1.vhd":86:4:86:5|Pruning bit <3> of add_r(3 downto 0) - not in use ... 
+@N: CL134 :"D:\Designs\GA_eval\vhd\spram1.vhd":57:9:57:12|Found RAM data, depth=8, width=16
+@W: CL209 :"D:\Designs\GA_eval\vhd\spram1.vhd":44:4:44:6|Input port bit <3> of add(3 downto 0) is unused 
 @N: CD630 :"D:\Designs\GA_eval\vhd\obs.vhd":37:7:37:9|Synthesizing work.obs.rtl 
 Post processing for work.obs.rtl
 @N: CD630 :"D:\Designs\GA_eval\vhd\mutation_v2.vhd":37:7:37:17|Synthesizing work.mutation_v2.rtl 
 Post processing for work.mutation_v2.rtl
 @N: CD630 :"D:\Designs\GA_eval\vhd\crossover_v2.vhd":36:7:36:18|Synthesizing work.crossover_v2.rtl 
 Post processing for work.crossover_v2.rtl
-@N: CD630 :"D:\Designs\GA_eval\vhd\selection.vhd":36:7:36:15|Synthesizing work.selection.rtl 
+@N: CD630 :"D:\Designs\GA_eval\vhd\selection.vhd":37:7:37:15|Synthesizing work.selection.rtl 
 Post processing for work.selection.rtl
-@N: CD630 :"D:\Designs\GA_eval\vhd\top_fit_eval.vhd":35:7:35:17|Synthesizing work.fit_eval_ga.str 
+@N: CD630 :"D:\Designs\GA_eval\vhd\top_fit_eval.vhd":36:7:36:17|Synthesizing work.fit_eval_ga.str 
 @N: CD630 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":37:7:37:15|Synthesizing work.fix_elite.rtl 
 Post processing for work.fix_elite.rtl
-@W: CL169 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":92:4:92:5|Pruning Register temp_indexs_1_0(31 downto 0)  
 @W: CL169 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":92:4:92:5|Pruning Register temp1_0(7 downto 0)  
+@W: CL169 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":92:4:92:5|Pruning Register temp_indexs_1_0(31 downto 0)  
 @N: CL201 :"D:\Designs\GA_eval\vhd\fix_elite.vhd":92:4:92:5|Trying to extract state machine for register count_cycle
 Extracted state machine for register count_cycle
 State machine has 4 reachable states with original encodings of:
@@ -414,15 +333,15 @@ Post processing for work.rng.rtl
 @W: CL212 :"D:\Designs\GA_eval\vhd\rng.vhd":74:28:74:29|Register taps_array_8(3 downto 1) is asynchronously set and not assigned a value on the clock, optimizing to 1 ... 
 Post processing for work.ga.str
 @END
-Process took 0h:00m:07s realtime, 0h:00m:07s cputime
-# Mon Nov 06 15:04:47 2006
+Process took 0h:00m:06s realtime, 0h:00m:06s cputime
+# Tue Nov 14 19:36:48 2006
 
 ###########################################################[
 Synplicity Xilinx Technology Mapper, Version 8.5.0.p, Build 022R, Built Apr  7 2006
 Copyright (C) 1994-2006, Synplicity Inc.  All Rights Reserved
 Version 8.5.1
 Reading constraint file: D:\Designs\GA_eval\syn\GA\ga.sdc
-Adding property syn_reference_clock1, value "clk,r=0.0,f=4.16666666666,u=0.0,p=8.33333333333,clockgroup=default_clkgroup_0,rd=0.0,fd=0.0,v=0" to view:work.ga(str)
+Adding property syn_reference_clock1, value "clk,r=0.0,f=3.57142857143,u=0.0,p=7.14285714286,clockgroup=default_clkgroup_0,rd=0.0,fd=0.0,v=0" to view:work.ga(str)
 Adding property syn_useioff, value 1 to view:work.ga(str)
 Adding property syn_multstyle, value "block_mult" to view:work.ga(str)
 Adding property syn_netlist_hierarchy, value 1 to view:work.ga(str)
@@ -459,31 +378,33 @@ Automatic dissolve at startup in view:work.ga(str) of U15(delay_regsZ3)
 Automatic dissolve at startup in view:work.ga(str) of U14(delay_regsZ4)
 Automatic dissolve at startup in view:work.ga(str) of U13(delay_regsZ4)
 Automatic dissolve at startup in view:work.ga(str) of U12(delay_regsZ4)
+Automatic dissolve at startup in view:work.ga(str) of U10(spram1Z0)
+Automatic dissolve at startup in view:work.ga(str) of U9(spram1Z1)
 Automatic dissolve at startup in view:work.ga(str) of U8(obs)
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_14[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_13[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_12[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_11[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_10[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_9[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_8[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_7[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_6[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_5[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_4[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_3[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_2[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_1[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl[15],  because it is equivalent to instance U9.data_out_cl_15[15]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl_6[7],  because it is equivalent to instance U10.data_out_cl_7[7]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl_5[7],  because it is equivalent to instance U10.data_out_cl_7[7]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl_4[7],  because it is equivalent to instance U10.data_out_cl_7[7]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl_3[7],  because it is equivalent to instance U10.data_out_cl_7[7]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl_2[7],  because it is equivalent to instance U10.data_out_cl_7[7]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl_1[7],  because it is equivalent to instance U10.data_out_cl_7[7]
+@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl[7],  because it is equivalent to instance U10.data_out_cl_7[7]
 @W: BN132 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.temp_indexs_1_1[31:0],  because it is equivalent to instance U4.U1.temp_indexs_2_0[31:0]
 @W: BN132 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.temp1_1[7:0],  because it is equivalent to instance U4.U1.temp2_0[7:0]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_14[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_13[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_12[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_11[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_10[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_9[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_8[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_7[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_6[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_5[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_4[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_3[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_2[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_1[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl[15],  because it is equivalent to instance U9.data_out_cl_15[15]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl_6[7],  because it is equivalent to instance U10.data_out_cl_7[7]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl_5[7],  because it is equivalent to instance U10.data_out_cl_7[7]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl_4[7],  because it is equivalent to instance U10.data_out_cl_7[7]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl_3[7],  because it is equivalent to instance U10.data_out_cl_7[7]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl_2[7],  because it is equivalent to instance U10.data_out_cl_7[7]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl_1[7],  because it is equivalent to instance U10.data_out_cl_7[7]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl[7],  because it is equivalent to instance U10.data_out_cl_7[7]
 Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[7]
 Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[6]
 Adding property syn_encoding in cell control_v5, value "sequential", to NInstance U11.sreg[5]
@@ -500,9 +421,9 @@ Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U1
 Adding property syn_encoding in cell control_v5, value "onehot", to NInstance U11.notify_cnt_p[0]
 @W: BN116 :"d:\designs\ga_eval\vhd\crossover_v2.vhd":68:70:68:72|Removing sequential instance crossout1_t[7:0] of view:PrimLib.dffre(prim) because there are no references to its outputs 
 NRtlRetiming done on crossout1_t[7:0]
-@W: BN116 :|Removing sequential instance done_t of view:PrimLib.dffre(prim) because there are no references to its outputs 
-@W: BN116 :|Removing sequential instance cumSum_p1[10:0] of view:PrimLib.dffre(prim) because there are no references to its outputs 
-@W: BN116 :|Removing sequential instance temp_rd of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing sequential instance done_t of view:PrimLib.dffre(prim) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing sequential instance cumSum_p1[10:0] of view:PrimLib.dffre(prim) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing sequential instance temp_rd of view:PrimLib.dffr(prim) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing sequential instance selParent_p[7:0] of view:PrimLib.dffre(prim) because there are no references to its outputs 
 NRtlRetiming done on selParent_p[7:0]
 RTL optimization done.
@@ -528,10 +449,7 @@ original code -> new code
    01 -> 01
    10 -> 10
    11 -> 11
-@N: MF179 :"d:\designs\ga_eval\vhd\selection.vhd":122:35:122:56|Found 15 bit by 15 bit '==' comparator, 'selection.un17_data_valid'
-@W: BN132 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing instance U5.scalFitSum_p[13],  because it is equivalent to instance U5.scalFitSum_p[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing instance U5.scalFitSum_p[12],  because it is equivalent to instance U5.scalFitSum_p[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing instance U5.scalFitSum_p[11],  because it is equivalent to instance U5.scalFitSum_p[14]
+@N: MF179 :"d:\designs\ga_eval\vhd\selection.vhd":123:35:123:56|Found 15 bit by 15 bit '==' comparator, 'selection.un17_data_valid'
 Encoding state machine work.control_v5(rtl)-notify_cnt_p[0:7]
 original code -> new code
    0000 -> 00000001
@@ -554,152 +472,54 @@ original code -> new code
    010000000 -> 010000000
    100000000 -> 100000000
 @N:"d:\designs\ga_eval\vhd\control_v5.vhd":158:4:158:5|Found counter in view:work.control_v5(rtl) inst count_gen_p1[6:0]
-@N: MF179 :"d:\designs\ga_eval\vhd\control_v5.vhd":207:13:207:49|Found 32 bit by 32 bit '==' comparator, 'loop1.un20_dummy_cnt_adapt'
 @N: MF179 :"d:\designs\ga_eval\vhd\control_v5.vhd":207:13:207:49|Found 32 bit by 32 bit '==' comparator, 'loop0.un7_dummy_cnt_adapt'
-@W: BN116 :"d:\designs\ga_eval\vhd\selection.vhd":75:4:75:5|Removing sequential instance scalFitSum_p[14] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@N: MF179 :"d:\designs\ga_eval\vhd\control_v5.vhd":207:13:207:49|Found 32 bit by 32 bit '==' comparator, 'loop1.un20_dummy_cnt_adapt'
 Automatic dissolve during optimization of view:work.crossover_v2(rtl) of un1_mask(PM_RSH__8_8_3_11111111_xc3s1500)
 Automatic dissolve during optimization of view:work.mutation_v2(rtl) of mutation_v2.un18_mutout(PM_LSH__8_8_4_10000000_xc3s1500)
 Automatic dissolve during optimization of view:work.mutation_v2(rtl) of mutation_v2.un3_mutout(PM_LSH__8_8_3_10000000_xc3s1500)
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_0[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_2[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_3[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_4[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_5[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_6[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance data_7[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 Automatic dissolve during optimization of view:work.ga(str) of U4(fit_eval_ga)
-Auto Dissolve of U9 (inst of view:work.spram1Z1(rtl))
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_7[7],  because it is equivalent to instance U9.data_7[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_6[7],  because it is equivalent to instance U9.data_6[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_7[6],  because it is equivalent to instance U9.data_7[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_5[7],  because it is equivalent to instance U9.data_5[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_6[6],  because it is equivalent to instance U9.data_6[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_7[5],  because it is equivalent to instance U9.data_7[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_4[7],  because it is equivalent to instance U9.data_4[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_5[6],  because it is equivalent to instance U9.data_5[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_6[5],  because it is equivalent to instance U9.data_6[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_7[4],  because it is equivalent to instance U9.data_7[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_3[7],  because it is equivalent to instance U9.data_3[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_4[6],  because it is equivalent to instance U9.data_4[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_5[5],  because it is equivalent to instance U9.data_5[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_6[4],  because it is equivalent to instance U9.data_6[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_7[3],  because it is equivalent to instance U9.data_7[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_2[7],  because it is equivalent to instance U9.data_2[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_3[6],  because it is equivalent to instance U9.data_3[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_4[5],  because it is equivalent to instance U9.data_4[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_5[4],  because it is equivalent to instance U9.data_5[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_6[3],  because it is equivalent to instance U9.data_6[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_7[2],  because it is equivalent to instance U9.data_7[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_1[7],  because it is equivalent to instance U9.data_1[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_2[6],  because it is equivalent to instance U9.data_2[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_3[5],  because it is equivalent to instance U9.data_3[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_4[4],  because it is equivalent to instance U9.data_4[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_5[3],  because it is equivalent to instance U9.data_5[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_6[2],  because it is equivalent to instance U9.data_6[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_7[1],  because it is equivalent to instance U9.data_7[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_0[7],  because it is equivalent to instance U9.data_0[14]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_1[6],  because it is equivalent to instance U9.data_1[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_2[5],  because it is equivalent to instance U9.data_2[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_3[4],  because it is equivalent to instance U9.data_3[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_4[3],  because it is equivalent to instance U9.data_4[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_5[2],  because it is equivalent to instance U9.data_5[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_6[1],  because it is equivalent to instance U9.data_6[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_0[6],  because it is equivalent to instance U9.data_0[13]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_1[5],  because it is equivalent to instance U9.data_1[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_2[4],  because it is equivalent to instance U9.data_2[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_3[3],  because it is equivalent to instance U9.data_3[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_4[2],  because it is equivalent to instance U9.data_4[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_5[1],  because it is equivalent to instance U9.data_5[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_0[5],  because it is equivalent to instance U9.data_0[12]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_1[4],  because it is equivalent to instance U9.data_1[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_2[3],  because it is equivalent to instance U9.data_2[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_3[2],  because it is equivalent to instance U9.data_3[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_4[1],  because it is equivalent to instance U9.data_4[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_0[4],  because it is equivalent to instance U9.data_0[11]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_1[3],  because it is equivalent to instance U9.data_1[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_2[2],  because it is equivalent to instance U9.data_2[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_3[1],  because it is equivalent to instance U9.data_3[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_0[3],  because it is equivalent to instance U9.data_0[10]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_1[2],  because it is equivalent to instance U9.data_1[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_2[1],  because it is equivalent to instance U9.data_2[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_0[2],  because it is equivalent to instance U9.data_0[9]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_1[1],  because it is equivalent to instance U9.data_1[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_0[1],  because it is equivalent to instance U9.data_0[8]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_out_1[8],  because it is equivalent to instance U9.data_out_1[1]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_out_1[9],  because it is equivalent to instance U9.data_out_1[2]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_out_1[10],  because it is equivalent to instance U9.data_out_1[3]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_out_1[11],  because it is equivalent to instance U9.data_out_1[4]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_out_1[12],  because it is equivalent to instance U9.data_out_1[5]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_out_1[13],  because it is equivalent to instance U9.data_out_1[6]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing instance U9.data_out_1[14],  because it is equivalent to instance U9.data_out_1[7]
 
-Finished factoring (Time elapsed 0h:00m:06s; Memory used current: 37MB peak: 38MB)
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[17] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[16] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[15] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[14] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[13] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[12] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[11] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[10] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[9] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[8] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[7] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[6] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[5] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[4] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[3] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[31] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[30] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[29] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[28] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[27] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[26] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[25] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[24] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[23] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[22] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[21] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[20] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[19] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[18] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U10.data_out_cl_7[7] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_15[15] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+Finished factoring (Time elapsed 0h:00m:07s; Memory used current: 36MB peak: 37MB)
+@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U9.data_out_cl_15[15] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":69:4:69:5|Removing sequential instance U10.data_out_cl_7[7] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:06s; Memory used current: 38MB peak: 39MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:07s; Memory used current: 37MB peak: 38MB)
 
 Clock Buffers:
   Inserting Clock buffer for port clk,	TNM=clk
 
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:08s; Memory used current: 38MB peak: 39MB)
-@N: FA196 :"d:\designs\ga_eval\vhd\rng.vhd":74:28:74:29|Found addmux in view:work.ga(str) inst U4.U1.fit_sum_6_0[10:0]  
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:07s; Memory used current: 37MB peak: 38MB)
+@N: FA196 :"d:\designs\ga_eval\vhd\rng.vhd":74:28:74:29|Found addmux in view:work.ga(str) inst U4.U1.fit_sum_7_i_m2[10:0]  
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:08s; Memory used current: 39MB peak: 39MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:08s; Memory used current: 37MB peak: 38MB)
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:09s; Memory used current: 39MB peak: 40MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:09s; Memory used current: 38MB peak: 39MB)
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:09s; Memory used current: 38MB peak: 40MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:09s; Memory used current: 37MB peak: 39MB)
+@W: BN132 :"d:\designs\ga_eval\vhd\selection.vhd":157:4:157:5|Removing instance U5.scalFitSum_p[12],  because it is equivalent to instance U5.scalFitSum_p[11]
+@W: BN132 :"d:\designs\ga_eval\vhd\selection.vhd":157:4:157:5|Removing instance U5.scalFitSum_p[13],  because it is equivalent to instance U5.scalFitSum_p[11]
+@W: BN132 :"d:\designs\ga_eval\vhd\selection.vhd":157:4:157:5|Removing instance U5.scalFitSum_p[14],  because it is equivalent to instance U5.scalFitSum_p[11]
+@W: BN116 :"d:\designs\ga_eval\vhd\selection.vhd":157:4:157:5|Removing sequential instance U5.scalFitSum_p[11] of view:UNILIB.FDRE(PRIM) because there are no references to its outputs 
 
-Finished preparing to map (Time elapsed 0h:00m:10s; Memory used current: 39MB peak: 40MB)
+Finished preparing to map (Time elapsed 0h:00m:10s; Memory used current: 38MB peak: 39MB)
 
-Finished technology mapping (Time elapsed 0h:00m:12s; Memory used current: 49MB peak: 50MB)
+Finished technology mapping (Time elapsed 0h:00m:12s; Memory used current: 48MB peak: 49MB)
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:12s		    -2.45ns		1215 /       932
+   1		0h:00m:12s		    -3.86ns		1096 /       721
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.best_fit_prev_gen_3[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.best_fit_prev_gen_2[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.best_fit_prev_gen[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.counter_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.counter_0[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":86:4:86:5|Removing sequential instance U9.add_r[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":86:4:86:5|Removing sequential instance U9.add_r[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\spram1.vhd":86:4:86:5|Removing sequential instance U9.add_r[2] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":199:4:199:5|Removing sequential instance U11.incr[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":199:4:199:5|Removing sequential instance U11.incr[3] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":199:4:199:5|Removing sequential instance U11.incr[2] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":199:4:199:5|Removing sequential instance U11.incr[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[2] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-@W: BN116 :"d:\designs\ga_eval\vhd\control_v5.vhd":993:4:993:5|Removing sequential instance U11.addr_1[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\mutation_v2.vhd":76:4:76:5|Removing sequential instance U7.mutout_p1[7] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\mutation_v2.vhd":76:4:76:5|Removing sequential instance U7.mutout_p1[6] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\mutation_v2.vhd":76:4:76:5|Removing sequential instance U7.mutout_p1[5] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
@@ -711,22 +531,20 @@ Pass		 CPU time		Worst Slack		Luts / Registers
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.best_fit_prev_gen_0[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.best_fit_prev_gen_1[1] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 @W: BN116 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Removing sequential instance U4.U1.counter[0] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
-   2		0h:00m:12s		    -2.35ns		1214 /       898
-   3		0h:00m:12s		    -2.35ns		1214 /       898
-   4		0h:00m:12s		    -2.35ns		1218 /       898
+   2		0h:00m:12s		    -3.66ns		1097 /       683
+   3		0h:00m:12s		    -3.66ns		1097 /       683
+   4		0h:00m:12s		    -3.66ns		1097 /       683
 ------------------------------------------------------------
 
 Timing driven replication report
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[10]" with 2 loads has been replicated 1 time(s) to improve timing 
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[9]" with 2 loads has been replicated 1 time(s) to improve timing 
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[8]" with 2 loads has been replicated 1 time(s) to improve timing 
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[7]" with 2 loads has been replicated 1 time(s) to improve timing 
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[6]" with 2 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_954_i" with 2 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_952_i" with 2 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_950_i" with 2 loads has been replicated 1 time(s) to improve timing 
 Added 0 Registers via timing driven replication
-Added 5 LUTs via timing driven replication
+Added 3 LUTs via timing driven replication
 
 Timing driven replication report
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[5]" with 2 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_948_i" with 2 loads has been replicated 1 time(s) to improve timing 
 Added 0 Registers via timing driven replication
 Added 1 LUTs via timing driven replication
 
@@ -734,11 +552,12 @@ Timing driven replication report
 No replication required.
 
 Timing driven replication report
-@N: FX271 :"d:\designs\ga_eval\vhd\top.vhd":343:2:343:4|Instance "U11.notify_cnt_p[3]" with 30 loads has been replicated 2 time(s) to improve timing 
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[4]" with 2 loads has been replicated 1 time(s) to improve timing 
-@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":112:6:112:7|Instance "U4.U1.fit_sum_6[3]" with 2 loads has been replicated 1 time(s) to improve timing 
-Added 2 Registers via timing driven replication
-Added 2 LUTs via timing driven replication
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_946_i" with 2 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_944_i" with 2 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_942_i" with 2 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"d:\designs\ga_eval\vhd\fix_elite.vhd":92:4:92:5|Instance "U4.U1.N_940_i" with 2 loads has been replicated 1 time(s) to improve timing 
+Added 0 Registers via timing driven replication
+Added 4 LUTs via timing driven replication
 
 xct_reducefodelay set to FALSE
 Timing driven replication report
@@ -746,15 +565,15 @@ No replication required.
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:14s		    -1.66ns		1231 /       908
-   2		0h:00m:14s		    -1.61ns		1231 /       908
-   3		0h:00m:14s		    -1.61ns		1231 /       908
+   1		0h:00m:13s		    -2.85ns		1150 /       739
+   2		0h:00m:13s		    -2.85ns		1150 /       739
+   3		0h:00m:13s		    -2.82ns		1150 /       739
 Timing driven replication report
 No replication required.
 
-   4		0h:00m:14s		    -1.61ns		1231 /       908
-   5		0h:00m:14s		    -1.61ns		1231 /       908
-   6		0h:00m:14s		    -1.61ns		1231 /       908
+   4		0h:00m:13s		    -2.82ns		1150 /       739
+   5		0h:00m:13s		    -2.82ns		1150 /       739
+   6		0h:00m:13s		    -2.82ns		1150 /       739
 ------------------------------------------------------------
 
 Timing driven replication report
@@ -765,30 +584,68 @@ No replication required.
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:14s		    -1.61ns		1229 /       908
-   2		0h:00m:14s		    -1.58ns		1229 /       908
-   3		0h:00m:14s		    -1.58ns		1229 /       908
+   1		0h:00m:14s		    -2.80ns		1147 /       739
+   2		0h:00m:14s		    -2.80ns		1147 /       739
+   3		0h:00m:14s		    -2.78ns		1147 /       739
 Timing driven replication report
 No replication required.
 
-   4		0h:00m:14s		    -1.58ns		1229 /       908
-   5		0h:00m:14s		    -1.58ns		1229 /       908
-   6		0h:00m:14s		    -1.58ns		1229 /       908
+   4		0h:00m:14s		    -2.78ns		1147 /       739
+   5		0h:00m:14s		    -2.78ns		1147 /       739
+   6		0h:00m:14s		    -2.78ns		1147 /       739
 ------------------------------------------------------------
 
 Net buffering Report for view:work.ga(str):
 No nets needed buffering.
 
-@N: MF197 |Retiming summary : 52 registers retimed to 164 
+@N: MF197 |Retiming summary : 93 registers retimed to 224 
 
 		#####  BEGIN RETIMING REPORT  #####
 
-Retiming summary : 52 registers retimed to 164
+Retiming summary : 93 registers retimed to 224
 
 Original and Pipelined registers replaced by retiming :
+		U4.U0.temp[1]
+		U4.U0.temp[2]
+		U4.U0.temp[3]
+		U4.U0.temp[4]
+		U4.U0.temp[5]
+		U4.U0.temp[6]
+		U4.U0.temp[7]
+		U4.U1.best_fit_prev_gen_0[0]
 		U4.U1.best_fit_prev_gen_0[1]
+		U4.U1.best_fit_prev_gen_0[2]
+		U4.U1.best_fit_prev_gen_0[3]
+		U4.U1.best_fit_prev_gen_0[4]
+		U4.U1.best_fit_prev_gen_0[5]
+		U4.U1.best_fit_prev_gen_0[6]
+		U4.U1.best_fit_prev_gen_0[7]
+		U4.U1.best_fit_prev_gen_1[0]
 		U4.U1.best_fit_prev_gen_1[1]
+		U4.U1.best_fit_prev_gen_1[2]
+		U4.U1.best_fit_prev_gen_1[3]
+		U4.U1.best_fit_prev_gen_1[4]
+		U4.U1.best_fit_prev_gen_1[5]
+		U4.U1.best_fit_prev_gen_1[6]
+		U4.U1.best_fit_prev_gen_1[7]
 		U4.U1.counter[0]
+		U4.U1.sum_p[1]
+		U4.U1.temp2_0[0]
+		U4.U1.temp2_0[2]
+		U4.U1.temp2_0[3]
+		U4.U1.temp2_0[4]
+		U4.U1.temp2_0[5]
+		U4.U1.temp2_0[6]
+		U4.U1.temp2_0[7]
+		U4.U1.temp2_2[0]
+		U4.U1.temp2_2[1]
+		U4.U1.temp2_2[2]
+		U4.U1.temp2_2[3]
+		U4.U1.temp2_2[4]
+		U4.U1.temp2_2[5]
+		U4.U1.temp2_2[6]
+		U4.U1.temp2_2[7]
+		U4.U1.temp2_4[1]
 		U5.cumSum_p1[0]
 		U5.cumSum_p1[1]
 		U5.cumSum_p1[2]
@@ -801,7 +658,7 @@ Original and Pipelined registers replaced by retiming :
 		U5.cumSum_p1[9]
 		U5.cumSum_p1[10]
 		U5.done_t
-		U5.scalFitSum_p[14]
+		U5.scalFitSum_p[11]
 		U5.selParent_p[0]
 		U5.selParent_p[1]
 		U5.selParent_p[2]
@@ -827,23 +684,82 @@ Original and Pipelined registers replaced by retiming :
 		U7.mutout_p1[5]
 		U7.mutout_p1[6]
 		U7.mutout_p1[7]
-		U11.addr_1[0]
-		U11.addr_1[1]
-		U11.addr_1[2]
+		U9.add_r[0]
+		U9.add_r[1]
+		U9.add_r[2]
 		U11.cnt_adapted
+		U11.cnt_parents_1[0]
+		U11.cnt_parents_1[1]
 		U11.count_offs_p1[2]
 		U11.count_offs_p1[3]
+		U11.flag
 		U11.incr[0]
 		U11.incr[1]
 		U11.incr[2]
 		U11.incr[3]
-		U11.index_1[3]
+		U11.sreg[1]
 
 New registers created by retiming :
+		U4.U0.temp2_0_ret
+		U4.U0.temp2_0_ret_1
+		U4.U0.temp2_0_ret_2
+		U4.U0.temp2_0_ret_3
+		U4.U0.temp2_0_ret_4
+		U4.U0.temp2_0_ret_5
+		U4.U0.temp2_0_ret_6
+		U4.U1.add_r_ret
+		U4.U1.add_r_ret_1
+		U4.U1.add_r_ret_2
 		U4.U1.best_fit_prev_gen_0_ret
 		U4.U1.best_fit_prev_gen_0_ret_1
 		U4.U1.best_fit_prev_gen_0_ret_2
-		U4.U1.best_fit_prev_gen_0_ret_3
+		U4.U1.cnt_parents_1_ret
+		U4.U1.cnt_parents_1_ret_0
+		U4.U1.count_cycle_ret
+		U4.U1.count_cycle_ret_0
+		U4.U1.decode_ret
+		U4.U1.decode_ret_0
+		U4.U1.decode_ret_1
+		U4.U1.decode_ret_2
+		U4.U1.decode_ret_3
+		U4.U1.decode_ret_4
+		U4.U1.decode_ret_5
+		U4.U1.decode_ret_6
+		U4.U1.decode_ret_7
+		U4.U1.decode_ret_8
+		U4.U1.decode_ret_9
+		U4.U1.decode_ret_10
+		U4.U1.decode_ret_11
+		U4.U1.decode_ret_12
+		U4.U1.decode_ret_13
+		U4.U1.decode_ret_14
+		U4.U1.decode_ret_15
+		U4.U1.decode_ret_16
+		U4.U1.decode_ret_17
+		U4.U1.decode_ret_18
+		U4.U1.decode_ret_19
+		U4.U1.decode_ret_20
+		U4.U1.decode_ret_21
+		U4.U1.decode_ret_22
+		U4.U1.loop1.temp2_0_ret
+		U4.U1.loop1.temp2_0_ret_6
+		U4.U1.loop1.temp2_0_ret_7
+		U4.U1.temp2_0_ret
+		U4.U1.temp2_0_ret_0
+		U4.U1.temp2_0_ret_1
+		U4.U1.temp2_0_ret_2
+		U4.U1.temp2_0_ret_3
+		U4.U1.temp2_0_ret_4
+		U4.U1.temp2_0_ret_5
+		U4.U1.temp2_0_ret_6
+		U4.U1.temp2_0_ret_7
+		U4.U1.temp2_0_ret_8
+		U4.U1.temp2_0_ret_9
+		U4.U1.temp2_0_ret_10
+		U4.U1.temp2_0_ret_11
+		U4.U1.temp2_0_ret_12
+		U4.U1.temp2_0_ret_13
+		U4.U1.temp2_0_ret_14
 		U5.cumSum_p1_ret
 		U5.cumSum_p1_ret_11
 		U5.selParent_p_ret
@@ -892,30 +808,20 @@ New registers created by retiming :
 		U6.crossover_v2.crossout1_t_ret_125
 		U6.crossover_v2.crossout1_t_ret_126
 		U6.crossover_v2.crossout1_t_ret_127
-		U6.mutout_p1_ret
-		U6.mutout_p1_ret_1
-		U6.mutout_p1_ret_2
-		U6.mutout_p1_ret_3
-		U6.mutout_p1_ret_4
-		U6.mutout_p1_ret_5
-		U6.mutout_p1_ret_6
-		U6.mutout_p1_ret_7
-		U7.mutation_v2.un18_mutout.mutout_p1_ret
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_1
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_2
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_3
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_4
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_5
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_6
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_7
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_8
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_9
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_10
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_11
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_12
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_13
-		U7.mutation_v2.un18_mutout.mutout_p1_ret_14
-		U7.mutout_p1_ret
+		U6.un1_mask_2.crossout1_t_ret_40
+		U6.un1_mask_2.crossout1_t_ret_120
+		U7.mutation_v2.mutout_p1_ret
+		U7.mutation_v2.mutout_p1_ret_0
+		U7.mutation_v2.mutout_p1_ret_1
+		U7.mutation_v2.mutout_p1_ret_2
+		U7.mutation_v2.mutout_p1_ret_3
+		U7.mutation_v2.mutout_p1_ret_4
+		U7.mutation_v2.mutout_p1_ret_5
+		U7.mutation_v2.mutout_p1_ret_6
+		U7.mutation_v2.mutout_p1_ret_7
+		U7.mutation_v2.mutout_p1_ret_8
+		U7.mutation_v2.mutout_p1_ret_9
+		U7.mutation_v2.mutout_p1_ret_10
 		U7.mutout_p1_ret_1
 		U7.mutout_p1_ret_2
 		U7.mutout_p1_ret_3
@@ -937,28 +843,25 @@ New registers created by retiming :
 		U7.mutout_p1_ret_19
 		U7.mutout_p1_ret_20
 		U7.mutout_p1_ret_21
-		U7.mutout_p1_ret_22
-		U7.mutout_p1_ret_23
-		U7.mutout_p1_ret_24
-		U7.mutout_p1_ret_25
-		U7.mutout_p1_ret_26
-		U7.mutout_p1_ret_27
-		U7.mutout_p1_ret_28
-		U7.mutout_p1_ret_29
-		U7.mutout_p1_ret_30
-		U7.mutout_p1_ret_31
-		U11.addr_1_ret
-		U11.addr_1_ret_1
-		U11.addr_1_ret_2
-		U11.addr_1_ret_3
-		U11.addr_1_ret_4
-		U11.addr_1_ret_5
-		U11.addr_1_ret_6
-		U11.addr_1_ret_7
-		U11.addr_1_ret_8
-		U11.addr_1_ret_9
-		U11.addr_1_ret_10
-		U11.addr_1_ret_11
+		U11.add_r_ret
+		U11.add_r_ret_1
+		U11.add_r_ret_2
+		U11.add_r_ret_3
+		U11.add_r_ret_4
+		U11.add_r_ret_5
+		U11.add_r_ret_7
+		U11.add_r_ret_8
+		U11.add_r_ret_9
+		U11.add_r_ret_10
+		U11.add_r_ret_11
+		U11.add_r_ret_12
+		U11.add_r_ret_14
+		U11.add_r_ret_15
+		U11.add_r_ret_16
+		U11.add_r_ret_17
+		U11.add_r_ret_18
+		U11.add_r_ret_19
+		U11.add_r_ret_21
 		U11.cnt_adapted_ret
 		U11.count_gen_p1_ret_1
 		U11.count_offs_p1_ret
@@ -969,44 +872,60 @@ New registers created by retiming :
 		U11.count_offs_p1_ret_4
 		U11.count_offs_p1_ret_5
 		U11.count_offs_p1_ret_6
-		U11.incr_ret
 		U11.incr_ret_1
+		U11.incr_ret_2
 		U11.incr_ret_3
 		U11.incr_ret_5
 		U11.incr_ret_6
 		U11.incr_ret_7
+		U11.incr_ret_9
 		U11.incr_ret_10
-		U11.index_1_ret
-		U11.index_1_ret_1
-		U11.index_1_ret_2
-		U11.index_1_ret_3
-		U11.loop0.incr_ret
-		U11.loop1.incr_ret
-		U11.loop1.un20_dummy_cnt_adapt_0.incr_ret_4
+		U11.incr_ret_11
+		U11.incr_ret_12
+		U11.incr_ret_13
+		U11.loop0.cnt_adapted_ret
+		U11.loop0.incr_ret_4
+		U11.loop0.un7_dummy_cnt_adapt_0.incr_ret
+		U11.loop1.cnt_adapted_ret
+		U11.loop1.incr_ret_4
+		U11.loop1.un20_dummy_cnt_adapt_0.incr_ret
+		U11.notify_cnt_p_ret
+		U11.sreg_ret
+		U11.sreg_ret_1
+		U11.sreg_ret_2
 		U11.term_rd_p1_ret_1
+		mutout_p1_ret
+		mutout_p1_ret_0
+		mutout_p1_ret_1
+		mutout_p1_ret_2
+		mutout_p1_ret_3
+		mutout_p1_ret_4
+		mutout_p1_ret_5
+		mutout_p1_ret_9
+		sreg_ret
 
 
 		#####   END RETIMING REPORT  #####
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:14s; Memory used current: 49MB peak: 51MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:14s; Memory used current: 48MB peak: 49MB)
 
-Finished restoring hierarchy (Time elapsed 0h:00m:14s; Memory used current: 49MB peak: 51MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:14s; Memory used current: 48MB peak: 49MB)
 @N: BN191 |Writing property annotation file D:\Designs\GA_eval\syn\GA\rev_1\top.tap.
 Writing Analyst data base D:\Designs\GA_eval\syn\GA\rev_1\top.srm
 @N: BN225 |Writing default property annotation file D:\Designs\GA_eval\syn\GA\rev_1\top.map.
 Writing EDIF Netlist and constraint files
 Version 8.5.1
-Found clock clk with period 8.33ns 
+Found clock clk with period 7.14ns 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Mon Nov 06 15:05:06 2006
+# Timing Report written on Tue Nov 14 19:37:06 2006
 #
 
 
 Top view:               ga
-Requested Frequency:    120.0 MHz
+Requested Frequency:    140.0 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    D:\Designs\GA_eval\syn\GA\ga.sdc
@@ -1022,12 +941,12 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -1.657
+Worst slack in design: -2.847
 
                    Requested     Estimated     Requested     Estimated                Clock        Clock             
 Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group             
 ---------------------------------------------------------------------------------------------------------------------
-clk                120.0 MHz     100.1 MHz     8.333         9.990         -1.657     declared     default_clkgroup_0
+clk                140.0 MHz     100.1 MHz     7.143         9.990         -2.847     declared     default_clkgroup_0
 =====================================================================================================================
 
 
@@ -1041,7 +960,7 @@ Clocks            |    rise  to  rise    |    fall  to  fall   |    rise  to  fa
 ---------------------------------------------------------------------------------------------------------
 Starting  Ending  |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
 ---------------------------------------------------------------------------------------------------------
-clk       clk     |  8.333       -1.657  |  No paths    -      |  No paths    -      |  No paths    -    
+clk       clk     |  7.143       -2.847  |  No paths    -      |  No paths    -      |  No paths    -    
 =========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -1068,37 +987,37 @@ Starting Points with Worst Slack
 Instance             Reference     Type     Pin     Net                  Time        Slack 
                      Clock                                                                 
 -------------------------------------------------------------------------------------------
-U4.U1.fit_sum[0]     clk           FDCE     Q       fit_sum_dummy[0]     0.720       -1.657
-U4.U1.fit_sum[1]     clk           FDCE     Q       fit_sum_dummy[1]     0.720       -1.657
-U4.U1.fit_sum[2]     clk           FDCE     Q       fit_sum_dummy[2]     0.720       -1.657
-U4.U1.fit_sum[3]     clk           FDCE     Q       fit_sum_dummy[3]     0.720       -1.657
-U4.U1.fit_sum[4]     clk           FDCE     Q       fit_sum_dummy[4]     0.720       -1.657
-U4.U1.fit_sum[5]     clk           FDCE     Q       fit_sum_dummy[5]     0.720       -1.657
-U4.U1.fit_sum[6]     clk           FDCE     Q       fit_sum_dummy[6]     0.720       -1.657
-U4.U1.fit_sum[7]     clk           FDCE     Q       fit_sum_dummy[7]     0.720       -1.657
-U4.U1.fit_sum[8]     clk           FDCE     Q       fit_sum_dummy[8]     0.720       -1.657
-U4.U1.fit_sum[9]     clk           FDCE     Q       fit_sum_dummy[9]     0.720       -1.657
+U4.U1.fit_sum[0]     clk           FDCE     Q       fit_sum_dummy[0]     0.720       -2.847
+U4.U1.fit_sum[1]     clk           FDCE     Q       fit_sum_dummy[1]     0.720       -2.847
+U4.U1.fit_sum[2]     clk           FDCE     Q       fit_sum_dummy[2]     0.720       -2.847
+U4.U1.fit_sum[3]     clk           FDCE     Q       fit_sum_dummy[3]     0.720       -2.847
+U4.U1.fit_sum[4]     clk           FDCE     Q       fit_sum_dummy[4]     0.720       -2.847
+U4.U1.fit_sum[5]     clk           FDCE     Q       fit_sum_dummy[5]     0.720       -2.847
+U4.U1.fit_sum[6]     clk           FDCE     Q       fit_sum_dummy[6]     0.720       -2.847
+U4.U1.fit_sum[7]     clk           FDCE     Q       fit_sum_dummy[7]     0.720       -2.847
+U4.U1.fit_sum[8]     clk           FDCE     Q       fit_sum_dummy[8]     0.720       -2.847
+U4.U1.fit_sum[9]     clk           FDCE     Q       fit_sum_dummy[9]     0.720       -2.847
 ===========================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                              Starting                                                  Required           
-Instance                      Reference     Type     Pin     Net                        Time         Slack 
-                              Clock                                                                        
------------------------------------------------------------------------------------------------------------
-U5.selParent_p_ret_2          clk           FDCE     D       un17_data_valid            8.130        -1.657
-U5.selParent_p_ret_3          clk           FDCE     D       un20_data_valid            8.130        -1.657
-U5.selection.done_t_ret_2     clk           FDCE     D       un17_data_valid            8.130        -1.657
-U5.selection.done_t_ret_3     clk           FDCE     D       un20_data_valid            8.130        -1.657
-U5.temp_rd_ret_1              clk           FDC      D       un17_data_valid            8.130        -1.657
-U5.temp_rd_ret_2              clk           FDC      D       un20_data_valid            8.130        -1.657
-U11.count_offs_p1[1]          clk           FDC      D       count_offs[1]              8.223        -1.300
-U4.U1.fit_sum[10]             clk           FDCE     D       fit_sum_6_10_rep1          8.223        -0.851
-U4.U1.sum_p[10]               clk           FDCE     D       fit_sum_6[10]              8.223        -0.851
-U11.count_offs_p1_ret_3       clk           FDC      D       un1_count_offs_p1_2_c1     8.130        -0.813
-===========================================================================================================
+                              Starting                                             Required           
+Instance                      Reference     Type     Pin     Net                   Time         Slack 
+                              Clock                                                                   
+------------------------------------------------------------------------------------------------------
+U5.selParent_p_ret_2          clk           FDCE     D       un17_data_valid       6.940        -2.847
+U5.selParent_p_ret_3          clk           FDCE     D       un20_data_valid       6.940        -2.847
+U5.selection.done_t_ret_2     clk           FDCE     D       un17_data_valid       6.940        -2.847
+U5.selection.done_t_ret_3     clk           FDCE     D       un20_data_valid       6.940        -2.847
+U5.temp_rd_ret_1              clk           FDC      D       un17_data_valid       6.940        -2.847
+U5.temp_rd_ret_2              clk           FDC      D       un20_data_valid       6.940        -2.847
+U11.count_offs_p1[1]          clk           FDC      D       count_offs[1]         7.032        -2.483
+U4.U1.fit_sum[10]             clk           FDCE     D       N_954_i_rep1          7.032        -2.020
+U4.U1.sum_p[10]               clk           FDCE     D       N_954_i               7.032        -2.020
+U11.sreg_ret_1                clk           FDC      D       sreg_ns_i_o4_1[7]     7.032        -2.015
+======================================================================================================
 
 
 
@@ -1107,12 +1026,12 @@ Worst Path Information
 
 
 Path information for path number 1: 
-    Requested Period:                        8.333
+    Requested Period:                        7.143
     - Setup time:                            0.203
-    = Required time:                         8.130
+    = Required time:                         6.940
 
     - Propagation time:                      9.787
-    = Slack (critical) :                     -1.657
+    = Slack (critical) :                     -2.847
 
     Number of logic level(s):                4
     Starting point:                          U4.U1.fit_sum[0] / Q
@@ -1134,8 +1053,8 @@ scalFitSum[10]                            Net           -         -       0.842 
 U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
 U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
 N_21_i                                    Net           -         -       0.000     -           1         
-U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
-U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       LO        Out     0.480     8.946       -         
 un17_data_valid                           Net           -         -       0.842     -           3         
 U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
 ==========================================================================================================
@@ -1143,12 +1062,12 @@ Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3
 
 
 Path information for path number 2: 
-    Requested Period:                        8.333
+    Requested Period:                        7.143
     - Setup time:                            0.203
-    = Required time:                         8.130
+    = Required time:                         6.940
 
     - Propagation time:                      9.787
-    = Slack (critical) :                     -1.657
+    = Slack (critical) :                     -2.847
 
     Number of logic level(s):                4
     Starting point:                          U4.U1.fit_sum[1] / Q
@@ -1170,8 +1089,8 @@ scalFitSum[10]                            Net           -         -       0.842 
 U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
 U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
 N_21_i                                    Net           -         -       0.000     -           1         
-U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
-U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       LO        Out     0.480     8.946       -         
 un17_data_valid                           Net           -         -       0.842     -           3         
 U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
 ==========================================================================================================
@@ -1179,12 +1098,12 @@ Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3
 
 
 Path information for path number 3: 
-    Requested Period:                        8.333
+    Requested Period:                        7.143
     - Setup time:                            0.203
-    = Required time:                         8.130
+    = Required time:                         6.940
 
     - Propagation time:                      9.787
-    = Slack (critical) :                     -1.657
+    = Slack (critical) :                     -2.847
 
     Number of logic level(s):                4
     Starting point:                          U4.U1.fit_sum[2] / Q
@@ -1206,8 +1125,8 @@ scalFitSum[10]                            Net           -         -       0.842 
 U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
 U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
 N_21_i                                    Net           -         -       0.000     -           1         
-U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
-U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       LO        Out     0.480     8.946       -         
 un17_data_valid                           Net           -         -       0.842     -           3         
 U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
 ==========================================================================================================
@@ -1215,12 +1134,12 @@ Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3
 
 
 Path information for path number 4: 
-    Requested Period:                        8.333
+    Requested Period:                        7.143
     - Setup time:                            0.203
-    = Required time:                         8.130
+    = Required time:                         6.940
 
     - Propagation time:                      9.787
-    = Slack (critical) :                     -1.657
+    = Slack (critical) :                     -2.847
 
     Number of logic level(s):                4
     Starting point:                          U4.U1.fit_sum[3] / Q
@@ -1242,8 +1161,8 @@ scalFitSum[10]                            Net           -         -       0.842 
 U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
 U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
 N_21_i                                    Net           -         -       0.000     -           1         
-U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
-U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       LO        Out     0.480     8.946       -         
 un17_data_valid                           Net           -         -       0.842     -           3         
 U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
 ==========================================================================================================
@@ -1251,12 +1170,12 @@ Total path delay (propagation time + setup) of 9.990 is 6.685(66.9%) logic and 3
 
 
 Path information for path number 5: 
-    Requested Period:                        8.333
+    Requested Period:                        7.143
     - Setup time:                            0.203
-    = Required time:                         8.130
+    = Required time:                         6.940
 
     - Propagation time:                      9.787
-    = Slack (critical) :                     -1.657
+    = Slack (critical) :                     -2.847
 
     Number of logic level(s):                4
     Starting point:                          U4.U1.fit_sum[4] / Q
@@ -1278,8 +1197,8 @@ scalFitSum[10]                            Net           -         -       0.842 
 U5.selection.un17_data_valid_0.N_21_i     LUT3          I1        In      -         7.886       -         
 U5.selection.un17_data_valid_0.N_21_i     LUT3          O         Out     0.580     8.466       -         
 N_21_i                                    Net           -         -       0.000     -           1         
-U5.selection.un17_data_valid_0.I_46       MUXCY         S         In      -         8.466       -         
-U5.selection.un17_data_valid_0.I_46       MUXCY         O         Out     0.480     8.946       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       S         In      -         8.466       -         
+U5.selection.un17_data_valid_0.I_46       MUXCY_L       LO        Out     0.480     8.946       -         
 un17_data_valid                           Net           -         -       0.842     -           3         
 U5.selParent_p_ret_2                      FDCE          D         In      -         9.787       -         
 ==========================================================================================================
@@ -1294,26 +1213,26 @@ Resource Usage Report for ga
 
 Mapping to part: xc3s1500fg676-4
 Cell usage:
-FDC             188 uses
-FDCE            638 uses
+FDC             239 uses
+FDCE            405 uses
 FDCP            34 uses
 FDCPE           34 uses
-FDP             2 uses
-FDPE            12 uses
-GND             4 uses
+FDP             8 uses
+FDPE            8 uses
+FDRE            11 uses
+GND             5 uses
 MULT18X18       1 use
-MULT_AND        17 uses
-MUXCY           7 uses
-MUXCY_L         106 uses
-MUXF5           82 uses
-MUXF6           24 uses
-MUXF7           8 uses
+MULT_AND        18 uses
+MUXCY           6 uses
+MUXCY_L         109 uses
+MUXF5           31 uses
+RAM16X4S        6 uses
 VCC             6 uses
-XORCY           35 uses
+XORCY           36 uses
 LUT1            5 uses
-LUT2            363 uses
-LUT3            441 uses
-LUT4            408 uses
+LUT2            365 uses
+LUT3            338 uses
+LUT4            419 uses
 
 I/O primitives: 58
 IBUF           40 uses
@@ -1322,7 +1241,11 @@ OBUF           18 uses
 BUFGP          1 use
 
 I/O Register bits:                  57
-Register bits not including I/Os:   851 (3%)
+Register bits not including I/Os:   682 (2%)
+
+RAM/ROM usage summary
+Single Port Rams (RAM16X4S): 6
+
 
 Block Multipliers: 1 of 32 (3%)
 
@@ -1330,10 +1253,10 @@ Global Clock Buffers: 1 of 8 (12%)
 
 
 Mapping Summary:
-Total  LUTs: 1217 (4%)
+Total  LUTs: 1151 (4%)
 
 Mapper successful!
-Process took 0h:00m:18s realtime, 0h:00m:17s cputime
-# Mon Nov 06 15:05:06 2006
+Process took 0h:00m:16s realtime, 0h:00m:16s cputime
+# Tue Nov 14 19:37:06 2006
 
 ###########################################################]

@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 07/11/06
+-- Last update: 08/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -105,9 +105,7 @@ begin
   selection : process (fitSum, rng, cumSum_p1, scalFitSum, scalFitSum_p, inGene, done_t, data_valid, count, temp_rd, selParent_p)
   begin
 
-
     if data_valid = '1' and temp_rd = '0' then
-
       --score <= inGene(score_sz-1 downto 0);
       --cumSum <= cumSum_p1 + inGene(score_sz-1 downto 0);
       if done_t = '0' then

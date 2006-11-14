@@ -1,7 +1,7 @@
 #-- Synplicity, Inc.
 #-- Version Synplify Pro 8.5.1
 #-- Project file D:\Designs\GA_eval\syn\GA\ga.prj
-#-- Written on Mon Nov 06 14:48:50 2006
+#-- Written on Tue Nov 14 19:37:35 2006
 
 
 #add_file options
@@ -21,6 +21,7 @@ add_file -vhdl -lib work "../../vhd/spram1.vhd"
 add_file -vhdl -lib work "../../vhd/top_fit_eval.vhd"
 add_file -vhdl -lib work "../../vhd/top.vhd"
 add_file -constraint "ga.sdc"
+add_file "D:/Designs/GA_eval/vhd/blk_mem_gen_v1_1.vho"
 
 
 #implementation: "rev_1"

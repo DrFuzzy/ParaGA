@@ -1,17 +1,17 @@
 -------------------------------------------------------------------------------
 -- Title      : Fitness Evaluation block
--- Project    : genetic Algorithm
+-- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
 -- File       : fix_elite_tsp.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 08/08/06
--- Last update: 2006-11-02
+-- Last update: 08/11/06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
--- Description: This block implements the fitness evaluation block 
--- ATTENTION  : FOR MORE THAN ONE ELITE CHILD 
+-- Description: This block implements the fitness evaluation block (works for
+-- more than one elite child)
 -------------------------------------------------------------------------------
 -- Copyright (c) 2006 NTUA
 -------------------------------------------------------------------------------

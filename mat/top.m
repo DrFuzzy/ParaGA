@@ -140,13 +140,13 @@ if mut_method ~= 2
         LFSR_reg_3 = temp_masks(i,:);         
         load_var = 0;
         if i~=1
-            if isequal(rem(i,2),0)  
+            %if isequal(rem(i,2),0)  
                 k=k+1;
                 cross_mask{index}(k,:) = temp_masks(i,1:genomlngt);
-            else
-                l=l+1;
-                mut_mask{index}(l,:) = temp_masks(i,:);
-            end
+            %else
+            %    l=l+1;
+                mut_mask{index}(k,:) = temp_masks(i,:);
+            %end
         end
     end
 
@@ -220,4 +220,4 @@ current_gen = current_gen + 1;
 end
 %% Execution Time Calculation
 toc
-exec_time = toc;
+calc_time = toc;

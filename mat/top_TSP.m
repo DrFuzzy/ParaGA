@@ -15,36 +15,61 @@ global mut_res
 global num_towns
 %% Generics - Constants
 cpu1 = cputime;
-popSz = 16;  % Change the load file too if you dont want to produce a new random initial generation
+popSz = 32;  % Change the load file too if you dont want to produce a new random initial generation
 elite = 2;
 num_towns = 8;
 genomlngt = (num_towns-1)*log2(num_towns);
 nParents = 2*(popSz-elite);
-max_gen = 60;
+max_gen =200;
 factor = 4;
 mut_prob = 100; % According to mut_res from VHDL design
 mut_res = 8;
 
-distance_map = [1 1
-                1 2
-                2 4
-                3 5
-                2 0
-                3 3
-                4 1
-                5 3
-                3 6
-                4 7
-                6 7
-                7 6 
-                5 5
-                5 4
-                6 2
-                7 1];
+% distance_map = [1 1
+%                 1 2
+%                 2 4
+%                 3 5
+%                 2 0
+%                 3 3
+%                 4 1
+%                 5 3
+%                 3 6
+%                 4 7
+%                 6 7
+%                 7 6 
+%                 5 5
+%                 5 4
+%                 6 2
+%                 7 1];
+
+distance_map = [8 7  % Athens
+                4 7  % Patras
+                10 5 % Mykonos
+                5 3  % Sparta
+                6 9  % Trikala
+                2 10 % Corfu
+                7 12 % Thessaloniki
+               11 14]; % Alexandroupoli
+%            
+% distance_map =  [16.47      96.10
+%   16.47       94.44
+%   20.09       92.54
+%   22.39       93.37
+%   25.23       97.24
+%   22.00       96.05
+%   20.47       97.02
+%   17.20       96.29
+%   16.30       97.38
+%   14.05       98.12
+%   21.52       95.59
+%   19.41       97.13
+%   20.09       94.55
+%   20.09       94.55
+%   20.09       94.55];
+
 [seed0,seed1,seed2,seed3] = seeds_generatorTSP(); % Produce new random --
 %                                                    seeds 
 %load seedsTSP;
-
 %% Initializations
 fit_limit_reached = 0;
 max_gen_reached = 0;
@@ -64,68 +89,68 @@ mut_point = cell(1,max_gen);
 max_fit = cell(1,max_gen);
 best_fit = cell(1,max_gen);
 delete('D:\Designs\GA_eval\sim\ip_vec_ga_tsp.vec');
-delete('D:\Designs\GA_eval\sim\op_vec_ga_tsp_tsp.vec');
+delete('D:\Designs\GA_eval\sim\op_vec_ga_tsp.vec');
 LFSR_reg_1 = ones(1,factor);
 LFSR_reg_2 = ones(1,2*log2(num_towns));
 LFSR_reg_3 = ones(1,mut_res);
 %% RNG : Creation of popSz genes (ram1) randomly -- Insert various seeds 
-load init_genes16; % 8 genes 
-% LFSR_reg = ones(1,log2(num_towns)*(num_towns-1));
-% load_var = 1; 
-% run = 1;
-% 
-% for i=1:popSz
-%     [temp_init_genes(i,:)] = rng(load_var,run,seed0,log2(num_towns)*(num_towns-1),LFSR_reg);
-%     LFSR_reg = temp_init_genes(i,:);
-%     load_var = 0;    
-%     ind=1;
-%     for k=1:log2(num_towns):log2(num_towns)*(num_towns-1)
-%         initial_genes(i,ind) = bin2dec(num2str(temp_init_genes(i,k:k+log2(num_towns)-1)));
-%         ind=ind+1;
-%     end
-%     initial_genes(i,find(initial_genes(i,:)==0))= ceil(7.*rand(1,1)); % No zeros
-%     l=1;
-%     m=1;
-%     no_change=0;
-%     for k=1:num_towns-1
-%         if isempty(find(initial_genes(i,:)==pool(k)))==1 
-%             missing_towns(l)=k;
-%             l=l+1;
-%         elseif size(find(initial_genes(i,:)==pool(k)),2)>1
-%             repeat_towns(m)=k;
-%             indices_rep_towns{m}=find(initial_genes(i,:)==pool(k));
-%             m=m+1;
-%         elseif size(find(initial_genes(i,:)==pool(k)),2)==1
-%             no_change=no_change+1;
-%         end
-%     end
-%     if no_change~=num_towns-1
-%         w=1;
-%         for n=1:size(indices_rep_towns,2)
-%             initial_genes(i,indices_rep_towns{n}(1:size(indices_rep_towns{n},2)-1))=missing_towns(w:w+size(indices_rep_towns{n},2)-2);
-%             w=w+size(indices_rep_towns{n},2)-1;
-%         end
-%         init_genes_dec(i,:)=initial_genes(i,:);
-%     else
-%         init_genes_dec(i,:)=initial_genes(i,:);
-%     end
-%     
-% % Binary transformation of integer genes
-% 
-%     ind2=1;
-%     for j=1:num_towns-1
-%         temp{j}=dec2bin(init_genes_dec(i,j),log2(num_towns));
-%     end
-%     for j=1:num_towns-1
-%         for k=1:log2(num_towns)
-%             init_genes(i,ind2)=str2num(temp{j}(k));
-%             ind2=ind2+1;
-%         end
-%     end
-%     clear missing_towns;
-%     clear repeat_towns;
-%     clear indices_rep_towns;
-% end
+%load init_genes32; % 8 genes 
+LFSR_reg = ones(1,log2(num_towns)*(num_towns-1));
+load_var = 1; 
+run = 1;
+
+for i=1:popSz
+    [temp_init_genes(i,:)] = rng(load_var,run,seed0,log2(num_towns)*(num_towns-1),LFSR_reg);
+    LFSR_reg = temp_init_genes(i,:);
+    load_var = 0;    
+    ind=1;
+    for k=1:log2(num_towns):log2(num_towns)*(num_towns-1)
+        initial_genes(i,ind) = bin2dec(num2str(temp_init_genes(i,k:k+log2(num_towns)-1)));
+        ind=ind+1;
+    end
+    initial_genes(i,find(initial_genes(i,:)==0))= ceil(7.*rand(1,1)); % No zeros
+    l=1;
+    m=1;
+    no_change=0;
+    for k=1:num_towns-1
+        if isempty(find(initial_genes(i,:)==pool(k)))==1 
+            missing_towns(l)=k;
+            l=l+1;
+        elseif size(find(initial_genes(i,:)==pool(k)),2)>1
+            repeat_towns(m)=k;
+            indices_rep_towns{m}=find(initial_genes(i,:)==pool(k));
+            m=m+1;
+        elseif size(find(initial_genes(i,:)==pool(k)),2)==1
+            no_change=no_change+1;
+        end
+    end
+    if no_change~=num_towns-1
+        w=1;
+        for n=1:size(indices_rep_towns,2)
+            initial_genes(i,indices_rep_towns{n}(1:size(indices_rep_towns{n},2)-1))=missing_towns(w:w+size(indices_rep_towns{n},2)-2);
+            w=w+size(indices_rep_towns{n},2)-1;
+        end
+        init_genes_dec(i,:)=initial_genes(i,:);
+    else
+        init_genes_dec(i,:)=initial_genes(i,:);
+    end
+    
+%Binary transformation of integer genes
+
+    ind2=1;
+    for j=1:num_towns-1
+        temp{j}=dec2bin(init_genes_dec(i,j),log2(num_towns));
+    end
+    for j=1:num_towns-1
+        for k=1:log2(num_towns)
+            init_genes(i,ind2)=str2num(temp{j}(k));
+            ind2=ind2+1;
+        end
+    end
+    clear missing_towns;
+    clear repeat_towns;
+    clear indices_rep_towns;
+end
 
 %% Fitness evaluation of first generation
 
@@ -225,12 +250,12 @@ if current_gen == max_gen
     inputtestvectors(4)= 0;
     dlmwrite('D:\Designs\GA_eval\sim\ip_vec_ga_tsp.vec', inputtestvectors, 'delimiter', '\t', 'precision', '%.0f','-append');
 end
-if best_fit_prev==best_fit{index+1}(1)
-    fin = fin+1;
-else
-    fin=0;
-end
-if fin>=2000 
+% if best_fit_prev==best_fit{index+1}(1)
+%     fin = fin+1;
+% else
+%     fin=0;
+% end
+if max_fit{index}==65507 
     fit_limit_reached=1;
     inputtestvectors(1)= 0; 
     inputtestvectors(2)= 0; 
@@ -246,31 +271,36 @@ end
 cpu2 = cputime;
 total = cpu2-cpu1;
  
-%% Plot Map
-figure(1) 
-x=1:5:max_gen+1;
-y=cell2mat(max_fit);
-plot(x, y(x), 'pr', 'MarkerSize',10);
-hold on;
-for i= 2:elite
-color = {'.k' '+c' 'og' '*b' 'xm' 'sg'};
-y2=cell2mat(best_fit);
-plot(x, y2(2*x), color{i-1});
-end
+% %% Plot Map
+% figure(1) 
+% x=1:5:max_gen+1;
+% y=cell2mat(max_fit);
+% plot(x, y(x), 'pr', 'MarkerSize',10);
+% hold on;
+% for i= 2:elite
+% color = {'.k' '+c' 'og' '*b' 'xm' 'sg'};
+% y2=cell2mat(best_fit);
+% plot(x, y2(2*x), color{i-1});
+% end
+% 
+% % set axis
+% axis([0 max_gen+1 65400 max_fit{max_gen+1}])
+% title ('Best fitnesses and max fitness vs Number of generations');
+% xlabel('Number of generations'); ylabel('Fitness');
+% h = legend('max fitness','other',4);
+% set(h,'Interpreter','none', 'Box', 'off');
+% hold off;
 
-% set axis
-axis([0 max_gen+1 0 max_fit{max_gen+1}])
-title ('Best fitnesses and max fitness vs Number of generations');
-xlabel('Number of generations'); ylabel('Fitness');
-h = legend('max fitness','other',4);
-set(h,'Interpreter','none', 'Box', 'off');
-hold off;
-
+markers_colors = ['ob'; 'xb'; 'pb'; '*b'; 'sb'; 'db'; '+b'; 'hb']; 
+name_of_towns = {'Athens'; 'Patras'; 'Mykonos'; 'Sparta'; 'Trikala'; 'Corfu';'Thessaloniki';'Alexandroupoli'};
 figure(2)
+for i=1:num_towns
 
-plot(distance_map(:,1), distance_map(:,2), 'ob');
+plot(distance_map(i,1), distance_map(i,2), markers_colors(i));
+text(distance_map(i,1)+0.1, distance_map(i,2)+0.1,name_of_towns{i})
 hold on;
-axis([0 8 0 8])
+end;
+axis([0 15 0 15])
 best_route=genes{current_gen}(elite_offs(1),:);
 ind=1;
 for k=1:log2(num_towns):log2(num_towns)*(num_towns-1)

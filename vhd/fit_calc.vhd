@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 -- Title      : Fitness Evaluation block
--- Project    : genetic Algorithm
+-- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
 -- File       : fit_calc_TSP.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 08/08/06
--- Last update: 2006-11-02
+-- Last update: 08/11/06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -70,26 +70,11 @@ begin
 
   begin
     if rst_n = '0' then
-      --gene_score <= (others=>'0');
-      --fit <= (others=>'0');
       temp   <= (others => '0');
-      --temp_fit <= (others=>'0');
-      --ready_out <= '0';
       done_p <= '0';
     elsif rising_edge(clk) then
-      done_p <= done;
       temp   <= gene_scr;
-      --temp_fit <= gene_scr(score_sz downto 0);
-      --if valid='1' and done_p /= '1' then             
-      --        gene_score <= gene_scr;
-      --        ready_out <= done;
-      --elsif valid = '0' then
-      --        gene_score <= gene_scr;
-      --        ready_out<='0';
-      --else                                    --if done_p = '1' and valid='1' then -- preserve same outputs
-      --        gene_score <= gene_scr;
-      --        ready_out <= done;                      
-      --end if;
+      done_p <= done;
     end if;
   end process;
 -- Outputs

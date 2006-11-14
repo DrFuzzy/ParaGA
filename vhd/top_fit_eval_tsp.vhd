@@ -5,7 +5,8 @@
 -- File       : top_fit_eval_tsp.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
--- Created    : 16/5/2006
+-- Created    : 16/05/06
+-- Last update: 08/11/06
 -- Platform   : Modelsim, Synplicity, ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------

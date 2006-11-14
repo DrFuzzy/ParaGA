@@ -3,14 +3,14 @@
 -- Project    : GA
 -------------------------------------------------------------------------------
 -- File       : init_generation_rom_p.vhd
--- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
+-- Author     : George Doyamis & Kyriakos Deliparaschos (gdoyamis@ieee.org kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
--- Created    : 14/09/2006
--- Last update: 2006-11-02
+-- Created    : 14/09/06
+-- Last update: 08/11/06
 -- Platform   : Modelsim, Synplify, ISE
 -------------------------------------------------------------------------------
 -- Description: This block implements a parameterized wrapper for the 
---              initial generation ROM  
+--              initial generation ROM 
 -------------------------------------------------------------------------------
 -- Copyright (c) 2006 NTUA
 -------------------------------------------------------------------------------

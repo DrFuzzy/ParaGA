@@ -108,20 +108,19 @@ begin  -- ARCHITECTURE bench
       genom_lngt         => 21,
       score_sz           => 16,
       scaling_factor_res => 4,
-      pop_sz             => 16,
+      pop_sz             => 32,
       elite              => 2,
       num_towns          => 8,
       townres            => 3,
       mr                 => 100,
       mut_res            => 8,
-      max_gen            => 200)          
+      max_gen            => 50)          
 
     
     
     port map (
       clk       => clk,
       rst_n     => rst_n,
-      --pool                => pool,    
       run_ga_i  => run_ga_i(0),
       seed_1_i  => seed_1_i,
       seed_2_i  => seed_2_i,

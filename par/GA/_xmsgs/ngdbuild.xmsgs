@@ -7,7 +7,7 @@
 <messages>
 <msg type="warning" file="XdmHelpers" num="681" delta="unknown" >UCF definition of specification &quot;<arg fmt="%s" index="1">TS_clk</arg>&quot; overrides the definition found in the netlist or NCF file:
 UCF: <arg fmt="%s" index="2">PERIOD &quot;clk&quot; 13000.000000 pS HIGH 50.000000 %</arg>
-netlist/NCF: <arg fmt="%s" index="3">PERIOD:clk:10000.000000:pS:HIGH:50.000000%</arg>
+netlist/NCF: <arg fmt="%s" index="3">PERIOD:clk:8333.000000:pS:HIGH:50.000000%</arg>
 </msg>
 
 </messages>

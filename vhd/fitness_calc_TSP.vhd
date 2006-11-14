@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 -- Title      : Fitness Evaluation block
--- Project    : genetic Algorithm
+-- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
 -- File       : fit_calc_TSP.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
--- Created    : 08/08/06
--- Last update: 2006-11-02
+-- Created    : 08/08/06 
+-- Last update: 08/11/06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -193,7 +193,7 @@ begin
         temp2    <= 0;
         temp_2   <= (others=>'0');        
         fit_p <= max_fit - fit_n;
-        gene_scr <= gene & fit_n;
+        gene_scr <= gene & (max_fit - fit_n);
         --fit_p      <= conv_std_logic_vector(100000/conv_integer(fit_n), fit_p'length);  -- Kalitera afairesi anti gia diairesi
         --gene_scr <= gene & conv_std_logic_vector(100000/conv_integer(fit_n), fit_p'length);
         temp_fit <= (others => '0');

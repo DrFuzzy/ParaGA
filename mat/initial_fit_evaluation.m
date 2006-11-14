@@ -49,8 +49,8 @@ for i=1:popSz
 %     y=genes(i,(genomlngt/2) + 1:genomlngt);
 %     x_dec=binary2integer(x);
 %     y_dec=binary2integer(y);
-%     x_dec_trans = (200/(2^(genomlngt/2) - 1))*x_dec - 100;
-%     y_dec_trans = (200/(2^(genomlngt/2) - 1))*y_dec - 100;
+%     x_dec_trans = (40/(2^(genomlngt/2) - 1))*x_dec - 20;
+%     y_dec_trans = (40/(2^(genomlngt/2) - 1))*y_dec - 20;
 %     fit(i) =(cos(x_dec_trans)*cos(y_dec_trans))*exp(-((x_dec_trans-pi)^2+(y_dec_trans-pi)^2)) + 1;
 
 
@@ -68,8 +68,8 @@ for i=1:popSz
 %     y=genes(i,(genomlngt/2) + 1:genomlngt);
 %     x_dec=binary2integer(x);
 %     y_dec=binary2integer(y);
-%     x_dec_trans = (10.24/(2^(genomlngt/2) - 1))*x_dec - 5.12;
-%     y_dec_trans = (10.24/(2^(genomlngt/2) - 1))*y_dec - 5.12;
+%     x_dec_trans = (10.24/(2^(genomlngt/2)))*x_dec - 5.12;
+%     y_dec_trans = (10.24/(2^(genomlngt/2)))*y_dec - 5.12;
 %     fit(i) = 100 - (x_dec_trans^2)- (y_dec_trans^2) +10*cos(2*pi*x_dec_trans) + 10*cos(2*pi*y_dec_trans);
 
     genes(i,genomlngt+1) = fit(i);

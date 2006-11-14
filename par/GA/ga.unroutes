@@ -1,14 +1,11 @@
 Release 8.1.03i - par I.27
 Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
 
-Fri Nov 03 20:25:24 2006
+Mon Nov 13 20:25:26 2006
 
 There are 0 unrouted networks: 
 
 
-There are 4 sourceless or loadless networks: 
+There are 1 sourceless or loadless networks: 
 
-   U5/scalFitSum(7)_REPLICA_27
-   U5/scalFitSum_0[4]_REPLICA_23
-   U5/scalFitSum_0[5]_REPLICA_20
-   U5/scalFitSum_0[6]_REPLICA_11
+   U5/scalFitSum_0[8]_REPLICA_8

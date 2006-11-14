@@ -1,6 +1,6 @@
 # Synplicity, Inc. constraint file
 # D:\Designs\GA_eval\syn\GA\ga.sdc
-# Written on Mon Nov 06 14:42:45 2006
+# Written on Tue Nov 14 19:37:31 2006
 # by Synplify Pro, Synplify Pro 8.5.1 Scope Editor
 
 #
@@ -58,6 +58,10 @@ define_false_path -disable  -from {{p:rst_n}}
 define_global_attribute          syn_useioff {1}
 define_global_attribute          syn_multstyle {block_mult}
 define_global_attribute          syn_netlist_hierarchy {1}
+define_global_attribute -disable syn_ramstyle {select_ram}
+define_global_attribute -disable syn_romstyle {block_rom}
+define_attribute -disable {U9} syn_ramstyle {select_ram}
+define_attribute -disable {U10} syn_ramstyle {select_ram}
 
 #
 # I/O standards

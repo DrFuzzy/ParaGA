@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
--- Title      : Arithmetic Package
+-- Title      : Arithmetic Package 
 -- Project    : Public
 -------------------------------------------------------------------------------
 -- File       : arith_pkg.vhd
 -- Author     : kyriakos deliparaschos, kdelip@mail.ntua.gr
 -- Company    : NTUA/IRAL
--- Created    : 19/12/05
--- Last update: 2006-11-02
+-- Created    : 19/04/06
+-- Last update: 08/11/06
 -- Platform   : Modelsim, Synplify, ISE
 -------------------------------------------------------------------------------
 -- Description: contains the following arithmetic functions:
@@ -32,7 +32,7 @@
 -------------------------------------------------------------------------------
 -- Revisions  :
 -- date        version  author  description
--- 19/12/05    1.1      kdelip  created
+-- 19/04/06    1.1      kdelip  created
 -------------------------------------------------------------------------------
 
 library ieee;
