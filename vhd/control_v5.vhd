@@ -56,19 +56,19 @@ entity control_v5 is
     mut_method      : in  std_logic_vector(1 downto 0);
     data_out_cross1 : out std_logic_vector(genom_lngt-1 downto 0);
     data_out_cross2 : out std_logic_vector(genom_lngt-1 downto 0);
-    addr_1          : out integer;
-    addr_2          : out integer;
+    addr_1_c          : out integer;
+    addr_2_c          : out integer;
     cnt_parents     : out integer;
-    we1             : out std_logic;
-    we2             : out std_logic;
+    we1_c             : out std_logic;
+    we2_c             : out std_logic;
     data_valid      : out std_logic;
     next_gene       : out std_logic;
-    clear           : out std_logic;
+    --clear           : out std_logic;
     ga_fin          : out std_logic;
     cross_out       : out std_logic;
     valid           : out std_logic;
     elite_null      : out std_logic;
-    index           : out integer;      -- memory address of the current gene 
+    index           : out integer range 0 to pop_sz+1;      -- memory address of the current gene 
     mut_out         : out std_logic;
     flag            : out std_logic;
     decode          : out std_logic;
@@ -118,14 +118,14 @@ architecture rtl of control_v5 is
   -- reg'd outputs
   signal data_out_cross1_c   : std_logic_vector(genom_lngt-1 downto 0);
   signal data_out_cross2_c   : std_logic_vector(genom_lngt-1 downto 0);
-  signal addr_1_c            : integer;
-  signal addr_2_c            : integer;
+  --signal addr_1_c            : integer;
+  --signal addr_2_c            : integer;
   signal cnt_parents_c       : integer;
-  signal we1_c               : std_logic;
-  signal we2_c               : std_logic;
+  --signal we1_c               : std_logic;
+  --signal we2_c               : std_logic;
   signal data_valid_c        : std_logic;
   signal next_gene_c         : std_logic;
-  signal clear_c             : std_logic;
+  --signal clear_c             : std_logic;
   signal ga_fin_c            : std_logic;
   signal cross_out_c         : std_logic;
   signal valid_c             : std_logic;
@@ -270,7 +270,7 @@ begin
           when '1' =>
             next_sreg    <= fill_ram_s;
             run_c        <= '1';
-            clear_c      <= '1';
+            --clear_c      <= '1';
             load_c       <= '1';
             elite_null_c <= '1';
             addr_1_c     <= 0;
@@ -279,7 +279,7 @@ begin
           when '0' =>
             next_sreg    <= clear_ram_s;
             run_c        <= '0';
-            clear_c      <= '0';
+            --clear_c      <= '0';
             load_c       <= '0';
             elite_null_c <= '0';
             addr_1_c     <= elite_offs(0);
@@ -307,7 +307,7 @@ begin
         count_gen          <= count_gen_p1;
         -- Outputs 
         run_c              <= '0';
-        clear_c            <= '0';
+        ----clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';
         sel_out_c          <= '0';
@@ -344,7 +344,7 @@ begin
         count_gen          <= count_gen_p1;
         -- Outputs 
         run_c              <= '0';
-        clear_c            <= '0';
+        --clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';  -- doesnot calculate but holds latest results
         sel_out_c          <= '0';
@@ -428,7 +428,7 @@ begin
         count_sel_wr       <= count_sel_wr_p1;
         count_gen          <= count_gen_p1;
         -- Outputs 
-        clear_c            <= '0';
+        --clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';
         run1_c             <= '0';
@@ -599,7 +599,7 @@ begin
         count_offs         <= count_offs_p1;
         -- Outputs 
         run_c              <= '0';
-        clear_c            <= '0';
+        --clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';
         sel_out_c          <= '1';
@@ -644,7 +644,7 @@ begin
         count_sel_rd    <= count_sel_rd_p1;
         -- Outputs 
         run_c           <= '0';
-        clear_c         <= '0';
+        --clear_c         <= '0';
         mut_out_c       <= '0';
         term_out_c      <= '0';
         load_c          <= '0';
@@ -780,7 +780,7 @@ begin
         count_sel_rd     <= count_sel_rd_p1;
         -- Outputs 
         run_c            <= '0';
-        clear_c          <= '0';
+        --clear_c          <= '0';
         sel_out_c        <= '0';
         term_out_c       <= '0';
         if mut_method = "10" then
@@ -829,7 +829,7 @@ begin
         count_sel_rd       <= count_sel_rd_p1;
         -- Outputs 
         run_c              <= '0';
-        clear_c            <= '0';
+        --clear_c            <= '0';
         cross_out_c        <= '0';
         sel_out_c          <= '0';
         term_out_c         <= '0';
@@ -922,11 +922,11 @@ begin
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
           ga_fin_r      <= '1';
-          if run_ga = '1' then
-            clear_c <= '1';
-          else
-            clear_c <= '0';
-          end if;
+          --if run_ga = '1' then
+            --clear_c <= '1';
+          --else
+            --clear_c <= '0';
+          --end if;
           term_out_c <= '1';
           load_c     <= '1';
           run3_c     <= '0';
@@ -936,11 +936,11 @@ begin
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
           ga_fin_r      <= '1';
-          if run_ga = '1' then
-            clear_c <= '1';
-          else
-            clear_c <= '0';
-          end if;
+          --if run_ga = '1' then
+            --clear_c <= '1';
+          --else
+            --clear_c <= '0';
+          --end if;
           term_out_c <= '1';
           load_c     <= '1';
           run3_c     <= '0';
@@ -949,7 +949,7 @@ begin
           count_offs    <= 0;
           count_parents <= 0;
           count_gen     <= count_gen_p1+1;
-          clear_c       <= '0';
+          --clear_c       <= '0';
           term_out_c    <= '1';
           load_c        <= '1';
           run3_c        <= '1';
@@ -960,7 +960,7 @@ begin
           count_offs    <= count_offs_p1;
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
-          clear_c       <= '0';
+          --clear_c       <= '0';
           term_out_c    <= '1';
           load_c        <= '0';
           run3_c        <= '0';
@@ -970,7 +970,7 @@ begin
           count_offs    <= count_offs_p1;
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
-          clear_c       <= '0';
+          --clear_c       <= '0';
           term_out_c    <= '1';
           load_c        <= '0';
           run3_c        <= '0';
@@ -992,14 +992,14 @@ begin
 
       data_out_cross1 <= (others => '0');
       data_out_cross2 <= (others => '0');
-      addr_1          <= 0;
-      addr_2          <= 0;
+      --addr_1          <= 0;
+      --addr_2          <= 0;
       cnt_parents     <= 0;
-      we1             <= '0';
-      we2             <= '0';
+      --we1             <= '0';
+      --we2             <= '0';
       data_valid      <= '0';
       next_gene       <= '0';
-      clear           <= '0';
+      --clear           <= '0';
       ga_fin          <= '0';
       cross_out       <= '0';
       valid           <= '0';
@@ -1018,14 +1018,14 @@ begin
     elsif clk'event and clk = '1' then  -- rising clock edge
       data_out_cross1 <= data_out_cross1_c;
       data_out_cross2 <= data_out_cross2_c;
-      addr_1          <= addr_1_c;
-      addr_2          <= addr_2_c;
+      --addr_1          <= addr_1_c;
+      --addr_2          <= addr_2_c;
       cnt_parents     <= cnt_parents_c;
-      we1             <= we1_c;
-      we2             <= we2_c;
+      --we1             <= we1_c;
+      --we2             <= we2_c;
       data_valid      <= data_valid_c;
       next_gene       <= next_gene_c;
-      clear           <= clear_c;
+      --clear           <= clear_c;
       ga_fin          <= ga_fin_c;
       cross_out       <= cross_out_c;
       valid           <= valid_c;
