@@ -2,11 +2,11 @@
 -- Title      : Genetic Algorithm Package
 -- Project    : Genetic Algorithm
 --------------------------------------------------------------------------------
--- File       : ga_pkg.vhd
+-- File       : dhga_pkg.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA
 -- Created    : 23/03/06
--- Last update: 2006-11-02
+-- Last update: 13/11/06
 -- Platform   : Modelsim, Synplicity, ISE
 -- Standard   : VHDL'93
 --------------------------------------------------------------------------------
@@ -251,8 +251,8 @@ package dhga_pkg is
       add      : in  std_logic_vector(add_width downto 0);  -- address (integer instead of std_vec)
       data_in  : in  std_logic_vector(data_width -1 downto 0);  -- input data (width ram1: genom_lngt+score_sz, width ram2: genom_lngt)
       data_out : out std_logic_vector(data_width -1 downto 0);  -- output data (width ram1: genom_lngt+score_sz, width ram2: genom_lngt)
-      wr       : in  std_logic;         -- read/write enable
-      clear    : in  std_logic);      
+      wr       : in  std_logic);        -- read/write enable
+          
   end component spram1;
 
 
@@ -337,19 +337,19 @@ package dhga_pkg is
       mut_method      : in  std_logic_vector(1 downto 0);
       data_out_cross1 : out std_logic_vector(genom_lngt-1 downto 0);
       data_out_cross2 : out std_logic_vector(genom_lngt-1 downto 0);
-      addr_1          : out integer;
-      addr_2          : out integer;
+      addr_1_c          : out integer;
+      addr_2_c          : out integer;
       cnt_parents     : out integer;
-      we1             : out std_logic;
-      we2             : out std_logic;
+      we1_c             : out std_logic;
+      we2_c             : out std_logic;
       data_valid      : out std_logic;
       next_gene       : out std_logic;
-      clear           : out std_logic;  -- clear ram
+      --clear           : out std_logic;  -- clear ram
       ga_fin          : out std_logic;
       cross_out       : out std_logic;
       valid           : out std_logic;
       elite_null      : out std_logic;
-      index           : out integer;
+      index           : out integer range 0 to pop_sz+1; 
       mut_out         : out std_logic;
       flag            : out std_logic;
       decode          : out std_logic;
@@ -556,15 +556,15 @@ package dhga_pkg is
       data_in_ram2    : in  std_logic_vector(genom_lngt-1 downto 0);  -- Parent from RAM 2
       data_out_cross1 : out std_logic_vector(genom_lngt-1 downto 0);
       data_out_cross2 : out std_logic_vector(genom_lngt-1 downto 0);
-      addr_1          : out integer;
-      addr_2          : out integer;
+      addr_1_c          : out integer;
+      addr_2_c          : out integer;
       cnt_parents     : out integer;
-      we1             : out std_logic;
-      we2             : out std_logic;
+      we1_c             : out std_logic;
+      we2_c             : out std_logic;
 
       data_valid : out std_logic;
       next_gene  : out std_logic;
-      clear      : out std_logic;
+      --clear      : out std_logic;
       ga_fin     : out std_logic;
       cross_out  : out std_logic;
       valid      : out std_logic;
