@@ -3,8 +3,8 @@
 @N:  :"":0:0:0:-1|Gated clock conversion enabled 
 @N: BN191 :"":0:0:0:-1|Writing property annotation file D:\Designs\GA_eval\syn\GA_TSP\rev_1\top_ga_tsp.tap.
 @N: BN225 :"":0:0:0:-1|Writing default property annotation file D:\Designs\GA_eval\syn\GA_TSP\rev_1\top_ga_tsp.map.
-@TM:1162924277
-@N: MF197 :"":0:0:0:-1|Retiming summary : 105 registers retimed to 216 
+@TM:1162925779
+@N: MF197 :"":0:0:0:-1|Retiming summary : 143 registers retimed to 380 
 @TM:1162917886
 @N: MF249 :"":0:0:0:-1|Running in 32-bit mode.
 @N: MT195 :"":0:0:0:-1|This timing report estimates place and route data. Please look at the place and route timing report for final timing..
@@ -19,6 +19,7 @@
 @N:  :"d:\designs\ga_eval\vhd\control_tsp.vhd":132:4:132:5|M
 @N: CL201 :"d:\designs\ga_eval\vhd\control_tsp.vhd":132:4:132:5|M
 @N: MF179 :"d:\designs\ga_eval\vhd\control_tsp.vhd":180:13:180:46|M
+@W: BN116 :"d:\designs\ga_eval\vhd\control_tsp.vhd":910:4:910:5|M
 @W: BN116 :"d:\designs\ga_eval\vhd\control_tsp.vhd":910:4:910:5|M
 @W: CL111 :"d:\designs\ga_eval\vhd\control_tsp.vhd":910:4:910:5|M
 @W: CL171 :"d:\designs\ga_eval\vhd\control_tsp.vhd":910:4:910:5|M
@@ -120,6 +121,8 @@
 @W: CL212 :"d:\designs\ga_eval\vhd\rng.vhd":74:28:74:29|M
 @TM:1162920157
 @N: FA196 :"d:\designs\ga_eval\vhd\rng.vhd":74:28:74:29|M
+@TM:1162925779
+@N: FX271 :"d:\designs\ga_eval\vhd\rng.vhd":74:28:74:29|M
 @TM:1162917886
 @N: CD630 :"d:\designs\ga_eval\vhd\selection.vhd":37:7:37:15|M
 @TM:1162921263

@@ -11,10 +11,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     2471               100 %                
-LATCHES       0                  0.0 %                
+REGISTERS     1149               100 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp:	2471 (39.10 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp:	1149 (28.28 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -22,12 +21,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     2516               100 %                
-MUXCY                    247                100 %                
-XORCY                    110                100 %                
+LUTS                     1882               100 %                
+MUXCY                    328                100 %                
+XORCY                    117                100 %                
 MULT18x18/MULT18x18S     4                  100 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp:	2877 (45.52 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp:	2331 (57.37 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -48,7 +47,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     59                 100 %                
 =================================================
-Total IO PADS in the block ga_tsp:	59 (0.93 % Utilization)
+Total IO PADS in the block ga_tsp:	59 (1.45 % Utilization)
 
 -----------------------------------------------------------------
 ########   Utilization report for  cell:   control_tsp   ########
@@ -60,10 +59,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     205                8.3 %                
-LATCHES       0                  0.0 %                
+REGISTERS     221                19.2 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.control_tsp:	205 (3.24 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.control_tsp:	221 (5.44 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -71,12 +69,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     384                15.3 %               
-MUXCY                    61                 24.7 %               
-XORCY                    31                 28.2 %               
+LUTS                     408                21.7 %               
+MUXCY                    64                 19.5 %               
+XORCY                    34                 29.1 %               
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.control_tsp:	476 (7.53 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.control_tsp:	506 (12.45 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -109,10 +107,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     128                5.18 %               
-LATCHES       0                  0.0 %                
+REGISTERS     111                9.66 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.crossover_TSP:	128 (2.03 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.crossover_TSP:	111 (2.73 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -120,12 +117,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     342                13.6 %               
+LUTS                     339                18. %                
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.crossover_TSP:	342 (5.41 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.crossover_TSP:	339 (8.34 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -158,10 +155,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     4                  0.1620 %             
-LATCHES       0                  0.0 %                
+REGISTERS     1                  8.7e-002 %           
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ0:	4 (0.06 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ0:	1 (0.02 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -197,6 +193,54 @@ PADS     0                  0.0 %
 =================================================
 Total IO PADS in the block ga_tsp.delay_regsZ0:	0 (0.00 % Utilization)
 
+--------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ0_1   ########
+Instance path:   ga_tsp.delay_regsZ0_1                              
+====================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     1                  8.7e-002 %           
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ0_1:	1 (0.02 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.delay_regsZ0_1:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.delay_regsZ0_1:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.delay_regsZ0_1:	0 (0.00 % Utilization)
+
 ------------------------------------------------------------------
 ########   Utilization report for  cell:   delay_regsZ1   ########
 Instance path:   ga_tsp.delay_regsZ1                              
@@ -207,10 +251,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     6                  0.2430 %             
-LATCHES       0                  0.0 %                
+REGISTERS     4                  0.3480 %             
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ1:	6 (0.09 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ1:	4 (0.10 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -256,10 +299,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     8                  0.3240 %             
-LATCHES       0                  0.0 %                
+REGISTERS     6                  0.5220 %             
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ2:	8 (0.13 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ2:	6 (0.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -305,10 +347,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     16                 0.6480 %             
-LATCHES       0                  0.0 %                
+REGISTERS     8                  0.6960 %             
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ3:	16 (0.25 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ3:	8 (0.20 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -354,10 +395,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     21                 0.850 %              
-LATCHES       0                  0.0 %                
+REGISTERS     16                 1.39 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ4:	21 (0.33 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ4:	16 (0.39 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -394,6 +434,54 @@ PADS     0                  0.0 %
 Total IO PADS in the block ga_tsp.delay_regsZ4:	0 (0.00 % Utilization)
 
 ------------------------------------------------------------------
+########   Utilization report for  cell:   delay_regsZ5   ########
+Instance path:   ga_tsp.delay_regsZ5                              
+==================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     21                 1.83 %               
+======================================================
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.delay_regsZ5:	21 (0.52 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     0                  0.0 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block ga_tsp.delay_regsZ5:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block ga_tsp.delay_regsZ5:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block ga_tsp.delay_regsZ5:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------
 ########   Utilization report for  cell:   fit_eval_tsp   ########
 Instance path:   ga_tsp.fit_eval_tsp                              
 ==================================================================
@@ -403,10 +491,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     539                21.8 %               
-LATCHES       0                  0.0 %                
+REGISTERS     455                39.6 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.fit_eval_tsp:	539 (8.53 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.fit_eval_tsp:	455 (11.20 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -414,12 +501,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     550                21.9 %               
-MUXCY                    106                42.9 %               
-XORCY                    35                 31.8 %               
+LUTS                     576                30.6 %               
+MUXCY                    107                32.6 %               
+XORCY                    36                 30.8 %               
 MULT18x18/MULT18x18S     2                  50. %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.fit_eval_tsp:	693 (10.97 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.fit_eval_tsp:	721 (17.75 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -442,6 +529,54 @@ PADS     0                  0.0 %
 =================================================
 Total IO PADS in the block ga_tsp.fit_eval_tsp:	0 (0.00 % Utilization)
 
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   coordinates_rom_p   ########
+Instance path:   fit_eval_tsp.coordinates_rom_p                        
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     1                  8.7e-002 %           
+======================================================
+Total SEQUENTIAL ELEMENTS in the block fit_eval_tsp.coordinates_rom_p:	1 (0.02 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     2                  0.1060 %             
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block fit_eval_tsp.coordinates_rom_p:	2 (0.05 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block fit_eval_tsp.coordinates_rom_p:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block fit_eval_tsp.coordinates_rom_p:	0 (0.00 % Utilization)
+
 ------------------------------------------------------------------
 ########   Utilization report for  cell:   fit_calc_tsp   ########
 Instance path:   fit_eval_tsp.fit_calc_tsp                        
@@ -452,10 +587,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     127                5.14 %               
-LATCHES       0                  0.0 %                
+REGISTERS     89                 7.75 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block fit_eval_tsp.fit_calc_tsp:	127 (2.01 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block fit_eval_tsp.fit_calc_tsp:	89 (2.19 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -463,12 +597,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     165                6.56 %               
-MUXCY                    15                 6.07 %               
-XORCY                    16                 14.5 %               
+LUTS                     184                9.78 %               
+MUXCY                    15                 4.57 %               
+XORCY                    16                 13.7 %               
 MULT18x18/MULT18x18S     2                  50. %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block fit_eval_tsp.fit_calc_tsp:	198 (3.13 % Utilization)
+Total COMBINATIONAL LOGIC in the block fit_eval_tsp.fit_calc_tsp:	217 (5.34 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -501,10 +635,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     381                15.4 %               
-LATCHES       0                  0.0 %                
+REGISTERS     351                30.5 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block fit_eval_tsp.fix_elite_tsp:	381 (6.03 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block fit_eval_tsp.fix_elite_tsp:	351 (8.64 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -512,12 +645,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     385                15.3 %               
-MUXCY                    91                 36.8 %               
-XORCY                    19                 17.3 %               
+LUTS                     390                20.7 %               
+MUXCY                    92                 28. %                
+XORCY                    20                 17.1 %               
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block fit_eval_tsp.fix_elite_tsp:	495 (7.83 % Utilization)
+Total COMBINATIONAL LOGIC in the block fit_eval_tsp.fix_elite_tsp:	502 (12.36 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -550,10 +683,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     0                  0.0 %                
-LATCHES       0                  0.0 %                
+REGISTERS     40                 3.48 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.init_generation_rom_p:	0 (0.00 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.init_generation_rom_p:	40 (0.98 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -561,12 +693,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     21                 0.8350 %             
+LUTS                     82                 4.36 %               
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.init_generation_rom_p:	21 (0.33 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.init_generation_rom_p:	82 (2.02 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -599,10 +731,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     52                 2.1 %                
-LATCHES       0                  0.0 %                
+REGISTERS     42                 3.66 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.mutation_tsp:	52 (0.82 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.mutation_tsp:	42 (1.03 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -610,12 +741,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     201                7.99 %               
-MUXCY                    0                  0.0 %                
+LUTS                     193                10.3 %               
+MUXCY                    72                 22. %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.mutation_tsp:	201 (3.18 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.mutation_tsp:	265 (6.52 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -648,10 +779,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     8                  0.3240 %             
-LATCHES       0                  0.0 %                
+REGISTERS     8                  0.6960 %             
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ0:	8 (0.13 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ0:	8 (0.20 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -659,12 +789,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     26                 1.03 %               
+LUTS                     26                 1.38 %               
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ0:	26 (0.41 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ0:	26 (0.64 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -697,10 +827,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     12                 0.4860 %             
-LATCHES       0                  0.0 %                
+REGISTERS     12                 1.04 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ1:	12 (0.19 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ1:	12 (0.30 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -708,12 +837,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     39                 1.55 %               
+LUTS                     39                 2.07 %               
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ1:	39 (0.62 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ1:	39 (0.96 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -746,10 +875,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     16                 0.6480 %             
-LATCHES       0                  0.0 %                
+REGISTERS     16                 1.39 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ2:	16 (0.25 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.rngZ2:	16 (0.39 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -757,12 +885,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     53                 2.11 %               
+LUTS                     54                 2.87 %               
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ2:	53 (0.84 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.rngZ2:	54 (1.33 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -795,10 +923,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     92                 3.72 %               
-LATCHES       0                  0.0 %                
+REGISTERS     75                 6.53 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.selection:	92 (1.46 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.selection:	75 (1.85 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -806,12 +933,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     108                4.29 %               
-MUXCY                    61                 24.7 %               
-XORCY                    25                 22.7 %               
+LUTS                     133                7.07 %               
+MUXCY                    65                 19.8 %               
+XORCY                    27                 23.1 %               
 MULT18x18/MULT18x18S     2                  50. %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.selection:	196 (3.10 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.selection:	227 (5.59 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -844,10 +971,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     693                28. %                
-LATCHES       0                  0.0 %                
+REGISTERS     28                 2.44 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.spram1Z0:	693 (10.97 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.spram1Z0:	28 (0.69 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -855,12 +981,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     400                15.9 %               
+LUTS                     1                  5.31e-002 %          
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.spram1Z0:	400 (6.33 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.spram1Z0:	1 (0.02 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -893,10 +1019,9 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     650                26.3 %               
-LATCHES       0                  0.0 %                
+REGISTERS     59                 5.13 %               
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga_tsp.spram1Z1:	650 (10.28 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga_tsp.spram1Z1:	59 (1.45 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -904,12 +1029,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     354                14.1 %               
+LUTS                     1                  5.31e-002 %          
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga_tsp.spram1Z1:	354 (5.60 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga_tsp.spram1Z1:	1 (0.02 % Utilization)
 
 
 MEMORY ELEMENTS

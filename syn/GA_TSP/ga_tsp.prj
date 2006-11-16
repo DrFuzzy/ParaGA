@@ -1,7 +1,7 @@
 #-- Synplicity, Inc.
-#-- Version Synplify Pro 8.5.1
+#-- Version Synplify Pro 8.1
 #-- Project file D:\Designs\GA_eval\syn\GA_TSP\ga_tsp.prj
-#-- Written on Tue Nov 07 20:31:03 2006
+#-- Written on Thu Nov 16 00:00:05 2006
 
 
 #add_file options
@@ -26,7 +26,7 @@ add_file -constraint "ga_tsp.sdc"
 
 
 #implementation: "rev_1"
-impl -add rev_1 -type fpga
+impl -add rev_1
 
 #device options
 set_option -technology SPARTAN3
@@ -47,10 +47,10 @@ set_option -run_prop_extract 1
 set_option -fanout_limit 10000
 set_option -disable_io_insertion 0
 set_option -pipe 1
+set_option -fixgatedclocks 1
 set_option -retiming 1
 set_option -modular 0
 set_option -update_models_cp 0
-set_option -fixgatedclocks 1
 set_option -verification_mode 0
 set_option -no_sequential_opt 0
 

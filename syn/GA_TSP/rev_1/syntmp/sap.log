@@ -1,7 +1,7 @@
 ###########################################################[
-Synplicity Xilinx Technology Mapper, Version 8.5.0.p, Build 022R, Built Apr  7 2006
-Copyright (C) 1994-2006, Synplicity Inc.  All Rights Reserved
-Version 8.5.1
+Version 8.1
+Synplicity Xilinx Technology Mapper, Version 8.1.0, Build 540R, Built May  9 2005
+Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
 Reading constraint file: D:\Designs\GA_eval\syn\GA_TSP\ga_tsp.sdc
 Adding property syn_reference_clock1, value "clk,r=0.0,f=5.0,u=0.0,p=10.0,clockgroup=default_clkgroup_0,rd=0.0,fd=0.0,v=0" to view:work.ga_tsp(str)
 Adding property syn_netlist_hierarchy, value 1 to view:work.ga_tsp(str)
@@ -9,76 +9,13 @@ Adding property syn_useioff, value 1 to view:work.ga_tsp(str)
 Reading constraint file: D:\Designs\GA_eval\syn\GA_TSP\rev_1\top_ga_tsp_fsm.sdc
 @N|Using encoding styles selected by FSM Explorer.
 Data created on Tue Nov 07 17:48:33 2006
-@N: MF249 |Running in 32-bit mode.
-@N|Gated clock conversion enabled 
+Reading Xilinx I/O pad type table from file <C:\EDA\Synplicity_81\fpga_81\lib/xilinx/x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file <C:\EDA\Synplicity_81\fpga_81\lib/xilinx/gttype.txt> 
 Adding property syn_clock, value "rise_offset=0.0,fall_offset=0.0,rs=0.0,fs=0.0,improve=0.0,route=0.0,rref=clk:r,fref=clk:f", to port clk
 Adding property syn_encoding in cell control_tsp, value "onehot", to instance U10.sreg[0:8]
 Adding property syn_encoding in cell control_tsp, value "onehot", to instance U10.notify_cnt_p[0:8]
-Reading Xilinx I/O pad type table from file <C:\EDA\Synplicity\fpga_85\lib/xilinx/x_io_tbl.txt> 
-Reading Xilinx Rocket I/O parameter type table from file <C:\EDA\Synplicity\fpga_85\lib/xilinx/gttype.txt> 
 
 
-@W: BN132 :"d:\designs\ga_eval\vhd\fix_elite_tsp.vhd":96:4:96:5|Removing sequential instance U4.U1.temp_indexs_1_1[31:0],  because it is equivalent to instance U4.U1.temp_indexs_2_0[31:0]
-@W: BN132 :"d:\designs\ga_eval\vhd\fix_elite_tsp.vhd":96:4:96:5|Removing sequential instance U4.U1.temp1_1[15:0],  because it is equivalent to instance U4.U1.temp2_0[15:0]
-@W: BN116 :"d:\designs\ga_eval\vhd\crossover_tsp.vhd":83:4:83:5|Removing sequential instance pool_int_4[2] of view:PrimLib.dffre(prim) because there are no references to its outputs 
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_35[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_34[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_33[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_32[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_31[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_30[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_29[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_28[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_27[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_26[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_25[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_24[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_23[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_22[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_21[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_20[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_19[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_18[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_17[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_16[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_15[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_14[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_13[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_12[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_11[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_10[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_9[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_8[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_7[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_6[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_5[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_4[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_3[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_2[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl_1[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U8.data_out_cl[36],  because it is equivalent to instance U8.data_out_cl_36[36]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_19[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_18[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_17[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_16[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_15[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_14[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_13[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_12[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_11[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_10[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_9[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_8[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_7[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_6[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_5[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_4[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_3[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_2[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl_1[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@W: BN132 :"d:\designs\ga_eval\vhd\spram1.vhd":68:4:68:5|Removing sequential instance U9.data_out_cl[20],  because it is equivalent to instance U9.data_out_cl_20[20]
-@N: BN225 |Writing default property annotation file D:\Designs\GA_eval\syn\GA_TSP\rev_1\top_ga_tsp.sap.
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Nov 07 20:32:45 2006
-
+@N|Writing default property annotation file D:\Designs\GA_eval\syn\GA_TSP\rev_1\top_ga_tsp.sap.
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
 ###########################################################]

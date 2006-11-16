@@ -1,15 +1,15 @@
 
-fsm_encoding {13924923} sequential
+fsm_encoding {13944943} sequential
 
-fsm_state_encoding {13924923} 00 {00}
+fsm_state_encoding {13944943} 00 {00}
 
-fsm_state_encoding {13924923} 01 {01}
+fsm_state_encoding {13944943} 01 {01}
 
-fsm_state_encoding {13924923} 10 {10}
+fsm_state_encoding {13944943} 10 {10}
 
-fsm_state_encoding {13924923} 11 {11}
+fsm_state_encoding {13944943} 11 {11}
 
-fsm_registers {13924923} {count_cycle[1]}  {count_cycle[0]} 
+fsm_registers {13944943} {count_cycle[1]}  {count_cycle[0]} 
 
 fsm_encoding {715841581} onehot
 
