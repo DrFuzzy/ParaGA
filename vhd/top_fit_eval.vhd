@@ -6,24 +6,25 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 12/10/06
--- Last update: 08/11/06
--- Platform   : Modelsim, Synplicity, ISE
+-- Last update: 16/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
 -- Description: This is the top structural block of the Fitness Evaluation Block
 --              connecting all the necessary moduless of the F.A. block together.
 -------------------------------------------------------------------------------
 -- Copyright (c) 2006 NTUA
+-- Revisions  :
+-- Date        Version  Author  Description
+-- 23/03/06    1.1      kdelip  created
+-- 16/11/06    1.2      kdelip  updated
 -------------------------------------------------------------------------------
-
 
 -------------------------------------------------------------------------------
 -- LIBRARIES
 -------------------------------------------------------------------------------
-
 library ieee;
 use ieee.std_logic_1164.all;
---use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
@@ -78,9 +79,7 @@ begin
     generic map (
       genom_lngt => genom_lngt,
       score_sz   => score_sz,
-      pop_sz     => pop_sz
-      )        
-
+      pop_sz     => pop_sz)        
     port map (
       clk        => clk,
       rst_n      => rst_n,
@@ -89,8 +88,7 @@ begin
       in_genes   => in_genes,
       gene_score => gene_score,
       fit        => fit_dummy,          -- to fix_elite
-      ready_out  => ready_out_dummy     -- to fix_elite
-      );            
+      ready_out  => ready_out_dummy);     -- to fix_elite            
 
 -------------------------------------------------------------------------------
 -- Elite fixation : Fixes the elite indexs and the array of the best fitnesses 
@@ -100,9 +98,7 @@ begin
       genom_lngt => genom_lngt,
       score_sz   => score_sz,
       pop_sz     => pop_sz,
-      elite      => elite
-      )                 
-
+      elite      => elite)                 
     port map(
       clk           => clk,
       rst_n         => rst_n,
@@ -116,7 +112,6 @@ begin
       elite_offs    => elite_offs,
       fit_sum       => fit_sum,
       max_fit       => max_fit,
-      rd            => rd
-      );
+      rd            => rd);
 
 end architecture str;

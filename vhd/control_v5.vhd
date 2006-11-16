@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
 -- Title      : Control
--- Project    : GA
+-- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
 -- File       : control.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 06/04/06
--- Last update: 07/11/06
--- Platform   : Modelsim, Synplify, ISE
+-- Last update: 16/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93 
 -------------------------------------------------------------------------------
 -- Description: This block implements the control module for the GA
@@ -17,6 +17,7 @@
 -- revisions  :
 -- date        version  author  description
 -- 04/06/06    1.1      kdelip  created
+-- 16/06/06    1.2      kdelip  updated   
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -56,19 +57,18 @@ entity control_v5 is
     mut_method      : in  std_logic_vector(1 downto 0);
     data_out_cross1 : out std_logic_vector(genom_lngt-1 downto 0);
     data_out_cross2 : out std_logic_vector(genom_lngt-1 downto 0);
-    addr_1_c          : out integer;
-    addr_2_c          : out integer;
+    addr_1_c        : out integer;
+    addr_2_c        : out integer;
     cnt_parents     : out integer;
-    we1_c             : out std_logic;
-    we2_c             : out std_logic;
+    we1_c           : out std_logic;
+    we2_c           : out std_logic;
     data_valid      : out std_logic;
     next_gene       : out std_logic;
-    --clear           : out std_logic;
     ga_fin          : out std_logic;
     cross_out       : out std_logic;
     valid           : out std_logic;
     elite_null      : out std_logic;
-    index           : out integer range 0 to pop_sz+1;      -- memory address of the current gene 
+    index           : out integer range 0 to pop_sz+1;  -- memory address of the current gene 
     mut_out         : out std_logic;
     flag            : out std_logic;
     decode          : out std_logic;
@@ -814,7 +814,7 @@ begin
             next_sreg   <= cross_s;
             cross_out_c <= '1';
             mut_out_c   <= '0';
-          --run1_c      <= '0';
+            --run1_c      <= '0';
           when others =>
         end case;
         
@@ -923,13 +923,13 @@ begin
           count_gen     <= count_gen_p1;
           ga_fin_r      <= '1';
           --if run_ga = '1' then
-            --clear_c <= '1';
+          --clear_c <= '1';
           --else
-            --clear_c <= '0';
+          --clear_c <= '0';
           --end if;
-          term_out_c <= '1';
-          load_c     <= '1';
-          run3_c     <= '0';
+          term_out_c    <= '1';
+          load_c        <= '1';
+          run3_c        <= '0';
         elsif (count_gen_p1 /= max_gen-1 and done = '1' and term_rd = '1') then  -- fit limit reached 
           next_sreg     <= clear_ram_s;
           count_offs    <= count_offs_p1;
@@ -937,13 +937,13 @@ begin
           count_gen     <= count_gen_p1;
           ga_fin_r      <= '1';
           --if run_ga = '1' then
-            --clear_c <= '1';
+          --clear_c <= '1';
           --else
-            --clear_c <= '0';
+          --clear_c <= '0';
           --end if;
-          term_out_c <= '1';
-          load_c     <= '1';
-          run3_c     <= '0';
+          term_out_c    <= '1';
+          load_c        <= '1';
+          run3_c        <= '0';
         elsif (count_gen_p1 /= max_gen-1 and done = '0' and term_rd = '1') then
           next_sreg     <= read_write_ram_1_s;
           count_offs    <= 0;
@@ -978,7 +978,7 @@ begin
         end if;
 
       when others =>
-    -- empty
+        -- empty
     end case;
   end process;
 

@@ -6,17 +6,18 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 14/11/06
--- Platform   : Modelsim, Synplify, Xilinx ISE
+-- Last update: 16/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
--- Description: This block implements the fitness evaluation block 
+-- Description: This block implements single port RAM
 -------------------------------------------------------------------------------
 -- Copyright (c) 2006 NTUA
 -------------------------------------------------------------------------------
 -- revisions  :
 -- date        version  author  description
--- 23/03/06    1.0      geod    created
+-- 23/03/06    1.1      geod    created
+-- 16/06/06    1.2      kdelip  updated
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -40,12 +41,17 @@ entity spram1 is
     data_width : integer);
   port (
     clk      : in  std_logic;           -- write clock
-    rst_n    : in  std_logic;           -- system reset
-    add      : in  std_logic_vector(add_width downto 0);  -- address (integer instead of std_vec)
-    data_in  : in  std_logic_vector(data_width -1 downto 0);  -- input data (width ram1: genomLngt+scoreSz, width ram2: genomLngt)
-    data_out : out std_logic_vector(data_width -1 downto 0);  -- output data (width ram1: genomLngt+scoreSz, width ram2: genomLngt)
-    wr       : in  std_logic);           -- read/write enable
-    --clear    : in  std_logic);                    
+    rst_n    : in  std_logic;           -- reset (active low)
+    -- address (integer instead of std_vec)
+    add      : in  std_logic_vector(add_width downto 0);
+    --
+    -- input data (width ram1: genomLngt+scoreSz, width ram2: genomLngt)
+    data_in  : in  std_logic_vector(data_width -1 downto 0);
+    --
+    -- output data (width ram1: genomLngt+scoreSz, width ram2: genomLngt)
+    data_out : out std_logic_vector(data_width -1 downto 0);
+    --
+    wr       : in  std_logic);          -- read/write enable
 end entity spram1;
 
 -------------------------------------------------------------------------------
@@ -53,7 +59,8 @@ end entity spram1;
 -------------------------------------------------------------------------------
 architecture rtl of spram1 is
   
-  type data_array is array (integer range <>) of std_logic_vector(data_width-1 downto 0);  -- memory type
+  type data_array is array (integer range <>) of
+    std_logic_vector(data_width-1 downto 0);          -- memory type
   signal data  : data_array(0 to (2** add_width)-1);  -- local data
   signal add_r : std_logic_vector(add_width downto 0);
   signal wr_r  : std_logic;
@@ -65,7 +72,7 @@ begin  -- spram1
   -- inputs : clk, rst_n, data_in, add_r, wr_r
   -- outputs: data_out
   sp_ram : process (clk, rst_n)
-  begin  -- process
+  begin  -- process sp_ram
     if rst_n = '0' then
       data_out <= (others => 'Z');
     elsif rising_edge(clk) then
@@ -81,7 +88,7 @@ begin  -- spram1
   -- type   : sequential
   -- inputs : clk, rst_n, add
   -- outputs: add_r
-  reg_ips : process (clk, rst_n)
+  reg_ip : process (clk, rst_n)
   begin  -- process reg_ips
     if rst_n = '0' then                 -- asynchronous reset (active low)
       add_r <= (others => '0');
@@ -90,6 +97,6 @@ begin  -- spram1
       add_r <= add;
       wr_r  <= wr;
     end if;
-  end process reg_ips;
+  end process reg_ip;
 
 end rtl;

@@ -6,8 +6,8 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 08/08/06
--- Last update: 08/11/06
--- Platform   : Modelsim & Synplify & Xilinx ISE
+-- Last update: 16/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, Xilinx ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
 -- Description: This block implements the fitness evaluation block (works for
@@ -15,8 +15,10 @@
 -------------------------------------------------------------------------------
 -- Copyright (c) 2006 NTUA
 -------------------------------------------------------------------------------
--- revisions  :
--- date        version  author  description
+-- Revisions  :
+-- Date        Version  Author  Description
+-- 23/03/06    1.1      kdelip  created
+-- 16/11/06    1.2      kdelip  updated
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -62,7 +64,7 @@ end entity fix_elite;
 architecture rtl of fix_elite is
   
   subtype score is std_logic_vector(score_sz-1 downto 0);
-  type fit_array is array (natural range 0 to elite-1) of score;
+  type    fit_array is array (natural range 0 to elite-1) of score;
 
   signal sum               : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0) := (others => '0');  -- accumulated sum of fitnesses
   signal sum_p             : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0) := (others => '0');  -- previous accumulated sum of fitnesses
