@@ -98,7 +98,7 @@ architecture bench of ga_tsp_tb is
   signal spy_max_fit         : std_logic_vector(16-1 downto 0);
 
   -- simulation period
-  signal period : time := 10 ns;        -- 100 MHz
+  signal period : time := 13 ns;        -- 100 MHz
   
   
 begin  -- ARCHITECTURE bench
@@ -108,13 +108,13 @@ begin  -- ARCHITECTURE bench
       genom_lngt         => 21,
       score_sz           => 16,
       scaling_factor_res => 4,
-      pop_sz             => 32,
+      pop_sz             => 16,
       elite              => 2,
       num_towns          => 8,
       townres            => 3,
-      mr                 => 100,
+      mr                 => 150,
       mut_res            => 8,
-      max_gen            => 50)          
+      max_gen            => 100)          
 
     
     

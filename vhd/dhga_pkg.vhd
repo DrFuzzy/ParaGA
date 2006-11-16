@@ -60,7 +60,18 @@ package dhga_pkg is
       );
   end component rng;
 
-
+  component rng_128 is
+    generic(n : positive);              -- length of pseudo-random sequence
+    port (
+      clk          : in  std_logic;     -- clock
+      rst_n        : in  std_logic;     -- reset (active low)
+      load         : in  std_logic;     -- load (active high)
+      seed         : in  std_logic_vector(n-1 downto 0);  -- parallel seed input
+      run          : in  std_logic;     -- if 1 run else output=high-Z
+      parallel_out : out std_logic_vector(n-1 downto 0)   -- parallel data out
+      );
+  end component rng_128;
+  
   component fit_eval_elite2 is
     generic(
       genom_lngt : positive;
@@ -569,7 +580,7 @@ package dhga_pkg is
       cross_out  : out std_logic;
       valid      : out std_logic;
       elite_null : out std_logic;
-      index      : out integer;         -- memory address of the current gene 
+      index      : out integer range 0 to pop_sz+1;         -- memory address of the current gene 
       mut_out    : out std_logic;
       flag       : out std_logic;
       decode     : out std_logic;

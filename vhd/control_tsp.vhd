@@ -59,7 +59,7 @@ entity control_tsp is
     cross_out       : out std_logic;
     valid           : out std_logic;
     elite_null      : out std_logic;
-    index           : out integer;      -- memory address of the current gene 
+    index           : out integer range 0 to pop_sz+1;      -- memory address of the current gene 
     mut_out         : out std_logic;
     flag            : out std_logic;
     decode          : out std_logic;

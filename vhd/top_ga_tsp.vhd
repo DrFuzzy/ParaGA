@@ -39,13 +39,13 @@ entity ga_tsp is
     genom_lngt         : positive := 21;
     score_sz           : integer  := 16;
     scaling_factor_res : integer  := 4;
-    pop_sz             : integer  := 32;
+    pop_sz             : integer  := 16;
     elite              : integer  := 2;
     num_towns          : integer  := 8;
     townres            : integer  := 3;
-    mr                 : integer  := 100;
+    mr                 : integer  := 150;
     mut_res            : integer  := 8;  -- max for mutation rate is 255
-    max_gen            : positive := 50);
+    max_gen            : positive := 100);
   port (
     clk       : in  std_logic;
     rst_n     : in  std_logic;
@@ -75,7 +75,7 @@ architecture str of ga_tsp is
   signal out_rng_3_dummy      : std_logic_vector(scaling_factor_res-1 downto 0);
   signal valid1               : std_logic;
   signal elite_null_dummy     : std_logic;
-  signal index                : integer;
+  signal index                : integer range 0 to pop_sz+1;
   signal elite_offs_dummy     : int_array(0 to elite-1);
   signal fit_eval_rd_dummy    : std_logic;
   signal inGene_fiteval_dummy : std_logic_vector(2*genom_lngt-1 downto 0);
@@ -140,7 +140,7 @@ begin
 -------------------------------------------------------------------------------
 -- RNG1 : feeds mutation with a random mask and a random number of mut_res bits 
 -------------------------------------------------------------------------------
-  U1 : rng
+  U1 : rng_128
     generic map (n => mut_res)          -- length of pseudo-random sequence
 
     port map (
@@ -155,7 +155,7 @@ begin
 -- RNG2 : feeds crossover with crossover points and mutation with mutation 
 --        points
 -------------------------------------------------------------------------------   
-  U2 : rng
+  U2 : rng_128
     generic map (n => 2*log2(num_towns))  -- length of pseudo-random sequence
 
     port map (
@@ -169,7 +169,7 @@ begin
 -------------------------------------------------------------------------------
 -- RNG3 : feeds selection block with random numbers
 -------------------------------------------------------------------------------   
-  U3 : rng
+  U3 : rng_128
     generic map (n => scaling_factor_res)  -- length of pseudo-random sequence
 
     port map (

@@ -138,19 +138,6 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading architecture bench of ga_tb
 -- Loading entity ga
 
-} {} {}} D:/Designs/GA_eval/vhd/control_tsp.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/control_tsp.vhd
-Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
--- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Loading package std_logic_signed
--- Loading package arith_pkg
--- Loading package dhga_pkg
--- Compiling entity control_tsp
--- Compiling architecture rtl of control_tsp
-
 } {} {}} D:/Designs/GA_eval/vhd/fit_eval_elite3.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/fit_eval_elite3.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package standard
@@ -200,6 +187,19 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Compiling package body rom_pkg
 -- Loading package rom_pkg
 
+} {} {}} D:/Designs/GA_eval/vhd/control_tsp.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/control_tsp.vhd
+Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package std_logic_signed
+-- Loading package arith_pkg
+-- Loading package dhga_pkg
+-- Compiling entity control_tsp
+-- Compiling architecture rtl of control_tsp
+
 } {} {}} D:/Designs/GA_eval/vhd/top_ga_tsp.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/top_ga_tsp.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package standard
@@ -212,6 +212,17 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package rom_pkg
 -- Compiling entity ga_tsp
 -- Compiling architecture str of ga_tsp
+
+} {} {}} D:/Designs/GA_eval/vhd/rng_128.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/rng_128.vhd
+Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_signed
+-- Loading package arith_pkg
+-- Loading package dhga_pkg
+-- Compiling entity rng_128
+-- Compiling architecture rtl of rng_128
 
 } {} {}} D:/Designs/GA_eval/vhd/fix_elite.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/fix_elite.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
@@ -290,6 +301,17 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Compiling entity fit_calc_tsp
 -- Compiling architecture rtl of fit_calc_tsp
 
+} {} {}} D:/Designs/GA_eval/vhd/dhga_pkg.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/dhga_pkg.vhd
+Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_signed
+-- Loading package arith_pkg
+-- Compiling package dhga_pkg
+-- Compiling package body dhga_pkg
+-- Loading package dhga_pkg
+
 } {} {}} D:/Designs/GA_eval/vhd/fit_calc.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/fit_calc.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package standard
@@ -302,17 +324,6 @@ Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
 -- Loading package dhga_pkg
 -- Compiling entity fit_calc
 -- Compiling architecture rtl of fit_calc
-
-} {} {}} D:/Designs/GA_eval/vhd/dhga_pkg.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/dhga_pkg.vhd
-Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package std_logic_signed
--- Loading package arith_pkg
--- Compiling package dhga_pkg
--- Compiling package body dhga_pkg
--- Loading package dhga_pkg
 
 } {} {}} D:/Designs/GA_eval/vhd/selection.vhd {1 {vcom -work work -2002 -explicit -novopt D:/Designs/GA_eval/vhd/selection.vhd
 Model Technology ModelSim SE vcom 6.1d Compiler 2006.01 Jan 23 2006
