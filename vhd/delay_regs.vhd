@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
 -- Title      : Delay Register
--- Project    : Public
+-- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
 -- File       : delay_reg.vhd
 -- Author     : Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 07/11/04
--- Last update: 2006-11-02
--- Platform   : Modelsim, Synplify, ISE
+-- Last update: 16/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
 -- Description: This block implements a delay register with parametric number 
@@ -19,6 +19,8 @@
 -- revisions  :
 -- date        version  author  description
 -- 07/11/04    1.1      kdelip  created
+-- 16/11/06    1.2      kdelip  fix model to support 1 bit width (single dff)
+--                              (width-1 -> width)
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -37,8 +39,8 @@ entity delay_regs is
   port (
     clk      : in  std_logic;           -- clock
     rst_n    : in  std_logic;           -- reset (active low)
-    in_data  : in  std_logic_vector((width-1) downto 0);   -- input data
-    out_data : out std_logic_vector((width-1) downto 0));  -- ouput data
+    in_data  : in  std_logic_vector(width downto 0);   -- input data
+    out_data : out std_logic_vector(width downto 0));  -- ouput data
 end delay_regs;
 
 -------------------------------------------------------------------------------
@@ -46,8 +48,7 @@ end delay_regs;
 -------------------------------------------------------------------------------
 architecture rtl of delay_regs is
 
-  type intern_type is array (latency-1 downto 0) of std_logic_vector((width-1) downto 0);
-
+  type   intern_type is array (latency-1 downto 0) of std_logic_vector(width downto 0);
   signal intern : intern_type;
 
 begin
@@ -55,7 +56,7 @@ begin
   case1 : if (latency > 0) generate
 
 -- make a word bit by bit iwidth: for i in 0 to (width-1) generate
-    iwidth : for i in 0 to (width-1) generate
+    iwidth : for i in 0 to (width) generate
       --make the number of delay stages
       ilatency : for j in 0 to (latency-1) generate
 
@@ -90,7 +91,6 @@ begin
     end generate;
     
   end generate;
-
 
   case2 : if (latency = 0) generate
     
