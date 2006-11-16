@@ -2,7 +2,7 @@
 -- Title      : Single port RAM block
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : spram1.vhd
+-- File       : spram.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
@@ -35,7 +35,7 @@ use work.arith_pkg.all;
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity spram1 is
+entity spram is
   generic (
     add_width  : integer;
     data_width : integer);
@@ -52,12 +52,12 @@ entity spram1 is
     data_out : out std_logic_vector(data_width -1 downto 0);
     --
     wr       : in  std_logic);          -- read/write enable
-end entity spram1;
+end entity spram;
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture rtl of spram1 is
+architecture rtl of spram is
   
   type data_array is array (integer range <>) of
     std_logic_vector(data_width-1 downto 0);          -- memory type
@@ -65,7 +65,7 @@ architecture rtl of spram1 is
   signal add_r : std_logic_vector(add_width downto 0);
   signal wr_r  : std_logic;
 
-begin  -- spram1
+begin  -- spram
 
   -- purpose: SP RAM Model
   -- type   : sequential
