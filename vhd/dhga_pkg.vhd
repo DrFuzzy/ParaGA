@@ -74,51 +74,7 @@ package dhga_pkg is
       parallel_out : out std_logic_vector(n-1 downto 0));  -- parallel data out
   end component rng_128;
 
-  component fit_eval_elite2 is
-    generic(
-      genom_lngt : positive;
-      score_sz   : integer;
-      pop_sz     : positive;
-      elite      : positive);  
-    port (
-      clk           : in  std_logic;    -- clock
-      rst_n         : in  std_logic;    -- reset (active low)
-      decode        : in  std_logic;
-      valid         : in  std_logic;
-      elite_null    : in  std_logic;
-      index         : in  integer;
-      count_parents : in  integer;
-      in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);  -- both mutation or rng fill evaluation block 
-      gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- inGene and its fitness value
-      elite_offs    : out int_array(1 to elite);  -- addresses of elite children (integer)
-      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
-      max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- maximum fitness 
-      rd            : out std_logic);  
-  end component fit_eval_elite2;
-
-  component fit_eval_elite3 is
-    generic(
-      genom_lngt : positive;
-      score_sz   : integer;
-      pop_sz     : positive;
-      elite      : positive);  
-    port (
-      clk           : in  std_logic;    -- clock
-      rst_n         : in  std_logic;    -- reset (active low)
-      decode        : in  std_logic;
-      valid         : in  std_logic;
-      elite_null    : in  std_logic;
-      index         : in  integer;
-      count_parents : in  integer;
-      in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);  -- both mutation or rng fill evaluation block 
-      gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- inGene and its fitness value
-      elite_offs    : out int_array(1 to elite);  -- addresses of elite children (integer)
-      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
-      max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- maximum fitness 
-      rd            : out std_logic);  
-  end component fit_eval_elite3;
-
-  component fit_calc is
+  component fitness_calc is
     generic(
       genom_lngt : positive;
       score_sz   : integer;
@@ -132,7 +88,7 @@ package dhga_pkg is
       gene_score : out std_logic_vector(genom_lngt+score_sz-1 downto 0);
       fit        : out std_logic_vector(score_sz-1 downto 0) := (others => '0');
       ready_out  : out std_logic);
-  end component fit_calc;
+  end component fitness_calc;
 
   component fix_elite is
     generic(
@@ -197,24 +153,7 @@ package dhga_pkg is
       rd         : out std_logic);  -- ready signal: parent is on pin selparent
   end component selection;
 
-  component mutation_v1 is
-    generic(
-      genom_lngt : positive;
-      mr         : integer;             -- 8bit coding
-      mut_res    : integer;
-      mut_method : std_logic_vector(1 downto 0));          
-    port (
-      clk       : in  std_logic;        -- clock
-      rst_n     : in  std_logic;        -- reset (active low)
-      mutEn     : in  std_logic;
-      mutPoint  : in  std_logic_vector(log2(genom_lngt)-1 downto 0);  -- mutation point (for 1point mutation) comes from rng2
-      rng       : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);
-      inGene    : in  std_logic_vector(genom_lngt-1 downto 0);
-      rd        : out std_logic;
-      mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));
-  end component mutation_v1;
-
-  component mutation_v2 is
+  component mutation is
     generic(
       genom_lngt : positive;
       mr         : integer;
@@ -230,9 +169,9 @@ package dhga_pkg is
       inGene    : in  std_logic_vector(genom_lngt-1 downto 0);
       rd        : out std_logic;        -- mutation ended for current parent
       mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  -- produced mutation offspring (kid)
-  end component mutation_v2;
+  end component mutation;
 
-  component crossover_v2 is
+  component crossover is
     generic(
       genom_lngt : positive);
     port (
@@ -246,9 +185,9 @@ package dhga_pkg is
       inGene2      : in  std_logic_vector(genom_lngt-1 downto 0);
       rd           : out std_logic;  -- Xover ended for current 2 parents having produced 1 offsping
       crossOffspr1 : out std_logic_vector(genom_lngt-1 downto 0));
-  end component crossover_v2;
+  end component crossover;
 
-  component spram1 is
+  component spram is
     generic (
       add_width  : integer;
       data_width : integer);
@@ -259,7 +198,7 @@ package dhga_pkg is
       data_in  : in  std_logic_vector(data_width -1 downto 0);  -- input data (width ram1: genom_lngt+score_sz, width ram2: genom_lngt)
       data_out : out std_logic_vector(data_width -1 downto 0);  -- output data (width ram1: genom_lngt+score_sz, width ram2: genom_lngt)
       wr       : in  std_logic);        -- read/write enable
-  end component spram1;
+  end component spram;
 
   component obs is
     generic(
@@ -272,55 +211,7 @@ package dhga_pkg is
           rd        : out std_logic);
   end component obs;
 
-  component control_v4 is
-    generic(
-      genom_lngt : integer;
-      max_gen    : positive;
-      pop_sz     : integer;
-      score_sz   : integer;
-      elite      : integer); 
-    port (
-      clk             : in  std_logic;
-      rst_n           : in  std_logic;
-      done            : in  std_logic;
-      fit_eval_rd     : in  std_logic;
-      sel_rd          : in  std_logic;
-      cross_rd        : in  std_logic;
-      mut_rd          : in  std_logic;
-      term_rd         : in  std_logic;
-      run_ga          : in  std_logic;
-      elite_offs      : in  int_array(0 to elite-1);
-      data_in_ram2    : in  std_logic_vector(genom_lngt-1 downto 0);
-      mut_method      : in  std_logic_vector(1 downto 0);
-      data_out_cross1 : out std_logic_vector(genom_lngt-1 downto 0);
-      data_out_cross2 : out std_logic_vector(genom_lngt-1 downto 0);
-      addr_1          : out integer;
-      addr_2          : out integer;
-      cnt_parents     : out integer;
-      we1             : out std_logic;
-      we2             : out std_logic;
-      data_valid      : out std_logic;
-      next_gene       : out std_logic;
-      clear           : out std_logic;  -- clear ram
-      ga_fin          : out std_logic;
-      cross_out       : out std_logic;
-      valid           : out std_logic;
-      elite_null      : out std_logic;
-      index           : out integer;
-      mut_out         : out std_logic;
-      flag            : out std_logic;
-      decode          : out std_logic;
-      sel_out         : out std_logic;
-      term_out        : out std_logic;
-      --rng             : out std_logic;
-      run             : out std_logic;
-      run1            : out std_logic;
-      run2            : out std_logic;
-      run3            : out std_logic;
-      load            : out std_logic);
-  end component control_v4;
-
-  component control_v5 is
+  component control is
     generic(
       genom_lngt : integer;
       max_gen    : positive;
@@ -457,16 +348,16 @@ package dhga_pkg is
       rd            : out std_logic);
   end component fix_elite_tsp;
 
-  component coordinates_rom_p is
+  component coordinates_rom is
     generic (
       townres : integer;
       pop_sz  : integer);
     port (
       addr     : in  integer;
       data_out : out std_logic_vector(2*townres-1 downto 0));
-  end component coordinates_rom_p;
+  end component coordinates_rom;
 
-  component init_generation_rom_p is
+  component init_generation_rom is
     generic (
       townres   : integer;
       pop_sz    : integer;
@@ -474,7 +365,7 @@ package dhga_pkg is
     port (
       addr     : in  integer;
       data_out : out std_logic_vector((num_towns-1)*townres-1 downto 0)); 
-  end component init_generation_rom_p;
+  end component init_generation_rom;
 
   component fit_eval_tsp is
     generic (
