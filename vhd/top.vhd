@@ -48,13 +48,13 @@ entity ga is
   port (
     clk             : in  std_logic;
     rst_n           : in  std_logic;
-    run_ga_i        : in  std_logic;
-    seed_i          : in  std_logic_vector(genom_lngt -1 downto 0);  -- parallel seed input for rng 
-    seed_1_i        : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);  -- parallel seed input for rng1
-    seed_2_i        : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);  -- parallel seed input for rng2
-    seed_3_i        : in  std_logic_vector(scaling_factor_res-1 downto 0);  -- parallel seed input for rng3
-    crossMethod_i   : in  std_logic_vector(1 downto 0);
-    mutMethod_i     : in  std_logic_vector(1 downto 0);
+    run_ga          : in  std_logic;
+    seed            : in  std_logic_vector(genom_lngt -1 downto 0);  -- parallel seed input for rng 
+    seed_1          : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);  -- parallel seed input for rng1
+    seed_2          : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);  -- parallel seed input for rng2
+    seed_3          : in  std_logic_vector(scaling_factor_res-1 downto 0);  -- parallel seed input for rng3
+    crossMethod     : in  std_logic_vector(1 downto 0);
+    mutMethod       : in  std_logic_vector(1 downto 0);
     best_gene       : out std_logic_vector(genom_lngt -1 downto 0);
     best_fit        : out std_logic_vector(score_sz-1 downto 0);
     fit_limit_reach : out std_logic;
@@ -115,14 +115,14 @@ architecture str of ga is
   signal best_fit_i           : std_logic_vector(score_sz-1 downto 0);
   signal ga_fin_i             : std_logic_vector(0 downto 0);
   signal ga_fin_i_vec         : std_logic_vector(0 downto 0);
-  signal run_ga               : std_logic_vector(0 downto 0);
-  signal run_ga_i_vec         : std_logic_vector(0 downto 0);
-  signal seed                 : std_logic_vector(genom_lngt -1 downto 0);
-  signal seed_1               : std_logic_vector(genom_lngt+mut_res-1 downto 0);
-  signal seed_2               : std_logic_vector(2*log2(genom_lngt)-1 downto 0);
-  signal seed_3               : std_logic_vector(scaling_factor_res-1 downto 0);
-  signal crossMethod          : std_logic_vector(1 downto 0);
-  signal mutMethod            : std_logic_vector(1 downto 0);
+  signal run_ga_i             : std_logic_vector(0 downto 0);
+  signal run_ga_vec           : std_logic_vector(0 downto 0);
+  signal seed_i               : std_logic_vector(genom_lngt -1 downto 0);
+  signal seed_1_i             : std_logic_vector(genom_lngt+mut_res-1 downto 0);
+  signal seed_2_i             : std_logic_vector(2*log2(genom_lngt)-1 downto 0);
+  signal seed_3_i             : std_logic_vector(scaling_factor_res-1 downto 0);
+  signal crossMethod_i        : std_logic_vector(1 downto 0);
+  signal mutMethod_i          : std_logic_vector(1 downto 0);
   signal fit_limit_reach_vec  : std_logic_vector(0 downto 0);
   
 begin
@@ -140,7 +140,7 @@ begin
       clk          => clk,
       rst_n        => rst_n,            -- from control v4
       load         => load_dummy,       -- from control v4
-      seed         => seed,             -- from chip port
+      seed         => seed_i,           -- from chip port
       run          => run,              -- from control v4
       parallel_out => inGene_fiteval_dummy(2*genom_lngt-1 downto genom_lngt));  -- to fitness evaluation
 
@@ -155,7 +155,7 @@ begin
       clk          => clk,
       rst_n        => rst_n,
       load         => load_dummy,        -- from control v4
-      seed         => seed_1,            -- from chip port
+      seed         => seed_1_i,          -- from chip port
       run          => run1,              -- from control v4
       parallel_out => out_rng_1_dummy);  -- to mutation and crossover
 
@@ -170,7 +170,7 @@ begin
       clk          => clk,
       rst_n        => rst_n,
       load         => load_dummy,        -- from control v4
-      seed         => seed_2,            -- from chip port
+      seed         => seed_2_i,          -- from chip port
       run          => run2,              -- from control v4
       parallel_out => out_rng_2_dummy);  -- to crossover and mutation
 
@@ -185,7 +185,7 @@ begin
       clk          => clk,
       rst_n        => rst_n,
       load         => load_dummy,        -- from control v4
-      seed         => seed_3,            -- from chip port
+      seed         => seed_3_i,          -- from chip port
       run          => run3,              -- from control v4
       parallel_out => out_rng_3_dummy);  -- to selection
 
@@ -247,10 +247,10 @@ begin
       rst_n        => rst_n,
       cont         => cross_out,
       crossPoints  => out_rng_2_dummy,  -- from rng 2
-      crossMethod  => crossMethod,      -- from chip port
+      crossMethod  => crossMethod_i,    -- from chip port
       rng          => out_rng_1_dummy(genom_lngt+mut_res-1 downto mut_res),  -- from rng 1
-      inGene1      => inGene1_cross_dummy,  -- from control_v4  
-      inGene2      => inGene2_cross_dummy,  -- from control_v4 
+      inGene1      => inGene1_cross_dummy,  -- from control  
+      inGene2      => inGene2_cross_dummy,  -- from control 
       rd           => cross_rd_dummy,   -- to control_v4 
       crossOffspr1 => crossOffspr_dummy);   -- to mutation
 
@@ -267,7 +267,7 @@ begin
       clk       => clk,
       rst_n     => rst_n,
       mutPoint  => out_rng_2_dummy(log2(genom_lngt)-1 downto 0),  -- from rng 2
-      mutMethod => mutMethod,           -- from chip port
+      mutMethod => mutMethod_i,         -- from chip port
       cont      => mut_out,
       flag      => flag_dummy,
       rng       => out_rng_1_dummy,     -- from rng 1
@@ -286,13 +286,13 @@ begin
       clk       => clk,
       rst_n     => term_out,
       max_fit   => max_fit_dummy,       -- from fitness evaluation
-      fitlim_rd => fitlim_rd_dummy(0),     -- to control_v4
+      fitlim_rd => fitlim_rd_dummy(0),  -- to control_v4
       rd        => obs_rd_dummy);  -- done signal in state machine (control_v4)    
 
 -------------------------------------------------------------------------------
 -- RAM 1 : write/reads genes and their scores (concatenated)
 -------------------------------------------------------------------------------          
-  U9 : spram1
+  U9 : spram
     generic map(
       add_width  => log2(pop_sz),
       data_width => genom_lngt+score_sz)
@@ -307,7 +307,7 @@ begin
 -------------------------------------------------------------------------------
 -- RAM 2 : writes/reads selected Parents
 ------------------------------------------------------------------------------- 
-  U10 : spram1
+  U10 : spram
     generic map(
       add_width  => log2(2*(pop_sz-elite)),
       data_width => genom_lngt)
@@ -338,7 +338,7 @@ begin
       cross_rd        => cross_rd_dummy,
       mut_rd          => mutation_rd_dummy,
       term_rd         => obs_rd_dummy,
-      run_ga          => run_ga(0),
+      run_ga          => run_ga_i(0),
       elite_offs      => elite_offs_dummy,
       data_in_ram2    => data_out_2_dummy,
       mut_method      => mutMethod,
@@ -401,8 +401,8 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      in_data  => seed_i,
-      out_data => seed);
+      in_data  => seed,
+      out_data => seed_i);
 
   U15 : delay_regs
     generic map(
@@ -411,8 +411,8 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      in_data  => seed_1_i,
-      out_data => seed_1);
+      in_data  => seed_1,
+      out_data => seed_1_i);
 
   U16 : delay_regs
     generic map(
@@ -421,9 +421,8 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      in_data  => seed_2_i,
-      out_data => seed_2
-      );
+      in_data  => seed_2,
+      out_data => seed_2_i);
 
   U17 : delay_regs
     generic map(
@@ -432,8 +431,8 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      in_data  => seed_3_i,
-      out_data => seed_3);
+      in_data  => seed_3,
+      out_data => seed_3_i);
 
   U18 : delay_regs
     generic map(
@@ -442,8 +441,8 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      in_data  => crossMethod_i,
-      out_data => crossMethod);
+      in_data  => crossMethod,
+      out_data => crossMethod_i);
 
   U19 : delay_regs
     generic map(
@@ -452,8 +451,8 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      in_data  => mutMethod_i,
-      out_data => mutMethod);
+      in_data  => mutMethod,
+      out_data => mutMethod_i);
 
   U20 : delay_regs
     generic map(
@@ -474,7 +473,7 @@ begin
       rst_n    => rst_n,
       in_data  => ga_fin_i,
       out_data => ga_fin_i_vec);
-  
+
   U22 : delay_regs
     generic map(
       width   => 0,
@@ -482,16 +481,16 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      in_data  => run_ga_i_vec,
-      out_data => run_ga);
+      in_data  => run_ga_vec,
+      out_data => run_ga_i);
 
-  addr_2_vec        <= conv_std_logic_vector(addr_2_dummy, addr_2_vec'length);
-  addr_1_vec        <= conv_std_logic_vector(addr_1_dummy, addr_1_vec'length);
-  best_gene_i       <= data_out_1_dummy(genom_lngt+score_sz -1 downto score_sz);
-  best_fit_i        <= max_fit_dummy;
+  addr_2_vec      <= conv_std_logic_vector(addr_2_dummy, addr_2_vec'length);
+  addr_1_vec      <= conv_std_logic_vector(addr_1_dummy, addr_1_vec'length);
+  best_gene_i     <= data_out_1_dummy(genom_lngt+score_sz -1 downto score_sz);
+  best_fit_i      <= max_fit_dummy;
   -- std_logic to std_logic_vector
-  run_ga_i_vec(0) <= run_ga_i;
-  ga_fin <= ga_fin_i_vec(0);
+  run_ga_vec(0)   <= run_ga;
+  ga_fin          <= ga_fin_i_vec(0);
   fit_limit_reach <= fit_limit_reach_vec(0);
 
 end architecture str;
