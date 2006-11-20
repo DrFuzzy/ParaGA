@@ -1,6 +1,6 @@
 # Synplicity, Inc. constraint file
 # D:\Designs\GA_eval\syn\GA\ga.sdc
-# Written on Tue Nov 14 19:37:31 2006
+# Written on Fri Nov 17 15:12:27 2006
 # by Synplify Pro, Synplify Pro 8.5.1 Scope Editor
 
 #

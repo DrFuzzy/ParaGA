@@ -63,7 +63,6 @@ architecture bench of ga_tsp_tb is
     port (
       clk       : in  std_logic;
       rst_n     : in  std_logic;
-      --pool        : in  int_array(1 to num_towns-1); 
       run_ga_i  : in  std_logic;
       seed_1_i  : in  std_logic_vector(mut_res-1 downto 0);
       seed_2_i  : in  std_logic_vector(2*log2(num_towns)-1 downto 0);
@@ -100,7 +99,6 @@ architecture bench of ga_tsp_tb is
   -- simulation period
   signal period : time := 13 ns;        -- 78 MHz
   
-  
 begin  -- ARCHITECTURE bench
 
   u_bench : ga_tsp
@@ -108,15 +106,13 @@ begin  -- ARCHITECTURE bench
       genom_lngt         => 21,
       score_sz           => 16,
       scaling_factor_res => 4,
-      pop_sz             => 16,
+      pop_sz             => 8,
       elite              => 2,
       num_towns          => 8,
       townres            => 3,
       mr                 => 150,
       mut_res            => 8,
-      max_gen            => 100)          
-
-    
+      max_gen            => 300)          
     
     port map (
       clk       => clk,
@@ -128,8 +124,6 @@ begin  -- ARCHITECTURE bench
       best_gene => best_gene,
       best_fit  => best_fit,
       ga_fin    => ga_fin);     
-
-
 
   -- clock and reset generator
   clk   <= not clk after period/2;

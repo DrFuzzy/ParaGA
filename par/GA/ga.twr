@@ -21,10 +21,10 @@ INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
    unconstrained paths section(s) of the report.
 
 ================================================================================
-Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH 50%;
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 11 ns HIGH 50%;
 
- 30104 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is  12.444ns.
+ 28232 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  10.969ns.
 --------------------------------------------------------------------------------
 
 
@@ -40,7 +40,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   12.444|         |         |         |
+clk            |   10.969|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -49,15 +49,15 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover 30104 paths, 0 nets, and 5010 connections
+Constraints cover 28232 paths, 0 nets, and 4299 connections
 
 Design statistics:
-   Minimum period:  12.444ns (Maximum frequency:  80.360MHz)
+   Minimum period:  10.969ns (Maximum frequency:  91.166MHz)
 
 
-Analysis completed Mon Nov 13 20:25:33 2006
+Analysis completed Mon Nov 20 13:22:17 2006
 --------------------------------------------------------------------------------
 
 
 
-Peak Memory Usage: 134 MB
+Peak Memory Usage: 131 MB

@@ -30,7 +30,4 @@
 <msg type="info" file="Pack" num="1650" delta="unknown" >Map created a placed design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367">The signal &lt;U5/scalFitSum_0[8]_REPLICA_8&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
 </messages>

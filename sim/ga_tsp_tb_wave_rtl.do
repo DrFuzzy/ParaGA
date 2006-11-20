@@ -72,8 +72,6 @@ add wave -noupdate -format Literal -radix decimal /ga_tsp_tb/u_bench/u4/u1/temp2
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u4/u1/elite_indexs
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u4/u1/temp_indexs_1
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u4/u1/temp_indexs_2
-add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u4/u1/cont
-add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u4/u1/nparents
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u4/u1/counter
 add wave -noupdate -divider {RNG FOR SELECTION}
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u3/clk
@@ -168,14 +166,9 @@ add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u10/elite_offs
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u10/data_in_ram2
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u10/data_out_cross1
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u10/data_out_cross2
-add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u10/addr_1
-add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u10/addr_2
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u10/cnt_parents
-add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/we1
-add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/we2
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/data_valid
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/next_gene
-add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/clear
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/ga_fin
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/cross_out
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u10/valid
@@ -218,7 +211,6 @@ add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u9/add
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u9/data_in
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u9/data_out
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u9/wr
-add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u9/clear
 add wave -noupdate -format Literal -radix unsigned -expand /ga_tsp_tb/u_bench/u9/data
 add wave -noupdate -format Literal /ga_tsp_tb/seed_1_i
 add wave -noupdate -format Literal /ga_tsp_tb/seed_2_i
@@ -230,7 +222,6 @@ add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u8/add
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u8/data_in
 add wave -noupdate -format Literal /ga_tsp_tb/u_bench/u8/data_out
 add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u8/wr
-add wave -noupdate -format Logic /ga_tsp_tb/u_bench/u8/clear
 add wave -noupdate -format Literal -expand /ga_tsp_tb/u_bench/u8/data
 add wave -noupdate -divider {TESTBENCH SIGNALS}
 add wave -noupdate -format Logic /ga_tsp_tb/clk
@@ -249,8 +240,8 @@ add wave -noupdate -format Literal /ga_tsp_tb/spy_elite
 add wave -noupdate -format Literal -radix decimal /ga_tsp_tb/spy_max_fit
 add wave -noupdate -format Literal /ga_tsp_tb/period
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {10695000 ps} 0}
-configure wave -namecolwidth 247
+WaveRestoreCursors {{Cursor 1} {202145000 ps} 0}
+configure wave -namecolwidth 314
 configure wave -valuecolwidth 64
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -263,4 +254,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {2399928273 ps} {2400003776 ps}
+WaveRestoreZoom {202130134 ps} {202159867 ps}

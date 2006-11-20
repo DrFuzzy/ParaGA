@@ -4,10 +4,7 @@ Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
 Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ga.ucf -p
 xc3s1500-fg676-4 D:/Designs/GA_eval/syn/GA/rev_1/top.edf ga.ngd 
 
-Executing edif2ngd -quiet "D:\Designs\GA_eval\syn\GA\rev_1\top.edf"
-"_ngo\top.ngo"
-Release 8.1.03i - edif2ngd I.27
-Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Reading module "top.ngo" ( "top.ngo" unchanged since last run )...
 Reading NGO file 'D:/Designs/GA_eval/par/GA/_ngo/top.ngo' ...
 
 Applying constraints in "ga.ucf" to the design...
@@ -15,7 +12,7 @@ Applying constraints in "ga.ucf" to the design...
 Checking timing specifications ...
 WARNING:XdmHelpers:681 - UCF definition of specification "TS_clk" overrides the
    definition found in the netlist or NCF file:
-   UCF: PERIOD "clk" 13000.000000 pS HIGH 50.000000 %
+   UCF: PERIOD "clk" 11000.000000 pS HIGH 50.000000 %
    netlist/NCF: PERIOD:clk:8333.000000:pS:HIGH:50.000000%
 Checking expanded design ...
 
@@ -23,7 +20,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   1
 
-Total memory usage is 67820 kilobytes
+Total memory usage is 67760 kilobytes
 
 Writing NGD file "ga.ngd" ...
 

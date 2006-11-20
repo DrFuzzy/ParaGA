@@ -44,7 +44,7 @@ for i=1:popSz
                              + power(distance_map(temp_int_offs(i,1)+1,2)- distance_map(1,2),2)...
                         + power(distance_map(temp_int_offs(i,num_towns-1)+1,1)-distance_map(1,1),2)...
                              + power(distance_map(temp_int_offs(i,num_towns-1)+1,2)-distance_map(1,2),2);
-    %fit(i) = floor(100000/fitness(i));   
+%     fit(i) = floor(100000/fitness(i));   
     fit(i) = 65535 - fitness(i);
     genes(i,genomlngt+1) = fit(i);
     fit_sum = fit_sum + fit(i);

@@ -1,4 +1,3 @@
-hdl_data -top_module work.ga_tsp
 hdl_param -add genom_lngt ga_tsp
 hdl_param -add score_sz ga_tsp
 hdl_param -add scaling_factor_res ga_tsp

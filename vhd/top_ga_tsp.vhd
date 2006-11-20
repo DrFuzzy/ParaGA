@@ -39,15 +39,15 @@ use work.arith_pkg.all;
 entity ga_tsp is
   generic (
     genom_lngt         : positive := 21;
-    score_sz           : integer  := 16;
+    score_sz           : integer  := 10;
     scaling_factor_res : integer  := 4;
-    pop_sz             : integer  := 16;
+    pop_sz             : integer  := 8;
     elite              : integer  := 2;
     num_towns          : integer  := 8;
     townres            : integer  := 3;
     mr                 : integer  := 150;
     mut_res            : integer  := 8;  -- max for mutation rate is 255
-    max_gen            : positive := 100);
+    max_gen            : positive := 300);
   port (
     clk       : in  std_logic;
     rst_n     : in  std_logic;
@@ -180,7 +180,7 @@ begin
 --                      of fitnesses, the maximum fitness, the elite children'
 --                      indexes and ready signals 
 ------------------------------------------------------------------------------- 
-  U4 : fit_eval_tsp
+  U4 : fitness_eval_tsp
     generic map(
       genom_lngt => genom_lngt,
       score_sz   => score_sz,
@@ -265,7 +265,7 @@ begin
 -------------------------------------------------------------------------------
 -- RAM 1 : write/reads genes and their scores (concatenated)
 -------------------------------------------------------------------------------          
-  U8 : spram1
+  U8 : spram
     generic map(
       add_width  => log2(pop_sz),
       data_width => genom_lngt+score_sz)
@@ -280,7 +280,7 @@ begin
 -------------------------------------------------------------------------------
 -- RAM 2 : writes/reads selected Parents
 ------------------------------------------------------------------------------- 
-  U9 : spram1
+  U9 : spram
     generic map(
       add_width  => log2(2*(pop_sz-elite)),
       data_width => genom_lngt)

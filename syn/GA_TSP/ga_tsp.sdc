@@ -1,6 +1,6 @@
 # Synplicity, Inc. constraint file
 # D:\Designs\GA_eval\syn\GA_TSP\ga_tsp.sdc
-# Written on Tue Nov 07 20:32:43 2006
+# Written on Wed Nov 15 19:25:42 2006
 # by Synplify Pro, Synplify Pro 8.5.1 Scope Editor
 
 #
@@ -51,6 +51,8 @@ define_input_delay -disable      {seed_3_i[3:0]} -improve 0.00 -route 0.00
 #
 define_global_attribute          syn_netlist_hierarchy {1}
 define_global_attribute          syn_useioff {1}
+define_global_attribute          syn_romstyle {block_rom}
+define_global_attribute -disable syn_ramstyle {registers}
 
 #
 # I/O standards

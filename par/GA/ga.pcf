@@ -1,47 +1,47 @@
 //! **************************************************************************
-// Written by: Map 1.1 on Mon Nov 13 20:24:58 2006
+// Written by: Map 1.1 on Mon Nov 20 13:21:38 2006
 //! **************************************************************************
 
 SCHEMATIC START;
 NET "clk_ibuf/IBUFG" BEL "clk_ibuf/BUFG.GCLKMUX" USELOCALCONNECT;
-TIMEGRP clk = BEL "fit_limit_reach" BEL "ga_fin" BEL "run_ga" BEL
-        "U0/parallel_out_1[2]" BEL "U0/parallel_out_1[3]" BEL
-        "U0/parallel_out_1[4]" BEL "U0/parallel_out_1[5]" BEL
-        "U0/parallel_out_1[6]" BEL "U0/parallel_out_1[7]" BEL
-        "U0/parallel_out_1[0]" BEL "U0/parallel_out_1[1]" BEL
-        "U0/LFSR.lfsr_reg[2]" BEL "U0/LFSR.lfsr_reg[3]" BEL
-        "U0/LFSR.lfsr_reg[4]" BEL "U0/LFSR.lfsr_reg[5]" BEL
-        "U0/LFSR.lfsr_reg[6]" BEL "U0/LFSR.lfsr_reg[7]" BEL
-        "U0/LFSR.lfsr_reg[0]" BEL "U0/LFSR.lfsr_reg[1]" BEL
-        "U1/parallel_out_1[15]" BEL "U1/parallel_out_1[0]" BEL
-        "U1/parallel_out_1[1]" BEL "U1/parallel_out_1[2]" BEL
-        "U1/parallel_out_1[3]" BEL "U1/parallel_out_1[5]" BEL
-        "U1/parallel_out_1[4]" BEL "U1/parallel_out_1[6]" BEL
-        "U1/parallel_out_1[7]" BEL "U1/parallel_out_1[8]" BEL
-        "U1/parallel_out_1[9]" BEL "U1/parallel_out_1[10]" BEL
-        "U1/parallel_out_1[11]" BEL "U1/parallel_out_1[12]" BEL
-        "U1/parallel_out_1[13]" BEL "U1/parallel_out_1[14]" BEL
-        "U1/mutout_p1_ret" BEL "U1/LFSR.lfsr_reg[2]" BEL "U1/LFSR.lfsr_reg[3]"
-        BEL "U1/LFSR.lfsr_reg[5]" BEL "U1/LFSR.lfsr_reg[4]" BEL
-        "U1/LFSR.lfsr_reg[6]" BEL "U1/LFSR.lfsr_reg[7]" BEL
-        "U1/LFSR.lfsr_reg[8]" BEL "U1/LFSR.lfsr_reg[9]" BEL
-        "U1/LFSR.lfsr_reg[10]" BEL "U1/LFSR.lfsr_reg[11]" BEL
-        "U1/LFSR.lfsr_reg[12]" BEL "U1/LFSR.lfsr_reg[13]" BEL
-        "U1/LFSR.lfsr_reg[14]" BEL "U1/LFSR.lfsr_reg[15]" BEL
-        "U1/LFSR.lfsr_reg[0]" BEL "U1/LFSR.lfsr_reg[1]" BEL
-        "U2/parallel_out_1[1]" BEL "U2/parallel_out_1[2]" BEL
-        "U2/parallel_out_1[3]" BEL "U2/parallel_out_1[4]" BEL
-        "U2/parallel_out_1[5]" BEL "U2/parallel_out_1[0]" BEL
-        "U2/LFSR.lfsr_reg[1]" BEL "U2/LFSR.lfsr_reg[2]" BEL
-        "U2/LFSR.lfsr_reg[3]" BEL "U2/LFSR.lfsr_reg[4]" BEL
-        "U2/LFSR.lfsr_reg[5]" BEL "U2/LFSR.lfsr_reg[0]" BEL
-        "U3/parallel_out_1[0]" BEL "U3/parallel_out_1[1]" BEL
-        "U3/parallel_out_1[2]" BEL "U3/parallel_out_1[3]" BEL
-        "U3/LFSR.lfsr_reg[1]" BEL "U3/LFSR.lfsr_reg[2]" BEL
-        "U3/LFSR.lfsr_reg[3]" BEL "U3/LFSR.lfsr_reg[0]" BEL "U4/U0/temp[15]"
-        BEL "U4/U0/done_p" BEL "U4/U0/temp[1]" BEL "U4/U0/temp[2]" BEL
-        "U4/U0/temp[3]" BEL "U4/U0/temp[4]" BEL "U4/U0/temp[5]" BEL
-        "U4/U0/temp[6]" BEL "U4/U0/temp[7]" BEL "U4/U1/temp_indexs_2_1[0]" BEL
+TIMEGRP clk = BEL "sreg_ret" BEL "U0/parallel_out_1[2]" BEL
+        "U0/parallel_out_1[3]" BEL "U0/parallel_out_1[4]" BEL
+        "U0/parallel_out_1[5]" BEL "U0/parallel_out_1[6]" BEL
+        "U0/parallel_out_1[7]" BEL "U0/parallel_out_1[0]" BEL
+        "U0/parallel_out_1[1]" BEL "U0/LFSR.lfsr_reg[2]" BEL
+        "U0/LFSR.lfsr_reg[3]" BEL "U0/LFSR.lfsr_reg[4]" BEL
+        "U0/LFSR.lfsr_reg[5]" BEL "U0/LFSR.lfsr_reg[6]" BEL
+        "U0/LFSR.lfsr_reg[7]" BEL "U0/LFSR.lfsr_reg[0]" BEL
+        "U0/LFSR.lfsr_reg[1]" BEL "U1/parallel_out_1[15]" BEL
+        "U1/parallel_out_1[0]" BEL "U1/parallel_out_1[1]" BEL
+        "U1/parallel_out_1[2]" BEL "U1/parallel_out_1[3]" BEL
+        "U1/parallel_out_1[5]" BEL "U1/parallel_out_1[4]" BEL
+        "U1/parallel_out_1[6]" BEL "U1/parallel_out_1[7]" BEL
+        "U1/parallel_out_1[8]" BEL "U1/parallel_out_1[9]" BEL
+        "U1/parallel_out_1[10]" BEL "U1/parallel_out_1[11]" BEL
+        "U1/parallel_out_1[12]" BEL "U1/parallel_out_1[13]" BEL
+        "U1/parallel_out_1[14]" BEL "U1/LFSR.lfsr_reg[2]" BEL
+        "U1/LFSR.lfsr_reg[3]" BEL "U1/LFSR.lfsr_reg[5]" BEL
+        "U1/LFSR.lfsr_reg[4]" BEL "U1/LFSR.lfsr_reg[6]" BEL
+        "U1/LFSR.lfsr_reg[7]" BEL "U1/LFSR.lfsr_reg[8]" BEL
+        "U1/LFSR.lfsr_reg[9]" BEL "U1/LFSR.lfsr_reg[10]" BEL
+        "U1/LFSR.lfsr_reg[11]" BEL "U1/LFSR.lfsr_reg[12]" BEL
+        "U1/LFSR.lfsr_reg[13]" BEL "U1/LFSR.lfsr_reg[14]" BEL
+        "U1/LFSR.lfsr_reg[15]" BEL "U1/LFSR.lfsr_reg[0]" BEL
+        "U1/LFSR.lfsr_reg[1]" BEL "U2/parallel_out_1[1]" BEL
+        "U2/parallel_out_1[2]" BEL "U2/parallel_out_1[3]" BEL
+        "U2/parallel_out_1[4]" BEL "U2/parallel_out_1[5]" BEL
+        "U2/parallel_out_1[0]" BEL "U2/LFSR.lfsr_reg[1]" BEL
+        "U2/LFSR.lfsr_reg[2]" BEL "U2/LFSR.lfsr_reg[3]" BEL
+        "U2/LFSR.lfsr_reg[4]" BEL "U2/LFSR.lfsr_reg[5]" BEL
+        "U2/LFSR.lfsr_reg[0]" BEL "U3/parallel_out_1[0]" BEL
+        "U3/parallel_out_1[1]" BEL "U3/parallel_out_1[2]" BEL
+        "U3/parallel_out_1[3]" BEL "U3/LFSR.lfsr_reg[1]" BEL
+        "U3/LFSR.lfsr_reg[2]" BEL "U3/LFSR.lfsr_reg[3]" BEL
+        "U3/LFSR.lfsr_reg[0]" BEL "U4/U0/temp[15]" BEL "U4/U0/done_p" BEL
+        "U4/U0/temp[1]" BEL "U4/U0/temp[2]" BEL "U4/U0/temp[3]" BEL
+        "U4/U0/temp[4]" BEL "U4/U0/temp[5]" BEL "U4/U0/temp[6]" BEL
+        "U4/U0/temp[7]" BEL "U4/U1/temp_indexs_2_1[0]" BEL
         "U4/U1/temp_indexs_2_1[1]" BEL "U4/U1/temp_indexs_2_1[2]" BEL
         "U4/U1/temp_indexs_2_1[3]" BEL "U4/U1/temp_indexs_2_1[4]" BEL
         "U4/U1/temp_indexs_2_1[5]" BEL "U4/U1/temp_indexs_2_1[6]" BEL
@@ -166,8 +166,8 @@ TIMEGRP clk = BEL "fit_limit_reach" BEL "ga_fin" BEL "run_ga" BEL
         "U4/U1/fit_sum[7]" BEL "U4/U1/sum_p[7]" BEL "U4/U1/fit_sum[8]" BEL
         "U4/U1/sum_p[8]" BEL "U4/U1/fit_sum[9]" BEL "U4/U1/sum_p[9]" BEL
         "U4/U1/fit_sum[10]" BEL "U4/U1/sum_p[10]" BEL "U4/U1/sum_p[0]" BEL
-        "U4/U1/fit_sum[0]" BEL "U4/U1/addr_1_ret" BEL "U4/U1/addr_1_ret_1" BEL
-        "U4/U1/addr_1_ret_2" BEL "U4/U1/best_fit_prev_gen_0_ret_1" BEL
+        "U4/U1/fit_sum[0]" BEL "U4/U1/add_r_ret" BEL "U4/U1/add_r_ret_1" BEL
+        "U4/U1/add_r_ret_2" BEL "U4/U1/best_fit_prev_gen_0_ret_1" BEL
         "U4/U1/best_fit_prev_gen_0_ret_2" BEL
         "U4/U1/best_fit_prev_gen_0_ret_3" BEL
         "U4/U1/best_fit_prev_gen_0_ret_0" BEL
@@ -186,18 +186,18 @@ TIMEGRP clk = BEL "fit_limit_reach" BEL "ga_fin" BEL "run_ga" BEL
         "U5/selParent_p_ret[5]" BEL "U5/selParent_p_ret[6]" BEL
         "U5/selParent_p_ret[7]" BEL "U5/selection.done_t_ret_3" BEL
         "U5/selection.done_t_ret_2" BEL "U5/selection.done_t_ret" BEL
-        "U5/cumSum_p1_ret_11" BEL "U5/cumSum_p1_ret[1]" BEL
-        "U5/cumSum_p1_ret[2]" BEL "U5/cumSum_p1_ret[3]" BEL
-        "U5/cumSum_p1_ret[4]" BEL "U5/cumSum_p1_ret[5]" BEL
-        "U5/cumSum_p1_ret[6]" BEL "U5/cumSum_p1_ret[7]" BEL
-        "U5/cumSum_p1_ret[8]" BEL "U5/cumSum_p1_ret[9]" BEL
-        "U5/cumSum_p1_ret[10]" BEL "U5/count" BEL "U5/temp_rd_ret_1" BEL
-        "U5/temp_rd_ret_2" BEL "U5/temp_rd_ret_3" BEL "U5/scalFitSum_p[0]" BEL
-        "U5/scalFitSum_p[1]" BEL "U5/scalFitSum_p[2]" BEL "U5/scalFitSum_p[3]"
-        BEL "U5/scalFitSum_p[4]" BEL "U5/scalFitSum_p[5]" BEL
-        "U5/scalFitSum_p[6]" BEL "U5/scalFitSum_p[7]" BEL "U5/scalFitSum_p[8]"
-        BEL "U5/scalFitSum_p[9]" BEL "U5/scalFitSum_p[10]" BEL
-        "U6/crossover_v2.crossout1_t_ret_127" BEL
+        "U5/cumSum_p1_ret_11" BEL "U5/cumSum_p1_ret[0]" BEL
+        "U5/cumSum_p1_ret[1]" BEL "U5/cumSum_p1_ret[2]" BEL
+        "U5/cumSum_p1_ret[3]" BEL "U5/cumSum_p1_ret[4]" BEL
+        "U5/cumSum_p1_ret[5]" BEL "U5/cumSum_p1_ret[6]" BEL
+        "U5/cumSum_p1_ret[7]" BEL "U5/cumSum_p1_ret[8]" BEL
+        "U5/cumSum_p1_ret[9]" BEL "U5/cumSum_p1_ret[10]" BEL "U5/count" BEL
+        "U5/temp_rd_ret_1" BEL "U5/temp_rd_ret_2" BEL "U5/temp_rd_ret_3" BEL
+        "U5/scalFitSum_p[0]" BEL "U5/scalFitSum_p[1]" BEL "U5/scalFitSum_p[2]"
+        BEL "U5/scalFitSum_p[3]" BEL "U5/scalFitSum_p[4]" BEL
+        "U5/scalFitSum_p[5]" BEL "U5/scalFitSum_p[6]" BEL "U5/scalFitSum_p[7]"
+        BEL "U5/scalFitSum_p[8]" BEL "U5/scalFitSum_p[9]" BEL
+        "U5/scalFitSum_p[10]" BEL "U6/crossover_v2.crossout1_t_ret_127" BEL
         "U6/crossover_v2.crossout1_t_ret_126" BEL
         "U6/crossover_v2.crossout1_t_ret_125" BEL
         "U6/crossover_v2.crossout1_t_ret_124" BEL
@@ -227,178 +227,124 @@ TIMEGRP clk = BEL "fit_limit_reach" BEL "ga_fin" BEL "run_ga" BEL
         BEL "U6/crossout1_t_ret_17_0[1]" BEL "U6/crossout1_t_ret" BEL
         "U6/crossout1_t_ret_40[0]" BEL "U6/crossout1_t_ret_40[1]" BEL
         "U6/crossout1_t_ret_40[2]" BEL "U6/done_t" BEL "U6/mutout_p1_ret" BEL
-        "U6/mutout_p1_ret_1" BEL "U6/mutout_p1_ret_2" BEL "U6/mutout_p1_ret_3"
-        BEL "U6/mutout_p1_ret_4" BEL "U6/mutout_p1_ret_5" BEL
-        "U6/mutout_p1_ret_6" BEL "U7/mutout_p1[2]" BEL "U7/count[0]" BEL
-        "U7/count[1]" BEL "U7/count[2]" BEL "U7/count[3]" BEL "U7/done_p" BEL
+        "U6/mutout_p1_ret_1" BEL "U6/mutout_p1_ret_2" BEL
+        "U6/un1_mask_2.crossout1_t_ret_126" BEL "U6/mutout_p1_ret_3" BEL
+        "U6/mutout_p1_ret_4" BEL "U6/mutout_p1_ret_5" BEL "U7/mutout_p1[0]"
+        BEL "U7/mutout_p1[3]" BEL "U7/count[0]" BEL "U7/count[1]" BEL
+        "U7/count[2]" BEL "U7/count[3]" BEL "U7/done_p" BEL
         "U7/mutation_v2.un18_mutout.mutout_p1_ret" BEL
         "U7/mutation_v2.un18_mutout.mutout_p1_ret_1" BEL "U7/mutout_p1_ret"
         BEL "U7/mutout_p1_ret_1" BEL "U7/mutout_p1_ret_2" BEL
-        "U7/mutout_p1_ret_3" BEL "U7/mutout_p1_ret_4" BEL
-        "U7/mutation_v2.mutout_p1_ret" BEL
-        "U7/mutation_v2.un18_mutout.mutout_p1_ret_2" BEL "U7/mutout_p1_ret_5"
-        BEL "U7/mutout_p1_ret_6" BEL "U7/mutout_p1_ret_7" BEL
-        "U7/mutation_v2.un18_mutout.mutout_p1_ret_3" BEL
-        "U7/mutation_v2.un18_mutout.mutout_p1_ret_4" BEL "U7/mutout_p1_ret_8"
+        "U7/mutout_p1_ret_3" BEL "U7/mutation_v2.un18_mutout.mutout_p1_ret_2"
+        BEL "U7/mutation_v2.un18_mutout.mutout_p1_ret_3" BEL
+        "U7/mutout_p1_ret_4" BEL "U7/mutout_p1_ret_5" BEL "U7/mutout_p1_ret_6"
+        BEL "U7/mutout_p1_ret_7" BEL
+        "U7/mutation_v2.un18_mutout.mutout_p1_ret_4" BEL
+        "U7/mutation_v2.un18_mutout.mutout_p1_ret_5" BEL "U7/mutout_p1_ret_8"
         BEL "U7/mutout_p1_ret_9" BEL "U7/mutout_p1_ret_10" BEL
-        "U7/mutout_p1_ret_11" BEL "U7/mutation_v2.un18_mutout.mutout_p1_ret_5"
-        BEL "U7/mutout_p1_ret_12" BEL "U7/mutout_p1_ret_13" BEL
+        "U7/mutout_p1_ret_11" BEL "U7/mutation_v2.un18_mutout.mutout_p1_ret_6"
+        BEL "U7/mutation_v2.un18_mutout.mutout_p1_ret_7" BEL
+        "U7/mutout_p1_ret_12" BEL "U7/mutout_p1_ret_13" BEL
         "U7/mutout_p1_ret_14" BEL "U7/mutout_p1_ret_15" BEL
-        "U7/mutout_p1_ret_16" BEL "U7/mutation_v2.mutout_p1_ret_1" BEL
-        "U7/mutation_v2.un18_mutout.mutout_p1_ret_6" BEL "U7/mutout_p1_ret_17"
-        BEL "U7/mutout_p1_ret_18" BEL "U7/mutout_p1_ret_19" BEL
-        "U7/mutation_v2.mutout_p1_ret_2" BEL
-        "U7/mutation_v2.un18_mutout.mutout_p1_ret_7" BEL
-        "U7/mutation_v2.un18_mutout.mutout_p1_ret_8" BEL "U7/mutout_p1_ret_20"
-        BEL "U7/mutout_p1_ret_21" BEL "U7/mutout_p1_ret_22" BEL
-        "U7/mutation_v2.un3_mutout.mutout_p1_ret" BEL "U7/mutout_p1_ret_23"
-        BEL "U7/mutation_v2.mutout_p1_ret_3" BEL
-        "U7/mutation_v2.un18_mutout.mutout_p1_ret_9" BEL "U7/mutout_p1_ret_24"
-        BEL "U8/rd" BEL "U8/fitlim_rd" BEL "U9/data_out_1[15]" BEL
-        "U9/data_7[8]" BEL "U9/data_7[9]" BEL "U9/data_7[10]" BEL
-        "U9/data_7[11]" BEL "U9/data_7[12]" BEL "U9/data_7[13]" BEL
-        "U9/data_7[14]" BEL "U9/data_7[15]" BEL "U9/data_6[8]" BEL
-        "U9/data_6[9]" BEL "U9/data_6[10]" BEL "U9/data_6[11]" BEL
-        "U9/data_6[12]" BEL "U9/data_6[13]" BEL "U9/data_6[14]" BEL
-        "U9/data_6[15]" BEL "U9/data_5[8]" BEL "U9/data_5[9]" BEL
-        "U9/data_5[10]" BEL "U9/data_5[11]" BEL "U9/data_5[12]" BEL
-        "U9/data_5[13]" BEL "U9/data_5[14]" BEL "U9/data_5[15]" BEL
-        "U9/data_4[8]" BEL "U9/data_4[9]" BEL "U9/data_4[10]" BEL
-        "U9/data_4[11]" BEL "U9/data_4[12]" BEL "U9/data_4[13]" BEL
-        "U9/data_4[14]" BEL "U9/data_4[15]" BEL "U9/data_3[8]" BEL
-        "U9/data_3[9]" BEL "U9/data_3[10]" BEL "U9/data_3[11]" BEL
-        "U9/data_3[12]" BEL "U9/data_3[13]" BEL "U9/data_3[14]" BEL
-        "U9/data_3[15]" BEL "U9/data_2[8]" BEL "U9/data_2[9]" BEL
-        "U9/data_2[10]" BEL "U9/data_2[11]" BEL "U9/data_2[12]" BEL
-        "U9/data_2[13]" BEL "U9/data_2[14]" BEL "U9/data_2[15]" BEL
-        "U9/data_1[8]" BEL "U9/data_1[9]" BEL "U9/data_1[10]" BEL
-        "U9/data_1[11]" BEL "U9/data_1[12]" BEL "U9/data_1[13]" BEL
-        "U9/data_1[14]" BEL "U9/data_1[15]" BEL "U9/data_0[8]" BEL
-        "U9/data_0[9]" BEL "U9/data_0[10]" BEL "U9/data_0[11]" BEL
-        "U9/data_0[12]" BEL "U9/data_0[13]" BEL "U9/data_0[14]" BEL
-        "U9/data_0[15]" BEL "U9/data_out_1[7]" BEL "U9/data_out_1[6]" BEL
-        "U9/data_out_1[5]" BEL "U9/data_out_1[4]" BEL "U9/data_out_1[3]" BEL
-        "U9/data_out_1[2]" BEL "U9/data_out_1[1]" BEL "U10/data_out_1[7]" BEL
-        "U10/data_out_1[6]" BEL "U10/data_out_1[5]" BEL "U10/data_out_1[4]"
-        BEL "U10/data_out_1[3]" BEL "U10/data_out_1[2]" BEL
-        "U10/data_out_1[1]" BEL "U10/data_out_1[0]" BEL "U10/data_15[0]" BEL
-        "U10/data_15[1]" BEL "U10/data_15[2]" BEL "U10/data_15[3]" BEL
-        "U10/data_15[4]" BEL "U10/data_15[5]" BEL "U10/data_15[6]" BEL
-        "U10/data_15[7]" BEL "U10/data_14[0]" BEL "U10/data_14[1]" BEL
-        "U10/data_14[2]" BEL "U10/data_14[3]" BEL "U10/data_14[4]" BEL
-        "U10/data_14[5]" BEL "U10/data_14[6]" BEL "U10/data_14[7]" BEL
-        "U10/data_13[0]" BEL "U10/data_13[1]" BEL "U10/data_13[2]" BEL
-        "U10/data_13[3]" BEL "U10/data_13[4]" BEL "U10/data_13[5]" BEL
-        "U10/data_13[6]" BEL "U10/data_13[7]" BEL "U10/data_12[0]" BEL
-        "U10/data_12[1]" BEL "U10/data_12[2]" BEL "U10/data_12[3]" BEL
-        "U10/data_12[4]" BEL "U10/data_12[5]" BEL "U10/data_12[6]" BEL
-        "U10/data_12[7]" BEL "U10/data_11[0]" BEL "U10/data_11[1]" BEL
-        "U10/data_11[2]" BEL "U10/data_11[3]" BEL "U10/data_11[4]" BEL
-        "U10/data_11[5]" BEL "U10/data_11[6]" BEL "U10/data_11[7]" BEL
-        "U10/data_10[0]" BEL "U10/data_10[1]" BEL "U10/data_10[2]" BEL
-        "U10/data_10[3]" BEL "U10/data_10[4]" BEL "U10/data_10[5]" BEL
-        "U10/data_10[6]" BEL "U10/data_10[7]" BEL "U10/data_9[0]" BEL
-        "U10/data_9[1]" BEL "U10/data_9[2]" BEL "U10/data_9[3]" BEL
-        "U10/data_9[4]" BEL "U10/data_9[5]" BEL "U10/data_9[6]" BEL
-        "U10/data_9[7]" BEL "U10/data_8[0]" BEL "U10/data_8[1]" BEL
-        "U10/data_8[2]" BEL "U10/data_8[3]" BEL "U10/data_8[4]" BEL
-        "U10/data_8[5]" BEL "U10/data_8[6]" BEL "U10/data_8[7]" BEL
-        "U10/data_7[0]" BEL "U10/data_7[1]" BEL "U10/data_7[2]" BEL
-        "U10/data_7[3]" BEL "U10/data_7[4]" BEL "U10/data_7[5]" BEL
-        "U10/data_7[6]" BEL "U10/data_7[7]" BEL "U10/data_6[0]" BEL
-        "U10/data_6[1]" BEL "U10/data_6[2]" BEL "U10/data_6[3]" BEL
-        "U10/data_6[4]" BEL "U10/data_6[5]" BEL "U10/data_6[6]" BEL
-        "U10/data_6[7]" BEL "U10/data_5[0]" BEL "U10/data_5[1]" BEL
-        "U10/data_5[2]" BEL "U10/data_5[3]" BEL "U10/data_5[4]" BEL
-        "U10/data_5[5]" BEL "U10/data_5[6]" BEL "U10/data_5[7]" BEL
-        "U10/data_4[0]" BEL "U10/data_4[1]" BEL "U10/data_4[2]" BEL
-        "U10/data_4[3]" BEL "U10/data_4[4]" BEL "U10/data_4[5]" BEL
-        "U10/data_4[6]" BEL "U10/data_4[7]" BEL "U10/data_3[0]" BEL
-        "U10/data_3[1]" BEL "U10/data_3[2]" BEL "U10/data_3[3]" BEL
-        "U10/data_3[4]" BEL "U10/data_3[5]" BEL "U10/data_3[6]" BEL
-        "U10/data_3[7]" BEL "U10/data_2[0]" BEL "U10/data_2[1]" BEL
-        "U10/data_2[2]" BEL "U10/data_2[3]" BEL "U10/data_2[4]" BEL
-        "U10/data_2[5]" BEL "U10/data_2[6]" BEL "U10/data_2[7]" BEL
-        "U10/data_1[0]" BEL "U10/data_1[1]" BEL "U10/data_1[2]" BEL
-        "U10/data_1[3]" BEL "U10/data_1[4]" BEL "U10/data_1[5]" BEL
-        "U10/data_1[6]" BEL "U10/data_1[7]" BEL "U10/data_0[0]" BEL
-        "U10/data_0[1]" BEL "U10/data_0[2]" BEL "U10/data_0[3]" BEL
-        "U10/data_0[4]" BEL "U10/data_0[5]" BEL "U10/data_0[6]" BEL
-        "U10/data_0[7]" BEL "U11/temp2[0]" BEL "U11/temp2[1]" BEL
-        "U11/temp2[2]" BEL "U11/temp2[3]" BEL "U11/temp2[4]" BEL
-        "U11/temp2[5]" BEL "U11/temp2[6]" BEL "U11/temp2[7]" BEL
-        "U11/temp1[0]" BEL "U11/temp1[1]" BEL "U11/temp1[2]" BEL
-        "U11/temp1[3]" BEL "U11/temp1[4]" BEL "U11/temp1[5]" BEL
-        "U11/temp1[6]" BEL "U11/temp1[7]" BEL "U11/addr_2_1[0]" BEL
-        "U11/addr_2_1[1]" BEL "U11/addr_2_1[2]" BEL "U11/addr_2_1[3]" BEL
-        "U11/index_1[0]" BEL "U11/index_1[1]" BEL "U11/index_1[2]" BEL
-        "U11/index_1[4]" BEL "U11/count_offs_p1[1]" BEL "U11/incr_p1[0]" BEL
-        "U11/incr_p1[1]" BEL "U11/incr_p1[2]" BEL "U11/incr_p1[3]" BEL
+        "U7/mutation_v2.un18_mutout.mutout_p1_ret_8" BEL
+        "U7/mutation_v2.un18_mutout.mutout_p1_ret_9" BEL "U7/mutout_p1_ret_16"
+        BEL "U7/mutout_p1_ret_17" BEL "U7/mutout_p1_ret_18" BEL
+        "U7/mutout_p1_ret_19" BEL
+        "U7/mutation_v2.un18_mutout.mutout_p1_ret_10" BEL
+        "U7/mutation_v2.un18_mutout.mutout_p1_ret_11" BEL
+        "U7/mutout_p1_ret_20" BEL "U7/mutout_p1_ret_21" BEL
+        "U7/mutout_p1_ret_22" BEL "U7/mutout_p1_ret_23" BEL "U8/rd" BEL
+        "U8/fitlim_rd" BEL "U9/data_out_1[15]" BEL "U9/data_out_1[14]" BEL
+        "U9/data_out_1[13]" BEL "U9/data_out_1[12]" BEL "U9/data_out_1[11]"
+        BEL "U9/data_out_1[10]" BEL "U9/data_out_1[9]" BEL "U9/data_out_1[8]"
+        BEL "U9/data_out_1[7]" BEL "U9/data_out_1[6]" BEL "U9/data_out_1[5]"
+        BEL "U9/data_out_1[4]" BEL "U9/data_out_1[3]" BEL "U9/data_out_1[2]"
+        BEL "U9/data_out_1[1]" BEL "U9/data_out_1[0]" BEL "U9/wr_r" BEL
+        "U10/data_out_1[7]" BEL "U10/data_out_1[6]" BEL "U10/data_out_1[5]"
+        BEL "U10/data_out_1[4]" BEL "U10/data_out_1[3]" BEL
+        "U10/data_out_1[2]" BEL "U10/data_out_1[1]" BEL "U10/data_out_1[0]"
+        BEL "U10/add_r[0]" BEL "U10/add_r[1]" BEL "U10/add_r[2]" BEL
+        "U10/add_r[3]" BEL "U10/wr_r" BEL "U10/data.I_2/RAM16X2S0/RAM16X1S0"
+        BEL "U10/data.I_2/RAM16X2S0/RAM16X1S1" BEL
+        "U10/data.I_2/RAM16X2S1/RAM16X1S0" BEL
+        "U10/data.I_2/RAM16X2S1/RAM16X1S1" BEL
+        "U10/data.I_1/RAM16X2S0/RAM16X1S0" BEL
+        "U10/data.I_1/RAM16X2S0/RAM16X1S1" BEL
+        "U10/data.I_1/RAM16X2S1/RAM16X1S0" BEL
+        "U10/data.I_1/RAM16X2S1/RAM16X1S1" BEL "U11/temp2[0]" BEL
+        "U11/temp2[1]" BEL "U11/temp2[2]" BEL "U11/temp2[3]" BEL
+        "U11/temp2[4]" BEL "U11/temp2[5]" BEL "U11/temp2[6]" BEL
+        "U11/temp2[7]" BEL "U11/temp1[0]" BEL "U11/temp1[1]" BEL
+        "U11/temp1[2]" BEL "U11/temp1[3]" BEL "U11/temp1[4]" BEL
+        "U11/temp1[5]" BEL "U11/temp1[6]" BEL "U11/temp1[7]" BEL
+        "U11/data_out_cross2[7]" BEL "U11/count_parents_p1[0]" BEL
+        "U11/count_parents_p1[1]" BEL "U11/count_parents_p1[2]" BEL
+        "U11/index[0]" BEL "U11/index[1]" BEL "U11/index[2]" BEL
+        "U11/index[3]" BEL "U11/data_out_cross1[4]" BEL
+        "U11/data_out_cross1[5]" BEL "U11/data_out_cross1[6]" BEL
+        "U11/data_out_cross1[7]" BEL "U11/count_sel_wr_p1[0]" BEL
+        "U11/count_sel_wr_p1[1]" BEL "U11/count_sel_wr_p1[2]" BEL
+        "U11/count_sel_wr_p1[3]" BEL "U11/data_out_cross2[0]" BEL
+        "U11/data_out_cross2[1]" BEL "U11/data_out_cross2[2]" BEL
+        "U11/data_out_cross2[3]" BEL "U11/data_out_cross2[4]" BEL
+        "U11/data_out_cross2[5]" BEL "U11/data_out_cross2[6]" BEL
+        "U11/incr_p1[0]" BEL "U11/incr_p1[1]" BEL "U11/incr_p1[2]" BEL
+        "U11/incr_p1[3]" BEL "U11/count_cross_offs_p1[0]" BEL
+        "U11/count_cross_offs_p1[1]" BEL "U11/count_cross_offs_p1[2]" BEL
+        "U11/count_sel_rd_p1[0]" BEL "U11/count_sel_rd_p1[1]" BEL
+        "U11/count_sel_rd_p1[2]" BEL "U11/count_sel_rd_p1[3]" BEL
         "U11/data_out_cross1[0]" BEL "U11/data_out_cross1[1]" BEL
         "U11/data_out_cross1[2]" BEL "U11/data_out_cross1[3]" BEL
-        "U11/data_out_cross1[4]" BEL "U11/data_out_cross1[5]" BEL
-        "U11/data_out_cross1[6]" BEL "U11/data_out_cross1[7]" BEL
-        "U11/count_offs_p1[0]" BEL "U11/data_out_cross2[4]" BEL
-        "U11/data_out_cross2[5]" BEL "U11/data_out_cross2[6]" BEL
-        "U11/data_out_cross2[7]" BEL "U11/count_parents_p1[0]" BEL
-        "U11/count_parents_p1[1]" BEL "U11/cnt_parents_1[0]" BEL
-        "U11/cnt_parents_1[3]" BEL "U11/count_sel_rd_p1[1]" BEL
-        "U11/count_sel_rd_p1[2]" BEL "U11/count_sel_rd_p1[3]" BEL
-        "U11/count_sel_wr_p1[0]" BEL "U11/count_sel_wr_p1[1]" BEL
-        "U11/count_sel_wr_p1[2]" BEL "U11/count_sel_wr_p1[3]" BEL
-        "U11/data_out_cross2[0]" BEL "U11/data_out_cross2[1]" BEL
-        "U11/data_out_cross2[2]" BEL "U11/data_out_cross2[3]" BEL
-        "U11/count_cross_offs_p1[0]" BEL "U11/count_cross_offs_p1[1]" BEL
-        "U11/count_cross_offs_p1[2]" BEL "U11/count_sel_rd_p1[0]" BEL
-        "U11/sreg[1]" BEL "U11/sreg[0]" BEL "U11/sreg[8]" BEL "U11/sreg[7]"
-        BEL "U11/sreg[6]" BEL "U11/sreg[5]" BEL "U11/sreg[4]" BEL
-        "U11/sreg[3]" BEL "U11/sreg[2]" BEL "U11/notify_cnt_p[7]" BEL
-        "U11/notify_cnt_p[6]" BEL "U11/notify_cnt_p[5]" BEL
-        "U11/notify_cnt_p[4]" BEL "U11/notify_cnt_p[2]" BEL
-        "U11/notify_cnt_p[0]" BEL "U11/ga_fin" BEL "U11/valid" BEL "U11/run3"
-        BEL "U11/mut_out" BEL "U11/run" BEL "U11/run1" BEL "U11/we1" BEL
-        "U11/decode" BEL "U11/sel_out" BEL "U11/term_out" BEL "U11/clear" BEL
+        "U11/cnt_parents_1[0]" BEL "U11/cnt_parents_1[1]" BEL
+        "U11/cnt_parents_1[2]" BEL "U11/count_offs_p1[0]" BEL
+        "U11/count_offs_p1[1]" BEL "U11/count_offs_p1[3]" BEL "U11/sreg[8]"
+        BEL "U11/sreg[7]" BEL "U11/sreg[6]" BEL "U11/sreg[5]" BEL
+        "U11/sreg[4]" BEL "U11/sreg[3]" BEL "U11/sreg[2]" BEL
+        "U11/notify_cnt_p[7]" BEL "U11/notify_cnt_p[4]" BEL
+        "U11/notify_cnt_p[3]" BEL "U11/notify_cnt_p[2]" BEL
+        "U11/notify_cnt_p[1]" BEL "U11/notify_cnt_p[0]" BEL "U11/decode" BEL
+        "U11/sel_out" BEL "U11/term_out" BEL "U11/ga_fin" BEL "U11/valid" BEL
+        "U11/run3" BEL "U11/mut_out" BEL "U11/run" BEL "U11/run1" BEL
         "U11/data_valid" BEL "U11/cross_out" BEL "U11/load" BEL "U11/run2" BEL
-        "U11/flag" BEL "U11/elite_null" BEL "U11/next_gene" BEL "U11/we2" BEL
-        "U11/term_rd_p1" BEL "U11/count_gen_p1[0]" BEL "U11/count_gen_p1[3]"
-        BEL "U11/count_gen_p1[4]" BEL "U11/count_gen_p1[6]" BEL
-        "U11/incr_ret_1" BEL "U11/incr_ret_3" BEL "U11/incr_ret_5" BEL
-        "U11/incr_ret_6" BEL "U11/incr_ret_7" BEL "U11/incr_ret_10" BEL
-        "U11/addr_1_ret" BEL "U11/addr_1_ret_1" BEL "U11/addr_1_ret_2" BEL
-        "U11/addr_1_ret_3" BEL "U11/addr_1_ret_4" BEL "U11/addr_1_ret_5" BEL
-        "U11/addr_1_ret_6" BEL "U11/addr_1_ret_7" BEL "U11/addr_1_ret_8" BEL
-        "U11/addr_1_ret_9" BEL "U11/addr_1_ret_10" BEL "U11/addr_1_ret_11" BEL
-        "U11/addr_1_ret_12" BEL "U11/addr_1_ret_13" BEL "U11/addr_1_ret_14"
-        BEL "U11/addr_1_ret_15" BEL "U11/addr_1_ret_16" BEL
-        "U11/addr_1_ret_17" BEL "U11/addr_1_ret_18" BEL "U11/addr_1_ret_19"
-        BEL "U11/addr_1_ret_20" BEL
-        "U11/loop1.un20_dummy_cnt_adapt_0.incr_ret_4" BEL
-        "U11/notify_cnt_p[3]" BEL "U11/notify_cnt_p[1]" BEL
-        "U11/notify_cnt_p_ret" BEL "U11/count_offs_p1_ret" BEL
-        "U11/count_offs_p1_ret_1" BEL "U11/count_offs_p1_ret_2" BEL
-        "U11/count_offs_p1_ret_3" BEL "U11/count_gen_p1[5]" BEL
-        "U11/count_gen_p1[2]" BEL "U11/count_gen_p1[1]" BEL
-        "U11/count_gen_p1_ret_1" BEL "U11/cnt_adapted_ret" BEL "U11/incr_ret"
-        BEL "U11/loop0.incr_ret" BEL "U11/loop1.incr_ret" BEL
-        "U11/index_1_ret" BEL "U11/index_1_ret_1" BEL "U11/index_1_ret_2" BEL
-        "U11/index_1_ret_3" BEL "U11/count_offs_p1_ret_0" BEL
-        "U11/count_offs_p1_ret_4" BEL "U11/count_offs_p1_ret_5" BEL
-        "U11/count_offs_p1_ret_6" BEL "U11/count_parents_p1_ret" BEL
+        "U11/flag" BEL "U11/elite_null" BEL "U11/next_gene" BEL
+        "U11/term_rd_p1" BEL "U11/count_gen_p1[0]" BEL "U11/count_gen_p1[1]"
+        BEL "U11/count_gen_p1[2]" BEL "U11/count_gen_p1[3]" BEL
+        "U11/count_gen_p1[4]" BEL "U11/count_gen_p1[5]" BEL
+        "U11/count_gen_p1[6]" BEL "U11/incr_ret_1" BEL "U11/incr_ret_2" BEL
+        "U11/incr_ret_3" BEL "U11/incr_ret_5" BEL "U11/incr_ret_6" BEL
+        "U11/incr_ret_7" BEL "U11/incr_ret_9" BEL "U11/incr_ret_10" BEL
+        "U11/incr_ret_11" BEL "U11/count_gen_p1_ret" BEL "U11/incr_ret_12" BEL
+        "U11/loop0.un7_dummy_cnt_adapt_0.incr_ret" BEL
+        "U11/loop1.un20_dummy_cnt_adapt_0.incr_ret" BEL "U11/incr_ret_13" BEL
+        "U11/loop0.un7_dummy_cnt_adapt_0.cnt_adapted_ret" BEL
+        "U11/loop1.un20_dummy_cnt_adapt_0.cnt_adapted_ret" BEL
+        "U11/cnt_adapted_ret" BEL "U11/add_r_ret" BEL "U11/add_r_ret_1" BEL
+        "U11/add_r_ret_2" BEL "U11/add_r_ret_3" BEL "U11/add_r_ret_4" BEL
+        "U11/add_r_ret_5" BEL "U11/add_r_ret_6" BEL "U11/add_r_ret_7" BEL
+        "U11/add_r_ret_8" BEL "U11/add_r_ret_9" BEL "U11/add_r_ret_10" BEL
+        "U11/add_r_ret_11" BEL "U11/add_r_ret_12" BEL "U11/add_r_ret_13" BEL
+        "U11/add_r_ret_14" BEL "U11/add_r_ret_15" BEL "U11/add_r_ret_16" BEL
+        "U11/add_r_ret_17" BEL "U11/add_r_ret_18" BEL "U11/add_r_ret_19" BEL
+        "U11/add_r_ret_20" BEL "U11/loop0.un7_dummy_cnt_adapt_0.incr_ret_4"
+        BEL "U11/loop1.un20_dummy_cnt_adapt_0.incr_ret_4" BEL "U11/sreg_ret"
+        BEL "U11/sreg_ret_1" BEL "U11/sreg_ret_2" BEL "U11/count_offs_p1_ret"
+        BEL "U11/count_offs_p1_ret_1" BEL "U11/count_offs_p1_ret_2" BEL
+        "U11/count_offs_p1_ret_3" BEL "U11/notify_cnt_p_ret" BEL
+        "U11/notify_cnt_p_ret_1" BEL "U11/notify_cnt_p_ret_2" BEL
+        "U11/sreg_ret_0" BEL "U11/sreg_ret_3" BEL "U11/sreg_ret_4" BEL
+        "U11/sreg_ret_5" BEL "U11/notify_cnt_p_ret_0" BEL
+        "U11/notify_cnt_p_ret_3" BEL "U11/notify_cnt_p_ret_4" BEL
+        "U11/notify_cnt_p_ret_5" BEL "U11/count_parents_p1_ret" BEL
         "U11/count_parents_p1_ret_1" BEL "U11/count_parents_p1_ret_2" BEL
-        "U11/count_parents_p1_ret_3" BEL "U11/count_parents_p1_ret_0" BEL
-        "U11/count_parents_p1_ret_4" BEL "U11/count_parents_p1_ret_5" BEL
-        "U11/count_parents_p1_ret_6" BEL "U11/notify_cnt_p_fast[4]" BEL
-        "U11/notify_cnt_p_4_rep1" BEL "U11/notify_cnt_p_fast[2]" BEL
-        "U11/notify_cnt_p_2_rep1" BEL
-        "U12/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
-        "U12/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
+        "U11/count_parents_p1_ret_3" BEL
         "U12/case1.iwidth.2.ilatency.0.idin.intern_0[2]" BEL
         "U12/case1.iwidth.3.ilatency.0.idin.intern_0[3]" BEL
         "U12/case1.iwidth.4.ilatency.0.idin.intern_0[4]" BEL
         "U12/case1.iwidth.5.ilatency.0.idin.intern_0[5]" BEL
         "U12/case1.iwidth.6.ilatency.0.idin.intern_0[6]" BEL
         "U12/case1.iwidth.7.ilatency.0.idin.intern_0[7]" BEL
-        "U13/case1.iwidth.7.ilatency.0.idin.intern_0[7]" BEL
+        "U12/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
+        "U12/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
         "U13/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
         "U13/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
         "U13/case1.iwidth.2.ilatency.0.idin.intern_0[2]" BEL
@@ -406,7 +352,7 @@ TIMEGRP clk = BEL "fit_limit_reach" BEL "ga_fin" BEL "run_ga" BEL
         "U13/case1.iwidth.4.ilatency.0.idin.intern_0[4]" BEL
         "U13/case1.iwidth.5.ilatency.0.idin.intern_0[5]" BEL
         "U13/case1.iwidth.6.ilatency.0.idin.intern_0[6]" BEL
-        "U14/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
+        "U13/case1.iwidth.7.ilatency.0.idin.intern_0[7]" BEL
         "U14/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
         "U14/case1.iwidth.2.ilatency.0.idin.intern_0[2]" BEL
         "U14/case1.iwidth.3.ilatency.0.idin.intern_0[3]" BEL
@@ -414,8 +360,7 @@ TIMEGRP clk = BEL "fit_limit_reach" BEL "ga_fin" BEL "run_ga" BEL
         "U14/case1.iwidth.5.ilatency.0.idin.intern_0[5]" BEL
         "U14/case1.iwidth.6.ilatency.0.idin.intern_0[6]" BEL
         "U14/case1.iwidth.7.ilatency.0.idin.intern_0[7]" BEL
-        "U15/case1.iwidth.6.ilatency.0.idin.intern_0[6]" BEL
-        "U15/case1.iwidth.7.ilatency.0.idin.intern_0[7]" BEL
+        "U14/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
         "U15/case1.iwidth.8.ilatency.0.idin.intern_0[8]" BEL
         "U15/case1.iwidth.9.ilatency.0.idin.intern_0[9]" BEL
         "U15/case1.iwidth.10.ilatency.0.idin.intern_0[10]" BEL
@@ -430,20 +375,38 @@ TIMEGRP clk = BEL "fit_limit_reach" BEL "ga_fin" BEL "run_ga" BEL
         "U15/case1.iwidth.3.ilatency.0.idin.intern_0[3]" BEL
         "U15/case1.iwidth.4.ilatency.0.idin.intern_0[4]" BEL
         "U15/case1.iwidth.5.ilatency.0.idin.intern_0[5]" BEL
-        "U16/case1.iwidth.5.ilatency.0.idin.intern_0[5]" BEL
+        "U15/case1.iwidth.6.ilatency.0.idin.intern_0[6]" BEL
+        "U15/case1.iwidth.7.ilatency.0.idin.intern_0[7]" BEL
         "U16/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
         "U16/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
         "U16/case1.iwidth.2.ilatency.0.idin.intern_0[2]" BEL
         "U16/case1.iwidth.3.ilatency.0.idin.intern_0[3]" BEL
         "U16/case1.iwidth.4.ilatency.0.idin.intern_0[4]" BEL
-        "U17/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
+        "U16/case1.iwidth.5.ilatency.0.idin.intern_0[5]" BEL
         "U17/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
         "U17/case1.iwidth.2.ilatency.0.idin.intern_0[2]" BEL
         "U17/case1.iwidth.3.ilatency.0.idin.intern_0[3]" BEL
+        "U17/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
         "U18/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
         "U18/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
         "U19/case1.iwidth.0.ilatency.0.idin.intern_0[0]" BEL
-        "U19/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL
-        "U19/case1.iwidth.0.ilatency.0.idin.mutout_p1_ret";
-TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH 50%;
+        "U19/case1.iwidth.1.ilatency.0.idin.intern_0[1]" BEL "U20/intern_0[0]"
+        BEL "U21/intern_0[0]" BEL "U22/intern_0[0]" BEL
+        "U9/data.I_1/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_1/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_1/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_1/RAM16X2S1/RAM16X1S1" BEL
+        "U9/data.I_2/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_2/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_2/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_2/RAM16X2S1/RAM16X1S1" BEL
+        "U9/data.I_5/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_5/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_5/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_5/RAM16X2S1/RAM16X1S1" BEL
+        "U9/data.I_6/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_6/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_6/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_6/RAM16X2S1/RAM16X1S1";
+TS_clk = PERIOD TIMEGRP "clk" 11 ns HIGH 50%;
 SCHEMATIC END;

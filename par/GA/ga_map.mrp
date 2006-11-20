@@ -10,32 +10,33 @@ D:/Designs/GA_eval/par/GA/GA.ise -intstyle ise -p xc3s1500-fg676-4 -timing
 Target Device  : xc3s1500
 Target Package : fg676
 Target Speed   : -4
-Mapper Version : spartan3 -- $Revision: 1.2 $
-Mapped Date    : Mon Nov 13 20:23:46 2006
+Mapper Version : spartan3 -- $Revision: 1.3 $
+Mapped Date    : Mon Nov 20 13:20:39 2006
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:         866 out of  26,624    3%
-  Number of 4 input LUTs:           1,219 out of  26,624    4%
+  Number of Slice Flip Flops:         681 out of  26,624    2%
+  Number of 4 input LUTs:           1,086 out of  26,624    4%
 Logic Distribution:
-  Number of occupied Slices:                          885 out of  13,312    6%
-    Number of Slices containing only related logic:     885 out of     885  100%
-    Number of Slices containing unrelated logic:          0 out of     885    0%
+  Number of occupied Slices:                          897 out of  13,312    6%
+    Number of Slices containing only related logic:     897 out of     897  100%
+    Number of Slices containing unrelated logic:          0 out of     897    0%
       *See NOTES below for an explanation of the effects of unrelated logic
-Total Number 4 input LUTs:          1,224 out of  26,624    4%
-  Number used as logic:              1,219
-  Number used as a route-thru:           5
+Total Number 4 input LUTs:          1,116 out of  26,624    4%
+  Number used as logic:              1,086
+  Number used as a route-thru:           6
+  Number used as 16x1 RAMs:             24
   Number of bonded IOBs:               59 out of     487   12%
     IOB Flip Flops:                    57
   Number of MULT18X18s:                1 out of      32    3%
   Number of GCLKs:                     1 out of       8   12%
 
-Total equivalent gate count for design:  19,617
+Total equivalent gate count for design:  20,185
 Additional JTAG gate count for IOBs:  2,832
-Peak Memory Usage:  223 MB
+Peak Memory Usage:  219 MB
 
 Table of Contents
 -----------------
@@ -58,8 +59,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:367 - The signal <U5/scalFitSum_0[8]_REPLICA_8> is
-   incomplete. The signal does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
@@ -81,7 +80,7 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   8 block(s) optimized away
+   9 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -96,6 +95,7 @@ GND 		U5/GND
 VCC 		U5/VCC
 VCC 		U6/VCC
 VCC 		U8/VCC
+GND 		U9/GND
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -124,48 +124,48 @@ Section 6 - IOB Properties
 | best_gene(6)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
 | best_gene(7)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
 | clk                                | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
-| crossMethod_i(0)                   | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| crossMethod_i(1)                   | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| crossMethod(0)                     | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| crossMethod(1)                     | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
 | fit_limit_reach                    | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
 | ga_fin                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
-| mutMethod_i(0)                     | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| mutMethod_i(1)                     | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| mutMethod(0)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| mutMethod(1)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
 | rst_n                              | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
-| run_ga_i                           | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(0)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(1)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(2)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(3)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(4)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(5)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(6)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(7)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(8)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(9)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(10)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(11)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(12)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(13)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(14)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_1_i(15)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_2_i(0)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_2_i(1)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_2_i(2)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_2_i(3)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_2_i(4)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_2_i(5)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_3_i(0)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_3_i(1)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_3_i(2)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_3_i(3)                        | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(0)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(1)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(2)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(3)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(4)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(5)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(6)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
-| seed_i(7)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| run_ga                             | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(0)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(1)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(2)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(3)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(4)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(5)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(6)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(7)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(0)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(1)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(2)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(3)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(4)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(5)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(6)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(7)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(8)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(9)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(10)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(11)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(12)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(13)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(14)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(15)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(0)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(1)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(2)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(3)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(4)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(5)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(0)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(1)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(2)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(3)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
 +------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs
@@ -192,7 +192,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                | Requested  | Actual     | Logic  | Absolute   |Number of  
                                             |            |            | Levels | Slack      |errors     
 ------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 13 ns HIGH  | 13.000ns   | 11.291ns   | 9      | 1.709ns    | 0         
+  TS_clk = PERIOD TIMEGRP "clk" 11 ns HIGH  | 11.000ns   | 10.159ns   | 6      | 0.841ns    | 0         
   50%                                       |            |            |        |            |           
 ------------------------------------------------------------------------------------------------------
 
@@ -206,7 +206,7 @@ Use the "-detail" map option to print out Configuration Strings
 Section 13 - Additional Device Resource Counts
 ----------------------------------------------
 Number of JTAG Gates for IOBs = 59
-Number of Equivalent Gates for Design = 19,617
+Number of Equivalent Gates for Design = 20,185
 Number of RPM Macros = 0
 Number of Hard Macros = 0
 DCIRESETs = 0
@@ -218,7 +218,7 @@ GCLKs = 1
 ICAPs = 0
 18X18 Multipliers = 1
 Block RAMs = 0
-Total Registers (Flops & Latches in Slices & IOBs) not driven by LUTs = 345
+Total Registers (Flops & Latches in Slices & IOBs) not driven by LUTs = 339
 IOB Dual-Rate Flops not driven by LUTs = 0
 IOB Dual-Rate Flops = 0
 IOB Slave Pads = 0
@@ -229,38 +229,38 @@ IOB Flip Flops not driven by LUTs = 57
 IOB Flip Flops = 57
 Unbonded IOBs = 0
 Bonded IOBs = 59
-XORs = 36
-CARRY_INITs = 62
+XORs = 37
+CARRY_INITs = 63
 CARRY_SKIPs = 0
-CARRY_MUXes = 113
+CARRY_MUXes = 115
 Shift Registers = 0
 Static Shift Registers = 0
 Dynamic Shift Registers = 0
 16x1 ROMs = 0
-16x1 RAMs = 0
+16x1 RAMs = 24
 32x1 RAMs = 0
 Dual Port RAMs = 0
-MUXFs = 146
-MULT_ANDs = 17
-4 input LUTs used as Route-Thrus = 5
-4 input LUTs = 1219
+MUXFs = 67
+MULT_ANDs = 18
+4 input LUTs used as Route-Thrus = 6
+4 input LUTs = 1086
 Slice Latches not driven by LUTs = 0
 Slice Latches = 0
-Slice Flip Flops not driven by LUTs = 288
-Slice Flip Flops = 866
-SliceMs = 16
-SliceLs = 869
-Slices = 885
+Slice Flip Flops not driven by LUTs = 282
+Slice Flip Flops = 681
+SliceMs = 12
+SliceLs = 885
+Slices = 897
 Multiplier(11,4) = 1
-F6 Muxes = 24
-F5 Muxes = 114
+F6 Muxes = 0
+F5 Muxes = 67
 F8 Muxes = 0
-F7 Muxes = 8
-Number of LUT signals with 4 loads = 26
-Number of LUT signals with 3 loads = 66
-Number of LUT signals with 2 loads = 126
-Number of LUT signals with 1 load = 901
-NGM Average fanout of LUT = 2.30
+F7 Muxes = 0
+Number of LUT signals with 4 loads = 25
+Number of LUT signals with 3 loads = 70
+Number of LUT signals with 2 loads = 112
+Number of LUT signals with 1 load = 824
+NGM Average fanout of LUT = 2.16
 NGM Maximum fanout of LUT = 149
-NGM Average fanin for LUT = 3.1256
-Number of LUT symbols = 1218
+NGM Average fanin for LUT = 3.1271
+Number of LUT symbols = 1086

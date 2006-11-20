@@ -16,6 +16,7 @@ offspring = zeros(nParents/2, genomlngt);
 children = zeros(nParents, num_towns-1);
 temp_offspring =zeros(nParents/2, num_towns-1);
 pool = [1 2 3 4 5 6 7];
+%pool=[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15];
 for i=1:2:nParents-1
     offs = offs+1;
     
@@ -64,14 +65,16 @@ for i=1:2:nParents-1
             non_existing_townsA=find(pool~=0);
             children(child_ind,free_indices1)=non_existing_townsA;
         end
-        pool = [1 2 3 4 5 6 7];
+         pool = [1 2 3 4 5 6 7];
+%pool=[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15];
         if setB~=0 
             existing_townsB=children(child_ind+1,find(children(child_ind+1,:)~=0));
             pool(existing_townsB)=0;
             non_existing_townsB=find(pool~=0);
             children(child_ind+1,free_indices2)=non_existing_townsB;
         end
-        pool = [1 2 3 4 5 6 7];    
+        pool = [1 2 3 4 5 6 7];
+%pool=[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15];
         % Decide which child is fitter
 %         temp_fitA =0;
 %         temp_fitB =0;

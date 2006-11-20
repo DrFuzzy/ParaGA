@@ -60,13 +60,13 @@ architecture bench of ga_tb is
     port (
       clk             : in  std_logic;
       rst_n           : in  std_logic;
-      run_ga_i        : in  std_logic;
-      seed_i          : in  std_logic_vector(genom_lngt -1 downto 0);  -- parallel seed input for rng 
-      seed_1_i        : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);  -- parallel seed input for rng1
-      seed_2_i        : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);  -- parallel seed input for rng2
-      seed_3_i        : in  std_logic_vector(scaling_factor_res-1 downto 0);  -- parallel seed input for rng3
-      crossMethod_i   : in  std_logic_vector(1 downto 0);
-      mutMethod_i     : in  std_logic_vector(1 downto 0);
+      run_ga        : in  std_logic;
+      seed         : in  std_logic_vector(genom_lngt -1 downto 0);  -- parallel seed input for rng 
+      seed_1        : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);  -- parallel seed input for rng1
+      seed_2        : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);  -- parallel seed input for rng2
+      seed_3        : in  std_logic_vector(scaling_factor_res-1 downto 0);  -- parallel seed input for rng3
+      crossMethod   : in  std_logic_vector(1 downto 0);
+      mutMethod     : in  std_logic_vector(1 downto 0);
       best_gene       : out std_logic_vector(genom_lngt -1 downto 0);
       best_fit        : out std_logic_vector(score_sz-1 downto 0);
       fit_limit_reach : out std_logic;
@@ -121,13 +121,13 @@ begin  -- ARCHITECTURE bench
     port map (
       clk             => clk,
       rst_n           => rst_n,
-      run_ga_i        => run_ga_i(0),
-      seed_i          => seed_i,
-      seed_1_i        => seed_1_i,
-      seed_2_i        => seed_2_i,
-      seed_3_i        => seed_3_i,
-      crossMethod_i   => crossMethod_i,
-      mutMethod_i     => mutMethod_i,
+      run_ga          => run_ga_i(0),
+      seed            => seed_i,
+      seed_1          => seed_1_i,
+      seed_2          => seed_2_i,
+      seed_3          => seed_3_i,
+      crossMethod     => crossMethod_i,
+      mutMethod       => mutMethod_i,
       best_gene       => best_gene,
       best_fit        => best_fit,
       fit_limit_reach => fit_limit_reach,

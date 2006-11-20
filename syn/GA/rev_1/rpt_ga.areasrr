@@ -11,9 +11,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     729                100 %                
+REGISTERS     738                100 %                
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga:	729 (30.54 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga:	738 (33.68 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -21,12 +22,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     1042               100 %                
-MUXCY                    117                100 %                
-XORCY                    39                 100 %                
+LUTS                     1082               100 %                
+MUXCY                    115                100 %                
+XORCY                    36                 100 %                
 MULT18x18/MULT18x18S     1                  100 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga:	1199 (50.23 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga:	1234 (56.32 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -47,21 +48,22 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     59                 100 %                
 =================================================
-Total IO PADS in the block ga:	59 (2.47 % Utilization)
+Total IO PADS in the block ga:	59 (2.69 % Utilization)
 
-----------------------------------------------------------------
-########   Utilization report for  cell:   control_v5   ########
-Instance path:   ga.control_v5                                  
-================================================================
+-------------------------------------------------------------
+########   Utilization report for  cell:   control   ########
+Instance path:   ga.control                                  
+=============================================================
 
 SEQUENTIAL ELEMENTS
 *******************
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     132                18.1 %               
+REGISTERS     159                21.5 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.control_v5:	132 (5.53 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.control:	159 (7.26 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -69,12 +71,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     293                28.1 %               
-MUXCY                    41                 35. %                
-XORCY                    10                 25.6 %               
+LUTS                     341                31.5 %               
+MUXCY                    38                 33. %                
+XORCY                    7                  19.4 %               
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.control_v5:	344 (14.41 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.control:	386 (17.62 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -85,7 +87,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block ga.control_v5:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block ga.control:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -95,21 +97,22 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block ga.control_v5:	0 (0.00 % Utilization)
+Total IO PADS in the block ga.control:	0 (0.00 % Utilization)
 
-------------------------------------------------------------------
-########   Utilization report for  cell:   crossover_v2   ########
-Instance path:   ga.crossover_v2                                  
-==================================================================
+---------------------------------------------------------------
+########   Utilization report for  cell:   crossover   ########
+Instance path:   ga.crossover                                  
+===============================================================
 
 SEQUENTIAL ELEMENTS
 *******************
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     41                 5.62 %               
+REGISTERS     46                 6.23 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.crossover_v2:	41 (1.72 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.crossover:	46 (2.10 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -117,12 +120,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     92                 8.83 %               
+LUTS                     72                 6.65 %               
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.crossover_v2:	92 (3.85 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.crossover:	72 (3.29 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -133,7 +136,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block ga.crossover_v2:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block ga.crossover:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -143,7 +146,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block ga.crossover_v2:	0 (0.00 % Utilization)
+Total IO PADS in the block ga.crossover:	0 (0.00 % Utilization)
 
 ------------------------------------------------------------------
 ########   Utilization report for  cell:   delay_regsZ0   ########
@@ -155,9 +158,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     1                  0.1370 %             
+REGISTERS     1                  0.1360 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0:	1 (0.04 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0:	1 (0.05 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -203,9 +207,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     1                  0.1370 %             
+REGISTERS     1                  0.1360 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0_1:	1 (0.04 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0_1:	1 (0.05 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -251,9 +256,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     1                  0.1370 %             
+REGISTERS     1                  0.1360 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0_2:	1 (0.04 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ0_2:	1 (0.05 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -299,9 +305,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     2                  0.2740 %             
+REGISTERS     2                  0.2710 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ1:	2 (0.08 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ1:	2 (0.09 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -347,9 +354,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     2                  0.2740 %             
+REGISTERS     2                  0.2710 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ1_1:	2 (0.08 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ1_1:	2 (0.09 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -395,9 +403,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     4                  0.5490 %             
+REGISTERS     4                  0.5420 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ2:	4 (0.17 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ2:	4 (0.18 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -443,9 +452,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     6                  0.8230 %             
+REGISTERS     6                  0.8130 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ3:	6 (0.25 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ3:	6 (0.27 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -491,9 +501,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     16                 2.19 %               
+REGISTERS     16                 2.17 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ4:	16 (0.67 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ4:	16 (0.73 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -539,9 +550,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     8                  1.1 %                
+REGISTERS     8                  1.08 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ5:	8 (0.34 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ5:	8 (0.37 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -587,9 +599,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     8                  1.1 %                
+REGISTERS     8                  1.08 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ5_1:	8 (0.34 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ5_1:	8 (0.37 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -635,9 +648,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     8                  1.1 %                
+REGISTERS     8                  1.08 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ5_2:	8 (0.34 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.delay_regsZ5_2:	8 (0.37 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -673,19 +687,20 @@ PADS     0                  0.0 %
 =================================================
 Total IO PADS in the block ga.delay_regsZ5_2:	0 (0.00 % Utilization)
 
------------------------------------------------------------------
-########   Utilization report for  cell:   fit_eval_ga   ########
-Instance path:   ga.fit_eval_ga                                  
-=================================================================
+------------------------------------------------------------------
+########   Utilization report for  cell:   fitness_eval   ########
+Instance path:   ga.fitness_eval                                  
+==================================================================
 
 SEQUENTIAL ELEMENTS
 *******************
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     295                40.5 %               
+REGISTERS     290                39.3 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.fit_eval_ga:	295 (12.36 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.fitness_eval:	290 (13.24 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -693,12 +708,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     326                31.3 %               
-MUXCY                    49                 41.9 %               
-XORCY                    19                 48.7 %               
+LUTS                     314                29. %                
+MUXCY                    49                 42.6 %               
+XORCY                    19                 52.8 %               
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.fit_eval_ga:	394 (16.51 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.fitness_eval:	382 (17.43 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -709,7 +724,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block ga.fit_eval_ga:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block ga.fitness_eval:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -719,21 +734,22 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block ga.fit_eval_ga:	0 (0.00 % Utilization)
+Total IO PADS in the block ga.fitness_eval:	0 (0.00 % Utilization)
 
---------------------------------------------------------------
-########   Utilization report for  cell:   fit_calc   ########
-Instance path:   fit_eval_ga.fit_calc                         
-==============================================================
+------------------------------------------------------------------
+########   Utilization report for  cell:   fitness_calc   ########
+Instance path:   fitness_eval.fitness_calc                        
+==================================================================
 
 SEQUENTIAL ELEMENTS
 *******************
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     15                 2.06 %               
+REGISTERS     9                  1.22 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block fit_eval_ga.fit_calc:	15 (0.63 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block fitness_eval.fitness_calc:	9 (0.41 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -741,12 +757,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     16                 1.54 %               
+LUTS                     9                  0.8320 %             
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block fit_eval_ga.fit_calc:	16 (0.67 % Utilization)
+Total COMBINATIONAL LOGIC in the block fitness_eval.fitness_calc:	9 (0.41 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -757,7 +773,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block fit_eval_ga.fit_calc:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block fitness_eval.fitness_calc:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -767,11 +783,11 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block fit_eval_ga.fit_calc:	0 (0.00 % Utilization)
+Total IO PADS in the block fitness_eval.fitness_calc:	0 (0.00 % Utilization)
 
 ---------------------------------------------------------------
 ########   Utilization report for  cell:   fix_elite   ########
-Instance path:   fit_eval_ga.fix_elite                         
+Instance path:   fitness_eval.fix_elite                        
 ===============================================================
 
 SEQUENTIAL ELEMENTS
@@ -779,9 +795,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     280                38.4 %               
+REGISTERS     281                38.1 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block fit_eval_ga.fix_elite:	280 (11.73 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block fitness_eval.fix_elite:	281 (12.83 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -789,12 +806,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     310                29.8 %               
-MUXCY                    49                 41.9 %               
-XORCY                    19                 48.7 %               
+LUTS                     305                28.2 %               
+MUXCY                    49                 42.6 %               
+XORCY                    19                 52.8 %               
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block fit_eval_ga.fix_elite:	378 (15.84 % Utilization)
+Total COMBINATIONAL LOGIC in the block fitness_eval.fix_elite:	373 (17.02 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -805,7 +822,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block fit_eval_ga.fix_elite:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block fitness_eval.fix_elite:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -815,21 +832,22 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block fit_eval_ga.fix_elite:	0 (0.00 % Utilization)
+Total IO PADS in the block fitness_eval.fix_elite:	0 (0.00 % Utilization)
 
------------------------------------------------------------------
-########   Utilization report for  cell:   mutation_v2   ########
-Instance path:   ga.mutation_v2                                  
-=================================================================
+--------------------------------------------------------------
+########   Utilization report for  cell:   mutation   ########
+Instance path:   ga.mutation                                  
+==============================================================
 
 SEQUENTIAL ELEMENTS
 *******************
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     24                 3.29 %               
+REGISTERS     43                 5.83 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.mutation_v2:	24 (1.01 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.mutation:	43 (1.96 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -837,12 +855,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     64                 6.14 %               
+LUTS                     64                 5.91 %               
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.mutation_v2:	64 (2.68 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.mutation:	64 (2.92 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -853,7 +871,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block ga.mutation_v2:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block ga.mutation:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -863,7 +881,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block ga.mutation_v2:	0 (0.00 % Utilization)
+Total IO PADS in the block ga.mutation:	0 (0.00 % Utilization)
 
 ---------------------------------------------------------
 ########   Utilization report for  cell:   obs   ########
@@ -875,9 +893,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     2                  0.2740 %             
+REGISTERS     2                  0.2710 %             
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.obs:	2 (0.08 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.obs:	2 (0.09 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -885,12 +904,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     2                  0.1920 %             
+LUTS                     2                  0.1850 %             
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.obs:	2 (0.08 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.obs:	2 (0.09 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -923,9 +942,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     8                  1.1 %                
+REGISTERS     8                  1.08 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.rngZ0:	8 (0.34 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ0:	8 (0.37 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -933,12 +953,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     26                 2.5 %                
+LUTS                     26                 2.4 %                
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.rngZ0:	26 (1.09 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.rngZ0:	26 (1.19 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -971,9 +991,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     12                 1.65 %               
+REGISTERS     12                 1.63 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.rngZ1:	12 (0.50 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ1:	12 (0.55 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -981,12 +1002,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     39                 3.74 %               
+LUTS                     39                 3.6 %                
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.rngZ1:	39 (1.63 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.rngZ1:	39 (1.78 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -1019,9 +1040,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     36                 4.94 %               
+REGISTERS     32                 4.34 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.rngZ2:	36 (1.51 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ2:	32 (1.46 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -1029,12 +1051,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     89                 8.54 %               
+LUTS                     104                9.61 %               
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.rngZ2:	89 (3.73 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.rngZ2:	104 (4.75 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -1067,9 +1089,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     16                 2.19 %               
+REGISTERS     16                 2.17 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.rngZ3:	16 (0.67 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.rngZ3:	16 (0.73 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -1077,12 +1100,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     53                 5.09 %               
+LUTS                     53                 4.9 %                
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.rngZ3:	53 (2.22 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.rngZ3:	53 (2.42 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -1115,9 +1138,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     51                 7. %                 
+REGISTERS     42                 5.69 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.selection:	51 (2.14 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.selection:	42 (1.92 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -1125,12 +1149,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     53                 5.09 %               
-MUXCY                    27                 23.1 %               
-XORCY                    10                 25.6 %               
+LUTS                     60                 5.55 %               
+MUXCY                    28                 24.3 %               
+XORCY                    10                 27.8 %               
 MULT18x18/MULT18x18S     1                  100 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.selection:	91 (3.81 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.selection:	99 (4.52 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -1153,19 +1177,20 @@ PADS     0                  0.0 %
 =================================================
 Total IO PADS in the block ga.selection:	0 (0.00 % Utilization)
 
---------------------------------------------------------------
-########   Utilization report for  cell:   spram1Z0   ########
-Instance path:   ga.spram1Z0                                  
-==============================================================
+-------------------------------------------------------------
+########   Utilization report for  cell:   spramZ0   ########
+Instance path:   ga.spramZ0                                  
+=============================================================
 
 SEQUENTIAL ELEMENTS
 *******************
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     13                 1.78 %               
+REGISTERS     13                 1.76 %               
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.spram1Z0:	13 (0.54 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.spramZ0:	13 (0.59 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -1173,12 +1198,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     1                  9.6e-002 %           
+LUTS                     1                  9.24e-002 %          
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.spram1Z0:	1 (0.04 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.spramZ0:	1 (0.05 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -1189,7 +1214,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block ga.spram1Z0:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block ga.spramZ0:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -1199,21 +1224,22 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block ga.spram1Z0:	0 (0.00 % Utilization)
+Total IO PADS in the block ga.spramZ0:	0 (0.00 % Utilization)
 
---------------------------------------------------------------
-########   Utilization report for  cell:   spram1Z1   ########
-Instance path:   ga.spram1Z1                                  
-==============================================================
+-------------------------------------------------------------
+########   Utilization report for  cell:   spramZ1   ########
+Instance path:   ga.spramZ1                                  
+=============================================================
 
 SEQUENTIAL ELEMENTS
 *******************
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     17                 2.33 %               
+REGISTERS     17                 2.3 %                
+LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block ga.spram1Z1:	17 (0.71 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ga.spramZ1:	17 (0.78 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -1221,12 +1247,12 @@ COMBINATIONAL LOGIC
 
 Name                     Total elements     Utilization     Notes
 -----------------------------------------------------------------
-LUTS                     1                  9.6e-002 %           
+LUTS                     1                  9.24e-002 %          
 MUXCY                    0                  0.0 %                
 XORCY                    0                  0.0 %                
 MULT18x18/MULT18x18S     0                  0.0 %                
 =================================================================
-Total COMBINATIONAL LOGIC in the block ga.spram1Z1:	1 (0.04 % Utilization)
+Total COMBINATIONAL LOGIC in the block ga.spramZ1:	1 (0.05 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -1237,7 +1263,7 @@ Name          Total elements     Number of bits     Utilization     Notes
 SYNC RAMS     0                  0                  0.0 %                
 ROMS          0                  0                  0.0 %                
 =========================================================================
-Total MEMORY ELEMENTS in the block ga.spram1Z1:	0 (0.00 % Utilization)
+Total MEMORY ELEMENTS in the block ga.spramZ1:	0 (0.00 % Utilization)
 
 
 IO PADS
@@ -1247,7 +1273,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     0                  0.0 %                
 =================================================
-Total IO PADS in the block ga.spram1Z1:	0 (0.00 % Utilization)
+Total IO PADS in the block ga.spramZ1:	0 (0.00 % Utilization)
 
 
 ##### END OF AREA REPORT #####]

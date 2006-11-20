@@ -112,7 +112,7 @@ package ga_pkg is
       rd            : out std_logic);
   end component fix_elite;
 
-  component fit_eval_ga is
+  component fitness_eval is
     generic (
       genom_lngt : positive;            -- townres*(num_towns-1)
       score_sz   : integer;
@@ -132,7 +132,7 @@ package ga_pkg is
       fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
       max_fit       : out std_logic_vector(score_sz-1 downto 0);
       rd            : out std_logic);
-  end component fit_eval_ga;
+  end component fitness_eval;
 
   component selection is
     generic(
@@ -305,7 +305,7 @@ package ga_pkg is
       mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  
   end component mutation_tsp;
 
-  component fit_calc_tsp is
+  component fitness_calc_tsp is
     generic(
       genom_lngt : positive;
       score_sz   : integer;
@@ -323,7 +323,7 @@ package ga_pkg is
       fit        : out std_logic_vector(score_sz-1 downto 0) := (others => '0');
       addr_rom   : out integer;
       ready_out  : out std_logic);
-  end component fit_calc_tsp;
+  end component fitness_calc_tsp;
 
   component fix_elite_tsp is
     generic(
@@ -366,7 +366,7 @@ package ga_pkg is
       data_out : out std_logic_vector((num_towns-1)*townres-1 downto 0)); 
   end component init_generation_rom;
 
-  component fit_eval_tsp is
+  component fitness_eval_tsp is
     generic (
       genom_lngt : positive;
       score_sz   : integer;
@@ -388,7 +388,7 @@ package ga_pkg is
       fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
       max_fit       : out std_logic_vector(score_sz-1 downto 0);
       rd            : out std_logic);
-  end component fit_eval_tsp;
+  end component fitness_eval_tsp;
 
   component control_tsp is
     generic(

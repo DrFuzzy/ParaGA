@@ -2,7 +2,7 @@
 -- Title      : GA
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : fit_eval.vhd
+-- File       : fitness_eval.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 12/10/06
@@ -34,7 +34,7 @@ use work.arith_pkg.all;
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity fit_eval is
+entity fitness_eval is
   generic (
     genom_lngt : positive;              -- townres*(num_towns-1)
     score_sz   : integer;
@@ -54,13 +54,13 @@ entity fit_eval is
     fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
     max_fit       : out std_logic_vector(score_sz-1 downto 0);
     rd            : out std_logic);
-end entity fit_eval;
+end entity fitness_eval;
 
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture str of fit_eval is
+architecture str of fitness_eval is
 
 -- SIGNAL DECLARATION
 -------------------------------------------------------------------------------
