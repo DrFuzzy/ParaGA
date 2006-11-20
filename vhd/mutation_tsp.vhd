@@ -6,7 +6,7 @@
 -- Author     : George Doyamis gdoyamis@ieee.org
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 08/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1d, Synplify Pro 8.5.1, ISE 8.1.03i
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
@@ -38,20 +38,20 @@ use work.arith_pkg.all;
 entity mutation_tsp is
   generic(
     genom_lngt : positive := 21;
-    mr         : integer  := 25;  -- mutation rate coded in mut_res bits --> 25/255 ~= 0,1  
-    mut_res    : integer  := 8;         -- mutation resolution
+    mr         : integer  := 25;
+    mut_res    : integer  := 8;
     num_towns  : integer  := 8
     );          
   port (
     clk       : in  std_logic;          -- clock
     rst_n     : in  std_logic;          -- reset (active low)
-    mutPoint  : in  std_logic_vector(2*log2(num_towns)-1 downto 0);  -- mutation points -- comes from rng2
+    mutPoint  : in  std_logic_vector(2*log2(num_towns)-1 downto 0);
     cont      : in  std_logic;
     flag      : in  std_logic;
-    rng       : in  std_logic_vector(mut_res-1 downto 0);  -- XORed with input Gene
+    rng       : in  std_logic_vector(mut_res-1 downto 0);
     inGene    : in  std_logic_vector(genom_lngt-1 downto 0);
-    rd        : out std_logic;          -- mutation ended for current parent
-    mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  -- produced mutation offspring (kid)
+    rd        : out std_logic;
+    mutOffspr : out std_logic_vector(genom_lngt-1 downto 0)); 
 end entity mutation_tsp;
 
 -------------------------------------------------------------------------------
@@ -100,11 +100,11 @@ begin
                 if i /= conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))-1 and i /= conv_integer(mutPoint(log2(num_towns)-1 downto 0)) then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((i+1)*log2(num_towns)-1 downto i*log2(num_towns));
                   exit;
-                -- i=mutPoint(1) and j=mutPoint(2)
+                  -- i=mutPoint(1) and j=mutPoint(2)
                 elsif i = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((num_towns-1)*log2(num_towns)-1 downto (num_towns-2)*log2(num_towns));
                   exit;
-                -- i=mutPoint(2) and j=mutPoint(1)
+                  -- i=mutPoint(2) and j=mutPoint(1)
                 elsif j = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) and i = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns)))-1 then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
                   exit;
@@ -120,11 +120,11 @@ begin
                 if i /= conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) and i /= conv_integer(mutPoint(log2(num_towns)-1 downto 0))-1 then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((i+1)*log2(num_towns)-1 downto i*log2(num_towns));
                   exit;
-                -- i=mutPoint(1) and j=mutPoint(2)
+                  -- i=mutPoint(1) and j=mutPoint(2)
                 elsif i = conv_integer(mutPoint(log2(num_towns)-1 downto 0))-1 and j = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
                   exit;
-                -- i=mutPoint(2) and j=mutPoint(1)
+                  -- i=mutPoint(2) and j=mutPoint(1)
                 elsif i = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((num_towns-1)*log2(num_towns)-1 downto (num_towns-2)*log2(num_towns));
                   exit;
@@ -140,11 +140,11 @@ begin
                 if i /= conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) and i /= conv_integer(mutPoint(log2(num_towns)-1 downto 0)) then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((i+1)*log2(num_towns)-1 downto i*log2(num_towns));
                   exit;
-                -- i=mutPoint(1) and j=mutPoint(2)
+                  -- i=mutPoint(1) and j=mutPoint(2)
                 elsif i = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) and j = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
                   exit;
-                -- i=mutPoint(2) and j=mutPoint(1)
+                  -- i=mutPoint(2) and j=mutPoint(1)
                 elsif j = conv_integer(mutPoint(log2(num_towns)-1 downto 0)) and i = conv_integer(mutPoint(2*log2(num_towns)-1 downto log2(num_towns))) then
                   mutout((i+1)*log2(num_towns)-1 downto i*log2(num_towns)) <= inGene((j+1)*log2(num_towns)-1 downto j*log2(num_towns));
                   exit;

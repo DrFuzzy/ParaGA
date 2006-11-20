@@ -2,11 +2,11 @@
 -- Title      : GA top
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : top.vhd
+-- File       : ga.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 16/5/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
@@ -49,10 +49,14 @@ entity ga is
     clk             : in  std_logic;
     rst_n           : in  std_logic;
     run_ga          : in  std_logic;
-    seed            : in  std_logic_vector(genom_lngt -1 downto 0);  -- parallel seed input for rng 
-    seed_1          : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);  -- parallel seed input for rng1
-    seed_2          : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);  -- parallel seed input for rng2
-    seed_3          : in  std_logic_vector(scaling_factor_res-1 downto 0);  -- parallel seed input for rng3
+    -- parallel seed input for rng
+    seed            : in  std_logic_vector(genom_lngt -1 downto 0);
+    seed_1          : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);
+    -- parallel seed input for rng1
+    seed_2          : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);
+    -- parallel seed input for rng2
+    seed_3          : in  std_logic_vector(scaling_factor_res-1 downto 0);
+    -- parallel seed input for rng3
     crossMethod     : in  std_logic_vector(1 downto 0);
     mutMethod       : in  std_logic_vector(1 downto 0);
     best_gene       : out std_logic_vector(genom_lngt -1 downto 0);
@@ -138,11 +142,11 @@ begin
       n => genom_lngt)                  -- length of pseudo-random sequence
     port map (
       clk          => clk,
-      rst_n        => rst_n,            -- from control v4
-      load         => load_dummy,       -- from control v4
-      seed         => seed_i,           -- from chip port
-      run          => run,              -- from control v4
-      parallel_out => inGene_fiteval_dummy(2*genom_lngt-1 downto genom_lngt));  -- to fitness evaluation
+      rst_n        => rst_n,
+      load         => load_dummy,
+      seed         => seed_i,
+      run          => run,
+      parallel_out => inGene_fiteval_dummy(2*genom_lngt-1 downto genom_lngt));  
 
 -------------------------------------------------------------------------------
 -- RNG1 : feeds mutation with a random mask and a random number of mut_res bits 
@@ -150,14 +154,14 @@ begin
 -------------------------------------------------------------------------------
   U1 : rng
     generic map (
-      n => genom_lngt+mut_res)           -- length of pseudo-random sequence
+      n => genom_lngt+mut_res)          -- length of pseudo-random sequence
     port map (
       clk          => clk,
       rst_n        => rst_n,
-      load         => load_dummy,        -- from control v4
-      seed         => seed_1_i,          -- from chip port
-      run          => run1,              -- from control v4
-      parallel_out => out_rng_1_dummy);  -- to mutation and crossover
+      load         => load_dummy,
+      seed         => seed_1_i,
+      run          => run1,
+      parallel_out => out_rng_1_dummy); 
 
 -------------------------------------------------------------------------------
 -- RNG2 : feeds crossover with crossover points and mutation with mutation 
@@ -165,14 +169,14 @@ begin
 -------------------------------------------------------------------------------   
   U2 : rng
     generic map (
-      n => 2*log2(genom_lngt))           -- length of pseudo-random sequence
+      n => 2*log2(genom_lngt))          -- length of pseudo-random sequence
     port map (
       clk          => clk,
       rst_n        => rst_n,
-      load         => load_dummy,        -- from control v4
-      seed         => seed_2_i,          -- from chip port
-      run          => run2,              -- from control v4
-      parallel_out => out_rng_2_dummy);  -- to crossover and mutation
+      load         => load_dummy,
+      seed         => seed_2_i,
+      run          => run2,
+      parallel_out => out_rng_2_dummy); 
 
 -------------------------------------------------------------------------------
 -- RNG3 : feeds selection block with random numbers
@@ -180,21 +184,21 @@ begin
   
   U3 : rng
     generic map (
-      n => scaling_factor_res)           -- length of pseudo-random sequence
+      n => scaling_factor_res)          -- length of pseudo-random sequence
     port map (
       clk          => clk,
       rst_n        => rst_n,
-      load         => load_dummy,        -- from control v4
-      seed         => seed_3_i,          -- from chip port
-      run          => run3,              -- from control v4
-      parallel_out => out_rng_3_dummy);  -- to selection
+      load         => load_dummy,
+      seed         => seed_3_i,
+      run          => run3,
+      parallel_out => out_rng_3_dummy);  
 
 -------------------------------------------------------------------------------
 -- Fitness Evaluation : evaluates genes and produces the gene's score, the sum 
 --                      of fitnesses, the maximum fitness, the elite children'
 --                      indexes and ready signals 
 ------------------------------------------------------------------------------- 
-  U4 : fit_eval_ga
+  U4 : fitness_eval
     generic map(
       genom_lngt => genom_lngt,
       score_sz   => score_sz,
@@ -206,14 +210,14 @@ begin
       decode        => decode_dummy,
       valid         => valid1,
       elite_null    => elite_null_dummy,
-      in_genes      => inGene_fiteval_dummy,  -- from mutation and rng
-      index         => index,                 -- from control
+      in_genes      => inGene_fiteval_dummy,
+      index         => index,
       count_parents => count_parents_dummy,
-      gene_score    => data_in_1_dummy,       -- to RAM 1
-      elite_offs    => elite_offs_dummy,      -- to control
-      fit_sum       => fit_sum_dummy,         -- to selection 
-      max_fit       => max_fit_dummy,         -- to observer 
-      rd            => fit_eval_rd_dummy);    -- to control_v4
+      gene_score    => data_in_1_dummy,
+      elite_offs    => elite_offs_dummy,
+      fit_sum       => fit_sum_dummy,
+      max_fit       => max_fit_dummy,
+      rd            => fit_eval_rd_dummy);   
 
 -------------------------------------------------------------------------------
 -- Selection : selects new parents for the next generation 
@@ -224,41 +228,41 @@ begin
       pop_sz             => pop_sz,
       elite              => elite,
       score_sz           => score_sz,
-      scaling_factor_res => scaling_factor_res)  --scaling factor resolution (bits)
+      scaling_factor_res => scaling_factor_res)  
     port map(
       clk        => clk,
       rst_n      => sel_out,
-      inGene     => data_out_1_dummy,   -- comes from ram1
-      rng        => out_rng_3_dummy,    -- comes from rng3
-      fitSum     => fit_sum_dummy,      -- from fitness evaluation 
-      data_valid => data_valid_dummy,   -- from control_v4 
+      inGene     => data_out_1_dummy,
+      rng        => out_rng_3_dummy,
+      fitSum     => fit_sum_dummy,
+      data_valid => data_valid_dummy,
       next_gene  => next_gene_dummy,
-      selParent  => data_in_2_dummy,    -- will be written in RAM 2
-      rd         => selection_rd_dummy);         -- to control_v4 
+      selParent  => data_in_2_dummy,
+      rd         => selection_rd_dummy);        
 
 -------------------------------------------------------------------------------
 -- Crossover : performs crossover algorithm on two selected parents
 -------------------------------------------------------------------------------           
-  U6 : crossover_v2
+  U6 : crossover
     generic map(
       genom_lngt => genom_lngt)
     port map(
       clk          => clk,
       rst_n        => rst_n,
       cont         => cross_out,
-      crossPoints  => out_rng_2_dummy,  -- from rng 2
-      crossMethod  => crossMethod_i,    -- from chip port
-      rng          => out_rng_1_dummy(genom_lngt+mut_res-1 downto mut_res),  -- from rng 1
-      inGene1      => inGene1_cross_dummy,  -- from control  
-      inGene2      => inGene2_cross_dummy,  -- from control 
-      rd           => cross_rd_dummy,   -- to control_v4 
-      crossOffspr1 => crossOffspr_dummy);   -- to mutation
+      crossPoints  => out_rng_2_dummy,
+      crossMethod  => crossMethod_i,
+      rng          => out_rng_1_dummy(genom_lngt+mut_res-1 downto mut_res),
+      inGene1      => inGene1_cross_dummy,
+      inGene2      => inGene2_cross_dummy,
+      rd           => cross_rd_dummy,
+      crossOffspr1 => crossOffspr_dummy);   
 
 -------------------------------------------------------------------------------
 -- Mutation : performs mutation algorithm on the "crossovered" offspring 
 --            according to mutrate (mr) (mutation probability)
 -------------------------------------------------------------------------------          
-  U7 : mutation_v2
+  U7 : mutation
     generic map(
       genom_lngt => genom_lngt,
       mr         => mr,
@@ -266,14 +270,14 @@ begin
     port map(
       clk       => clk,
       rst_n     => rst_n,
-      mutPoint  => out_rng_2_dummy(log2(genom_lngt)-1 downto 0),  -- from rng 2
-      mutMethod => mutMethod_i,         -- from chip port
+      mutPoint  => out_rng_2_dummy(log2(genom_lngt)-1 downto 0),
+      mutMethod => mutMethod_i,
       cont      => mut_out,
       flag      => flag_dummy,
-      rng       => out_rng_1_dummy,     -- from rng 1
-      inGene    => crossOffspr_dummy,   -- from crossover   
-      rd        => mutation_rd_dummy,   -- to control_v4
-      mutOffspr => inGene_fiteval_dummy(genom_lngt-1 downto 0));  -- to fitness evaluation
+      rng       => out_rng_1_dummy,
+      inGene    => crossOffspr_dummy,
+      rd        => mutation_rd_dummy,
+      mutOffspr => inGene_fiteval_dummy(genom_lngt-1 downto 0)); 
 
 -------------------------------------------------------------------------------
 -- Observer : Observes if the algorithm has met one of the desired specs
@@ -285,9 +289,9 @@ begin
     port map(
       clk       => clk,
       rst_n     => term_out,
-      max_fit   => max_fit_dummy,       -- from fitness evaluation
-      fitlim_rd => fitlim_rd_dummy(0),  -- to control_v4
-      rd        => obs_rd_dummy);  -- done signal in state machine (control_v4)    
+      max_fit   => max_fit_dummy,
+      fitlim_rd => fitlim_rd_dummy(0),
+      rd        => obs_rd_dummy);   
 
 -------------------------------------------------------------------------------
 -- RAM 1 : write/reads genes and their scores (concatenated)
@@ -300,8 +304,8 @@ begin
       clk      => clk,
       rst_n    => rst_n,
       add      => addr_1_vec,
-      data_in  => data_in_1_dummy,      -- from fitness evaluation
-      data_out => data_out_1_dummy,     -- to selection block
+      data_in  => data_in_1_dummy,
+      data_out => data_out_1_dummy,
       wr       => we1_dummy);
 
 -------------------------------------------------------------------------------
@@ -315,14 +319,14 @@ begin
       clk      => clk,
       rst_n    => rst_n,
       add      => addr_2_vec,
-      data_in  => data_in_2_dummy,      -- from selection
-      data_out => data_out_2_dummy,     -- to control_v4  
+      data_in  => data_in_2_dummy,
+      data_out => data_out_2_dummy,
       wr       => we2_dummy);
 
 -------------------------------------------------------------------------------
--- control_v5 : controls all the signals of the design
+-- control : controls all the signals of the design
 ------------------------------------------------------------------------------- 
-  U11 : control_v5
+  U11 : control
     generic map(
       genom_lngt => genom_lngt,
       max_gen    => max_gen,
@@ -351,10 +355,8 @@ begin
       we2_c           => we2_dummy,
       data_valid      => data_valid_dummy,
       next_gene       => next_gene_dummy,
-      --clear           => clear_dummy,
       ga_fin          => ga_fin_i(0),
       cross_out       => cross_out,
-      --eval              => eval,
       valid           => valid1,
       elite_null      => elite_null_dummy,
       index           => index,
@@ -363,7 +365,6 @@ begin
       decode          => decode_dummy,
       sel_out         => sel_out,
       term_out        => term_out,
-      --rng               => rng1,
       run             => run,
       run1            => run1,
       run2            => run2,

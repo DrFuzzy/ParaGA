@@ -2,11 +2,11 @@
 -- Title      : Genetic Algorithm Package
 -- Project    : Genetic Algorithm
 --------------------------------------------------------------------------------
--- File       : dhga_pkg.vhd
+-- File       : ga_pkg.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplicity 8.1, ISE 8.1
 -- Standard   : VHDL'93
 --------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ use work.arith_pkg.all;
 --------------------------------------------------------------------------------
 -- PACKAGE DECLARATION
 --------------------------------------------------------------------------------
-package dhga_pkg is
+package ga_pkg is
 
 -- CONSTANTS DECLARATION
 --------------------------------------------------------------------------------
@@ -57,8 +57,8 @@ package dhga_pkg is
       clk          : in  std_logic;     -- clock
       rst_n        : in  std_logic;     -- reset (active low)
       load         : in  std_logic;     -- load (active high)
-      seed         : in  std_logic_vector(n-1 downto 0);  -- parallel seed input
-      run          : in  std_logic;     -- if 1 run else output=high-Z
+      seed         : in  std_logic_vector(n-1 downto 0);
+      run          : in  std_logic;
       parallel_out : out std_logic_vector(n-1 downto 0));  -- parallel data out
   end component rng;
 
@@ -69,8 +69,8 @@ package dhga_pkg is
       clk          : in  std_logic;     -- clock
       rst_n        : in  std_logic;     -- reset (active low)
       load         : in  std_logic;     -- load (active high)
-      seed         : in  std_logic_vector(n-1 downto 0);  -- parallel seed input
-      run          : in  std_logic;     -- if 1 run else output=high-Z
+      seed         : in  std_logic_vector(n-1 downto 0);
+      run          : in  std_logic;
       parallel_out : out std_logic_vector(n-1 downto 0));  -- parallel data out
   end component rng_128;
 
@@ -121,16 +121,16 @@ package dhga_pkg is
     port (
       clk           : in  std_logic;
       rst_n         : in  std_logic;
-      decode        : in  std_logic;  -- evaluation after rng_s or after mut_s
-      valid         : in  std_logic;  -- if H compute else if L don't                                         -- if H 
-      in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);  -- both mutation or rng fill evaluation block      
+      decode        : in  std_logic;
+      valid         : in  std_logic;
+      in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);
       elite_null    : in  std_logic;
-      index         : in  integer;      -- the address of the current gene
-      count_parents : in  integer;      -- how many parents have been selected
-      gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- ingene and its fitness value
-      elite_offs    : out int_array(0 to elite-1);  -- addresses of elite children (integer)
-      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
-      max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- maximum fitness
+      index         : in  integer;
+      count_parents : in  integer;
+      gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);
+      elite_offs    : out int_array(0 to elite-1);
+      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
+      max_fit       : out std_logic_vector(score_sz-1 downto 0);
       rd            : out std_logic);
   end component fit_eval_ga;
 
@@ -140,35 +140,35 @@ package dhga_pkg is
       pop_sz             : positive;
       elite              : integer;
       score_sz           : integer;
-      scaling_factor_res : integer);    -- scaling factor resolution (bits) 
+      scaling_factor_res : integer);   
     port (
       clk        : in  std_logic;       -- clock
       rst_n      : in  std_logic;       -- reset (active low)
-      inGene     : in  std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- gene and its fitness value concatenated
-      rng        : in  std_logic_vector(scaling_factor_res-1 downto 0);  -- random number for scaling down the fitSum 
-      fitSum     : in  std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
+      inGene     : in  std_logic_vector(genom_lngt+score_sz-1 downto 0);
+      rng        : in  std_logic_vector(scaling_factor_res-1 downto 0);
+      fitSum     : in  std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
       data_valid : in  std_logic;
       next_gene  : in  std_logic;
       selParent  : out std_logic_vector(genom_lngt-1 downto 0);
-      rd         : out std_logic);  -- ready signal: parent is on pin selparent
+      rd         : out std_logic); 
   end component selection;
 
   component mutation is
     generic(
       genom_lngt : positive;
       mr         : integer;
-      mut_res    : integer);            -- mutation resolution          
+      mut_res    : integer);                
     port (
       clk       : in  std_logic;        -- clock
       rst_n     : in  std_logic;        -- reset (active low)
-      mutPoint  : in  std_logic_vector(log2(genom_lngt)-1 downto 0);  -- mutation point (for 1point mutation) comes from rng2
+      mutPoint  : in  std_logic_vector(log2(genom_lngt)-1 downto 0);
       mutMethod : in  std_logic_vector(1 downto 0);
       cont      : in  std_logic;
       flag      : in  std_logic;
-      rng       : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);  -- XORed with input Gene
+      rng       : in  std_logic_vector(genom_lngt+mut_res-1 downto 0);
       inGene    : in  std_logic_vector(genom_lngt-1 downto 0);
-      rd        : out std_logic;        -- mutation ended for current parent
-      mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  -- produced mutation offspring (kid)
+      rd        : out std_logic;
+      mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  
   end component mutation;
 
   component crossover is
@@ -178,12 +178,12 @@ package dhga_pkg is
       clk          : in  std_logic;     -- clock
       rst_n        : in  std_logic;     -- reset (active low)
       cont         : in  std_logic;
-      crossPoints  : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);  -- Xover 1st/2nd point from rng2
+      crossPoints  : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);
       crossMethod  : in  std_logic_vector(1 downto 0);
-      rng          : in  std_logic_vector(genom_lngt-1 downto 0);  -- used for uniform crossover 
+      rng          : in  std_logic_vector(genom_lngt-1 downto 0);
       inGene1      : in  std_logic_vector(genom_lngt-1 downto 0);
       inGene2      : in  std_logic_vector(genom_lngt-1 downto 0);
-      rd           : out std_logic;  -- Xover ended for current 2 parents having produced 1 offsping
+      rd           : out std_logic;
       crossOffspr1 : out std_logic_vector(genom_lngt-1 downto 0));
   end component crossover;
 
@@ -194,9 +194,9 @@ package dhga_pkg is
     port (
       clk      : in  std_logic;         -- write clock
       rst_n    : in  std_logic;         -- system reset
-      add      : in  std_logic_vector(add_width downto 0);  -- address (integer instead of std_vec)
-      data_in  : in  std_logic_vector(data_width -1 downto 0);  -- input data (width ram1: genom_lngt+score_sz, width ram2: genom_lngt)
-      data_out : out std_logic_vector(data_width -1 downto 0);  -- output data (width ram1: genom_lngt+score_sz, width ram2: genom_lngt)
+      add      : in  std_logic_vector(add_width downto 0);
+      data_in  : in  std_logic_vector(data_width -1 downto 0);
+      data_out : out std_logic_vector(data_width -1 downto 0);
       wr       : in  std_logic);        -- read/write enable
   end component spram;
 
@@ -206,8 +206,8 @@ package dhga_pkg is
       fit_limit : positive);  
     port (clk       : in  std_logic;    -- clock
           rst_n     : in  std_logic;    -- reset (active low)
-          max_fit   : in  std_logic_vector(score_sz-1 downto 0);  -- produced by fit_eval block
-          fitlim_rd : out std_logic;  -- fitness limit reached (done signal in state machine)
+          max_fit   : in  std_logic_vector(score_sz-1 downto 0);
+          fitlim_rd : out std_logic;
           rd        : out std_logic);
   end component obs;
 
@@ -255,7 +255,7 @@ package dhga_pkg is
       run2            : out std_logic;
       run3            : out std_logic;
       load            : out std_logic);
-  end component control_v5;
+  end component control;
 
   component delay_regs is
     generic (
@@ -280,30 +280,29 @@ package dhga_pkg is
       clk          : in  std_logic;     -- clock
       rst_n        : in  std_logic;     -- reset (active low)
       cont         : in  std_logic;
-      crossPoints  : in  std_logic_vector(2*log2(num_towns)-1 downto 0);  -- Xover 1st/2nd point from rng2
+      crossPoints  : in  std_logic_vector(2*log2(num_towns)-1 downto 0);
       inGene1      : in  std_logic_vector(genom_lngt-1 downto 0);
       inGene2      : in  std_logic_vector(genom_lngt-1 downto 0);
-      --pool        : in  int_array(1 to num_towns-1);
-      rd           : out std_logic;  -- Xover ended for current 2 parents having produced 1 offsping
+      rd           : out std_logic;
       crossOffspr1 : out std_logic_vector(genom_lngt-1 downto 0));
   end component crossover_TSP;
 
   component mutation_tsp is
     generic(
       genom_lngt : positive;
-      mr         : integer;  -- mutation rate coded in mut_res bits --> 25/255 ~= 0,1  
-      mut_res    : integer;             -- mutation resolution
+      mr         : integer;
+      mut_res    : integer;
       num_towns  : integer);          
     port (
       clk       : in  std_logic;        -- clock
       rst_n     : in  std_logic;        -- reset (active low)
-      mutPoint  : in  std_logic_vector(2*log2(num_towns)-1 downto 0);  -- mutation points -- comes from rng2
+      mutPoint  : in  std_logic_vector(2*log2(num_towns)-1 downto 0);
       cont      : in  std_logic;
       flag      : in  std_logic;
-      rng       : in  std_logic_vector(mut_res-1 downto 0);  -- XORed with input Gene
+      rng       : in  std_logic_vector(mut_res-1 downto 0);
       inGene    : in  std_logic_vector(genom_lngt-1 downto 0);
-      rd        : out std_logic;        -- mutation ended for current parent
-      mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  -- produced mutation offspring (kid)
+      rd        : out std_logic;
+      mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  
   end component mutation_tsp;
 
   component fit_calc_tsp is
@@ -316,12 +315,12 @@ package dhga_pkg is
     port (
       clk        : in  std_logic;       -- clock
       rst_n      : in  std_logic;       -- reset (active low)
-      decode     : in  std_logic;  -- evaluation after rng_s or after mut_s
-      valid      : in  std_logic;  -- if H compute else if L don't                                         -- if H 
-      in_genes   : in  std_logic_vector(2*genom_lngt-1 downto 0);  -- both mutation or rng fill evaluation block  
-      data_in    : in  std_logic_vector(2*townres-1 downto 0);  -- importing ROM data
-      gene_score : out std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- ingene and its fitness value
-      fit        : out std_logic_vector(score_sz-1 downto 0) := (others => '0');  -- fitness of current gene ()
+      decode     : in  std_logic;
+      valid      : in  std_logic;
+      in_genes   : in  std_logic_vector(2*genom_lngt-1 downto 0);
+      data_in    : in  std_logic_vector(2*townres-1 downto 0);
+      gene_score : out std_logic_vector(genom_lngt+score_sz-1 downto 0);
+      fit        : out std_logic_vector(score_sz-1 downto 0) := (others => '0');
       addr_rom   : out integer;
       ready_out  : out std_logic);
   end component fit_calc_tsp;
@@ -335,16 +334,16 @@ package dhga_pkg is
     port (
       clk           : in  std_logic;    -- clock
       rst_n         : in  std_logic;    -- reset (active low)
-      decode        : in  std_logic;  -- evaluation after rng_s or after mut_s
-      valid         : in  std_logic;    -- if H compute else if L don't 
-      elite_null    : in  std_logic;    -- if H 
-      index         : in  integer;      -- the address of the current gene
+      decode        : in  std_logic;
+      valid         : in  std_logic;
+      elite_null    : in  std_logic;
+      index         : in  integer;
       fit           : in  std_logic_vector(score_sz-1 downto 0);
-      count_parents : in  integer;      -- how many parents have been selected
+      count_parents : in  integer;
       ready_in      : in  std_logic;
-      elite_offs    : out int_array(0 to elite-1);  -- addresses of elite children (integer)
-      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
-      max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- maximum fitness
+      elite_offs    : out int_array(0 to elite-1);
+      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
+      max_fit       : out std_logic_vector(score_sz-1 downto 0);
       rd            : out std_logic);
   end component fix_elite_tsp;
 
@@ -369,7 +368,7 @@ package dhga_pkg is
 
   component fit_eval_tsp is
     generic (
-      genom_lngt : positive;            -- townres*(num_towns-1)
+      genom_lngt : positive;
       score_sz   : integer;
       pop_sz     : integer;
       elite      : integer;
@@ -378,18 +377,16 @@ package dhga_pkg is
     port (
       clk           : in  std_logic;
       rst_n         : in  std_logic;
-      decode        : in  std_logic;  -- evaluation after rng_s or after mut_s
-      valid         : in  std_logic;  -- if H compute else if L don't compute
-      -- both mutation or rng fill evaluation block
+      decode        : in  std_logic;
+      valid         : in  std_logic;
       in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);
-      --
       elite_null    : in  std_logic;
-      index         : in  integer;      -- the address of the current gene
-      count_parents : in  integer;      -- how many parents have been selected
-      gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- ingene and its fitness value
-      elite_offs    : out int_array(0 to elite-1);  -- addresses of elite children (integer)
-      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
-      max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- maximum fitness
+      index         : in  integer;
+      count_parents : in  integer;
+      gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);
+      elite_offs    : out int_array(0 to elite-1);
+      fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
+      max_fit       : out std_logic_vector(score_sz-1 downto 0);
       rd            : out std_logic);
   end component fit_eval_tsp;
 
@@ -408,8 +405,8 @@ package dhga_pkg is
       cross_rd        : in  std_logic;
       mut_rd          : in  std_logic;
       run_ga          : in  std_logic;
-      elite_offs      : in  int_array(0 to elite-1);  -- addresses of elite children (integer) 
-      data_in_ram2    : in  std_logic_vector(genom_lngt-1 downto 0);  -- Parent from RAM 2
+      elite_offs      : in  int_array(0 to elite-1);
+      data_in_ram2    : in  std_logic_vector(genom_lngt-1 downto 0);
       data_out_cross1 : out std_logic_vector(genom_lngt-1 downto 0);
       data_out_cross2 : out std_logic_vector(genom_lngt-1 downto 0);
       addr_1_c        : out integer;
@@ -423,7 +420,7 @@ package dhga_pkg is
       cross_out       : out std_logic;
       valid           : out std_logic;
       elite_null      : out std_logic;
-      index           : out integer range 0 to pop_sz+1;  -- memory address of the current gene 
+      index           : out integer range 0 to pop_sz+1;
       mut_out         : out std_logic;
       flag            : out std_logic;
       decode          : out std_logic;
@@ -435,11 +432,11 @@ package dhga_pkg is
       load            : out std_logic);
   end component control_tsp;
 
-end package dhga_pkg;
+end package ga_pkg;
 
 --------------------------------------------------------------------------------
 -- PACKAGE BODY DECLARATION
 --------------------------------------------------------------------------------
-package body dhga_pkg is
+package body ga_pkg is
 -- empty
-end package body dhga_pkg;
+end package body ga_pkg;

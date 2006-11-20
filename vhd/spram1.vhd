@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_signed.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
@@ -51,6 +51,7 @@ entity spram is
     -- output data (width ram1: genomLngt+scoreSz, width ram2: genomLngt)
     data_out : out std_logic_vector(data_width -1 downto 0);
     --
+    -- write/read enable (1: write, 0: read)
     wr       : in  std_logic);          -- read/write enable
 end entity spram;
 
@@ -76,10 +77,10 @@ begin  -- spram
     if rst_n = '0' then
       data_out <= (others => 'Z');
     elsif rising_edge(clk) then
-      if wr_r = '1' then                        -- wr=1 means write ram
+      if wr_r = '1' then
         data(conv_integer(add_r)) <= data_in;
       else
-        data_out <= data(conv_integer(add_r));  -- wr=0 means read ram
+        data_out <= data(conv_integer(add_r));
       end if;
     end if;
   end process sp_ram;

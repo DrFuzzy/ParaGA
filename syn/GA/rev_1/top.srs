@@ -20,8 +20,8 @@
 #CUR:"C:\\EDA\\Synplicity_81\\fpga_81\\lib\\vhd\\signed.vhd":953647364
 #CUR:"C:\\EDA\\Synplicity_81\\fpga_81\\lib\\vhd\\arith.vhd":1035374678
 #CUR:"C:\\EDA\\Synplicity_81\\fpga_81\\lib\\vhd\\arith.vhd":1035374678
-#CUR:"D:\\Designs\\GA_eval\\vhd\\dhga_pkg.vhd":1163620098
-#CUR:"D:\\Designs\\GA_eval\\vhd\\dhga_pkg.vhd":1163620098
+#CUR:"D:\\Designs\\GA_eval\\vhd\\ga_pkg.vhd":1163620098
+#CUR:"D:\\Designs\\GA_eval\\vhd\\ga_pkg.vhd":1163620098
 #CUR:"D:\\Designs\\GA_eval\\vhd\\delay_regs.vhd":1163594739
 #CUR:"D:\\Designs\\GA_eval\\vhd\\delay_regs.vhd":1163594739
 #CUR:"D:\\Designs\\GA_eval\\vhd\\control_v5.vhd":1163614407
@@ -62,7 +62,7 @@ f "C:\EDA\Synplicity_81\fpga_81\lib\vhd\signed.vhd"; # file 3
 af .is_vhdl 1;
 f "C:\EDA\Synplicity_81\fpga_81\lib\vhd\arith.vhd"; # file 4
 af .is_vhdl 1;
-f "D:\Designs\GA_eval\vhd\dhga_pkg.vhd"; # file 5
+f "D:\Designs\GA_eval\vhd\ga_pkg.vhd"; # file 5
 af .is_vhdl 1;
 f "D:\Designs\GA_eval\vhd\delay_regs.vhd"; # file 6
 af .is_vhdl 1;

@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
--- Title      : GA
+-- Title      : GA Testbench for TSP
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
 -- File       : ga_tsp_tb.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 25/09/06
--- Last update: 2006-11-02
+-- Last update: 20/11/06
 -- Platform   : Modelsim, Synplicity, ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ library modelsim_lib;
 use modelsim_lib.util.all;
 
 use std.textio.all;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.rom_pkg.all;
 use work.arith_pkg.all;
 
@@ -98,7 +98,7 @@ architecture bench of ga_tsp_tb is
   signal spy_max_fit         : std_logic_vector(16-1 downto 0);
 
   -- simulation period
-  signal period : time := 13 ns;        -- 100 MHz
+  signal period : time := 13 ns;        -- 78 MHz
   
   
 begin  -- ARCHITECTURE bench
@@ -151,7 +151,7 @@ begin  -- ARCHITECTURE bench
     variable seed3     : integer;
 
     -- file where the input stimuli are stored
-    file ip_vec_ga_tsp : text is "..\sim\ip_vec_ga_tsp.vec";  -- Change Matlab file name too....(3/10/2006)
+    file ip_vec_ga_tsp : text is "..\sim\ip_vec_ga_tsp.vec";
     
   begin
     
@@ -196,7 +196,7 @@ begin  -- ARCHITECTURE bench
     variable good_number : boolean;
 
     -- file where the output stimuli are stored
-    file op_vec_ga_tsp : text is "..\sim\op_vec_ga_tsp.vec";  -- Change Matlab file name too....(3/10/2006)
+    file op_vec_ga_tsp : text is "..\sim\op_vec_ga_tsp.vec";
     
   begin
 

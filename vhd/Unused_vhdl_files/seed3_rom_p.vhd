@@ -24,7 +24,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 library work;
 use work.arith_pkg.all;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.rom_pkg.all;
 
 -------------------------------------------------------------------------------

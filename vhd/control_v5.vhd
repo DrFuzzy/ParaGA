@@ -6,8 +6,8 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 06/04/06
--- Last update: 16/11/06
--- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
+-- Last update: 20/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, Xilinx ISE 8.1
 -- Standard   : VHDL'93 
 -------------------------------------------------------------------------------
 -- Description: This block implements the control module for the GA
@@ -17,7 +17,7 @@
 -- revisions  :
 -- date        version  author  description
 -- 04/06/06    1.1      kdelip  created
--- 16/06/06    1.2      kdelip  updated   
+-- 20/11/06    1.2      kdelip  updated   
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -29,13 +29,13 @@ use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity control_v5 is
+entity control is
   generic(
     genom_lngt : integer;
     max_gen    : positive;
@@ -79,17 +79,16 @@ entity control_v5 is
     run2            : out std_logic;
     run3            : out std_logic;
     load            : out std_logic);
-end control_v5;
+end control;
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture rtl of control_v5 is
+architecture rtl of control is
   type type_sreg is (clear_ram_s, cross_s, done_s, fill_ram_s, fit_eval_s, mut_s, sel_s,
                      read_write_ram_1_s, read_write_ram_2_s);
 
   signal sreg, next_sreg     : type_sreg;
-  --signal mut_rd_p1           : std_logic;
   signal term_rd_p1          : std_logic;
   signal data_out_cross1_p1  : std_logic_vector(genom_lngt-1 downto 0);
   signal data_out_cross2_p1  : std_logic_vector(genom_lngt-1 downto 0);
@@ -118,14 +117,9 @@ architecture rtl of control_v5 is
   -- reg'd outputs
   signal data_out_cross1_c   : std_logic_vector(genom_lngt-1 downto 0);
   signal data_out_cross2_c   : std_logic_vector(genom_lngt-1 downto 0);
-  --signal addr_1_c            : integer;
-  --signal addr_2_c            : integer;
   signal cnt_parents_c       : integer;
-  --signal we1_c               : std_logic;
-  --signal we2_c               : std_logic;
   signal data_valid_c        : std_logic;
   signal next_gene_c         : std_logic;
-  --signal clear_c             : std_logic;
   signal ga_fin_c            : std_logic;
   signal cross_out_c         : std_logic;
   signal valid_c             : std_logic;
@@ -158,7 +152,6 @@ begin
     if (rst_n = '0') then
       notify_cnt_p        <= 0;
       term_rd_p1          <= '0';
-      --mut_rd_p1           <= '0';
       count_offs_p1       <= 0;
       count_parents_p1    <= 0;
       count_sel_wr_p1     <= 0;
@@ -169,7 +162,6 @@ begin
     elsif rising_edge(clk) then
       notify_cnt_p        <= notify_cnt;
       term_rd_p1          <= term_rd;
-      --mut_rd_p1           <= mut_rd;
       count_offs_p1       <= count_offs;
       count_parents_p1    <= count_parents;
       count_sel_wr_p1     <= count_sel_wr;
@@ -270,7 +262,6 @@ begin
           when '1' =>
             next_sreg    <= fill_ram_s;
             run_c        <= '1';
-            --clear_c      <= '1';
             load_c       <= '1';
             elite_null_c <= '1';
             addr_1_c     <= 0;
@@ -279,7 +270,6 @@ begin
           when '0' =>
             next_sreg    <= clear_ram_s;
             run_c        <= '0';
-            --clear_c      <= '0';
             load_c       <= '0';
             elite_null_c <= '0';
             addr_1_c     <= elite_offs(0);
@@ -307,7 +297,6 @@ begin
         count_gen          <= count_gen_p1;
         -- Outputs 
         run_c              <= '0';
-        ----clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';
         sel_out_c          <= '0';
@@ -344,7 +333,6 @@ begin
         count_gen          <= count_gen_p1;
         -- Outputs 
         run_c              <= '0';
-        --clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';  -- doesnot calculate but holds latest results
         sel_out_c          <= '0';
@@ -428,7 +416,6 @@ begin
         count_sel_wr       <= count_sel_wr_p1;
         count_gen          <= count_gen_p1;
         -- Outputs 
-        --clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';
         run1_c             <= '0';
@@ -599,7 +586,6 @@ begin
         count_offs         <= count_offs_p1;
         -- Outputs 
         run_c              <= '0';
-        --clear_c            <= '0';
         cross_out_c        <= '0';
         mut_out_c          <= '0';
         sel_out_c          <= '1';
@@ -644,7 +630,6 @@ begin
         count_sel_rd    <= count_sel_rd_p1;
         -- Outputs 
         run_c           <= '0';
-        --clear_c         <= '0';
         mut_out_c       <= '0';
         term_out_c      <= '0';
         load_c          <= '0';
@@ -701,7 +686,7 @@ begin
           run3_c             <= '0';
           addr_1_c           <= count_sel_rd_p1;
           addr_2_c           <= count_parents_p1;
-          data_out_cross1_p1 <= (others => '0');  --data_in_ram2;
+          data_out_cross1_p1 <= (others => '0'); 
           data_out_cross2_p1 <= (others => '0');
         elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 2) then
           next_sreg          <= read_write_ram_2_s;
@@ -711,16 +696,14 @@ begin
           count_cross_offs   <= count_cross_offs_p1 + 1;
           cross_out_c        <= '0';
           sel_out_c          <= '1';
-          run1_c             <= '0';    -- changed
-          run2_c             <= '0';    -- changed
+          run1_c             <= '0';    
+          run2_c             <= '0';    
           run3_c             <= '0';
           addr_1_c           <= count_sel_rd_p1;
           addr_2_c           <= count_parents_p1;
-          --data_out_cross1_p1 <= temp1;
-          --data_out_cross2_p1 <= data_in_ram2;
           data_out_cross1_p1 <= data_in_ram2;
           data_out_cross2_p1 <= (others => '0');
-        elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 3) then  -- new if statement
+        elsif (notify_cnt_p = 7) and (count_cross_offs_p1 = 3) then  
           next_sreg          <= read_write_ram_2_s;
           count_sel_wr       <= count_sel_wr_p1;
           notify_cnt         <= 7;
@@ -743,7 +726,7 @@ begin
           count_cross_offs   <= count_cross_offs_p1;
           cross_out_c        <= '1';
           sel_out_c          <= '0';
-          run1_c             <= '0';    -- changed
+          run1_c             <= '0';   
           run2_c             <= '0';
           run3_c             <= '0';
           addr_1_c           <= count_sel_rd_p1;
@@ -780,7 +763,6 @@ begin
         count_sel_rd     <= count_sel_rd_p1;
         -- Outputs 
         run_c            <= '0';
-        --clear_c          <= '0';
         sel_out_c        <= '0';
         term_out_c       <= '0';
         if mut_method = "10" then
@@ -806,7 +788,7 @@ begin
         data_out_cross2_p1 <= temp2;
         index_c            <= 0;
         case cross_rd is
-          when '1' =>                   -- crossover ready
+          when '1' =>                 
             next_sreg   <= mut_s;
             cross_out_c <= '0';
             mut_out_c   <= '1';
@@ -829,7 +811,6 @@ begin
         count_sel_rd       <= count_sel_rd_p1;
         -- Outputs 
         run_c              <= '0';
-        --clear_c            <= '0';
         cross_out_c        <= '0';
         sel_out_c          <= '0';
         term_out_c         <= '0';
@@ -848,7 +829,7 @@ begin
         addr_2_c           <= 0;
         data_out_cross1_p1 <= temp1;
         data_out_cross2_p1 <= temp2;
-        if (mut_rd = '1') or (notify_cnt_p = 8) then  -- mutation ready          
+        if (mut_rd = '1') or (notify_cnt_p = 8) then          
           if cnt_adapted = '1' then
             next_sreg       <= fit_eval_s;
             notify_cnt      <= notify_cnt_p;
@@ -892,7 +873,7 @@ begin
         dummy_cnt_adapt    <= '0';
         next_generation    <= '0';
         -- Counters
-        notify_cnt         <= 1;  -- notify yto clear_c ram to hold ga_fin_r = 1
+        notify_cnt         <= 1; 
         count_sel_wr       <= count_sel_wr_p1;
         count_cross_offs   <= count_cross_offs_p1;
         count_sel_rd       <= count_sel_rd_p1;
@@ -922,11 +903,6 @@ begin
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
           ga_fin_r      <= '1';
-          --if run_ga = '1' then
-          --clear_c <= '1';
-          --else
-          --clear_c <= '0';
-          --end if;
           term_out_c    <= '1';
           load_c        <= '1';
           run3_c        <= '0';
@@ -936,11 +912,6 @@ begin
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
           ga_fin_r      <= '1';
-          --if run_ga = '1' then
-          --clear_c <= '1';
-          --else
-          --clear_c <= '0';
-          --end if;
           term_out_c    <= '1';
           load_c        <= '1';
           run3_c        <= '0';
@@ -949,7 +920,6 @@ begin
           count_offs    <= 0;
           count_parents <= 0;
           count_gen     <= count_gen_p1+1;
-          --clear_c       <= '0';
           term_out_c    <= '1';
           load_c        <= '1';
           run3_c        <= '1';
@@ -960,7 +930,6 @@ begin
           count_offs    <= count_offs_p1;
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
-          --clear_c       <= '0';
           term_out_c    <= '1';
           load_c        <= '0';
           run3_c        <= '0';
@@ -970,7 +939,6 @@ begin
           count_offs    <= count_offs_p1;
           count_parents <= count_parents_p1;
           count_gen     <= count_gen_p1;
-          --clear_c       <= '0';
           term_out_c    <= '1';
           load_c        <= '0';
           run3_c        <= '0';
@@ -984,22 +952,17 @@ begin
 
 -- purpose: reduce_critical path
 -- type   : sequential
--- inputs : clk, rst_n, valid_c, addr_1_c
--- outputs: valid, addr_1
+-- inputs : clk, rst_n, all module outputs_c
+-- outputs: all_module outputs
   reg_op : process (clk, rst_n)
   begin  -- process reg_op
     if rst_n = '0' then                 -- asynchronous reset (active low)
 
       data_out_cross1 <= (others => '0');
       data_out_cross2 <= (others => '0');
-      --addr_1          <= 0;
-      --addr_2          <= 0;
       cnt_parents     <= 0;
-      --we1             <= '0';
-      --we2             <= '0';
       data_valid      <= '0';
       next_gene       <= '0';
-      --clear           <= '0';
       ga_fin          <= '0';
       cross_out       <= '0';
       valid           <= '0';
@@ -1018,14 +981,9 @@ begin
     elsif clk'event and clk = '1' then  -- rising clock edge
       data_out_cross1 <= data_out_cross1_c;
       data_out_cross2 <= data_out_cross2_c;
-      --addr_1          <= addr_1_c;
-      --addr_2          <= addr_2_c;
       cnt_parents     <= cnt_parents_c;
-      --we1             <= we1_c;
-      --we2             <= we2_c;
       data_valid      <= data_valid_c;
       next_gene       <= next_gene_c;
-      --clear           <= clear_c;
       ga_fin          <= ga_fin_c;
       cross_out       <= cross_out_c;
       valid           <= valid_c;
@@ -1043,6 +1001,7 @@ begin
       load            <= load_c;
     end if;
   end process reg_op;
+  
 end rtl;
 
 

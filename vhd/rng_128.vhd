@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 15/11/06
--- Last update: 15/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93 
 -------------------------------------------------------------------------------
@@ -32,7 +32,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
@@ -44,7 +44,7 @@ entity rng_128 is
     rst_n        : in  std_logic;       -- reset (active low)
     load         : in  std_logic;       -- load (active high)
     seed         : in  std_logic_vector(n-1 downto 0);   -- parallel seed input
-    run          : in  std_logic;       -- if 1 run else output=high-Z
+    run          : in  std_logic;     
     parallel_out : out std_logic_vector(n-1 downto 0));  -- parallel data out
 end entity rng_128;
 

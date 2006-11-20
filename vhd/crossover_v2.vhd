@@ -2,12 +2,12 @@
 -- Title      : Crossover block
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : crossover_v2.vhd
+-- File       : crossover.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 08/11/06
--- Platform   : Modelsim & Synplify & Xilinx ISE
+-- Last update: 20/11/06
+-- Platform   : Modelsim 6.1c, Synplify 8.1, Xilinx ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
 -- Description: This block implements the mutation algorithm block 
@@ -17,6 +17,7 @@
 -- revisions  :
 -- date        version  author  description
 -- 23/03/06    1.1      kdelip  created
+-- 20/11/06    1.2      kdelip  updated
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -27,39 +28,39 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity crossover_v2 is
+entity crossover is
   generic(
     genom_lngt : positive);
   port (
     clk          : in  std_logic;       -- clock
     rst_n        : in  std_logic;       -- reset (active low)
     cont         : in  std_logic;
-    crossPoints  : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);  -- Xover 1st/2nd point from rng2
+    crossPoints  : in  std_logic_vector(2*log2(genom_lngt)-1 downto 0);
     crossMethod  : in  std_logic_vector(1 downto 0);
-    rng          : in  std_logic_vector(genom_lngt-1 downto 0);  -- used for uniform crossover / cross_mask
+    rng          : in  std_logic_vector(genom_lngt-1 downto 0);
     inGene1      : in  std_logic_vector(genom_lngt-1 downto 0);
     inGene2      : in  std_logic_vector(genom_lngt-1 downto 0);
-    rd           : out std_logic;  -- Xover ended for current 2 parents having produced 1 offsping
+    rd           : out std_logic;
     crossOffspr1 : out std_logic_vector(genom_lngt-1 downto 0));
-end entity crossover_v2;
+end entity crossover;
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture rtl of crossover_v2 is
+architecture rtl of crossover is
 
   
   signal mask        : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
   signal mask1       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
   signal mask2       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
   signal temp        : std_logic_vector(log2(genom_lngt) downto 0) := (others => '0');
-  signal temp_int    : integer                                     := 0;  -- range 1 to 7; 
+  signal temp_int    : integer                                     := 0;
   signal temp1       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
   signal temp2       : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
   signal crossout1   : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
@@ -82,7 +83,8 @@ begin
   rd           <= done_t;
   crossOffspr1 <= crossout1_t;
 
-  crossover_v2 : process (crossMethod, crossout1_t, mask, mask1, mask2, inGene1, inGene2, temp_int, temp1, temp2, temp, rng, crossPoints, cont, done_t)
+  crossover : process (crossMethod, crossout1_t, mask, mask1, mask2, inGene1, inGene2,
+                      temp_int, temp1, temp2, temp, rng, crossPoints, cont, done_t)
   begin
 
     if cont = '1' and done_t = '0' then
@@ -91,7 +93,8 @@ begin
         when "00" =>                    -- one Point crossover 
           mask <= (others => '1');
 
-          mask1     <= shr(mask, conv_std_logic_vector(genom_lngt-1, log2(genom_lngt)) - crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)));
+          mask1 <= shr(mask, conv_std_logic_vector(genom_lngt-1, log2(genom_lngt))
+                           - crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)));
           temp1     <= inGene1 and mask1;
           temp2     <= inGene2 and (not mask1);
           crossout1 <= (temp1 xor temp2);
@@ -102,8 +105,9 @@ begin
           
         when "01" =>                    -- two point crossover
           mask     <= (others => '1');
-          temp_int <= conv_integer(crossPoints(log2(genom_lngt)-1 downto 0)) - conv_integer(crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)));
-          temp     <= abs(conv_signed(temp_int, temp'length));
+          temp_int <= conv_integer(crossPoints(log2(genom_lngt)-1 downto 0))
+                      - conv_integer(crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)));
+          temp <= abs(conv_signed(temp_int, temp'length));
           if crossPoints(log2(genom_lngt)-1 downto 0) /= crossPoints(2*log2(genom_lngt)-1 downto log2(genom_lngt)) then
             mask1 <= shr(mask, conv_std_logic_vector(genom_lngt, temp'length)-temp);
           else
@@ -164,6 +168,6 @@ begin
       done      <= '0';
       crossout1 <= (others => '0');
     end if;
-  end process crossover_v2;
+  end process crossover;
 
 end rtl;

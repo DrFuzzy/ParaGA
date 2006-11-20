@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, Xilinx ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -34,7 +34,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
@@ -47,9 +47,8 @@ entity rng is
     rst_n        : in  std_logic;       -- reset (active low)
     load         : in  std_logic;       -- load (active high)
     seed         : in  std_logic_vector(n-1 downto 0);   -- parallel seed input
-    run          : in  std_logic;       -- if 1 run else output=high-Z
+    run          : in  std_logic;      
     parallel_out : out std_logic_vector(n-1 downto 0));  -- parallel data out
-  --serial_out   : out std_logic -- serial data out (from last shift register)
 end entity rng;
 
 -------------------------------------------------------------------------------
@@ -139,16 +138,8 @@ begin
       parallel_out <= LFSR_reg;
       
     elsif (run = '0') then              -- same output
-
-      --for N in n-1 downto 0 loop
-      --LFSR_reg(N) := LFSR_reg(N);
-      --end loop;
       parallel_out <= LFSR_reg;
     end if;
-
-    --parallel_out <= LFSR_reg;           -- parallel data out
-    --serial_out   <= LFSR_reg(n-1);      -- serial data out
-
   end process;
 
 end rtl;

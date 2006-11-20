@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
@@ -42,13 +42,11 @@ entity obs is
   port(
     clk       : in  std_logic;          -- clock
     rst_n     : in  std_logic;          -- reset (active low)
-    -- max. fitness (from fit_eval block)
     max_fit   : in  std_logic_vector(score_sz-1 downto 0);
     --
     -- fitness limit reached (done signal in state machine)
     fitlim_rd : out std_logic;
-    --
-    rd        : out std_logic);         -- obs block ready signal
+    rd        : out std_logic);
 end entity obs;
 
 -------------------------------------------------------------------------------

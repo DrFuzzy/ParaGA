@@ -14,7 +14,7 @@ vif_set_technology -architecture FPGA -vendor Xilinx
 
 # RTL and technology files
 vif_add_file -original -vhdl -lib work ../../../vhd/arith_pkg.vhd
-vif_add_file -original -vhdl -lib work ../../../vhd/dhga_pkg.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/ga_pkg.vhd
 vif_add_file -original -vhdl -lib work ../../../vhd/rom_pkg.vhd
 vif_add_file -original -vhdl -lib work ../../../vhd/control_tsp.vhd
 vif_add_file -original -vhdl -lib work ../../../vhd/coordinates_rom_p.vhd

@@ -2,11 +2,11 @@
 -- Title      : GA
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : top_fit_eval.vhd
+-- File       : fit_eval.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 12/10/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -28,13 +28,13 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity fit_eval_ga is
+entity fit_eval is
   generic (
     genom_lngt : positive;              -- townres*(num_towns-1)
     score_sz   : integer;
@@ -43,24 +43,24 @@ entity fit_eval_ga is
   port (
     clk           : in  std_logic;
     rst_n         : in  std_logic;
-    decode        : in  std_logic;  -- evaluation after rng_s or after mut_s
-    valid         : in  std_logic;  -- if H compute else if L don't                                         -- if H 
-    in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);  -- both mutation or rng fill evaluation block        
+    decode        : in  std_logic;
+    valid         : in  std_logic;
+    in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);
     elite_null    : in  std_logic;
-    index         : in  integer;        -- the address of the current gene
-    count_parents : in  integer;        -- how many parents have been selected
-    gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);  -- ingene and its fitness value
-    elite_offs    : out int_array(0 to elite-1);  -- addresses of elite children (integer)
-    fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
-    max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- maximum fitness
+    index         : in  integer;
+    count_parents : in  integer;
+    gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);
+    elite_offs    : out int_array(0 to elite-1);
+    fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
+    max_fit       : out std_logic_vector(score_sz-1 downto 0);
     rd            : out std_logic);
-end entity fit_eval_ga;
+end entity fit_eval;
 
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture str of fit_eval_ga is
+architecture str of fit_eval is
 
 -- SIGNAL DECLARATION
 -------------------------------------------------------------------------------
@@ -75,7 +75,7 @@ begin
 -------------------------------------------------------------------------------
 -- Fitness Calculator : Computes the fitness of the input gene 
 -------------------------------------------------------------------------------
-  U0 : fit_calc
+  U0 : fitness_calc
     generic map (
       genom_lngt => genom_lngt,
       score_sz   => score_sz,
@@ -87,8 +87,8 @@ begin
       valid      => valid,
       in_genes   => in_genes,
       gene_score => gene_score,
-      fit        => fit_dummy,          -- to fix_elite
-      ready_out  => ready_out_dummy);     -- to fix_elite            
+      fit        => fit_dummy,
+      ready_out  => ready_out_dummy);             
 
 -------------------------------------------------------------------------------
 -- Elite fixation : Fixes the elite indexs and the array of the best fitnesses 

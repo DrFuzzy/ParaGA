@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 08/08/06
--- Last update: 08/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
@@ -43,16 +43,16 @@ entity fix_elite_tsp is
   port (
     clk           : in  std_logic;      -- clock
     rst_n         : in  std_logic;      -- reset (active low)
-    decode        : in  std_logic;  -- evaluation after rng_s or after mut_s
-    valid         : in  std_logic;      -- if H compute else if L don't 
-    elite_null    : in  std_logic;      -- if H 
-    index         : in  integer;        -- the address of the current gene
+    decode        : in  std_logic;
+    valid         : in  std_logic;
+    elite_null    : in  std_logic;
+    index         : in  integer;
     fit           : in  std_logic_vector(score_sz-1 downto 0);
-    count_parents : in  integer;        -- how many parents have been selected
+    count_parents : in  integer;
     ready_in      : in  std_logic;
-    elite_offs    : out int_array(0 to elite-1);  -- addresses of elite children (integer)
-    fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);  -- sum of fitnesses
-    max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- maximum fitness
+    elite_offs    : out int_array(0 to elite-1);
+    fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
+    max_fit       : out std_logic_vector(score_sz-1 downto 0);
     rd            : out std_logic);
 end entity fix_elite_tsp;
 
@@ -62,18 +62,19 @@ end entity fix_elite_tsp;
 architecture rtl of fix_elite_tsp is
   subtype score is std_logic_vector(score_sz-1 downto 0);
   type    fit_array is array (natural range 0 to elite-1) of score;
-
-  signal sum               : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0) := (others => '0');  -- accumulated sum of fitnesses
-  signal sum_p             : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0) := (others => '0');  -- previous accumulated sum of fitnesses
-  signal best_fit          : fit_array                                          := (others => (others => '0'));
-  signal best_fit_prev_gen : fit_array                                          := (others => (others => '0'));
-  signal temp1             : fit_array                                          := (others => (others => '0'));
-  signal temp2             : fit_array                                          := (others => (others => '0'));
-  signal elite_indexs      : int_array(0 to elite-1)                            := (others => 0);
-  signal temp_indexs_1     : int_array(0 to elite-1)                            := (others => 0);
-  signal temp_indexs_2     : int_array(0 to elite-1)                            := (others => 0);
-  signal count_cycle              : integer range 0 to 3;
-  signal counter           : integer range 0 to elite-1;
+-- accumulated sum of fitnesses
+  signal  sum               : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0) := (others => '0');
+-- previous accumulated sum of fitnesses
+  signal  sum_p             : std_logic_vector(score_sz+log2(pop_sz)-1 downto 0) := (others => '0');
+  signal  best_fit          : fit_array                                          := (others => (others => '0'));
+  signal  best_fit_prev_gen : fit_array                                          := (others => (others => '0'));
+  signal  temp1             : fit_array                                          := (others => (others => '0'));
+  signal  temp2             : fit_array                                          := (others => (others => '0'));
+  signal  elite_indexs      : int_array(0 to elite-1)                            := (others => 0);
+  signal  temp_indexs_1     : int_array(0 to elite-1)                            := (others => 0);
+  signal  temp_indexs_2     : int_array(0 to elite-1)                            := (others => 0);
+  signal  count_cycle       : integer range 0 to 3;
+  signal  counter           : integer range 0 to elite-1;
   
 begin
 
@@ -94,12 +95,12 @@ begin
 
   begin
     if rst_n = '0' then
-      rd      <= '0';
-      count_cycle    <= 0;
-      counter <= 0;
-      max_fit <= (others => '0');
-      fit_sum <= (others => '0');
-      sum_p   <= (others => '0');
+      rd          <= '0';
+      count_cycle <= 0;
+      counter     <= 0;
+      max_fit     <= (others => '0');
+      fit_sum     <= (others => '0');
+      sum_p       <= (others => '0');
       for i in elite-1 downto 0 loop
         elite_offs(i)    <= 0;
         elite_indexs(i)  <= 0;
@@ -128,17 +129,17 @@ begin
               temp2(0)         <= best_fit(0);
               temp_indexs_1(0) <= 0;
               temp_indexs_2(0) <= elite_indexs(0);
-              count_cycle             <= 1;
+              count_cycle      <= 1;
             else
               count_cycle <= 0;
             end if;
           end loop;
-          rd  <= '0';
+          rd <= '0';
         end if;
 
         -- 2nd clock cycle
-        if count_cycle = 1 then 
-          for i in elite-1 downto 1 loop  -- for more than one elite child !!!!!!!!!
+        if count_cycle = 1 then
+          for i in elite-1 downto 1 loop  -- for more than one elite child
 
             if temp1(i) < fit and temp2(i) < fit and temp1(i) /= temp2(i) then
               best_fit(i)     <= temp1(i);
@@ -167,11 +168,11 @@ begin
                 best_fit(0)     <= temp2(0);
                 elite_indexs(0) <= temp_indexs_2(0);
               end if;
-              count_cycle  <= 2;
+              count_cycle <= 2;
             else
               count_cycle <= 1;
             end if;
-            rd  <= '0';
+            rd <= '0';
           end loop;
 
         end if;
@@ -196,21 +197,21 @@ begin
           else
             counter <= 0;
           end if;
-
-          if decode = '0' and valid = '1' and count_parents = 2*(pop_sz-elite) then  --  produce new elite indexes only at the last mut offs
+          --  produce new elite indexes only at the last mutation offs
+          if decode = '0' and valid = '1' and count_parents = 2*(pop_sz-elite) then
             elite_offs        <= elite_indexs;
             best_fit_prev_gen <= best_fit;
-          elsif decode = '1' and valid = '1' then  -- rng offs evaluation
+          elsif decode = '1' and valid = '1' then
             elite_offs        <= elite_indexs;
             best_fit_prev_gen <= best_fit;
           end if;
           count_cycle <= 3;
-          rd      <= '1';
+          rd          <= '1';
         end if;
         
       else
-        count_cycle  <= 0;
-        rd    <= '0';
+        count_cycle <= 0;
+        rd          <= '0';
         if (count_parents = 0 and decode = '0') or (decode = '1' and valid = '0' and index = pop_sz - 1) then
           sum_p <= (others => '0');
         end if;

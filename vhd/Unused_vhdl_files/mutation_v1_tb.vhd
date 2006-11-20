@@ -7,7 +7,7 @@ library modelsim_lib;
 use modelsim_lib.util.all;
 
 use std.textio.all;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------

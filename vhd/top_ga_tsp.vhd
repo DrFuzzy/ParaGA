@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
--- Title      : GA top for TSP
+-- Title      : GA for TSP
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : top_ga_tsp.vhd
+-- File       : ga_tsp.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 16/05/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.rom_pkg.all;
 use work.arith_pkg.all;
 
@@ -123,7 +123,7 @@ begin
 -------------------------------------------------------------------------------
 -- ROM : Stores initial generation for the TSP algorithm
 -------------------------------------------------------------------------------
-  U0 : init_generation_rom_p
+  U0 : init_generation_rom
     generic map(
       townres   => townres,
       pop_sz    => pop_sz,
@@ -141,10 +141,10 @@ begin
     port map (
       clk          => clk,
       rst_n        => rst_n,
-      load         => load_dummy,        -- from control v4
-      seed         => seed_1,            -- from chip port
-      run          => run1,              -- from control v4
-      parallel_out => out_rng_1_dummy);  -- to mutation and crossover
+      load         => load_dummy,
+      seed         => seed_1,
+      run          => run1,
+      parallel_out => out_rng_1_dummy);  
 
 -------------------------------------------------------------------------------
 -- RNG2 : feeds crossover with crossover points and mutation with mutation 
@@ -156,10 +156,10 @@ begin
     port map (
       clk          => clk,
       rst_n        => rst_n,
-      load         => load_dummy,        -- from control v4
-      seed         => seed_2,            -- from chip port
-      run          => run2,              -- from control v4
-      parallel_out => out_rng_2_dummy);  -- to crossover and mutation
+      load         => load_dummy,
+      seed         => seed_2,
+      run          => run2,
+      parallel_out => out_rng_2_dummy);  
 
 -------------------------------------------------------------------------------
 -- RNG3 : feeds selection block with random numbers
@@ -170,10 +170,10 @@ begin
     port map (
       clk          => clk,
       rst_n        => rst_n,
-      load         => load_dummy,        -- from control v4
-      seed         => seed_3,            -- from chip port
-      run          => run3,              -- from control v4
-      parallel_out => out_rng_3_dummy);  -- to selection
+      load         => load_dummy,
+      seed         => seed_3,
+      run          => run3,
+      parallel_out => out_rng_3_dummy); 
 
 -------------------------------------------------------------------------------
 -- Fitness Evaluation : evaluates genes and produces the gene's score, the sum 
@@ -193,15 +193,15 @@ begin
       rst_n         => rst_n,
       decode        => decode_dummy,
       valid         => valid1,
-      in_genes      => inGene_fiteval_dummy,  -- from mutation and rng
+      in_genes      => inGene_fiteval_dummy,
       elite_null    => elite_null_dummy,
-      index         => index,                 -- from control
+      index         => index,
       count_parents => count_parents_dummy,
-      gene_score    => data_in_1_dummy,       -- to RAM 1
-      elite_offs    => elite_offs_dummy,      -- to control
-      fit_sum       => fit_sum_dummy,         -- to selection 
-      max_fit       => max_fit_dummy,         -- to observer 
-      rd            => fit_eval_rd_dummy);    -- to control_v4 
+      gene_score    => data_in_1_dummy,
+      elite_offs    => elite_offs_dummy,
+      fit_sum       => fit_sum_dummy,
+      max_fit       => max_fit_dummy,
+      rd            => fit_eval_rd_dummy);   
 
 -------------------------------------------------------------------------------
 -- Selection : selects new parents for the next generation 
@@ -212,17 +212,17 @@ begin
       pop_sz             => pop_sz,
       elite              => elite,
       score_sz           => score_sz,
-      scaling_factor_res => scaling_factor_res)  --scaling factor resolution (bits)
+      scaling_factor_res => scaling_factor_res) 
     port map(
       clk        => clk,
       rst_n      => sel_out,
-      inGene     => data_out_1_dummy,   -- comes from ram1
-      rng        => out_rng_3_dummy,    -- comes from rng3
-      fitSum     => fit_sum_dummy,      -- from fitness evaluation 
-      data_valid => data_valid_dummy,   -- from control_v4 
+      inGene     => data_out_1_dummy,
+      rng        => out_rng_3_dummy,
+      fitSum     => fit_sum_dummy,
+      data_valid => data_valid_dummy,
       next_gene  => next_gene_dummy,
-      selParent  => data_in_2_dummy,    -- will be written in RAM 2
-      rd         => selection_rd_dummy);         -- to control_v4 
+      selParent  => data_in_2_dummy,
+      rd         => selection_rd_dummy);
 
 -------------------------------------------------------------------------------
 -- Crossover : performs crossover algorithm on two selected parents
@@ -235,12 +235,11 @@ begin
       clk          => clk,
       rst_n        => rst_n,
       cont         => cross_out,
-      crossPoints  => out_rng_2_dummy,      -- from rng 2
-      inGene1      => inGene1_cross_dummy,  -- from control_v4  
-      inGene2      => inGene2_cross_dummy,  -- from control_v4 
-      --pool         => pool,                   -- from package
-      rd           => cross_rd_dummy,       -- to control_v4 
-      crossOffspr1 => crossOffspr_dummy);   -- to mutation
+      crossPoints  => out_rng_2_dummy,
+      inGene1      => inGene1_cross_dummy,
+      inGene2      => inGene2_cross_dummy,
+      rd           => cross_rd_dummy,
+      crossOffspr1 => crossOffspr_dummy);  
 
 -------------------------------------------------------------------------------
 -- Mutation : performs mutation algorithm on the "crossovered" offspring 
@@ -255,13 +254,13 @@ begin
     port map(
       clk       => clk,
       rst_n     => rst_n,
-      mutPoint  => out_rng_2_dummy,     -- from rng 2
+      mutPoint  => out_rng_2_dummy,
       cont      => mut_out,
       flag      => flag_dummy,
-      rng       => out_rng_1_dummy,     -- from rng 1
-      inGene    => crossOffspr_dummy,   -- from crossover   
-      rd        => mutation_rd_dummy,   -- to control_v4
-      mutOffspr => inGene_fiteval_dummy(genom_lngt-1 downto 0));  -- to fitness evaluation
+      rng       => out_rng_1_dummy,
+      inGene    => crossOffspr_dummy,
+      rd        => mutation_rd_dummy,
+      mutOffspr => inGene_fiteval_dummy(genom_lngt-1 downto 0));
 
 -------------------------------------------------------------------------------
 -- RAM 1 : write/reads genes and their scores (concatenated)
@@ -273,9 +272,9 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      add      => addr_1_vec,           -- address (integer instead of std_vec)
-      data_in  => data_in_1_dummy,      -- from fitness evaluation
-      data_out => data_out_1_dummy,     -- to selection block
+      add      => addr_1_vec,
+      data_in  => data_in_1_dummy,
+      data_out => data_out_1_dummy,
       wr       => we1_dummy);
 
 -------------------------------------------------------------------------------
@@ -288,9 +287,9 @@ begin
     port map(
       clk      => clk,
       rst_n    => rst_n,
-      add      => addr_2_vec,           -- address (integer instead of std_vec)
-      data_in  => data_in_2_dummy,      -- from selection
-      data_out => data_out_2_dummy,     -- to control_v4  
+      add      => addr_2_vec,
+      data_in  => data_in_2_dummy,
+      data_out => data_out_2_dummy,
       wr       => we2_dummy);
 
 -------------------------------------------------------------------------------
@@ -331,7 +330,7 @@ begin
       flag            => flag_dummy,
       decode          => decode_dummy,
       sel_out         => sel_out,
-      addr_rom        => addr_rom_dummy,  -- To ROM input (initial generation)
+      addr_rom        => addr_rom_dummy,
       run1            => run1,
       run2            => run2,
       run3            => run3,

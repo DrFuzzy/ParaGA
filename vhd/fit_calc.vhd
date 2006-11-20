@@ -2,11 +2,11 @@
 -- Title      : Fitness Evaluation block
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : fit_calc_TSP.vhd
+-- File       : fitness_calc.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 08/08/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, Xilinx ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -17,7 +17,7 @@
 -- revisions  :
 -- date        version  author  description
 -- 08/08/06    1.1      kdelip  created
--- 16/11/06    1.2      kdelip  updated
+-- 20/11/06    1.2      kdelip  updated
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -29,13 +29,13 @@ use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity fit_calc is
+entity fitness_calc is
   generic(
     genom_lngt : positive;
     score_sz   : integer;
@@ -43,8 +43,8 @@ entity fit_calc is
   port (
     clk        : in  std_logic;         -- clock
     rst_n      : in  std_logic;         -- reset (active low)
-    decode     : in  std_logic;         -- eval. after rng_s or after mut_s
-    valid      : in  std_logic;         -- if H compute else if L don't 
+    decode     : in  std_logic;
+    valid      : in  std_logic;
     -- both mutation or rng fill evaluation block
     in_genes   : in  std_logic_vector(2*genom_lngt-1 downto 0);
     --
@@ -55,18 +55,17 @@ entity fit_calc is
     fit        : out std_logic_vector(score_sz-1 downto 0) := (others => '0');
     --
     ready_out  : out std_logic);        -- handshake
-end entity fit_calc;
+end entity fitness_calc;
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture rtl of fit_calc is
+architecture rtl of fitness_calc is
 
   signal gene_scr : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal temp     : std_logic_vector(genom_lngt+score_sz-1 downto 0);
   signal gene     : std_logic_vector(genom_lngt-1 downto 0);
   signal max_fit  : std_logic_vector(score_sz-1 downto 0);
-  --signal temp_fit          : std_logic_vector(score_sz-1 downto 0) ;
   signal fit_p    : std_logic_vector(score_sz-1 downto 0);
   signal done     : std_logic;
   signal done_p   : std_logic;
@@ -92,7 +91,7 @@ begin
   -- type   : combinatorial
   -- inputs : in_genes, gene, decode, valid, done, done_p, temp
   -- outputs: max_fit, fit_p, gene_scr
-  fit_calculation : process (in_genes, gene, decode, valid, done, done_p, temp)
+  fit_calc : process (in_genes, gene, decode, valid, done, done_p, temp)
   begin
     if valid = '1' and done_p /= '1' then  -- evaluate gene - calculate fitness
       if decode = '1' then                 -- pick out the rng offspring
@@ -125,12 +124,12 @@ begin
       gene_scr <= (others => '0');
       max_fit  <= (others => '1');
       done     <= '0';
-    end if;  -- valid
-  end process fit_calculation;
+    end if;
+  end process fit_calc;
 
   -- connect outputs
-  fit        <= temp(score_sz-1 downto 0);  -- maybe temp_fit
-  gene_score <= temp;                       -- maybe temp
+  fit        <= temp(score_sz-1 downto 0);
+  gene_score <= temp;
   ready_out  <= done_p;
 
 end rtl;

@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
--- Title      : GA
+-- Title      : GA Testbench
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
 -- File       : ga_tb.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 03/10/06
--- Last update: 2006-11-02
+-- Last update: 20/11/06
 -- Platform   : Modelsim, Synplicity, ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ library modelsim_lib;
 use modelsim_lib.util.all;
 
 use std.textio.all;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
@@ -118,9 +118,6 @@ begin  -- ARCHITECTURE bench
       mut_res            => 8,
       fit_limit          => 511,
       max_gen            => 100)          
-
-    
-    
     port map (
       clk             => clk,
       rst_n           => rst_n,
@@ -135,8 +132,6 @@ begin  -- ARCHITECTURE bench
       best_fit        => best_fit,
       fit_limit_reach => fit_limit_reach,
       ga_fin          => ga_fin);       
-
-
 
   -- clock and reset generator
   clk   <= not clk after period/2;

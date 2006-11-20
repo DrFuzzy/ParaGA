@@ -2,11 +2,11 @@
 -- Title      : Mutation block
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : mutation_v2.vhd
+-- File       : mutation.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 08/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim & Synplify & Xilinx ISE
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -28,45 +28,41 @@ use ieee.numeric_std.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity mutation_v2 is
+entity mutation is
   generic(
     genom_lngt : positive := 8;
-    mr         : integer  := 25;  -- mutation rate coded in mut_res bits --> 25/255 ~= 0,1  
-    mut_res    : integer  := 8);        -- mutation resolution
+    mr         : integer  := 25;
+    mut_res    : integer  := 8); 
   port (
     clk       : in  std_logic;          -- clock
     rst_n     : in  std_logic;          -- reset (active low)
-    mutPoint  : in  std_logic_vector(log2(genom_lngt)-1 downto 0);  -- mutation point (for 1point mutation) comes from rng2
+    mutPoint  : in  std_logic_vector(log2(genom_lngt)-1 downto 0);
     mutMethod : in  std_logic_vector(1 downto 0);
     cont      : in  std_logic;
     flag      : in  std_logic;
-    rng       : in  std_logic_vector(genom_lngt + mut_res-1 downto 0);  -- XORed with input Gene
+    rng       : in  std_logic_vector(genom_lngt + mut_res-1 downto 0);
     inGene    : in  std_logic_vector(genom_lngt-1 downto 0);
-    rd        : out std_logic;          -- mutation ended for current parent
-    mutOffspr : out std_logic_vector(genom_lngt-1 downto 0));  -- produced mutation offspring (kid)
-end entity mutation_v2;
+    rd        : out std_logic;
+    mutOffspr : out std_logic_vector(genom_lngt-1 downto 0)); 
+end entity mutation;
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture rtl of mutation_v2 is
+architecture rtl of mutation is
 
   constant WeirdTRUE : std_logic_vector(1 downto 0)                := "01";
-  --signal mask       : std_logic_vector(genom_lngt-1 downto 0):= (others=>'0');
-  --signal maskUnif   : std_logic_vector(genom_lngt-1 downto 0):= (others=>'0');
-  signal mutout      : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  signal mutout_p1   : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
-  --signal inGene_mut : std_logic_vector(genom_lngt-1 downto 0):= (others=>'0');
-  --signal rng1     : std_logic_vector(mut_res-1 downto 0):= (others=>'0');
-  signal count       : std_logic_vector(log2(genom_lngt) downto 0) := (others => '0');  -- count'length = log2(genom_lngt)+1
-  signal done        : std_logic                                   := '0';
-  signal done_p      : std_logic                                   := '0';
+  signal   mutout    : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal   mutout_p1 : std_logic_vector(genom_lngt-1 downto 0)     := (others => '0');
+  signal   count     : std_logic_vector(log2(genom_lngt) downto 0) := (others => '0');
+  signal   done      : std_logic                                   := '0';
+  signal   done_p    : std_logic                                   := '0';
 
 
 begin
@@ -96,7 +92,7 @@ begin
 
   mutOffspr <= mutout_p1;
   rd        <= done_p;
-  mutation_v2 : process (mutMethod, mutPoint, rng, inGene, mutout_p1, count, cont, flag, done_p)
+  mutation : process (mutMethod, mutPoint, rng, inGene, mutout_p1, count, cont, flag, done_p)
   begin
 
     case done_p is
@@ -109,9 +105,6 @@ begin
             case mutMethod is
               
               when "00" =>              -- one Point mutation 
-
-                --mask <= ext(WeirdTRUE, genom_lngt); -- initial mask creation
-                --inGene_mut <= inGene xor shl(mask, mutPoint);
                 if rng(mut_res-1 downto 0) > conv_std_logic_vector(mr, mut_res) then
                   mutout <= inGene;
                   done   <= '1';
@@ -119,12 +112,9 @@ begin
                   mutout <= inGene xor shl(ext(WeirdTRUE, genom_lngt), mutPoint);
                   done   <= '1';
                 end if;
-
-                --maskUnif <= (others=>'0');
                 
               when "01" =>              -- XOR (masked) mutation
 
-                --inGene_mut <= inGene xor rng(genom_lngt+mut_res-1 downto mut_res);        
                 if rng(mut_res-1 downto 0) > conv_std_logic_vector(mr, mut_res) then
                   mutout <= inGene;
                   done   <= '1';
@@ -132,14 +122,8 @@ begin
                   mutout <= inGene xor rng(genom_lngt+mut_res-1 downto mut_res);
                   done   <= '1';
                 end if;
-
-                --maskUnif <= (others=>'0');
-                --mask <= (others=>'0');
                 
               when "10" =>              -- uniform mutation
-
-                --mask <= ext(WeirdTRUE, genom_lngt);
-                --maskUnif <= shl(mask, count);
 
                 if rng(mut_res-1 downto 0) < conv_std_logic_vector(mr, mut_res) and count = ext("00", count'length) then
                   mutout <= inGene xor shl(ext(WeirdTRUE, genom_lngt), count);
@@ -183,6 +167,6 @@ begin
       when others =>
         
     end case;
-  end process mutation_v2;
+  end process mutation;
 
 end rtl;

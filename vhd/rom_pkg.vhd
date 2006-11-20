@@ -6,7 +6,7 @@
 -- Author     : George Doyamis & Kyriakos Deliparaschos (kdelip@mail.ntua.gr)
 -- Company    : NTUA/IRAL
 -- Created    : 14/09/2006
--- Last update: 08/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim, Synplify, ISE
 -------------------------------------------------------------------------------
 -- Description: This package holds the rom data of the numerous ROM's in the
@@ -23,7 +23,7 @@
 -------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 
 --------------------------------------------------------------------------------
 -- PACKAGE DECLARATION
@@ -39,7 +39,7 @@ package rom_pkg is
   subtype town_x_y is std_logic_vector(2*resol-1 downto 0);
   type    towns_x_y is array(0 to towns) of town_x_y;
   --                                         
-  constant coordinates_rom : towns_x_y := towns_x_y'(
+  constant coord_rom : towns_x_y := towns_x_y'(
 
     "ZZZZZZ",
     "001001",
@@ -82,7 +82,7 @@ package rom_pkg is
   subtype  init_gene is std_logic_vector(resol*(towns-1)-1 downto 0);
   type     init_genes is array(0 to pop_sz) of init_gene;
   --                                         
-  constant init_generation_rom : init_genes := init_genes'(
+  constant init_gen_rom : init_genes := init_genes'(
 -------------------------------------------------
 -- Population Size = 8
 -------------------------------------------------
@@ -153,8 +153,6 @@ package rom_pkg is
 --"011010101111110001100",
 --"010001110111100011101"
 );
-
-
 end package rom_pkg;
 
 

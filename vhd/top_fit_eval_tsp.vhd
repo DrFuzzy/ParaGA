@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
--- Title      : fit_eval_tsp
+-- Title      : Fitness Evaluation for TSP
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : top_fit_eval_tsp.vhd
+-- File       : fitness_eval_tsp.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos 
 -- Company    : NTUA/IRAL
 -- Created    : 16/05/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -29,47 +29,43 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 library work;
-use work.dhga_pkg.all;
+use work.ga_pkg.all;
 use work.rom_pkg.all;
 use work.arith_pkg.all;
 
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity fit_eval_tsp is
+entity fitness_eval_tsp is
   generic (
-    genom_lngt : positive := 21;        -- townres*(num_towns-1)
-    score_sz   : integer  := 16;        -- score size
-    pop_sz     : integer  := 8;         -- population size
-    elite      : integer  := 3;         -- number of elites
-    townres    : integer  := 3;         -- town resolution
-    num_towns  : integer  := 8);        -- number of towns
+    genom_lngt : positive := 21;
+    score_sz   : integer  := 16;
+    pop_sz     : integer  := 8;
+    elite      : integer  := 3;
+    townres    : integer  := 3;
+    num_towns  : integer  := 8);       
   port (
     clk           : in  std_logic;      -- clock
     rst_n         : in  std_logic;      -- reset (active low)
-    decode        : in  std_logic;  -- evaluation after rng_s or after mut_s
-    valid         : in  std_logic;      -- if H compute else if L don't
+    decode        : in  std_logic;
+    valid         : in  std_logic;
     -- both mutation or rng fill evaluation block
     in_genes      : in  std_logic_vector(2*genom_lngt-1 downto 0);
     --
     elite_null    : in  std_logic;
-    index         : in  integer;        -- the address of the current gene
-    count_parents : in  integer;        -- how many parents have been selected
-    -- ingene and its fitness value
+    index         : in  integer;
+    count_parents : in  integer;
     gene_score    : out std_logic_vector(genom_lngt+score_sz-1 downto 0);
-    --
-    elite_offs    : out int_array(0 to elite-1);  -- addr's of elite children
-    -- sum of fitnesses
+    elite_offs    : out int_array(0 to elite-1);
     fit_sum       : out std_logic_vector(score_sz+log2(pop_sz)-1 downto 0);
-    --
-    max_fit       : out std_logic_vector(score_sz-1 downto 0);  -- max. fitness
+    max_fit       : out std_logic_vector(score_sz-1 downto 0);
     rd            : out std_logic);     -- handshake
-end entity fit_eval_tsp;
+end entity fitness_eval_tsp;
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture str of fit_eval_tsp is
+architecture str of fitness_eval_tsp is
 
 -- SIGNAL DECLARATION
 -------------------------------------------------------------------------------
@@ -85,7 +81,7 @@ begin
 -------------------------------------------------------------------------------
 -- Fitness Calculator : Computes the fitness of the input gene 
 -------------------------------------------------------------------------------
-  U0 : fit_calc_tsp
+  U0 : fitness_calc_tsp
     generic map (
       genom_lngt => genom_lngt,
       score_sz   => score_sz,
@@ -100,9 +96,9 @@ begin
       in_genes   => in_genes,
       data_in    => data_out_rom,
       gene_score => gene_score,
-      fit        => fit_dummy,          -- to fix_elite
-      addr_rom   => addr_dummy,         -- to rom
-      ready_out  => ready_out_dummy);   -- to fix_elite            
+      fit        => fit_dummy,
+      addr_rom   => addr_dummy,
+      ready_out  => ready_out_dummy);            
 
 -------------------------------------------------------------------------------
 -- Elite fixation : Fixes the elite indexs and the array of the best fitnesses 
@@ -131,7 +127,7 @@ begin
 -------------------------------------------------------------------------------
 -- ROM : Contains the coordinates map of the towns (TSP problem)
 -------------------------------------------------------------------------------
-  U2 : coordinates_rom_p
+  U2 : coordinates_rom
     generic map(
       townres => townres,
       pop_sz  => pop_sz)

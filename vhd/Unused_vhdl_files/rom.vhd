@@ -2,11 +2,11 @@
 -- Title      : ROM
 -- Project    : Genetic Algorithm
 -------------------------------------------------------------------------------
--- File       : srom.vhd
+-- File       : rom.vhd
 -- Author     : George Doyamis & Kyriakos Deliparaschos
 -- Company    : NTUA/IRAL
 -- Created    : 23/03/06
--- Last update: 16/11/06
+-- Last update: 20/11/06
 -- Platform   : Modelsim 6.1c, Synplify 8.1, ISE 8.1
 -------------------------------------------------------------------------------
 -- Description: Implements a ROM.
@@ -28,18 +28,18 @@ use ieee.std_logic_arith.all;
 -------------------------------------------------------------------------------
 -- ENTITY
 -------------------------------------------------------------------------------
-entity ROM is
+entity rom is
   generic (
     townres : integer := 8);
   port (
     addr     : in  integer;
     data_out : out std_logic_vector(2*townres-1 downto 0));
-end entity ROM;
+end entity rom;
 
 -------------------------------------------------------------------------------
 -- ARCHITECTURE
 -------------------------------------------------------------------------------
-architecture rtl of ROM is
+architecture rtl of rom is
 
 begin
 

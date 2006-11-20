@@ -4,7 +4,7 @@ f "d:\designs\ga_eval\vhd\arith_pkg.vhd"; #file 2
 f "c:\eda\synplicity_81\fpga_81\lib\vhd\std1164.vhd"; #file 3
 f "c:\eda\synplicity_81\fpga_81\lib\vhd\signed.vhd"; #file 4
 f "c:\eda\synplicity_81\fpga_81\lib\vhd\arith.vhd"; #file 5
-f "d:\designs\ga_eval\vhd\dhga_pkg.vhd"; #file 6
+f "d:\designs\ga_eval\vhd\ga_pkg.vhd"; #file 6
 f "d:\designs\ga_eval\vhd\rom_pkg.vhd"; #file 7
 f "d:\designs\ga_eval\vhd\control_tsp.vhd"; #file 8
 f "c:\eda\synplicity_81\fpga_81\lib\vhd\numeric.vhd"; #file 9
