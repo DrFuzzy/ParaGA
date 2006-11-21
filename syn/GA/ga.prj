@@ -62,7 +62,7 @@ set_option -write_vif 1
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "rev_1/top.edf"
+project -result_file "rev_1/ga.edf"
 
 #
 #implementation attributes
