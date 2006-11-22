@@ -1,7 +1,7 @@
 #-- Synplicity, Inc.
 #-- Version Synplify Pro 8.5.1
 #-- Project file D:\Designs\GA_eval\syn\GA_TSP\ga_tsp.prd
-#-- Written on Mon Nov 20 20:56:33 2006
+#-- Written on Wed Nov 22 19:56:59 2006
 
 #
 ### Watch Implementation type ###
@@ -10,7 +10,7 @@ watch_impl -all
 #
 ### Watch Implementation properties ###
 #
-watch_prop -clear {  clk - Estimated Frequency } {  Worst Slack } {  clk - Requested Frequency } { ga_tsp Single Port Rams (RAM16X4S) } { ga_tsp 32x1 ROMs (ROM32X1) } { ga_tsp Register bits (Non I/O) } {  clk - Estimated Period }
+watch_prop -clear {  clk - Estimated Frequency } {  Worst Slack } {  clk - Requested Frequency } { ga_tsp Single Port Rams (RAM16X4S) } {  clk - Estimated Period }
 
 #HDL Parameters
 set_option -hdl_param -add genom_lngt ga_tsp
