@@ -126,7 +126,7 @@ rem #################
 
 set  tran=1 
 set  map=1
-set  par=0
+set  par=1
 set  sim=0
 set  bit=0
 set  prom=0
