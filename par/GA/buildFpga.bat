@@ -146,7 +146,7 @@ if not %tran%==0 goto end
 :tran
 echo ===== Starting Translate
 
-ngdbuild.exe -p %Target% -sd /Cores -dd _ngo -nt timestamp -uc ga.ucf -intstyle ise %EdfPath%%Project%.edf %Project%.ngd 
+ngdbuild.exe -p %Target% -sd /Cores -dd _ngo -nt timestamp -uc %Project%.ucf -intstyle ise %EdfPath%%Project%.edf %Project%.ngd 
 
 echo ===== Translate Complete
 
