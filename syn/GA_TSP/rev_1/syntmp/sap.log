@@ -1,0 +1,17 @@
+###########################################################[
+Version 8.1
+Synplicity Xilinx Technology Mapper, Version 8.1.0, Build 540R, Built May  9 2005
+Copyright (C) 1994-2005, Synplicity Inc.  All Rights Reserved
+Reading constraint file: C:\Documents and Settings\delk\Documents\Designs\GA_eval\syn\GA_TSP\ga_tsp.sdc
+Adding property syn_reference_clock1, value "clk,r=0.0,f=5.0,u=0.0,p=10.0,clockgroup=default_clkgroup_0,rd=0.0,fd=0.0,v=0" to view:work.ga_tsp(str)
+Adding property syn_netlist_hierarchy, value 1 to view:work.ga_tsp(str)
+Adding property syn_useioff, value 1 to view:work.ga_tsp(str)
+Adding property syn_romstyle, value "block_rom" to view:work.ga_tsp(str)
+Reading Xilinx I/O pad type table from file <C:\EDA\Synplicity\fpga_81\lib/xilinx/x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file <C:\EDA\Synplicity\fpga_81\lib/xilinx/gttype.txt> 
+Adding property syn_clock, value "rise_offset=0.0,fall_offset=0.0,rs=0.0,fs=0.0,improve=0.0,route=0.0,rref=clk:r,fref=clk:f", to port clk
+
+
+@N|Writing default property annotation file C:\Documents and Settings\delk\Documents\Designs\GA_eval\syn\GA_TSP\rev_1\ga_tsp.sap.
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+###########################################################]

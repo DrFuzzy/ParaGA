@@ -1,0 +1,2582 @@
+
+d U0;
+
+gi parallel_out_1[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_14";
+ai .async_set "n:U0.un1_rst_n_6";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_13";
+ai .async_set "n:U0.un1_rst_n_14";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_13";
+ai .async_set "n:U0.un1_rst_n_5";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_12";
+ai .async_set "n:U0.un1_rst_n_13";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_12";
+ai .async_set "n:U0.un1_rst_n_4";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_11";
+ai .async_set "n:U0.un1_rst_n_12";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_11";
+ai .async_set "n:U0.un1_rst_n_3";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_10";
+ai .async_set "n:U0.un1_rst_n_11";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_10";
+ai .async_set "n:U0.un1_rst_n_2";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_9";
+ai .async_set "n:U0.un1_rst_n_10";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_9";
+ai .async_set "n:U0.un1_rst_n_1";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_8";
+ai .async_set "n:U0.un1_rst_n_9";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_16";
+ai .async_set "n:U0.un1_rst_n_8";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_15";
+ai .async_set "n:U0.un1_rst_n_16";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U0.un1_run_15";
+ai .async_set "n:U0.un1_rst_n_7";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run";
+ai .async_reset "n:U0.un1_load_14";
+ai .async_set "n:U0.un1_rst_n_15";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U1;
+
+gi parallel_out_1[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_30";
+ai .async_set "n:U1.un1_rst_n_14";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_29";
+ai .async_set "n:U1.un1_rst_n_30";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_29";
+ai .async_set "n:U1.un1_rst_n_13";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_28";
+ai .async_set "n:U1.un1_rst_n_29";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_27";
+ai .async_set "n:U1.un1_rst_n_11";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_26";
+ai .async_set "n:U1.un1_rst_n_27";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_28";
+ai .async_set "n:U1.un1_rst_n_12";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_27";
+ai .async_set "n:U1.un1_rst_n_28";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_26";
+ai .async_set "n:U1.un1_rst_n_10";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_25";
+ai .async_set "n:U1.un1_rst_n_26";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_25";
+ai .async_set "n:U1.un1_rst_n_9";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_24";
+ai .async_set "n:U1.un1_rst_n_25";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[8];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_24";
+ai .async_set "n:U1.un1_rst_n_8";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[8];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_23";
+ai .async_set "n:U1.un1_rst_n_24";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[9];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_23";
+ai .async_set "n:U1.un1_rst_n_7";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[9];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_22";
+ai .async_set "n:U1.un1_rst_n_23";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[10];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_22";
+ai .async_set "n:U1.un1_rst_n_6";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[10];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_21";
+ai .async_set "n:U1.un1_rst_n_22";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[11];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_21";
+ai .async_set "n:U1.un1_rst_n_5";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[11];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_20";
+ai .async_set "n:U1.un1_rst_n_21";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[12];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_20";
+ai .async_set "n:U1.un1_rst_n_4";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[12];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_19";
+ai .async_set "n:U1.un1_rst_n_20";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[13];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_19";
+ai .async_set "n:U1.un1_rst_n_3";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[13];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_18";
+ai .async_set "n:U1.un1_rst_n_19";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[14];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_18";
+ai .async_set "n:U1.un1_rst_n_2";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[14];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_17";
+ai .async_set "n:U1.un1_rst_n_18";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_17";
+ai .async_set "n:U1.un1_rst_n_1";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_16";
+ai .async_set "n:U1.un1_rst_n_17";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_32";
+ai .async_set "n:U1.un1_rst_n_16";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_31";
+ai .async_set "n:U1.un1_rst_n_32";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U1.un1_run_31";
+ai .async_set "n:U1.un1_rst_n_15";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run1";
+ai .async_reset "n:U1.un1_load_30";
+ai .async_set "n:U1.un1_rst_n_31";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U2;
+
+gi parallel_out_1[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U2.un1_run_11";
+ai .async_set "n:U2.un1_rst_n_5";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run2";
+ai .async_reset "n:U2.un1_load_10";
+ai .async_set "n:U2.un1_rst_n_11";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U2.un1_run_10";
+ai .async_set "n:U2.un1_rst_n_4";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run2";
+ai .async_reset "n:U2.un1_load_9";
+ai .async_set "n:U2.un1_rst_n_10";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U2.un1_run_9";
+ai .async_set "n:U2.un1_rst_n_3";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run2";
+ai .async_reset "n:U2.un1_load_8";
+ai .async_set "n:U2.un1_rst_n_9";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U2.un1_run_8";
+ai .async_set "n:U2.un1_rst_n_2";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run2";
+ai .async_reset "n:U2.un1_load_7";
+ai .async_set "n:U2.un1_rst_n_8";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U2.un1_run_7";
+ai .async_set "n:U2.un1_rst_n_1";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run2";
+ai .async_reset "n:U2.un1_load_6";
+ai .async_set "n:U2.un1_rst_n_7";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U2.un1_run_12";
+ai .async_set "n:U2.un1_rst_n_6";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run2";
+ai .async_reset "n:U2.un1_load_11";
+ai .async_set "n:U2.un1_rst_n_12";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U3;
+
+gi parallel_out_1[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U3.un1_run_7";
+ai .async_set "n:U3.un1_rst_n_3";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run3";
+ai .async_reset "n:U3.un1_load_6";
+ai .async_set "n:U3.un1_rst_n_7";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U3.un1_run_6";
+ai .async_set "n:U3.un1_rst_n_2";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run3";
+ai .async_reset "n:U3.un1_load_5";
+ai .async_set "n:U3.un1_rst_n_6";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U3.un1_run_5";
+ai .async_set "n:U3.un1_rst_n_1";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run3";
+ai .async_reset "n:U3.un1_load_4";
+ai .async_set "n:U3.un1_rst_n_5";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi parallel_out_1[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:U3.un1_run_8";
+ai .async_set "n:U3.un1_rst_n_4";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi LFSR.lfsr_reg[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:run3";
+ai .async_reset "n:U3.un1_load_7";
+ai .async_set "n:U3.un1_rst_n_8";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U4.U0;
+
+gi done_p;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp[7:1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U0.fit_calc.un2_valid";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U0.fit_calc.un2_valid";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U4.U1;
+
+gi count_cycle[0:3];
+ai .clock "clk";
+ai .clock_edge "rise";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi fin;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_count_cycle_3_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi max_fit[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_3[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi counter[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.fix_sum.un2_valid";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi best_fit_0[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_4[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi elite_indexs_0[31:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_4[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi best_fit_prev_gen_0[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_6[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi best_fit_prev_gen_1[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_6[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp1_1[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.temp1_1_0_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp2_0[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.temp1_1_0_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi elite_offs_0[31:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_6[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi elite_offs_1[31:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_6[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp_indexs_1_1[31:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.temp1_1_0_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp_indexs_2_0[31:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.temp1_1_0_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi best_fit_1[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_8[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi elite_indexs_1[31:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_8[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp2_1[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.temp1_1_0_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp_indexs_2_1[31:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.temp1_1_0_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi fit_sum[10:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_elite_null_3[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi sum_p[10:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U4.U1.un1_sum_p_1_sqmuxa_1[0]";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U4;
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U5;
+
+gi count;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:sel_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi cumSum_p1[10:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U5.un1_clk";
+ai .async_reset "n:sel_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi scalFitSum_p[14:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .sync_reset "n:sel_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi done_t;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U5.selection.un1_data_valid";
+ai .async_reset "n:sel_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp_rd;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:sel_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi selParent_p[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U5.selection.un25_data_valid";
+ai .async_reset "n:sel_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U6;
+
+gi done_t;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi tmp_2[2:0];
+ai .rtl_dangling_pins "OUT[0]";
+
+
+gi un11_mask1[2:0];
+ai .rtl_dangling_pins "OUT[0]";
+
+
+gi crossout1_t[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:cross_rd_dummy";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U7;
+
+gi done_p;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi count[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi mutout_p1[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U7.un1_done_p_2";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U8;
+
+gi rd;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:term_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi fitlim_rd;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:term_out";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U9;
+
+gi wr_r;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi add_r[2:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_1[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_2[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_3[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_4[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_5[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_6[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_7[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_8[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_9[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_10[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_11[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_12[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_13[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_14[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_15[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data[15:0];
+ai .clock "clk";
+gp CLK;
+ap .is_clock 1;
+ap .clock "clk";
+
+gi data_out_1[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[8];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[9];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[10];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[11];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[12];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[13];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[14];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U9.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U10;
+
+gi wr_r;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi add_r[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_1[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_2[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_3[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_4[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_5[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_6[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cl_7[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data[7:0];
+ai .clock "clk";
+gp CLK;
+ap .is_clock 1;
+ap .clock "clk";
+
+gi data_out_1[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_1[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U10.un1_wr_r";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U11;
+
+gi sreg[0:8];
+ai .clock "clk";
+ai .clock_edge "rise";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi term_rd_p1;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi notify_cnt_p[0:7];
+ai .clock "clk";
+ai .clock_edge "rise";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi elite_null;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi next_gene;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi flag;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi run2;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_valid;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi cross_out;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi load;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi mut_out;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi run;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi index[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi run1;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi decode;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp1[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U11.un1_sreg_32";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi sel_out;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi term_out;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cross1[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi ga_fin;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi count_gen_p1[6:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi temp2[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U11.un1_sreg_34";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi cnt_adapted;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U11.un1_incr_2_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi count_sel_wr_p1[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi valid;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi data_out_cross2[7:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi count_parents_p1[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi addr_1_c[31:0];
+ai .rtl_dangling_pins "OUT[31]";
+
+
+gi cnt_parents_1[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi count_offs_p1[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi incr[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .clock_enable "n:U11.un1_incr_2_sqmuxa";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi run3;
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi incr_p1[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi count_cross_offs_p1[2:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi count_sel_rd_p1[3:0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U15;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.8.ilatency.ilatency.0.idin.intern_0[8];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.9.ilatency.ilatency.0.idin.intern_0[9];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.10.ilatency.ilatency.0.idin.intern_0[10];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.11.ilatency.ilatency.0.idin.intern_0[11];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.12.ilatency.ilatency.0.idin.intern_0[12];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.13.ilatency.ilatency.0.idin.intern_0[13];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.14.ilatency.ilatency.0.idin.intern_0[14];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.15.ilatency.ilatency.0.idin.intern_0[15];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U16;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U17;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+n work ga str;
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+av .syn_compile_point 1;
+av .compile_point_name ga;
+
+d U22;
+
+gi intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U21;
+
+gi intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U20;
+
+gi intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U19;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U18;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U14;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U13;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";
+
+d U12;
+
+gi case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0[6];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+
+gi case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0[7];
+ai .clock "clk";
+ai .clock_edge "rise";
+ai .async_reset "n:rst_n";
+gp C;
+ap .is_clock 1;
+ap .clock "clk";
+ap .clock_edge "rise";
+gn clk;
+an .is_clock 1;
+an .clock "clk";
+an .clock_edge "rise";

@@ -1,0 +1,1224 @@
+#
+# Synplicity Verification Interface File
+# Generated using Synplify-pro
+#
+# Copyright (c) 1996-2005 Synplicity, Inc.
+# All rights reserved
+#
+
+# Set logfile options
+vif_set_result_file  ga_tsp.vlf
+
+# Set technology for TCL script
+vif_set_technology -architecture FPGA -vendor Xilinx
+
+# RTL and technology files
+vif_add_file -original -vhdl -lib work ../../../vhd/arith_pkg.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/ga_pkg.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/rom_pkg.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/control_tsp.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/coordinates_rom.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/crossover_TSP.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/delay_regs.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/fitness_calc_TSP.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/fix_elite_tsp.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/init_generation_rom.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/selection.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/rng_128.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/spram.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/mutation_tsp.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/fitness_eval_tsp.vhd
+vif_add_file -original -vhdl -lib work ../../../vhd/ga_tsp.vhd
+vif_set_top_module -original -top ga_tsp
+ 
+vif_add_library -translated $XILINX/verilog/verification/unisims
+vif_add_library -translated $XILINX/verilog/verification/simprims
+vif_add_file -translated -verilog ga_tsp.vm
+vif_set_top_module -translated -top ga_tsp 
+# Read FSM encoding
+vif_set_fsm -fsm fsm_0
+vif_set_fsmreg -original -fsm fsm_0 U4/U1/count_cycle[1:0]
+vif_set_fsmreg -translated -fsm  fsm_0 U4/U1/count_cycle[1:0]
+vif_set_state_map -fsm fsm_0 -original "00" -translated "00"
+vif_set_state_map -fsm fsm_0 -original "01" -translated "01"
+vif_set_state_map -fsm fsm_0 -original "10" -translated "10"
+vif_set_state_map -fsm fsm_0 -original "11" -translated "11"
+vif_set_fsm -fsm fsm_3
+vif_set_fsmreg -original -fsm fsm_3 U6/cont1[2:0]
+vif_set_fsmreg -translated -fsm  fsm_3 U6/cont1[5:0]
+vif_set_state_map -fsm fsm_3 -original "000" -translated "100000"
+vif_set_state_map -fsm fsm_3 -original "001" -translated "010000"
+vif_set_state_map -fsm fsm_3 -original "010" -translated "001000"
+vif_set_state_map -fsm fsm_3 -original "011" -translated "000100"
+vif_set_state_map -fsm fsm_3 -original "100" -translated "000010"
+vif_set_state_map -fsm fsm_3 -original "101" -translated "000001"
+vif_set_fsm -fsm fsm_10
+vif_set_fsmreg -original -fsm fsm_10 U10/notify_cnt_p[3:0]
+vif_set_fsmreg -translated -fsm  fsm_10 U10/notify_cnt_p[8:0]
+vif_set_state_map -fsm fsm_10 -original "0000" -translated "100000000"
+vif_set_state_map -fsm fsm_10 -original "0001" -translated "010000000"
+vif_set_state_map -fsm fsm_10 -original "0010" -translated "001000000"
+vif_set_state_map -fsm fsm_10 -original "0011" -translated "000100000"
+vif_set_state_map -fsm fsm_10 -original "0101" -translated "000010000"
+vif_set_state_map -fsm fsm_10 -original "0110" -translated "000001000"
+vif_set_state_map -fsm fsm_10 -original "0111" -translated "000000100"
+vif_set_state_map -fsm fsm_10 -original "1000" -translated "000000010"
+vif_set_state_map -fsm fsm_10 -original "1001" -translated "000000001"
+vif_set_fsm -fsm fsm_11
+vif_set_fsmreg -original -fsm fsm_11 U10/sreg[8:0]
+vif_set_fsmreg -translated -fsm  fsm_11 U10/sreg[8:0]
+vif_set_state_map -fsm fsm_11 -original "000000001" -translated "100000000"
+vif_set_state_map -fsm fsm_11 -original "000000010" -translated "010000000"
+vif_set_state_map -fsm fsm_11 -original "000000100" -translated "001000000"
+vif_set_state_map -fsm fsm_11 -original "000001000" -translated "000100000"
+vif_set_state_map -fsm fsm_11 -original "000010000" -translated "000010000"
+vif_set_state_map -fsm fsm_11 -original "000100000" -translated "000001000"
+vif_set_state_map -fsm fsm_11 -original "001000000" -translated "000000100"
+vif_set_state_map -fsm fsm_11 -original "010000000" -translated "000000010"
+vif_set_state_map -fsm fsm_11 -original "100000000" -translated "000000001"
+
+# Memory map points
+
+# SRL map points
+
+# Compiler constant registers
+
+# Compiler constant latches
+
+# Compiler RTL sequential redundancies
+
+# RTL sequential redundancies
+vif_set_merge -original  U4/U0/gene_score[9] U4/U0/fit[9]
+vif_set_merge -original  U4/U0/gene_score[8] U4/U0/fit[8]
+vif_set_merge -original  U4/U0/gene_score[7] U4/U0/fit[7]
+vif_set_merge -original  U4/U0/gene_score[6] U4/U0/fit[6]
+vif_set_merge -original  U4/U0/gene_score[5] U4/U0/fit[5]
+vif_set_merge -original  U4/U0/gene_score[4] U4/U0/fit[4]
+vif_set_merge -original  U4/U0/gene_score[3] U4/U0/fit[3]
+vif_set_merge -original  U4/U0/gene_score[2] U4/U0/fit[2]
+vif_set_merge -original  U4/U0/gene_score[1] U4/U0/fit[1]
+vif_set_merge -original  U4/U0/gene_score[0] U4/U0/fit[0]
+vif_set_merge -original  U4/U1/temp2[0][9] U4/U1/temp1[1][9]
+vif_set_merge -original  U4/U1/temp2[0][8] U4/U1/temp1[1][8]
+vif_set_merge -original  U4/U1/temp2[0][7] U4/U1/temp1[1][7]
+vif_set_merge -original  U4/U1/temp2[0][6] U4/U1/temp1[1][6]
+vif_set_merge -original  U4/U1/temp2[0][5] U4/U1/temp1[1][5]
+vif_set_merge -original  U4/U1/temp2[0][4] U4/U1/temp1[1][4]
+vif_set_merge -original  U4/U1/temp2[0][3] U4/U1/temp1[1][3]
+vif_set_merge -original  U4/U1/temp2[0][2] U4/U1/temp1[1][2]
+vif_set_merge -original  U4/U1/temp2[0][1] U4/U1/temp1[1][1]
+vif_set_merge -original  U4/U1/temp2[0][0] U4/U1/temp1[1][0]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][31] U4/U1/temp_indexs_1[1][31]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][30] U4/U1/temp_indexs_1[1][30]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][29] U4/U1/temp_indexs_1[1][29]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][28] U4/U1/temp_indexs_1[1][28]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][27] U4/U1/temp_indexs_1[1][27]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][26] U4/U1/temp_indexs_1[1][26]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][25] U4/U1/temp_indexs_1[1][25]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][24] U4/U1/temp_indexs_1[1][24]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][23] U4/U1/temp_indexs_1[1][23]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][22] U4/U1/temp_indexs_1[1][22]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][21] U4/U1/temp_indexs_1[1][21]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][20] U4/U1/temp_indexs_1[1][20]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][19] U4/U1/temp_indexs_1[1][19]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][18] U4/U1/temp_indexs_1[1][18]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][17] U4/U1/temp_indexs_1[1][17]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][16] U4/U1/temp_indexs_1[1][16]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][15] U4/U1/temp_indexs_1[1][15]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][14] U4/U1/temp_indexs_1[1][14]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][13] U4/U1/temp_indexs_1[1][13]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][12] U4/U1/temp_indexs_1[1][12]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][11] U4/U1/temp_indexs_1[1][11]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][10] U4/U1/temp_indexs_1[1][10]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][9] U4/U1/temp_indexs_1[1][9]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][8] U4/U1/temp_indexs_1[1][8]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][7] U4/U1/temp_indexs_1[1][7]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][6] U4/U1/temp_indexs_1[1][6]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][5] U4/U1/temp_indexs_1[1][5]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][4] U4/U1/temp_indexs_1[1][4]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][3] U4/U1/temp_indexs_1[1][3]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][2] U4/U1/temp_indexs_1[1][2]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][1] U4/U1/temp_indexs_1[1][1]
+vif_set_merge -original  U4/U1/temp_indexs_2[0][0] U4/U1/temp_indexs_1[1][0]
+
+# Technology sequential redundancies
+vif_set_equiv -translated U2/parallel_out_1_Z[3] U2/parallel_out_1_3_rep1_Z
+vif_set_equiv -translated U2/parallel_out_1_Z[3] U2/parallel_out_1_fast_Z[3]
+vif_set_equiv -translated U2/parallel_out_1_Z[4] U2/parallel_out_1_4_rep1_Z
+vif_set_equiv -translated U2/parallel_out_1_Z[4] U2/parallel_out_1_fast_Z[4]
+vif_set_equiv -translated U2/parallel_out_1_Z[5] U2/parallel_out_1_5_rep1_Z
+vif_set_equiv -translated U2/parallel_out_1_Z[5] U2/parallel_out_1_fast_Z[5]
+vif_set_equiv -translated U6/temp1_Z[17] U6/temp1_fast_Z[17]
+vif_set_equiv -translated U6/temp1_Z[13] U6/temp1_fast_Z[13]
+vif_set_equiv -translated U6/temp1_Z[12] U6/temp1_fast_Z[12]
+vif_set_equiv -translated U6/temp1_Z[15] U6/temp1_fast_Z[15]
+vif_set_equiv -translated U6/temp1_Z[16] U6/temp1_fast_Z[16]
+vif_set_equiv -translated U10/sreg_Z[0] U10/sreg_0_rep1_Z
+vif_set_equiv -translated U10/sreg_Z[0] U10/sreg_fast_Z[0]
+vif_set_equiv -translated U10/decode_Z U10/decode_rep2_Z
+vif_set_equiv -translated U10/decode_Z U10/decode_rep1_Z
+vif_set_equiv -translated U10/decode_Z U10/decode_fast_Z
+
+# Inversion map points
+
+# Port mappping and directions
+
+# Black box mapping
+
+
+# Other sequential cells, including multidimensional arrays
+vif_set_map_point -register -original U11/intern[0][7] -translated U11/case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0_Z[7]
+vif_set_map_point -register -original U11/intern[0][6] -translated U11/case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0_Z[6]
+vif_set_map_point -register -original U11/intern[0][5] -translated U11/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0_Z[5]
+vif_set_map_point -register -original U11/intern[0][4] -translated U11/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0_Z[4]
+vif_set_map_point -register -original U11/intern[0][3] -translated U11/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0_Z[3]
+vif_set_map_point -register -original U11/intern[0][2] -translated U11/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0_Z[2]
+vif_set_map_point -register -original U11/intern[0][1] -translated U11/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0_Z[1]
+vif_set_map_point -register -original U11/intern[0][0] -translated U11/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0_Z[0]
+vif_set_map_point -register -original U11/intern[0][20] -translated U11/case1.iwidth.iwidth.20.ilatency.ilatency.0.idin.intern_0_Z[20]
+vif_set_map_point -register -original U11/intern[0][19] -translated U11/case1.iwidth.iwidth.19.ilatency.ilatency.0.idin.intern_0_Z[19]
+vif_set_map_point -register -original U11/intern[0][18] -translated U11/case1.iwidth.iwidth.18.ilatency.ilatency.0.idin.intern_0_Z[18]
+vif_set_map_point -register -original U11/intern[0][17] -translated U11/case1.iwidth.iwidth.17.ilatency.ilatency.0.idin.intern_0_Z[17]
+vif_set_map_point -register -original U11/intern[0][16] -translated U11/case1.iwidth.iwidth.16.ilatency.ilatency.0.idin.intern_0_Z[16]
+vif_set_map_point -register -original U11/intern[0][15] -translated U11/case1.iwidth.iwidth.15.ilatency.ilatency.0.idin.intern_0_Z[15]
+vif_set_map_point -register -original U11/intern[0][14] -translated U11/case1.iwidth.iwidth.14.ilatency.ilatency.0.idin.intern_0_Z[14]
+vif_set_map_point -register -original U11/intern[0][13] -translated U11/case1.iwidth.iwidth.13.ilatency.ilatency.0.idin.intern_0_Z[13]
+vif_set_map_point -register -original U11/intern[0][12] -translated U11/case1.iwidth.iwidth.12.ilatency.ilatency.0.idin.intern_0_Z[12]
+vif_set_map_point -register -original U11/intern[0][11] -translated U11/case1.iwidth.iwidth.11.ilatency.ilatency.0.idin.intern_0_Z[11]
+vif_set_map_point -register -original U11/intern[0][10] -translated U11/case1.iwidth.iwidth.10.ilatency.ilatency.0.idin.intern_0_Z[10]
+vif_set_map_point -register -original U11/intern[0][9] -translated U11/case1.iwidth.iwidth.9.ilatency.ilatency.0.idin.intern_0_Z[9]
+vif_set_map_point -register -original U11/intern[0][8] -translated U11/case1.iwidth.iwidth.8.ilatency.ilatency.0.idin.intern_0_Z[8]
+vif_set_map_point -register -original U12/intern[0][1] -translated U12/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0_Z[1]
+vif_set_map_point -register -original U12/intern[0][0] -translated U12/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0_Z[0]
+vif_set_map_point -register -original U12/intern[0][9] -translated U12/case1.iwidth.iwidth.9.ilatency.ilatency.0.idin.intern_0_Z[9]
+vif_set_map_point -register -original U12/intern[0][8] -translated U12/case1.iwidth.iwidth.8.ilatency.ilatency.0.idin.intern_0_Z[8]
+vif_set_map_point -register -original U12/intern[0][7] -translated U12/case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0_Z[7]
+vif_set_map_point -register -original U12/intern[0][6] -translated U12/case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0_Z[6]
+vif_set_map_point -register -original U12/intern[0][5] -translated U12/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0_Z[5]
+vif_set_map_point -register -original U12/intern[0][4] -translated U12/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0_Z[4]
+vif_set_map_point -register -original U12/intern[0][3] -translated U12/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0_Z[3]
+vif_set_map_point -register -original U12/intern[0][2] -translated U12/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0_Z[2]
+vif_set_map_point -register -original U13/intern[0][6] -translated U13/case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0_Z[6]
+vif_set_map_point -register -original U13/intern[0][5] -translated U13/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0_Z[5]
+vif_set_map_point -register -original U13/intern[0][4] -translated U13/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0_Z[4]
+vif_set_map_point -register -original U13/intern[0][3] -translated U13/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0_Z[3]
+vif_set_map_point -register -original U13/intern[0][2] -translated U13/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0_Z[2]
+vif_set_map_point -register -original U13/intern[0][1] -translated U13/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0_Z[1]
+vif_set_map_point -register -original U13/intern[0][0] -translated U13/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0_Z[0]
+vif_set_map_point -register -original U13/intern[0][7] -translated U13/case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0_Z[7]
+vif_set_map_point -register -original U14/intern[0][5] -translated U14/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0_Z[5]
+vif_set_map_point -register -original U14/intern[0][4] -translated U14/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0_Z[4]
+vif_set_map_point -register -original U14/intern[0][3] -translated U14/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0_Z[3]
+vif_set_map_point -register -original U14/intern[0][2] -translated U14/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0_Z[2]
+vif_set_map_point -register -original U14/intern[0][1] -translated U14/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0_Z[1]
+vif_set_map_point -register -original U14/intern[0][0] -translated U14/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0_Z[0]
+vif_set_map_point -register -original U15/intern[0][3] -translated U15/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0_Z[3]
+vif_set_map_point -register -original U15/intern[0][2] -translated U15/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0_Z[2]
+vif_set_map_point -register -original U15/intern[0][1] -translated U15/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0_Z[1]
+vif_set_map_point -register -original U15/intern[0][0] -translated U15/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0_Z[0]
+vif_set_map_point -register -original U16/intern[0][0] -translated U16/intern_0_Z[0]
+vif_set_map_point -register -original U17/intern[0][0] -translated U17/intern_0_Z[0]
+
+# Constant Registers
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U8/data_out_cl[30]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+vif_set_constant -original -1 U9/data_out_cl[20]
+
+# Retimed Registers
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_12_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_11_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_10_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_9_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_8_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_7_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_6_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_5_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_4_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_3_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_2_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U0/un1_lfsr_reg_3 -translated U0/addr_rom_1_ret_Z
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[1] -translated U1/LFSR.lfsr_reg_Z[1]
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[0] -translated U1/LFSR.lfsr_reg_Z[0]
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[7] -translated U1/LFSR.lfsr_reg_Z[7]
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[3] -translated U1/LFSR.lfsr_reg_Z[3]
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[6] -translated U1/LFSR.lfsr_reg_Z[6]
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[5] -translated U1/LFSR.lfsr_reg_Z[5]
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[4] -translated U1/LFSR.lfsr_reg_Z[4]
+vif_set_sequential_verify -retimed -register -original U1/lfsr_reg[2] -translated U1/LFSR.lfsr_reg_Z[2]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[0] -translated U1/parallel_out_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[7] -translated U1/parallel_out_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[3] -translated U1/parallel_out_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[6] -translated U1/parallel_out_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[5] -translated U1/parallel_out_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[4] -translated U1/parallel_out_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[2] -translated U1/parallel_out_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U1/parallel_out[1] -translated U1/parallel_out_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U2/lfsr_reg[4] -translated U2/LFSR.lfsr_reg_Z[4]
+vif_set_sequential_verify -retimed -register -original U2/lfsr_reg[3] -translated U2/LFSR.lfsr_reg_Z[3]
+vif_set_sequential_verify -retimed -register -original U2/lfsr_reg[2] -translated U2/LFSR.lfsr_reg_Z[2]
+vif_set_sequential_verify -retimed -register -original U2/lfsr_reg[1] -translated U2/LFSR.lfsr_reg_Z[1]
+vif_set_sequential_verify -retimed -register -original U2/lfsr_reg[5] -translated U2/LFSR.lfsr_reg_Z[5]
+vif_set_sequential_verify -retimed -register -original U2/lfsr_reg[0] -translated U2/LFSR.lfsr_reg_Z[0]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out -translated U2/parallel_out_1_3_rep1_Z
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[3] -translated U2/parallel_out_1_fast_Z[3]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out -translated U2/parallel_out_1_4_rep1_Z
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[4] -translated U2/parallel_out_1_fast_Z[4]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out -translated U2/parallel_out_1_5_rep1_Z
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[5] -translated U2/parallel_out_1_fast_Z[5]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[4] -translated U2/parallel_out_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[3] -translated U2/parallel_out_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[2] -translated U2/parallel_out_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[1] -translated U2/parallel_out_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[5] -translated U2/parallel_out_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U2/parallel_out[0] -translated U2/parallel_out_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U3/lfsr_reg[2] -translated U3/LFSR.lfsr_reg_Z[2]
+vif_set_sequential_verify -retimed -register -original U3/lfsr_reg[1] -translated U3/LFSR.lfsr_reg_Z[1]
+vif_set_sequential_verify -retimed -register -original U3/lfsr_reg[3] -translated U3/LFSR.lfsr_reg_Z[3]
+vif_set_sequential_verify -retimed -register -original U3/lfsr_reg[0] -translated U3/LFSR.lfsr_reg_Z[0]
+vif_set_sequential_verify -retimed -register -original U3/parallel_out[3] -translated U3/parallel_out_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U3/parallel_out[0] -translated U3/parallel_out_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U3/parallel_out[2] -translated U3/parallel_out_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U3/parallel_out[1] -translated U3/parallel_out_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_8_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_1_8_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_3_2_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_1_7_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_3_1_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_6_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_5_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/dist_1_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_4_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/counter_read_rom_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/counter_read_rom[0] -translated U4/U0/counter_read_rom_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U0/counter_read_rom[1] -translated U4/U0/counter_read_rom_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U0/counter_read_rom[2] -translated U4/U0/counter_read_rom_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U0/counter_read_rom[3] -translated U4/U0/counter_read_rom_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_3_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_1_3_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_2_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_7_0_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_1_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_1_1_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_2_0_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/counter_read_rom_ret_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/dist_1_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/dist_1_ret_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/valid_ret_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_22_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_21_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_20_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_19_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_18_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_17_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_16_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_15_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_14_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_11_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_9_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/un1_lfsr_reg_3 -translated U4/U0/fit_n_ret_8_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/flag -translated U4/U0/dist_1_ret_0_pipe_5_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/flag -translated U4/U0/dist_1_ret_0_pipe_4_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/flag -translated U4/U0/dist_1_ret_0_pipe_3_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/dist_1[1] -translated U4/U0/dist_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U0/flag -translated U4/U0/dist_1_ret_pipe_5_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/flag -translated U4/U0/dist_1_ret_pipe_4_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/flag -translated U4/U0/dist_1_ret_pipe_3_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/dist_1[4] -translated U4/U0/dist_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U0/dist_1[3] -translated U4/U0/dist_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[9] -translated U4/U0/gene_score_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[8] -translated U4/U0/gene_score_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[7] -translated U4/U0/gene_score_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[6] -translated U4/U0/gene_score_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[5] -translated U4/U0/gene_score_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[4] -translated U4/U0/gene_score_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[3] -translated U4/U0/gene_score_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[2] -translated U4/U0/gene_score_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[1] -translated U4/U0/gene_score_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[0] -translated U4/U0/gene_score_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U0/done_p -translated U4/U0/done_p_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/ready_out -translated U4/U0/ready_out_Z
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[30] -translated U4/U0/gene_score_Z[30]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[29] -translated U4/U0/gene_score_Z[29]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[28] -translated U4/U0/gene_score_Z[28]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[27] -translated U4/U0/gene_score_Z[27]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[26] -translated U4/U0/gene_score_Z[26]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[25] -translated U4/U0/gene_score_Z[25]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[24] -translated U4/U0/gene_score_Z[24]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[23] -translated U4/U0/gene_score_Z[23]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[22] -translated U4/U0/gene_score_Z[22]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[21] -translated U4/U0/gene_score_Z[21]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[20] -translated U4/U0/gene_score_Z[20]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[19] -translated U4/U0/gene_score_Z[19]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[18] -translated U4/U0/gene_score_Z[18]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[17] -translated U4/U0/gene_score_Z[17]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[16] -translated U4/U0/gene_score_Z[16]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[15] -translated U4/U0/gene_score_Z[15]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[14] -translated U4/U0/gene_score_Z[14]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[13] -translated U4/U0/gene_score_Z[13]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[12] -translated U4/U0/gene_score_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[11] -translated U4/U0/gene_score_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U0/gene_score[10] -translated U4/U0/gene_score_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[0] -translated U4/U1/fit_sum_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[0] -translated U4/U1/sum_p_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[12] -translated U4/U1/sum_p_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[12] -translated U4/U1/fit_sum_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[11] -translated U4/U1/sum_p_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[11] -translated U4/U1/fit_sum_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[10] -translated U4/U1/sum_p_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[10] -translated U4/U1/fit_sum_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[9] -translated U4/U1/sum_p_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[9] -translated U4/U1/fit_sum_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[8] -translated U4/U1/sum_p_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[8] -translated U4/U1/fit_sum_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[7] -translated U4/U1/sum_p_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[7] -translated U4/U1/fit_sum_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[6] -translated U4/U1/sum_p_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[6] -translated U4/U1/fit_sum_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[5] -translated U4/U1/sum_p_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[5] -translated U4/U1/fit_sum_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[4] -translated U4/U1/sum_p_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[4] -translated U4/U1/fit_sum_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[3] -translated U4/U1/sum_p_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[3] -translated U4/U1/fit_sum_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[2] -translated U4/U1/sum_p_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[2] -translated U4/U1/fit_sum_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/sum_p[1] -translated U4/U1/sum_p_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/fit_sum[1] -translated U4/U1/fit_sum_Z[1]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U4/U1/count_cycle[1] -translated U4/U1/count_cycle_Z[1]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U4/U1/count_cycle[0] -translated U4/U1/count_cycle_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/rd -translated U4/U1/rd_Z
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[9] -translated U4/U1/max_fit_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[8] -translated U4/U1/max_fit_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[7] -translated U4/U1/max_fit_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[6] -translated U4/U1/max_fit_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[5] -translated U4/U1/max_fit_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[4] -translated U4/U1/max_fit_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[3] -translated U4/U1/max_fit_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[2] -translated U4/U1/max_fit_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[1] -translated U4/U1/max_fit_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/max_fit[0] -translated U4/U1/max_fit_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/counter[0] -translated U4/U1/counter_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][9] -translated U4/U1/best_fit_0_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][8] -translated U4/U1/best_fit_0_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][7] -translated U4/U1/best_fit_0_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][6] -translated U4/U1/best_fit_0_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][5] -translated U4/U1/best_fit_0_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][4] -translated U4/U1/best_fit_0_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][3] -translated U4/U1/best_fit_0_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][2] -translated U4/U1/best_fit_0_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][1] -translated U4/U1/best_fit_0_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[0][0] -translated U4/U1/best_fit_0_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][31] -translated U4/U1/elite_indexs_0_Z[31]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][30] -translated U4/U1/elite_indexs_0_Z[30]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][29] -translated U4/U1/elite_indexs_0_Z[29]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][28] -translated U4/U1/elite_indexs_0_Z[28]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][27] -translated U4/U1/elite_indexs_0_Z[27]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][26] -translated U4/U1/elite_indexs_0_Z[26]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][25] -translated U4/U1/elite_indexs_0_Z[25]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][24] -translated U4/U1/elite_indexs_0_Z[24]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][23] -translated U4/U1/elite_indexs_0_Z[23]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][22] -translated U4/U1/elite_indexs_0_Z[22]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][21] -translated U4/U1/elite_indexs_0_Z[21]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][20] -translated U4/U1/elite_indexs_0_Z[20]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][19] -translated U4/U1/elite_indexs_0_Z[19]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][18] -translated U4/U1/elite_indexs_0_Z[18]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][17] -translated U4/U1/elite_indexs_0_Z[17]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][16] -translated U4/U1/elite_indexs_0_Z[16]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][15] -translated U4/U1/elite_indexs_0_Z[15]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][14] -translated U4/U1/elite_indexs_0_Z[14]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][13] -translated U4/U1/elite_indexs_0_Z[13]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][12] -translated U4/U1/elite_indexs_0_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][11] -translated U4/U1/elite_indexs_0_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][10] -translated U4/U1/elite_indexs_0_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][9] -translated U4/U1/elite_indexs_0_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][8] -translated U4/U1/elite_indexs_0_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][7] -translated U4/U1/elite_indexs_0_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][6] -translated U4/U1/elite_indexs_0_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][5] -translated U4/U1/elite_indexs_0_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][4] -translated U4/U1/elite_indexs_0_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][3] -translated U4/U1/elite_indexs_0_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][2] -translated U4/U1/elite_indexs_0_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][1] -translated U4/U1/elite_indexs_0_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[0][0] -translated U4/U1/elite_indexs_0_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][9] -translated U4/U1/best_fit_prev_gen_0_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][8] -translated U4/U1/best_fit_prev_gen_0_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][7] -translated U4/U1/best_fit_prev_gen_0_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][6] -translated U4/U1/best_fit_prev_gen_0_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][5] -translated U4/U1/best_fit_prev_gen_0_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][4] -translated U4/U1/best_fit_prev_gen_0_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][3] -translated U4/U1/best_fit_prev_gen_0_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][2] -translated U4/U1/best_fit_prev_gen_0_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][1] -translated U4/U1/best_fit_prev_gen_0_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[0][0] -translated U4/U1/best_fit_prev_gen_0_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][9] -translated U4/U1/best_fit_prev_gen_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][8] -translated U4/U1/best_fit_prev_gen_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][7] -translated U4/U1/best_fit_prev_gen_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][6] -translated U4/U1/best_fit_prev_gen_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][5] -translated U4/U1/best_fit_prev_gen_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][4] -translated U4/U1/best_fit_prev_gen_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][3] -translated U4/U1/best_fit_prev_gen_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][2] -translated U4/U1/best_fit_prev_gen_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][1] -translated U4/U1/best_fit_prev_gen_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit_prev_gen[1][0] -translated U4/U1/best_fit_prev_gen_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][9] -translated U4/U1/temp2_0_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][8] -translated U4/U1/temp2_0_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][7] -translated U4/U1/temp2_0_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][6] -translated U4/U1/temp2_0_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][5] -translated U4/U1/temp2_0_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][4] -translated U4/U1/temp2_0_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][3] -translated U4/U1/temp2_0_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][2] -translated U4/U1/temp2_0_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][1] -translated U4/U1/temp2_0_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[0][0] -translated U4/U1/temp2_0_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][31] -translated U4/U1/elite_offs_0_Z[31]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][30] -translated U4/U1/elite_offs_0_Z[30]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][29] -translated U4/U1/elite_offs_0_Z[29]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][28] -translated U4/U1/elite_offs_0_Z[28]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][27] -translated U4/U1/elite_offs_0_Z[27]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][26] -translated U4/U1/elite_offs_0_Z[26]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][25] -translated U4/U1/elite_offs_0_Z[25]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][24] -translated U4/U1/elite_offs_0_Z[24]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][23] -translated U4/U1/elite_offs_0_Z[23]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][22] -translated U4/U1/elite_offs_0_Z[22]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][21] -translated U4/U1/elite_offs_0_Z[21]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][20] -translated U4/U1/elite_offs_0_Z[20]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][19] -translated U4/U1/elite_offs_0_Z[19]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][18] -translated U4/U1/elite_offs_0_Z[18]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][17] -translated U4/U1/elite_offs_0_Z[17]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][16] -translated U4/U1/elite_offs_0_Z[16]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][15] -translated U4/U1/elite_offs_0_Z[15]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][14] -translated U4/U1/elite_offs_0_Z[14]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][13] -translated U4/U1/elite_offs_0_Z[13]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][12] -translated U4/U1/elite_offs_0_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][11] -translated U4/U1/elite_offs_0_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][10] -translated U4/U1/elite_offs_0_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][9] -translated U4/U1/elite_offs_0_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][8] -translated U4/U1/elite_offs_0_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][7] -translated U4/U1/elite_offs_0_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][6] -translated U4/U1/elite_offs_0_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][5] -translated U4/U1/elite_offs_0_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][4] -translated U4/U1/elite_offs_0_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][3] -translated U4/U1/elite_offs_0_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][2] -translated U4/U1/elite_offs_0_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][1] -translated U4/U1/elite_offs_0_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[0][0] -translated U4/U1/elite_offs_0_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][31] -translated U4/U1/elite_offs_1_Z[31]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][30] -translated U4/U1/elite_offs_1_Z[30]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][29] -translated U4/U1/elite_offs_1_Z[29]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][28] -translated U4/U1/elite_offs_1_Z[28]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][27] -translated U4/U1/elite_offs_1_Z[27]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][26] -translated U4/U1/elite_offs_1_Z[26]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][25] -translated U4/U1/elite_offs_1_Z[25]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][24] -translated U4/U1/elite_offs_1_Z[24]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][23] -translated U4/U1/elite_offs_1_Z[23]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][22] -translated U4/U1/elite_offs_1_Z[22]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][21] -translated U4/U1/elite_offs_1_Z[21]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][20] -translated U4/U1/elite_offs_1_Z[20]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][19] -translated U4/U1/elite_offs_1_Z[19]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][18] -translated U4/U1/elite_offs_1_Z[18]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][17] -translated U4/U1/elite_offs_1_Z[17]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][16] -translated U4/U1/elite_offs_1_Z[16]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][15] -translated U4/U1/elite_offs_1_Z[15]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][14] -translated U4/U1/elite_offs_1_Z[14]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][13] -translated U4/U1/elite_offs_1_Z[13]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][12] -translated U4/U1/elite_offs_1_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][11] -translated U4/U1/elite_offs_1_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][10] -translated U4/U1/elite_offs_1_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][9] -translated U4/U1/elite_offs_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][8] -translated U4/U1/elite_offs_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][7] -translated U4/U1/elite_offs_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][6] -translated U4/U1/elite_offs_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][5] -translated U4/U1/elite_offs_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][4] -translated U4/U1/elite_offs_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][3] -translated U4/U1/elite_offs_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][2] -translated U4/U1/elite_offs_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][1] -translated U4/U1/elite_offs_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_offs[1][0] -translated U4/U1/elite_offs_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][31] -translated U4/U1/temp_indexs_2_0_Z[31]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][30] -translated U4/U1/temp_indexs_2_0_Z[30]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][29] -translated U4/U1/temp_indexs_2_0_Z[29]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][28] -translated U4/U1/temp_indexs_2_0_Z[28]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][27] -translated U4/U1/temp_indexs_2_0_Z[27]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][26] -translated U4/U1/temp_indexs_2_0_Z[26]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][25] -translated U4/U1/temp_indexs_2_0_Z[25]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][24] -translated U4/U1/temp_indexs_2_0_Z[24]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][23] -translated U4/U1/temp_indexs_2_0_Z[23]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][22] -translated U4/U1/temp_indexs_2_0_Z[22]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][21] -translated U4/U1/temp_indexs_2_0_Z[21]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][20] -translated U4/U1/temp_indexs_2_0_Z[20]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][19] -translated U4/U1/temp_indexs_2_0_Z[19]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][18] -translated U4/U1/temp_indexs_2_0_Z[18]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][17] -translated U4/U1/temp_indexs_2_0_Z[17]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][16] -translated U4/U1/temp_indexs_2_0_Z[16]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][15] -translated U4/U1/temp_indexs_2_0_Z[15]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][14] -translated U4/U1/temp_indexs_2_0_Z[14]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][13] -translated U4/U1/temp_indexs_2_0_Z[13]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][12] -translated U4/U1/temp_indexs_2_0_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][11] -translated U4/U1/temp_indexs_2_0_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][10] -translated U4/U1/temp_indexs_2_0_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][9] -translated U4/U1/temp_indexs_2_0_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][8] -translated U4/U1/temp_indexs_2_0_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][7] -translated U4/U1/temp_indexs_2_0_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][6] -translated U4/U1/temp_indexs_2_0_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][5] -translated U4/U1/temp_indexs_2_0_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][4] -translated U4/U1/temp_indexs_2_0_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][3] -translated U4/U1/temp_indexs_2_0_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][2] -translated U4/U1/temp_indexs_2_0_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][1] -translated U4/U1/temp_indexs_2_0_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[0][0] -translated U4/U1/temp_indexs_2_0_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][9] -translated U4/U1/best_fit_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][8] -translated U4/U1/best_fit_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][7] -translated U4/U1/best_fit_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][6] -translated U4/U1/best_fit_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][5] -translated U4/U1/best_fit_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][4] -translated U4/U1/best_fit_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][3] -translated U4/U1/best_fit_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][2] -translated U4/U1/best_fit_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][1] -translated U4/U1/best_fit_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/best_fit[1][0] -translated U4/U1/best_fit_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][31] -translated U4/U1/elite_indexs_1_Z[31]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][30] -translated U4/U1/elite_indexs_1_Z[30]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][29] -translated U4/U1/elite_indexs_1_Z[29]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][28] -translated U4/U1/elite_indexs_1_Z[28]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][27] -translated U4/U1/elite_indexs_1_Z[27]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][26] -translated U4/U1/elite_indexs_1_Z[26]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][25] -translated U4/U1/elite_indexs_1_Z[25]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][24] -translated U4/U1/elite_indexs_1_Z[24]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][23] -translated U4/U1/elite_indexs_1_Z[23]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][22] -translated U4/U1/elite_indexs_1_Z[22]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][21] -translated U4/U1/elite_indexs_1_Z[21]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][20] -translated U4/U1/elite_indexs_1_Z[20]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][19] -translated U4/U1/elite_indexs_1_Z[19]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][18] -translated U4/U1/elite_indexs_1_Z[18]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][17] -translated U4/U1/elite_indexs_1_Z[17]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][16] -translated U4/U1/elite_indexs_1_Z[16]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][15] -translated U4/U1/elite_indexs_1_Z[15]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][14] -translated U4/U1/elite_indexs_1_Z[14]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][13] -translated U4/U1/elite_indexs_1_Z[13]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][12] -translated U4/U1/elite_indexs_1_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][11] -translated U4/U1/elite_indexs_1_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][10] -translated U4/U1/elite_indexs_1_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][9] -translated U4/U1/elite_indexs_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][8] -translated U4/U1/elite_indexs_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][7] -translated U4/U1/elite_indexs_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][6] -translated U4/U1/elite_indexs_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][5] -translated U4/U1/elite_indexs_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][4] -translated U4/U1/elite_indexs_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][3] -translated U4/U1/elite_indexs_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][2] -translated U4/U1/elite_indexs_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][1] -translated U4/U1/elite_indexs_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/elite_indexs[1][0] -translated U4/U1/elite_indexs_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][9] -translated U4/U1/temp2_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][8] -translated U4/U1/temp2_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][7] -translated U4/U1/temp2_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][6] -translated U4/U1/temp2_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][5] -translated U4/U1/temp2_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][4] -translated U4/U1/temp2_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][3] -translated U4/U1/temp2_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][2] -translated U4/U1/temp2_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][1] -translated U4/U1/temp2_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp2[1][0] -translated U4/U1/temp2_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][31] -translated U4/U1/temp_indexs_2_1_Z[31]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][30] -translated U4/U1/temp_indexs_2_1_Z[30]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][29] -translated U4/U1/temp_indexs_2_1_Z[29]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][28] -translated U4/U1/temp_indexs_2_1_Z[28]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][27] -translated U4/U1/temp_indexs_2_1_Z[27]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][26] -translated U4/U1/temp_indexs_2_1_Z[26]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][25] -translated U4/U1/temp_indexs_2_1_Z[25]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][24] -translated U4/U1/temp_indexs_2_1_Z[24]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][23] -translated U4/U1/temp_indexs_2_1_Z[23]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][22] -translated U4/U1/temp_indexs_2_1_Z[22]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][21] -translated U4/U1/temp_indexs_2_1_Z[21]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][20] -translated U4/U1/temp_indexs_2_1_Z[20]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][19] -translated U4/U1/temp_indexs_2_1_Z[19]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][18] -translated U4/U1/temp_indexs_2_1_Z[18]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][17] -translated U4/U1/temp_indexs_2_1_Z[17]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][16] -translated U4/U1/temp_indexs_2_1_Z[16]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][15] -translated U4/U1/temp_indexs_2_1_Z[15]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][14] -translated U4/U1/temp_indexs_2_1_Z[14]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][13] -translated U4/U1/temp_indexs_2_1_Z[13]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][12] -translated U4/U1/temp_indexs_2_1_Z[12]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][11] -translated U4/U1/temp_indexs_2_1_Z[11]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][10] -translated U4/U1/temp_indexs_2_1_Z[10]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][9] -translated U4/U1/temp_indexs_2_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][8] -translated U4/U1/temp_indexs_2_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][7] -translated U4/U1/temp_indexs_2_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][6] -translated U4/U1/temp_indexs_2_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][5] -translated U4/U1/temp_indexs_2_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][4] -translated U4/U1/temp_indexs_2_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][3] -translated U4/U1/temp_indexs_2_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][2] -translated U4/U1/temp_indexs_2_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][1] -translated U4/U1/temp_indexs_2_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U4/U1/temp_indexs_2[1][0] -translated U4/U1/temp_indexs_2_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U4/un1_lfsr_reg_3 -translated U4/dist_1_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U4/un1_lfsr_reg_3 -translated U4/dist_1_ret_Z
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[13] -translated U5/scalFitSum_p_Z[13]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[14] -translated U5/scalFitSum_p_Z[14]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[15] -translated U5/scalFitSum_p_Z[15]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[16] -translated U5/scalFitSum_p_Z[16]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[12] -translated U5/scalFitSum_p_Z[12]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[11] -translated U5/scalFitSum_p_Z[11]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[10] -translated U5/scalFitSum_p_Z[10]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[9] -translated U5/scalFitSum_p_Z[9]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[8] -translated U5/scalFitSum_p_Z[8]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[7] -translated U5/scalFitSum_p_Z[7]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[6] -translated U5/scalFitSum_p_Z[6]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[5] -translated U5/scalFitSum_p_Z[5]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[4] -translated U5/scalFitSum_p_Z[4]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[3] -translated U5/scalFitSum_p_Z[3]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[2] -translated U5/scalFitSum_p_Z[2]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[1] -translated U5/scalFitSum_p_Z[1]
+vif_set_sequential_verify -retimed -register -original U5/scalFitSum_p[0] -translated U5/scalFitSum_p_Z[0]
+vif_set_sequential_verify -retimed -register -original U5/selection/un1_lfsr_reg_3 -translated U5/selection.done_t_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U5/selection/un1_lfsr_reg_3 -translated U5/selection.done_t_ret_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/done_t_ret_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_21_Z
+vif_set_sequential_verify -retimed -register -original U5/selection/un1_lfsr_reg_3 -translated U5/selection.selParent_p_ret_19_Z
+vif_set_sequential_verify -retimed -register -original U5/selection/un17_data_valid_0/un1_lfsr_reg_3 -translated U5/selection.un17_data_valid_0.selParent_p_ret_19_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_20_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_18_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_16_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_14_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_12_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_10_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_8_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_6_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_4_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_2_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_1_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_3_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_5_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_7_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_9_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_11_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_13_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_15_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_17_0_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_19_1_Z
+vif_set_sequential_verify -retimed -register -original U5/un1_lfsr_reg_3 -translated U5/selParent_p_ret_19_0_Z
+vif_set_sequential_verify -retimed -register -original U5/count -translated U5/count_Z
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[0] -translated U5/cumSum_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[12] -translated U5/cumSum_p1_Z[12]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[11] -translated U5/cumSum_p1_Z[11]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[10] -translated U5/cumSum_p1_Z[10]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[9] -translated U5/cumSum_p1_Z[9]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[8] -translated U5/cumSum_p1_Z[8]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[7] -translated U5/cumSum_p1_Z[7]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[6] -translated U5/cumSum_p1_Z[6]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[5] -translated U5/cumSum_p1_Z[5]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[4] -translated U5/cumSum_p1_Z[4]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[3] -translated U5/cumSum_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[2] -translated U5/cumSum_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U5/cumSum_p1[1] -translated U5/cumSum_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/temp1[17] -translated U6/temp1_fast_Z[17]
+vif_set_sequential_verify -retimed -register -original U6/temp1[13] -translated U6/temp1_fast_Z[13]
+vif_set_sequential_verify -retimed -register -original U6/temp1[12] -translated U6/temp1_fast_Z[12]
+vif_set_sequential_verify -retimed -register -original U6/temp1[15] -translated U6/temp1_fast_Z[15]
+vif_set_sequential_verify -retimed -register -original U6/temp1[16] -translated U6/temp1_fast_Z[16]
+vif_set_sequential_verify -retimed -register -original U6/un1_lfsr_reg_3 -translated U6/counter_ret_2_Z
+vif_set_sequential_verify -retimed -register -original U6/un1_lfsr_reg_3 -translated U6/counter_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U6/un1_lfsr_reg_3 -translated U6/counter_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U6/counter[1] -translated U6/counter_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/un1_lfsr_reg_3 -translated U6/counter_ret_Z
+vif_set_sequential_verify -retimed -register -original U6/counter[0] -translated U6/counter_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/counter[2] -translated U6/counter_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/rd -translated U6/rd_Z
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U6/cont1[0] -translated U6/cont1_Z[0]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U6/cont1[1] -translated U6/cont1_Z[1]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U6/cont1[2] -translated U6/cont1_Z[2]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U6/cont1[3] -translated U6/cont1_Z[3]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U6/cont1[4] -translated U6/cont1_Z[4]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U6/cont1[5] -translated U6/cont1_Z[5]
+vif_set_sequential_verify -retimed -register -original U6/temp1[5] -translated U6/temp1_Z[5]
+vif_set_sequential_verify -retimed -register -original U6/temp1[4] -translated U6/temp1_Z[4]
+vif_set_sequential_verify -retimed -register -original U6/temp1[3] -translated U6/temp1_Z[3]
+vif_set_sequential_verify -retimed -register -original U6/temp1[2] -translated U6/temp1_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/temp1[1] -translated U6/temp1_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/temp1[0] -translated U6/temp1_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/ind[2] -translated U6/ind_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/ind[1] -translated U6/ind_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/ind[0] -translated U6/ind_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/temp1[20] -translated U6/temp1_Z[20]
+vif_set_sequential_verify -retimed -register -original U6/temp1[19] -translated U6/temp1_Z[19]
+vif_set_sequential_verify -retimed -register -original U6/temp1[18] -translated U6/temp1_Z[18]
+vif_set_sequential_verify -retimed -register -original U6/temp1[17] -translated U6/temp1_Z[17]
+vif_set_sequential_verify -retimed -register -original U6/temp1[16] -translated U6/temp1_Z[16]
+vif_set_sequential_verify -retimed -register -original U6/temp1[15] -translated U6/temp1_Z[15]
+vif_set_sequential_verify -retimed -register -original U6/temp1[14] -translated U6/temp1_Z[14]
+vif_set_sequential_verify -retimed -register -original U6/temp1[13] -translated U6/temp1_Z[13]
+vif_set_sequential_verify -retimed -register -original U6/temp1[12] -translated U6/temp1_Z[12]
+vif_set_sequential_verify -retimed -register -original U6/temp1[11] -translated U6/temp1_Z[11]
+vif_set_sequential_verify -retimed -register -original U6/temp1[10] -translated U6/temp1_Z[10]
+vif_set_sequential_verify -retimed -register -original U6/temp1[9] -translated U6/temp1_Z[9]
+vif_set_sequential_verify -retimed -register -original U6/temp1[8] -translated U6/temp1_Z[8]
+vif_set_sequential_verify -retimed -register -original U6/temp1[7] -translated U6/temp1_Z[7]
+vif_set_sequential_verify -retimed -register -original U6/temp1[6] -translated U6/temp1_Z[6]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[14] -translated U6/crossOffspr1_Z[14]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[13] -translated U6/crossOffspr1_Z[13]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[12] -translated U6/crossOffspr1_Z[12]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[11] -translated U6/crossOffspr1_Z[11]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[10] -translated U6/crossOffspr1_Z[10]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[9] -translated U6/crossOffspr1_Z[9]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[8] -translated U6/crossOffspr1_Z[8]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[7] -translated U6/crossOffspr1_Z[7]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[6] -translated U6/crossOffspr1_Z[6]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[5] -translated U6/crossOffspr1_Z[5]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[4] -translated U6/crossOffspr1_Z[4]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[3] -translated U6/crossOffspr1_Z[3]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[2] -translated U6/crossOffspr1_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[1] -translated U6/crossOffspr1_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[0] -translated U6/crossOffspr1_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[20] -translated U6/crossOffspr1_Z[20]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[19] -translated U6/crossOffspr1_Z[19]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[18] -translated U6/crossOffspr1_Z[18]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[17] -translated U6/crossOffspr1_Z[17]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[16] -translated U6/crossOffspr1_Z[16]
+vif_set_sequential_verify -retimed -register -original U6/crossOffspr1[15] -translated U6/crossOffspr1_Z[15]
+vif_set_sequential_verify -retimed -register -original U6/done -translated U6/done_Z
+vif_set_sequential_verify -retimed -register -original U6/crossout1[20] -translated U6/crossout1_Z[20]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[19] -translated U6/crossout1_Z[19]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[18] -translated U6/crossout1_Z[18]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[17] -translated U6/crossout1_Z[17]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[16] -translated U6/crossout1_Z[16]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[15] -translated U6/crossout1_Z[15]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[14] -translated U6/crossout1_Z[14]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[13] -translated U6/crossout1_Z[13]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[12] -translated U6/crossout1_Z[12]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[11] -translated U6/crossout1_Z[11]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[10] -translated U6/crossout1_Z[10]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[9] -translated U6/crossout1_Z[9]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[8] -translated U6/crossout1_Z[8]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[7] -translated U6/crossout1_Z[7]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[6] -translated U6/crossout1_Z[6]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[5] -translated U6/crossout1_Z[5]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[4] -translated U6/crossout1_Z[4]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[3] -translated U6/crossout1_Z[3]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[2] -translated U6/crossout1_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[1] -translated U6/crossout1_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/crossout1[0] -translated U6/crossout1_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/cross_point_int[2] -translated U6/loop7.cross_point_int_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/cross_point_int[1] -translated U6/loop7.cross_point_int_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/cross_point_int[0] -translated U6/loop7.cross_point_int_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/pool_int[2][0] -translated U6/pool_int_2_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/pool_int[5][1] -translated U6/pool_int_5_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[1][2] -translated U6/index_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/index[1][1] -translated U6/index_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[1][0] -translated U6/index_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/index[2][2] -translated U6/index_2_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/index[2][1] -translated U6/index_2_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[2][0] -translated U6/index_2_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/index[3][2] -translated U6/index_3_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/index[3][1] -translated U6/index_3_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[3][0] -translated U6/index_3_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/index[4][2] -translated U6/index_4_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/index[4][1] -translated U6/index_4_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[4][0] -translated U6/index_4_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/index[5][2] -translated U6/index_5_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/index[5][1] -translated U6/index_5_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[5][0] -translated U6/index_5_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/index[6][2] -translated U6/index_6_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/index[6][1] -translated U6/index_6_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[6][0] -translated U6/index_6_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/index[7][2] -translated U6/index_7_Z[2]
+vif_set_sequential_verify -retimed -register -original U6/index[7][1] -translated U6/index_7_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/index[7][0] -translated U6/index_7_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/pool_int[0][0] -translated U6/pool_int_0_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/pool_int[4][0] -translated U6/pool_int_4_Z[0]
+vif_set_sequential_verify -retimed -register -original U6/pool_int[1][1] -translated U6/pool_int_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U6/pool_int[3][2] -translated U6/pool_int_3_Z[2]
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/decode_ret_2_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/decode_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_2_4_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_1_4_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_7_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/decode_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/decode_ret_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_2_3_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_1_3_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_6_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_2_2_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_1_2_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_5_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_4_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_2_1_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_1_1_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_3_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_2_0_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_1_0_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_0_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_2_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U7/un1_lfsr_reg_3 -translated U7/mutout_p1_ret_Z
+vif_set_sequential_verify -retimed -register -original U7/done_p -translated U7/done_p_Z
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[19] -translated U7/mutout_p1_Z[19]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[18] -translated U7/mutout_p1_Z[18]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[16] -translated U7/mutout_p1_Z[16]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[15] -translated U7/mutout_p1_Z[15]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[11] -translated U7/mutout_p1_Z[11]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[10] -translated U7/mutout_p1_Z[10]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[9] -translated U7/mutout_p1_Z[9]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[8] -translated U7/mutout_p1_Z[8]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[6] -translated U7/mutout_p1_Z[6]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[5] -translated U7/mutout_p1_Z[5]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[4] -translated U7/mutout_p1_Z[4]
+vif_set_sequential_verify -retimed -register -original U7/mutout_p1[3] -translated U7/mutout_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_20_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_19_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_18_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_17_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_16_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_15_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_14_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_13_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_12_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_11_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_10_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_9_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_8_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_7_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_6_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_5_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_4_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_3_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_2_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U8/un1_lfsr_reg_3 -translated U8/selParent_p_ret_Z
+vif_set_sequential_verify -retimed -register -original U8/wr_r -translated U8/wr_r_Z
+vif_set_sequential_verify -retimed -register -original U8/add_r[0] -translated U8/add_r_Z[0]
+vif_set_sequential_verify -retimed -register -original U8/add_r[2] -translated U8/add_r_Z[2]
+vif_set_sequential_verify -retimed -register -original U8/add_r[1] -translated U8/add_r_Z[1]
+vif_set_sequential_verify -retimed -register -original U8/data_out[0] -translated U8/data_out_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U8/data_out[1] -translated U8/data_out_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U8/data_out[2] -translated U8/data_out_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U8/data_out[3] -translated U8/data_out_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U8/data_out[4] -translated U8/data_out_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U8/data_out[5] -translated U8/data_out_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U8/data_out[6] -translated U8/data_out_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U8/data_out[7] -translated U8/data_out_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U8/data_out[8] -translated U8/data_out_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U8/data_out[9] -translated U8/data_out_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U8/data_out[10] -translated U8/data_out_1_Z[10]
+vif_set_sequential_verify -retimed -register -original U8/data_out[11] -translated U8/data_out_1_Z[11]
+vif_set_sequential_verify -retimed -register -original U8/data_out[12] -translated U8/data_out_1_Z[12]
+vif_set_sequential_verify -retimed -register -original U8/data_out[13] -translated U8/data_out_1_Z[13]
+vif_set_sequential_verify -retimed -register -original U8/data_out[14] -translated U8/data_out_1_Z[14]
+vif_set_sequential_verify -retimed -register -original U8/data_out[15] -translated U8/data_out_1_Z[15]
+vif_set_sequential_verify -retimed -register -original U8/data_out[16] -translated U8/data_out_1_Z[16]
+vif_set_sequential_verify -retimed -register -original U8/data_out[17] -translated U8/data_out_1_Z[17]
+vif_set_sequential_verify -retimed -register -original U8/data_out[18] -translated U8/data_out_1_Z[18]
+vif_set_sequential_verify -retimed -register -original U8/data_out[19] -translated U8/data_out_1_Z[19]
+vif_set_sequential_verify -retimed -register -original U8/data_out[20] -translated U8/data_out_1_Z[20]
+vif_set_sequential_verify -retimed -register -original U8/data_out[21] -translated U8/data_out_1_Z[21]
+vif_set_sequential_verify -retimed -register -original U8/data_out[22] -translated U8/data_out_1_Z[22]
+vif_set_sequential_verify -retimed -register -original U8/data_out[23] -translated U8/data_out_1_Z[23]
+vif_set_sequential_verify -retimed -register -original U8/data_out[24] -translated U8/data_out_1_Z[24]
+vif_set_sequential_verify -retimed -register -original U8/data_out[25] -translated U8/data_out_1_Z[25]
+vif_set_sequential_verify -retimed -register -original U8/data_out[26] -translated U8/data_out_1_Z[26]
+vif_set_sequential_verify -retimed -register -original U8/data_out[27] -translated U8/data_out_1_Z[27]
+vif_set_sequential_verify -retimed -register -original U8/data_out[28] -translated U8/data_out_1_Z[28]
+vif_set_sequential_verify -retimed -register -original U8/data_out[29] -translated U8/data_out_1_Z[29]
+vif_set_sequential_verify -retimed -register -original U8/data_out[30] -translated U8/data_out_1_Z[30]
+vif_set_sequential_verify -retimed -register -original U9/wr_r -translated U9/wr_r_Z
+vif_set_sequential_verify -retimed -register -original U9/add_r[3] -translated U9/add_r_Z[3]
+vif_set_sequential_verify -retimed -register -original U9/add_r[2] -translated U9/add_r_Z[2]
+vif_set_sequential_verify -retimed -register -original U9/add_r[1] -translated U9/add_r_Z[1]
+vif_set_sequential_verify -retimed -register -original U9/add_r[0] -translated U9/add_r_Z[0]
+vif_set_sequential_verify -retimed -register -original U9/data_out[0] -translated U9/data_out_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U9/data_out[1] -translated U9/data_out_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U9/data_out[2] -translated U9/data_out_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U9/data_out[3] -translated U9/data_out_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U9/data_out[4] -translated U9/data_out_1_Z[4]
+vif_set_sequential_verify -retimed -register -original U9/data_out[5] -translated U9/data_out_1_Z[5]
+vif_set_sequential_verify -retimed -register -original U9/data_out[6] -translated U9/data_out_1_Z[6]
+vif_set_sequential_verify -retimed -register -original U9/data_out[7] -translated U9/data_out_1_Z[7]
+vif_set_sequential_verify -retimed -register -original U9/data_out[8] -translated U9/data_out_1_Z[8]
+vif_set_sequential_verify -retimed -register -original U9/data_out[9] -translated U9/data_out_1_Z[9]
+vif_set_sequential_verify -retimed -register -original U9/data_out[10] -translated U9/data_out_1_Z[10]
+vif_set_sequential_verify -retimed -register -original U9/data_out[11] -translated U9/data_out_1_Z[11]
+vif_set_sequential_verify -retimed -register -original U9/data_out[12] -translated U9/data_out_1_Z[12]
+vif_set_sequential_verify -retimed -register -original U9/data_out[13] -translated U9/data_out_1_Z[13]
+vif_set_sequential_verify -retimed -register -original U9/data_out[14] -translated U9/data_out_1_Z[14]
+vif_set_sequential_verify -retimed -register -original U9/data_out[15] -translated U9/data_out_1_Z[15]
+vif_set_sequential_verify -retimed -register -original U9/data_out[16] -translated U9/data_out_1_Z[16]
+vif_set_sequential_verify -retimed -register -original U9/data_out[17] -translated U9/data_out_1_Z[17]
+vif_set_sequential_verify -retimed -register -original U9/data_out[18] -translated U9/data_out_1_Z[18]
+vif_set_sequential_verify -retimed -register -original U9/data_out[19] -translated U9/data_out_1_Z[19]
+vif_set_sequential_verify -retimed -register -original U9/data_out[20] -translated U9/data_out_1_Z[20]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg -translated U10/sreg_0_rep1_Z
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[0] -translated U10/sreg_fast_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/decode_ret_5_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/decode_ret_4_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/decode_ret_3_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/decode_ret_2_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/decode_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U10/decode -translated U10/decode_rep2_Z
+vif_set_sequential_verify -retimed -register -original U10/decode -translated U10/decode_rep1_Z
+vif_set_sequential_verify -retimed -register -original U10/decode -translated U10/decode_fast_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/count_sel_wr_p1_ret_Z
+vif_set_sequential_verify -retimed -register -original U10/count_sel_wr_p1[0] -translated U10/count_sel_wr_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/count_sel_wr_p1[1] -translated U10/count_sel_wr_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/count_sel_wr_p1[2] -translated U10/count_sel_wr_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/count_sel_wr_p1[3] -translated U10/count_sel_wr_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/notify_cnt_p_ret_Z
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[2] -translated U10/notify_cnt_p_Z[2]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[4] -translated U10/notify_cnt_p_Z[4]
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/count_cross_offs_p1_ret_Z
+vif_set_sequential_verify -retimed -register -original U10/count_cross_offs_p1[0] -translated U10/count_cross_offs_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/count_cross_offs_p1[1] -translated U10/count_cross_offs_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/count_cross_offs_p1[2] -translated U10/count_cross_offs_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/addr_rom[2] -translated U10/addr_rom_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/decode -translated U10/decode_Z
+vif_set_sequential_verify -retimed -register -original U10/addr_rom[0] -translated U10/addr_rom_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/addr_rom[1] -translated U10/addr_rom_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/addr_rom[3] -translated U10/addr_rom_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/selParent_p_ret_19_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_8_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_7_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_6_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_5_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_4_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_3_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_2_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_1_Z
+vif_set_sequential_verify -retimed -register -original U10/un1_lfsr_reg_3 -translated U10/fit_n_ret_Z
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[8] -translated U10/count_gen_p1_Z[8]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[7] -translated U10/count_gen_p1_Z[7]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[6] -translated U10/count_gen_p1_Z[6]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[5] -translated U10/count_gen_p1_Z[5]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[4] -translated U10/count_gen_p1_Z[4]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[3] -translated U10/count_gen_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[2] -translated U10/count_gen_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[1] -translated U10/count_gen_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/count_gen_p1[0] -translated U10/count_gen_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/flag -translated U10/flag_Z
+vif_set_sequential_verify -retimed -register -original U10/mut_out -translated U10/mut_out_Z
+vif_set_sequential_verify -retimed -register -original U10/run3 -translated U10/run3_Z
+vif_set_sequential_verify -retimed -register -original U10/load -translated U10/load_Z
+vif_set_sequential_verify -retimed -register -original U10/elite_null -translated U10/elite_null_Z
+vif_set_sequential_verify -retimed -register -original U10/ga_fin -translated U10/ga_fin_Z
+vif_set_sequential_verify -retimed -register -original U10/cross_out -translated U10/cross_out_Z
+vif_set_sequential_verify -retimed -register -original U10/run2 -translated U10/run2_1_Z
+vif_set_sequential_verify -retimed -register -original U10/valid -translated U10/valid_Z
+vif_set_sequential_verify -retimed -register -original U10/sel_out -translated U10/sel_out_Z
+vif_set_sequential_verify -retimed -register -original U10/next_gene -translated U10/next_gene_Z
+vif_set_sequential_verify -retimed -register -original U10/data_valid -translated U10/data_valid_Z
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[0] -translated U10/notify_cnt_p_Z[0]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[1] -translated U10/notify_cnt_p_Z[1]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[3] -translated U10/notify_cnt_p_Z[3]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[5] -translated U10/notify_cnt_p_Z[5]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[6] -translated U10/notify_cnt_p_Z[6]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[7] -translated U10/notify_cnt_p_Z[7]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/notify_cnt_p[8] -translated U10/notify_cnt_p_Z[8]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[3] -translated U10/sreg_Z[3]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[4] -translated U10/sreg_Z[4]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[5] -translated U10/sreg_Z[5]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[6] -translated U10/sreg_Z[6]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[7] -translated U10/sreg_Z[7]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[8] -translated U10/sreg_Z[8]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[0] -translated U10/sreg_Z[0]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[1] -translated U10/sreg_Z[1]
+# Retimed registers from FSM not handled in VIF
+//vif_set_sequential_verify -retimed -register -original U10/sreg[2] -translated U10/sreg_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[4] -translated U10/data_out_cross2_Z[4]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[3] -translated U10/data_out_cross2_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[2] -translated U10/data_out_cross2_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[1] -translated U10/data_out_cross2_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[0] -translated U10/data_out_cross2_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/count_offs_p1[3] -translated U10/count_offs_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/count_offs_p1[2] -translated U10/count_offs_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/count_offs_p1[1] -translated U10/count_offs_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/count_offs_p1[0] -translated U10/count_offs_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/incr[3] -translated U10/loop1.incr_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/incr[2] -translated U10/loop1.incr_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/incr[1] -translated U10/loop1.incr_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/incr[0] -translated U10/loop1.incr_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[19] -translated U10/data_out_cross2_Z[19]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[18] -translated U10/data_out_cross2_Z[18]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[17] -translated U10/data_out_cross2_Z[17]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[16] -translated U10/data_out_cross2_Z[16]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[15] -translated U10/data_out_cross2_Z[15]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[14] -translated U10/data_out_cross2_Z[14]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[13] -translated U10/data_out_cross2_Z[13]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[12] -translated U10/data_out_cross2_Z[12]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[11] -translated U10/data_out_cross2_Z[11]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[10] -translated U10/data_out_cross2_Z[10]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[9] -translated U10/data_out_cross2_Z[9]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[8] -translated U10/data_out_cross2_Z[8]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[7] -translated U10/data_out_cross2_Z[7]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[6] -translated U10/data_out_cross2_Z[6]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[5] -translated U10/data_out_cross2_Z[5]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[13] -translated U10/data_out_cross1_Z[13]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[12] -translated U10/data_out_cross1_Z[12]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[11] -translated U10/data_out_cross1_Z[11]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[10] -translated U10/data_out_cross1_Z[10]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[9] -translated U10/data_out_cross1_Z[9]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[8] -translated U10/data_out_cross1_Z[8]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[7] -translated U10/data_out_cross1_Z[7]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[6] -translated U10/data_out_cross1_Z[6]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[5] -translated U10/data_out_cross1_Z[5]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[4] -translated U10/data_out_cross1_Z[4]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[3] -translated U10/data_out_cross1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[2] -translated U10/data_out_cross1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[1] -translated U10/data_out_cross1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[0] -translated U10/data_out_cross1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross2[20] -translated U10/data_out_cross2_Z[20]
+vif_set_sequential_verify -retimed -register -original U10/count_parents_p1[3] -translated U10/count_parents_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/count_parents_p1[2] -translated U10/count_parents_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/count_parents_p1[1] -translated U10/count_parents_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/count_parents_p1[0] -translated U10/count_parents_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[20] -translated U10/data_out_cross1_Z[20]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[19] -translated U10/data_out_cross1_Z[19]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[18] -translated U10/data_out_cross1_Z[18]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[17] -translated U10/data_out_cross1_Z[17]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[16] -translated U10/data_out_cross1_Z[16]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[15] -translated U10/data_out_cross1_Z[15]
+vif_set_sequential_verify -retimed -register -original U10/data_out_cross1[14] -translated U10/data_out_cross1_Z[14]
+vif_set_sequential_verify -retimed -register -original U10/count_sel_rd_p1[3] -translated U10/count_sel_rd_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/count_sel_rd_p1[2] -translated U10/count_sel_rd_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/count_sel_rd_p1[1] -translated U10/count_sel_rd_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/count_sel_rd_p1[0] -translated U10/count_sel_rd_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/index[3] -translated U10/index_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/index[2] -translated U10/index_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/index[1] -translated U10/index_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/index[0] -translated U10/index_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/cnt_parents[3] -translated U10/cnt_parents_1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/cnt_parents[2] -translated U10/cnt_parents_1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/cnt_parents[1] -translated U10/cnt_parents_1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/cnt_parents[0] -translated U10/cnt_parents_1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/incr_p1[3] -translated U10/incr_p1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/incr_p1[2] -translated U10/incr_p1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/incr_p1[1] -translated U10/incr_p1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/incr_p1[0] -translated U10/incr_p1_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/cnt_adapted -translated U10/loop0.cnt_adapted_Z
+vif_set_sequential_verify -retimed -register -original U10/temp2[20] -translated U10/temp2_Z[20]
+vif_set_sequential_verify -retimed -register -original U10/temp2[19] -translated U10/temp2_Z[19]
+vif_set_sequential_verify -retimed -register -original U10/temp2[18] -translated U10/temp2_Z[18]
+vif_set_sequential_verify -retimed -register -original U10/temp2[17] -translated U10/temp2_Z[17]
+vif_set_sequential_verify -retimed -register -original U10/temp2[16] -translated U10/temp2_Z[16]
+vif_set_sequential_verify -retimed -register -original U10/temp2[15] -translated U10/temp2_Z[15]
+vif_set_sequential_verify -retimed -register -original U10/temp2[14] -translated U10/temp2_Z[14]
+vif_set_sequential_verify -retimed -register -original U10/temp2[13] -translated U10/temp2_Z[13]
+vif_set_sequential_verify -retimed -register -original U10/temp2[12] -translated U10/temp2_Z[12]
+vif_set_sequential_verify -retimed -register -original U10/temp2[11] -translated U10/temp2_Z[11]
+vif_set_sequential_verify -retimed -register -original U10/temp2[10] -translated U10/temp2_Z[10]
+vif_set_sequential_verify -retimed -register -original U10/temp2[9] -translated U10/temp2_Z[9]
+vif_set_sequential_verify -retimed -register -original U10/temp2[8] -translated U10/temp2_Z[8]
+vif_set_sequential_verify -retimed -register -original U10/temp2[7] -translated U10/temp2_Z[7]
+vif_set_sequential_verify -retimed -register -original U10/temp2[6] -translated U10/temp2_Z[6]
+vif_set_sequential_verify -retimed -register -original U10/temp2[5] -translated U10/temp2_Z[5]
+vif_set_sequential_verify -retimed -register -original U10/temp2[4] -translated U10/temp2_Z[4]
+vif_set_sequential_verify -retimed -register -original U10/temp2[3] -translated U10/temp2_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/temp2[2] -translated U10/temp2_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/temp2[1] -translated U10/temp2_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/temp2[0] -translated U10/temp2_Z[0]
+vif_set_sequential_verify -retimed -register -original U10/temp1[20] -translated U10/temp1_Z[20]
+vif_set_sequential_verify -retimed -register -original U10/temp1[19] -translated U10/temp1_Z[19]
+vif_set_sequential_verify -retimed -register -original U10/temp1[18] -translated U10/temp1_Z[18]
+vif_set_sequential_verify -retimed -register -original U10/temp1[17] -translated U10/temp1_Z[17]
+vif_set_sequential_verify -retimed -register -original U10/temp1[16] -translated U10/temp1_Z[16]
+vif_set_sequential_verify -retimed -register -original U10/temp1[15] -translated U10/temp1_Z[15]
+vif_set_sequential_verify -retimed -register -original U10/temp1[14] -translated U10/temp1_Z[14]
+vif_set_sequential_verify -retimed -register -original U10/temp1[13] -translated U10/temp1_Z[13]
+vif_set_sequential_verify -retimed -register -original U10/temp1[12] -translated U10/temp1_Z[12]
+vif_set_sequential_verify -retimed -register -original U10/temp1[11] -translated U10/temp1_Z[11]
+vif_set_sequential_verify -retimed -register -original U10/temp1[10] -translated U10/temp1_Z[10]
+vif_set_sequential_verify -retimed -register -original U10/temp1[9] -translated U10/temp1_Z[9]
+vif_set_sequential_verify -retimed -register -original U10/temp1[8] -translated U10/temp1_Z[8]
+vif_set_sequential_verify -retimed -register -original U10/temp1[7] -translated U10/temp1_Z[7]
+vif_set_sequential_verify -retimed -register -original U10/temp1[6] -translated U10/temp1_Z[6]
+vif_set_sequential_verify -retimed -register -original U10/temp1[5] -translated U10/temp1_Z[5]
+vif_set_sequential_verify -retimed -register -original U10/temp1[4] -translated U10/temp1_Z[4]
+vif_set_sequential_verify -retimed -register -original U10/temp1[3] -translated U10/temp1_Z[3]
+vif_set_sequential_verify -retimed -register -original U10/temp1[2] -translated U10/temp1_Z[2]
+vif_set_sequential_verify -retimed -register -original U10/temp1[1] -translated U10/temp1_Z[1]
+vif_set_sequential_verify -retimed -register -original U10/temp1[0] -translated U10/temp1_Z[0]
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated dist_1_ret_2_0_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated dist_1_ret_1_1_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated dist_1_ret_2_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated mutout_p1_ret_1_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated mutout_p1_ret_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated dist_1_ret_1_0_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated dist_1_ret_0_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated dist_1_ret_1_Z
+vif_set_sequential_verify -retimed -register -original un1_lfsr_reg_3 -translated dist_1_ret_Z
+

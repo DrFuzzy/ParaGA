@@ -1,0 +1,54 @@
+#### START OF AREA REPORT #####[
+
+Part:			XC3S1500FG676-4 (Xilinx)
+
+--------------------------------------------------------------------------------------
+########   Utilization report for  Top level view:   U4.U1.count_cycle_0_3c   ########
+======================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     2                  100 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block U4.U1.count_cycle_0_3c:	2 (12.50 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+LUTS                     11                 100 %                
+MUXCY                    0                  0.0 %                
+XORCY                    0                  0.0 %                
+MULT18x18/MULT18x18S     0                  0.0 %                
+=================================================================
+Total COMBINATIONAL LOGIC in the block U4.U1.count_cycle_0_3c:	11 (68.75 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name          Total elements     Number of bits     Utilization     Notes
+-------------------------------------------------------------------------
+SYNC RAMS     0                  0                  0.0 %                
+ROMS          0                  0                  0.0 %                
+=========================================================================
+Total MEMORY ELEMENTS in the block U4.U1.count_cycle_0_3c:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     0                  0.0 %                
+=================================================
+Total IO PADS in the block U4.U1.count_cycle_0_3c:	0 (0.00 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

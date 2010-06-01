@@ -1,0 +1,503 @@
+//! **************************************************************************
+// Written by: Map I.27 on Wed Nov 22 19:36:31 2006
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clk_ibuf/IBUFG" BEL "clk_ibuf/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "dist_1_ret" BEL "dist_1_ret_1" BEL "dist_1_ret_0" BEL
+        "dist_1_ret_1_0" BEL "mutout_p1_ret" BEL "mutout_p1_ret_1" BEL
+        "dist_1_ret_2" BEL "dist_1_ret_1_1" BEL "dist_1_ret_2_0" BEL
+        "U0/addr_rom_1_ret" BEL "U0/addr_rom_1_ret_0" BEL
+        "U0/addr_rom_1_ret_1" BEL "U0/addr_rom_1_ret_2" BEL
+        "U0/addr_rom_1_ret_3" BEL "U0/addr_rom_1_ret_4" BEL
+        "U0/addr_rom_1_ret_5" BEL "U0/addr_rom_1_ret_6" BEL
+        "U0/addr_rom_1_ret_7" BEL "U0/addr_rom_1_ret_8" BEL
+        "U0/addr_rom_1_ret_9" BEL "U0/addr_rom_1_ret_10" BEL
+        "U0/addr_rom_1_ret_11" BEL "U0/addr_rom_1_ret_12" BEL
+        "U1/parallel_out_1[1]" BEL "U1/parallel_out_1[2]" BEL
+        "U1/parallel_out_1[4]" BEL "U1/parallel_out_1[5]" BEL
+        "U1/parallel_out_1[6]" BEL "U1/parallel_out_1[3]" BEL
+        "U1/parallel_out_1[7]" BEL "U1/parallel_out_1[0]" BEL
+        "U1/LFSR.lfsr_reg[2]" BEL "U1/LFSR.lfsr_reg[4]" BEL
+        "U1/LFSR.lfsr_reg[5]" BEL "U1/LFSR.lfsr_reg[6]" BEL
+        "U1/LFSR.lfsr_reg[3]" BEL "U1/LFSR.lfsr_reg[7]" BEL
+        "U1/LFSR.lfsr_reg[0]" BEL "U1/LFSR.lfsr_reg[1]" BEL
+        "U2/parallel_out_1[0]" BEL "U2/parallel_out_1[5]" BEL
+        "U2/parallel_out_1[1]" BEL "U2/parallel_out_1[2]" BEL
+        "U2/parallel_out_1[3]" BEL "U2/parallel_out_1[4]" BEL
+        "U2/parallel_out_1_fast[5]" BEL "U2/parallel_out_1_5_rep1" BEL
+        "U2/parallel_out_1_fast[4]" BEL "U2/parallel_out_1_4_rep1" BEL
+        "U2/parallel_out_1_fast[3]" BEL "U2/parallel_out_1_3_rep1" BEL
+        "U2/LFSR.lfsr_reg[0]" BEL "U2/LFSR.lfsr_reg[5]" BEL
+        "U2/LFSR.lfsr_reg[1]" BEL "U2/LFSR.lfsr_reg[2]" BEL
+        "U2/LFSR.lfsr_reg[3]" BEL "U2/LFSR.lfsr_reg[4]" BEL
+        "U3/parallel_out_1[1]" BEL "U3/parallel_out_1[2]" BEL
+        "U3/parallel_out_1[0]" BEL "U3/parallel_out_1[3]" BEL
+        "U3/LFSR.lfsr_reg[0]" BEL "U3/LFSR.lfsr_reg[3]" BEL
+        "U3/LFSR.lfsr_reg[1]" BEL "U3/LFSR.lfsr_reg[2]" BEL "U4/dist_1_ret"
+        BEL "U4/dist_1_ret_0" BEL "U4/U0/gene_score[10]" BEL
+        "U4/U0/gene_score[11]" BEL "U4/U0/gene_score[12]" BEL
+        "U4/U0/gene_score[13]" BEL "U4/U0/gene_score[14]" BEL
+        "U4/U0/gene_score[15]" BEL "U4/U0/gene_score[16]" BEL
+        "U4/U0/gene_score[17]" BEL "U4/U0/gene_score[18]" BEL
+        "U4/U0/gene_score[19]" BEL "U4/U0/gene_score[20]" BEL
+        "U4/U0/gene_score[21]" BEL "U4/U0/gene_score[22]" BEL
+        "U4/U0/gene_score[23]" BEL "U4/U0/gene_score[24]" BEL
+        "U4/U0/gene_score[25]" BEL "U4/U0/gene_score[26]" BEL
+        "U4/U0/gene_score[27]" BEL "U4/U0/gene_score[28]" BEL
+        "U4/U0/gene_score[29]" BEL "U4/U0/gene_score[30]" BEL
+        "U4/U0/ready_out" BEL "U4/U0/done_p" BEL "U4/U0/gene_score[0]" BEL
+        "U4/U0/gene_score[1]" BEL "U4/U0/gene_score[2]" BEL
+        "U4/U0/gene_score[3]" BEL "U4/U0/gene_score[4]" BEL
+        "U4/U0/gene_score[5]" BEL "U4/U0/gene_score[6]" BEL
+        "U4/U0/gene_score[7]" BEL "U4/U0/gene_score[8]" BEL
+        "U4/U0/gene_score[9]" BEL "U4/U0/dist_1[3]" BEL "U4/U0/dist_1[4]" BEL
+        "U4/U0/dist_1_ret_pipe_3" BEL "U4/U0/dist_1_ret_pipe_4" BEL
+        "U4/U0/dist_1_ret_pipe_5" BEL "U4/U0/dist_1[1]" BEL
+        "U4/U0/dist_1_ret_0_pipe_3" BEL "U4/U0/dist_1_ret_0_pipe_4" BEL
+        "U4/U0/dist_1_ret_0_pipe_5" BEL "U4/U0/fit_n_ret_8" BEL
+        "U4/U0/fit_n_ret_9" BEL "U4/U0/fit_n_ret_11" BEL "U4/U0/fit_n_ret_14"
+        BEL "U4/U0/fit_n_ret_15" BEL "U4/U0/fit_n_ret_16" BEL
+        "U4/U0/fit_n_ret_17" BEL "U4/U0/fit_n_ret_18" BEL "U4/U0/fit_n_ret_19"
+        BEL "U4/U0/fit_n_ret_20" BEL "U4/U0/fit_n_ret_21" BEL
+        "U4/U0/fit_n_ret_22" BEL "U4/U0/valid_ret" BEL "U4/U0/dist_1_ret" BEL
+        "U4/U0/dist_1_ret_0" BEL "U4/U0/counter_read_rom_ret" BEL
+        "U4/U0/fit_n_ret_2_0" BEL "U4/U0/fit_n_ret_1_1" BEL
+        "U4/U0/fit_n_ret_2_1" BEL "U4/U0/fit_n_ret_7_0" BEL
+        "U4/U0/fit_n_ret_2_2" BEL "U4/U0/fit_n_ret_1_3" BEL
+        "U4/U0/fit_n_ret_2_3" BEL "U4/U0/counter_read_rom[3]" BEL
+        "U4/U0/counter_read_rom[2]" BEL "U4/U0/counter_read_rom[1]" BEL
+        "U4/U0/counter_read_rom[0]" BEL "U4/U0/counter_read_rom_ret_0" BEL
+        "U4/U0/fit_n_ret_2_4" BEL "U4/U0/dist_1_ret_1" BEL
+        "U4/U0/fit_n_ret_2_5" BEL "U4/U0/fit_n_ret_2_6" BEL
+        "U4/U0/fit_n_ret_3_1" BEL "U4/U0/fit_n_ret_1_7" BEL
+        "U4/U0/fit_n_ret_3_2" BEL "U4/U0/fit_n_ret_0" BEL
+        "U4/U0/fit_n_ret_1_8" BEL "U4/U0/fit_n_ret_2_8" BEL
+        "U4/U1/temp_indexs_2_1[0]" BEL "U4/U1/temp_indexs_2_1[1]" BEL
+        "U4/U1/temp_indexs_2_1[2]" BEL "U4/U1/temp_indexs_2_1[3]" BEL
+        "U4/U1/temp_indexs_2_1[4]" BEL "U4/U1/temp_indexs_2_1[5]" BEL
+        "U4/U1/temp_indexs_2_1[6]" BEL "U4/U1/temp_indexs_2_1[7]" BEL
+        "U4/U1/temp_indexs_2_1[8]" BEL "U4/U1/temp_indexs_2_1[9]" BEL
+        "U4/U1/temp_indexs_2_1[10]" BEL "U4/U1/temp_indexs_2_1[11]" BEL
+        "U4/U1/temp_indexs_2_1[12]" BEL "U4/U1/temp_indexs_2_1[13]" BEL
+        "U4/U1/temp_indexs_2_1[14]" BEL "U4/U1/temp_indexs_2_1[15]" BEL
+        "U4/U1/temp_indexs_2_1[16]" BEL "U4/U1/temp_indexs_2_1[17]" BEL
+        "U4/U1/temp_indexs_2_1[18]" BEL "U4/U1/temp_indexs_2_1[19]" BEL
+        "U4/U1/temp_indexs_2_1[20]" BEL "U4/U1/temp_indexs_2_1[21]" BEL
+        "U4/U1/temp_indexs_2_1[22]" BEL "U4/U1/temp_indexs_2_1[23]" BEL
+        "U4/U1/temp_indexs_2_1[24]" BEL "U4/U1/temp_indexs_2_1[25]" BEL
+        "U4/U1/temp_indexs_2_1[26]" BEL "U4/U1/temp_indexs_2_1[27]" BEL
+        "U4/U1/temp_indexs_2_1[28]" BEL "U4/U1/temp_indexs_2_1[29]" BEL
+        "U4/U1/temp_indexs_2_1[30]" BEL "U4/U1/temp_indexs_2_1[31]" BEL
+        "U4/U1/temp2_1[0]" BEL "U4/U1/temp2_1[1]" BEL "U4/U1/temp2_1[2]" BEL
+        "U4/U1/temp2_1[3]" BEL "U4/U1/temp2_1[4]" BEL "U4/U1/temp2_1[5]" BEL
+        "U4/U1/temp2_1[6]" BEL "U4/U1/temp2_1[7]" BEL "U4/U1/temp2_1[8]" BEL
+        "U4/U1/temp2_1[9]" BEL "U4/U1/elite_indexs_1[0]" BEL
+        "U4/U1/elite_indexs_1[1]" BEL "U4/U1/elite_indexs_1[2]" BEL
+        "U4/U1/elite_indexs_1[3]" BEL "U4/U1/elite_indexs_1[4]" BEL
+        "U4/U1/elite_indexs_1[5]" BEL "U4/U1/elite_indexs_1[6]" BEL
+        "U4/U1/elite_indexs_1[7]" BEL "U4/U1/elite_indexs_1[8]" BEL
+        "U4/U1/elite_indexs_1[9]" BEL "U4/U1/elite_indexs_1[10]" BEL
+        "U4/U1/elite_indexs_1[11]" BEL "U4/U1/elite_indexs_1[12]" BEL
+        "U4/U1/elite_indexs_1[13]" BEL "U4/U1/elite_indexs_1[14]" BEL
+        "U4/U1/elite_indexs_1[15]" BEL "U4/U1/elite_indexs_1[16]" BEL
+        "U4/U1/elite_indexs_1[17]" BEL "U4/U1/elite_indexs_1[18]" BEL
+        "U4/U1/elite_indexs_1[19]" BEL "U4/U1/elite_indexs_1[20]" BEL
+        "U4/U1/elite_indexs_1[21]" BEL "U4/U1/elite_indexs_1[22]" BEL
+        "U4/U1/elite_indexs_1[23]" BEL "U4/U1/elite_indexs_1[24]" BEL
+        "U4/U1/elite_indexs_1[25]" BEL "U4/U1/elite_indexs_1[26]" BEL
+        "U4/U1/elite_indexs_1[27]" BEL "U4/U1/elite_indexs_1[28]" BEL
+        "U4/U1/elite_indexs_1[29]" BEL "U4/U1/elite_indexs_1[30]" BEL
+        "U4/U1/elite_indexs_1[31]" BEL "U4/U1/best_fit_1[0]" BEL
+        "U4/U1/best_fit_1[1]" BEL "U4/U1/best_fit_1[2]" BEL
+        "U4/U1/best_fit_1[3]" BEL "U4/U1/best_fit_1[4]" BEL
+        "U4/U1/best_fit_1[5]" BEL "U4/U1/best_fit_1[6]" BEL
+        "U4/U1/best_fit_1[7]" BEL "U4/U1/best_fit_1[8]" BEL
+        "U4/U1/best_fit_1[9]" BEL "U4/U1/temp_indexs_2_0[0]" BEL
+        "U4/U1/temp_indexs_2_0[1]" BEL "U4/U1/temp_indexs_2_0[2]" BEL
+        "U4/U1/temp_indexs_2_0[3]" BEL "U4/U1/temp_indexs_2_0[4]" BEL
+        "U4/U1/temp_indexs_2_0[5]" BEL "U4/U1/temp_indexs_2_0[6]" BEL
+        "U4/U1/temp_indexs_2_0[7]" BEL "U4/U1/temp_indexs_2_0[8]" BEL
+        "U4/U1/temp_indexs_2_0[9]" BEL "U4/U1/temp_indexs_2_0[10]" BEL
+        "U4/U1/temp_indexs_2_0[11]" BEL "U4/U1/temp_indexs_2_0[12]" BEL
+        "U4/U1/temp_indexs_2_0[13]" BEL "U4/U1/temp_indexs_2_0[14]" BEL
+        "U4/U1/temp_indexs_2_0[15]" BEL "U4/U1/temp_indexs_2_0[16]" BEL
+        "U4/U1/temp_indexs_2_0[17]" BEL "U4/U1/temp_indexs_2_0[18]" BEL
+        "U4/U1/temp_indexs_2_0[19]" BEL "U4/U1/temp_indexs_2_0[20]" BEL
+        "U4/U1/temp_indexs_2_0[21]" BEL "U4/U1/temp_indexs_2_0[22]" BEL
+        "U4/U1/temp_indexs_2_0[23]" BEL "U4/U1/temp_indexs_2_0[24]" BEL
+        "U4/U1/temp_indexs_2_0[25]" BEL "U4/U1/temp_indexs_2_0[26]" BEL
+        "U4/U1/temp_indexs_2_0[27]" BEL "U4/U1/temp_indexs_2_0[28]" BEL
+        "U4/U1/temp_indexs_2_0[29]" BEL "U4/U1/temp_indexs_2_0[30]" BEL
+        "U4/U1/temp_indexs_2_0[31]" BEL "U4/U1/elite_offs_1[0]" BEL
+        "U4/U1/elite_offs_1[1]" BEL "U4/U1/elite_offs_1[2]" BEL
+        "U4/U1/elite_offs_1[3]" BEL "U4/U1/elite_offs_1[4]" BEL
+        "U4/U1/elite_offs_1[5]" BEL "U4/U1/elite_offs_1[6]" BEL
+        "U4/U1/elite_offs_1[7]" BEL "U4/U1/elite_offs_1[8]" BEL
+        "U4/U1/elite_offs_1[9]" BEL "U4/U1/elite_offs_1[10]" BEL
+        "U4/U1/elite_offs_1[11]" BEL "U4/U1/elite_offs_1[12]" BEL
+        "U4/U1/elite_offs_1[13]" BEL "U4/U1/elite_offs_1[14]" BEL
+        "U4/U1/elite_offs_1[15]" BEL "U4/U1/elite_offs_1[16]" BEL
+        "U4/U1/elite_offs_1[17]" BEL "U4/U1/elite_offs_1[18]" BEL
+        "U4/U1/elite_offs_1[19]" BEL "U4/U1/elite_offs_1[20]" BEL
+        "U4/U1/elite_offs_1[21]" BEL "U4/U1/elite_offs_1[22]" BEL
+        "U4/U1/elite_offs_1[23]" BEL "U4/U1/elite_offs_1[24]" BEL
+        "U4/U1/elite_offs_1[25]" BEL "U4/U1/elite_offs_1[26]" BEL
+        "U4/U1/elite_offs_1[27]" BEL "U4/U1/elite_offs_1[28]" BEL
+        "U4/U1/elite_offs_1[29]" BEL "U4/U1/elite_offs_1[30]" BEL
+        "U4/U1/elite_offs_1[31]" BEL "U4/U1/elite_offs_0[0]" BEL
+        "U4/U1/elite_offs_0[1]" BEL "U4/U1/elite_offs_0[2]" BEL
+        "U4/U1/elite_offs_0[3]" BEL "U4/U1/elite_offs_0[4]" BEL
+        "U4/U1/elite_offs_0[5]" BEL "U4/U1/elite_offs_0[6]" BEL
+        "U4/U1/elite_offs_0[7]" BEL "U4/U1/elite_offs_0[8]" BEL
+        "U4/U1/elite_offs_0[9]" BEL "U4/U1/elite_offs_0[10]" BEL
+        "U4/U1/elite_offs_0[11]" BEL "U4/U1/elite_offs_0[12]" BEL
+        "U4/U1/elite_offs_0[13]" BEL "U4/U1/elite_offs_0[14]" BEL
+        "U4/U1/elite_offs_0[15]" BEL "U4/U1/elite_offs_0[16]" BEL
+        "U4/U1/elite_offs_0[17]" BEL "U4/U1/elite_offs_0[18]" BEL
+        "U4/U1/elite_offs_0[19]" BEL "U4/U1/elite_offs_0[20]" BEL
+        "U4/U1/elite_offs_0[21]" BEL "U4/U1/elite_offs_0[22]" BEL
+        "U4/U1/elite_offs_0[23]" BEL "U4/U1/elite_offs_0[24]" BEL
+        "U4/U1/elite_offs_0[25]" BEL "U4/U1/elite_offs_0[26]" BEL
+        "U4/U1/elite_offs_0[27]" BEL "U4/U1/elite_offs_0[28]" BEL
+        "U4/U1/elite_offs_0[29]" BEL "U4/U1/elite_offs_0[30]" BEL
+        "U4/U1/elite_offs_0[31]" BEL "U4/U1/temp2_0[0]" BEL "U4/U1/temp2_0[1]"
+        BEL "U4/U1/temp2_0[2]" BEL "U4/U1/temp2_0[3]" BEL "U4/U1/temp2_0[4]"
+        BEL "U4/U1/temp2_0[5]" BEL "U4/U1/temp2_0[6]" BEL "U4/U1/temp2_0[7]"
+        BEL "U4/U1/temp2_0[8]" BEL "U4/U1/temp2_0[9]" BEL
+        "U4/U1/best_fit_prev_gen_1[0]" BEL "U4/U1/best_fit_prev_gen_1[1]" BEL
+        "U4/U1/best_fit_prev_gen_1[2]" BEL "U4/U1/best_fit_prev_gen_1[3]" BEL
+        "U4/U1/best_fit_prev_gen_1[4]" BEL "U4/U1/best_fit_prev_gen_1[5]" BEL
+        "U4/U1/best_fit_prev_gen_1[6]" BEL "U4/U1/best_fit_prev_gen_1[7]" BEL
+        "U4/U1/best_fit_prev_gen_1[8]" BEL "U4/U1/best_fit_prev_gen_1[9]" BEL
+        "U4/U1/best_fit_prev_gen_0[0]" BEL "U4/U1/best_fit_prev_gen_0[1]" BEL
+        "U4/U1/best_fit_prev_gen_0[2]" BEL "U4/U1/best_fit_prev_gen_0[3]" BEL
+        "U4/U1/best_fit_prev_gen_0[4]" BEL "U4/U1/best_fit_prev_gen_0[5]" BEL
+        "U4/U1/best_fit_prev_gen_0[6]" BEL "U4/U1/best_fit_prev_gen_0[7]" BEL
+        "U4/U1/best_fit_prev_gen_0[8]" BEL "U4/U1/best_fit_prev_gen_0[9]" BEL
+        "U4/U1/elite_indexs_0[0]" BEL "U4/U1/elite_indexs_0[1]" BEL
+        "U4/U1/elite_indexs_0[2]" BEL "U4/U1/elite_indexs_0[3]" BEL
+        "U4/U1/elite_indexs_0[4]" BEL "U4/U1/elite_indexs_0[5]" BEL
+        "U4/U1/elite_indexs_0[6]" BEL "U4/U1/elite_indexs_0[7]" BEL
+        "U4/U1/elite_indexs_0[8]" BEL "U4/U1/elite_indexs_0[9]" BEL
+        "U4/U1/elite_indexs_0[10]" BEL "U4/U1/elite_indexs_0[11]" BEL
+        "U4/U1/elite_indexs_0[12]" BEL "U4/U1/elite_indexs_0[13]" BEL
+        "U4/U1/elite_indexs_0[14]" BEL "U4/U1/elite_indexs_0[15]" BEL
+        "U4/U1/elite_indexs_0[16]" BEL "U4/U1/elite_indexs_0[17]" BEL
+        "U4/U1/elite_indexs_0[18]" BEL "U4/U1/elite_indexs_0[19]" BEL
+        "U4/U1/elite_indexs_0[20]" BEL "U4/U1/elite_indexs_0[21]" BEL
+        "U4/U1/elite_indexs_0[22]" BEL "U4/U1/elite_indexs_0[23]" BEL
+        "U4/U1/elite_indexs_0[24]" BEL "U4/U1/elite_indexs_0[25]" BEL
+        "U4/U1/elite_indexs_0[26]" BEL "U4/U1/elite_indexs_0[27]" BEL
+        "U4/U1/elite_indexs_0[28]" BEL "U4/U1/elite_indexs_0[29]" BEL
+        "U4/U1/elite_indexs_0[30]" BEL "U4/U1/elite_indexs_0[31]" BEL
+        "U4/U1/best_fit_0[0]" BEL "U4/U1/best_fit_0[1]" BEL
+        "U4/U1/best_fit_0[2]" BEL "U4/U1/best_fit_0[3]" BEL
+        "U4/U1/best_fit_0[4]" BEL "U4/U1/best_fit_0[5]" BEL
+        "U4/U1/best_fit_0[6]" BEL "U4/U1/best_fit_0[7]" BEL
+        "U4/U1/best_fit_0[8]" BEL "U4/U1/best_fit_0[9]" BEL "U4/U1/counter[0]"
+        BEL "U4/U1/max_fit[0]" BEL "U4/U1/max_fit[1]" BEL "U4/U1/max_fit[2]"
+        BEL "U4/U1/max_fit[3]" BEL "U4/U1/max_fit[4]" BEL "U4/U1/max_fit[5]"
+        BEL "U4/U1/max_fit[6]" BEL "U4/U1/max_fit[7]" BEL "U4/U1/max_fit[8]"
+        BEL "U4/U1/max_fit[9]" BEL "U4/U1/rd" BEL "U4/U1/count_cycle[0]" BEL
+        "U4/U1/count_cycle[1]" BEL "U4/U1/fit_sum[1]" BEL "U4/U1/sum_p[1]" BEL
+        "U4/U1/fit_sum[2]" BEL "U4/U1/sum_p[2]" BEL "U4/U1/fit_sum[3]" BEL
+        "U4/U1/sum_p[3]" BEL "U4/U1/fit_sum[4]" BEL "U4/U1/sum_p[4]" BEL
+        "U4/U1/fit_sum[5]" BEL "U4/U1/sum_p[5]" BEL "U4/U1/fit_sum[6]" BEL
+        "U4/U1/sum_p[6]" BEL "U4/U1/fit_sum[7]" BEL "U4/U1/sum_p[7]" BEL
+        "U4/U1/fit_sum[8]" BEL "U4/U1/sum_p[8]" BEL "U4/U1/fit_sum[9]" BEL
+        "U4/U1/sum_p[9]" BEL "U4/U1/fit_sum[10]" BEL "U4/U1/sum_p[10]" BEL
+        "U4/U1/fit_sum[11]" BEL "U4/U1/sum_p[11]" BEL "U4/U1/fit_sum[12]" BEL
+        "U4/U1/sum_p[12]" BEL "U4/U1/sum_p[0]" BEL "U4/U1/fit_sum[0]" BEL
+        "U5/cumSum_p1[1]" BEL "U5/cumSum_p1[2]" BEL "U5/cumSum_p1[3]" BEL
+        "U5/cumSum_p1[4]" BEL "U5/cumSum_p1[5]" BEL "U5/cumSum_p1[6]" BEL
+        "U5/cumSum_p1[7]" BEL "U5/cumSum_p1[8]" BEL "U5/cumSum_p1[9]" BEL
+        "U5/cumSum_p1[10]" BEL "U5/cumSum_p1[11]" BEL "U5/cumSum_p1[12]" BEL
+        "U5/cumSum_p1[0]" BEL "U5/count" BEL "U5/selParent_p_ret_19_0" BEL
+        "U5/selParent_p_ret_19_1" BEL "U5/selParent_p_ret_17_0" BEL
+        "U5/selParent_p_ret_15_0" BEL "U5/selParent_p_ret_13_0" BEL
+        "U5/selParent_p_ret_11_0" BEL "U5/selParent_p_ret_9_0" BEL
+        "U5/selParent_p_ret_7_0" BEL "U5/selParent_p_ret_5_0" BEL
+        "U5/selParent_p_ret_3_0" BEL "U5/selParent_p_ret_1_0" BEL
+        "U5/selParent_p_ret_0" BEL "U5/selParent_p_ret_2_0" BEL
+        "U5/selParent_p_ret_4_0" BEL "U5/selParent_p_ret_6_0" BEL
+        "U5/selParent_p_ret_8_0" BEL "U5/selParent_p_ret_10_0" BEL
+        "U5/selParent_p_ret_12_0" BEL "U5/selParent_p_ret_14_0" BEL
+        "U5/selParent_p_ret_16_0" BEL "U5/selParent_p_ret_18_0" BEL
+        "U5/selParent_p_ret_20_0" BEL
+        "U5/selection.un17_data_valid_0.selParent_p_ret_19" BEL
+        "U5/selection.selParent_p_ret_19" BEL "U5/selParent_p_ret_21" BEL
+        "U5/done_t_ret" BEL "U5/selection.done_t_ret" BEL
+        "U5/selection.done_t_ret_1" BEL "U5/scalFitSum_p[0]" BEL
+        "U5/scalFitSum_p[1]" BEL "U5/scalFitSum_p[2]" BEL "U5/scalFitSum_p[3]"
+        BEL "U5/scalFitSum_p[4]" BEL "U5/scalFitSum_p[5]" BEL
+        "U5/scalFitSum_p[6]" BEL "U5/scalFitSum_p[7]" BEL "U5/scalFitSum_p[8]"
+        BEL "U5/scalFitSum_p[9]" BEL "U5/scalFitSum_p[10]" BEL
+        "U5/scalFitSum_p[11]" BEL "U5/scalFitSum_p[12]" BEL
+        "U5/scalFitSum_p[16]" BEL "U5/scalFitSum_p[15]" BEL
+        "U5/scalFitSum_p[14]" BEL "U5/scalFitSum_p[13]" BEL "U6/pool_int_3[2]"
+        BEL "U6/pool_int_1[1]" BEL "U6/pool_int_4[0]" BEL "U6/pool_int_0[0]"
+        BEL "U6/index_7[0]" BEL "U6/index_7[1]" BEL "U6/index_7[2]" BEL
+        "U6/index_6[0]" BEL "U6/index_6[1]" BEL "U6/index_6[2]" BEL
+        "U6/index_5[0]" BEL "U6/index_5[1]" BEL "U6/index_5[2]" BEL
+        "U6/index_4[0]" BEL "U6/index_4[1]" BEL "U6/index_4[2]" BEL
+        "U6/index_3[0]" BEL "U6/index_3[1]" BEL "U6/index_3[2]" BEL
+        "U6/index_2[0]" BEL "U6/index_2[1]" BEL "U6/index_2[2]" BEL
+        "U6/index_1[0]" BEL "U6/index_1[1]" BEL "U6/index_1[2]" BEL
+        "U6/pool_int_5[1]" BEL "U6/pool_int_2[0]" BEL
+        "U6/loop7.cross_point_int[0]" BEL "U6/loop7.cross_point_int[1]" BEL
+        "U6/loop7.cross_point_int[2]" BEL "U6/crossout1[0]" BEL
+        "U6/crossout1[1]" BEL "U6/crossout1[2]" BEL "U6/crossout1[3]" BEL
+        "U6/crossout1[4]" BEL "U6/crossout1[5]" BEL "U6/crossout1[6]" BEL
+        "U6/crossout1[7]" BEL "U6/crossout1[8]" BEL "U6/crossout1[9]" BEL
+        "U6/crossout1[10]" BEL "U6/crossout1[11]" BEL "U6/crossout1[12]" BEL
+        "U6/crossout1[13]" BEL "U6/crossout1[14]" BEL "U6/crossout1[15]" BEL
+        "U6/crossout1[16]" BEL "U6/crossout1[17]" BEL "U6/crossout1[18]" BEL
+        "U6/crossout1[19]" BEL "U6/crossout1[20]" BEL "U6/done" BEL
+        "U6/crossOffspr1[15]" BEL "U6/crossOffspr1[16]" BEL
+        "U6/crossOffspr1[17]" BEL "U6/crossOffspr1[18]" BEL
+        "U6/crossOffspr1[19]" BEL "U6/crossOffspr1[20]" BEL
+        "U6/crossOffspr1[0]" BEL "U6/crossOffspr1[1]" BEL "U6/crossOffspr1[2]"
+        BEL "U6/crossOffspr1[3]" BEL "U6/crossOffspr1[4]" BEL
+        "U6/crossOffspr1[5]" BEL "U6/crossOffspr1[6]" BEL "U6/crossOffspr1[7]"
+        BEL "U6/crossOffspr1[8]" BEL "U6/crossOffspr1[9]" BEL
+        "U6/crossOffspr1[10]" BEL "U6/crossOffspr1[11]" BEL
+        "U6/crossOffspr1[12]" BEL "U6/crossOffspr1[13]" BEL
+        "U6/crossOffspr1[14]" BEL "U6/temp1[6]" BEL "U6/temp1[7]" BEL
+        "U6/temp1[8]" BEL "U6/temp1[9]" BEL "U6/temp1[10]" BEL "U6/temp1[11]"
+        BEL "U6/temp1[12]" BEL "U6/temp1[13]" BEL "U6/temp1[14]" BEL
+        "U6/temp1[15]" BEL "U6/temp1[16]" BEL "U6/temp1[17]" BEL
+        "U6/temp1[18]" BEL "U6/temp1[19]" BEL "U6/temp1[20]" BEL "U6/ind[0]"
+        BEL "U6/ind[1]" BEL "U6/ind[2]" BEL "U6/temp1[0]" BEL "U6/temp1[1]"
+        BEL "U6/temp1[2]" BEL "U6/temp1[3]" BEL "U6/temp1[4]" BEL
+        "U6/temp1[5]" BEL "U6/cont1[5]" BEL "U6/cont1[4]" BEL "U6/cont1[3]"
+        BEL "U6/cont1[2]" BEL "U6/cont1[1]" BEL "U6/cont1[0]" BEL "U6/rd" BEL
+        "U6/counter[2]" BEL "U6/counter[0]" BEL "U6/counter_ret" BEL
+        "U6/counter[1]" BEL "U6/counter_ret_0" BEL "U6/counter_ret_1" BEL
+        "U6/counter_ret_2" BEL "U6/temp1_fast[16]" BEL "U6/temp1_fast[15]" BEL
+        "U6/temp1_fast[12]" BEL "U6/temp1_fast[13]" BEL "U6/temp1_fast[17]"
+        BEL "U7/mutout_p1[3]" BEL "U7/mutout_p1[4]" BEL "U7/mutout_p1[5]" BEL
+        "U7/mutout_p1[6]" BEL "U7/mutout_p1[8]" BEL "U7/mutout_p1[9]" BEL
+        "U7/mutout_p1[10]" BEL "U7/mutout_p1[11]" BEL "U7/mutout_p1[15]" BEL
+        "U7/mutout_p1[16]" BEL "U7/mutout_p1[18]" BEL "U7/mutout_p1[19]" BEL
+        "U7/done_p" BEL "U7/mutout_p1_ret" BEL "U7/mutout_p1_ret_1" BEL
+        "U7/mutout_p1_ret_2" BEL "U7/mutout_p1_ret_0" BEL
+        "U7/mutout_p1_ret_1_0" BEL "U7/mutout_p1_ret_2_0" BEL
+        "U7/mutout_p1_ret_3" BEL "U7/mutout_p1_ret_1_1" BEL
+        "U7/mutout_p1_ret_2_1" BEL "U7/mutout_p1_ret_4" BEL
+        "U7/mutout_p1_ret_5" BEL "U7/mutout_p1_ret_1_2" BEL
+        "U7/mutout_p1_ret_2_2" BEL "U7/mutout_p1_ret_6" BEL
+        "U7/mutout_p1_ret_1_3" BEL "U7/mutout_p1_ret_2_3" BEL "U7/decode_ret"
+        BEL "U7/decode_ret_0" BEL "U7/mutout_p1_ret_7" BEL
+        "U7/mutout_p1_ret_1_4" BEL "U7/mutout_p1_ret_2_4" BEL
+        "U7/decode_ret_1" BEL "U7/decode_ret_2" BEL "U8/data_out_1[30]" BEL
+        "U8/data_out_1[29]" BEL "U8/data_out_1[28]" BEL "U8/data_out_1[27]"
+        BEL "U8/data_out_1[26]" BEL "U8/data_out_1[25]" BEL
+        "U8/data_out_1[24]" BEL "U8/data_out_1[23]" BEL "U8/data_out_1[22]"
+        BEL "U8/data_out_1[21]" BEL "U8/data_out_1[20]" BEL
+        "U8/data_out_1[19]" BEL "U8/data_out_1[18]" BEL "U8/data_out_1[17]"
+        BEL "U8/data_out_1[16]" BEL "U8/data_out_1[15]" BEL
+        "U8/data_out_1[14]" BEL "U8/data_out_1[13]" BEL "U8/data_out_1[12]"
+        BEL "U8/data_out_1[11]" BEL "U8/data_out_1[10]" BEL "U8/data_out_1[9]"
+        BEL "U8/data_out_1[8]" BEL "U8/data_out_1[7]" BEL "U8/data_out_1[6]"
+        BEL "U8/data_out_1[5]" BEL "U8/data_out_1[4]" BEL "U8/data_out_1[3]"
+        BEL "U8/data_out_1[2]" BEL "U8/data_out_1[1]" BEL "U8/data_out_1[0]"
+        BEL "U8/add_r[1]" BEL "U8/add_r[2]" BEL "U8/add_r[0]" BEL "U8/wr_r"
+        BEL "U8/selParent_p_ret" BEL "U8/selParent_p_ret_1" BEL
+        "U8/selParent_p_ret_2" BEL "U8/selParent_p_ret_3" BEL
+        "U8/selParent_p_ret_4" BEL "U8/selParent_p_ret_5" BEL
+        "U8/selParent_p_ret_6" BEL "U8/selParent_p_ret_7" BEL
+        "U8/selParent_p_ret_8" BEL "U8/selParent_p_ret_9" BEL
+        "U8/selParent_p_ret_10" BEL "U8/selParent_p_ret_11" BEL
+        "U8/selParent_p_ret_12" BEL "U8/selParent_p_ret_13" BEL
+        "U8/selParent_p_ret_14" BEL "U8/selParent_p_ret_15" BEL
+        "U8/selParent_p_ret_16" BEL "U8/selParent_p_ret_17" BEL
+        "U8/selParent_p_ret_18" BEL "U8/selParent_p_ret_19" BEL
+        "U8/selParent_p_ret_20" BEL "U9/data_out_1[20]" BEL
+        "U9/data_out_1[19]" BEL "U9/data_out_1[18]" BEL "U9/data_out_1[17]"
+        BEL "U9/data_out_1[16]" BEL "U9/data_out_1[15]" BEL
+        "U9/data_out_1[14]" BEL "U9/data_out_1[13]" BEL "U9/data_out_1[12]"
+        BEL "U9/data_out_1[11]" BEL "U9/data_out_1[10]" BEL "U9/data_out_1[9]"
+        BEL "U9/data_out_1[8]" BEL "U9/data_out_1[7]" BEL "U9/data_out_1[6]"
+        BEL "U9/data_out_1[5]" BEL "U9/data_out_1[4]" BEL "U9/data_out_1[3]"
+        BEL "U9/data_out_1[2]" BEL "U9/data_out_1[1]" BEL "U9/data_out_1[0]"
+        BEL "U9/add_r[0]" BEL "U9/add_r[1]" BEL "U9/add_r[2]" BEL
+        "U9/add_r[3]" BEL "U9/wr_r" BEL "U9/data.I_10/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_10/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_10/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_10/RAM16X2S1/RAM16X1S1" BEL
+        "U9/data.I_9/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_9/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_9/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_9/RAM16X2S1/RAM16X1S1" BEL
+        "U9/data.I_6/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_6/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_6/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_6/RAM16X2S1/RAM16X1S1" BEL
+        "U9/data.I_5/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_5/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_5/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_5/RAM16X2S1/RAM16X1S1" BEL
+        "U9/data.I_2/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_1/RAM16X2S0/RAM16X1S0" BEL
+        "U9/data.I_1/RAM16X2S0/RAM16X1S1" BEL
+        "U9/data.I_1/RAM16X2S1/RAM16X1S0" BEL
+        "U9/data.I_1/RAM16X2S1/RAM16X1S1" BEL "U10/temp1[0]" BEL
+        "U10/temp1[1]" BEL "U10/temp1[2]" BEL "U10/temp1[3]" BEL
+        "U10/temp1[4]" BEL "U10/temp1[5]" BEL "U10/temp1[6]" BEL
+        "U10/temp1[7]" BEL "U10/temp1[8]" BEL "U10/temp1[9]" BEL
+        "U10/temp1[10]" BEL "U10/temp1[11]" BEL "U10/temp1[12]" BEL
+        "U10/temp1[13]" BEL "U10/temp1[14]" BEL "U10/temp1[15]" BEL
+        "U10/temp1[16]" BEL "U10/temp1[17]" BEL "U10/temp1[18]" BEL
+        "U10/temp1[19]" BEL "U10/temp1[20]" BEL "U10/temp2[0]" BEL
+        "U10/temp2[1]" BEL "U10/temp2[2]" BEL "U10/temp2[3]" BEL
+        "U10/temp2[4]" BEL "U10/temp2[5]" BEL "U10/temp2[6]" BEL
+        "U10/temp2[7]" BEL "U10/temp2[8]" BEL "U10/temp2[9]" BEL
+        "U10/temp2[10]" BEL "U10/temp2[11]" BEL "U10/temp2[12]" BEL
+        "U10/temp2[13]" BEL "U10/temp2[14]" BEL "U10/temp2[15]" BEL
+        "U10/temp2[16]" BEL "U10/temp2[17]" BEL "U10/temp2[18]" BEL
+        "U10/temp2[19]" BEL "U10/temp2[20]" BEL "U10/loop0.cnt_adapted" BEL
+        "U10/incr_p1[0]" BEL "U10/incr_p1[1]" BEL "U10/incr_p1[2]" BEL
+        "U10/incr_p1[3]" BEL "U10/cnt_parents_1[0]" BEL "U10/cnt_parents_1[1]"
+        BEL "U10/cnt_parents_1[2]" BEL "U10/cnt_parents_1[3]" BEL
+        "U10/index[0]" BEL "U10/index[1]" BEL "U10/index[2]" BEL
+        "U10/index[3]" BEL "U10/count_sel_rd_p1[0]" BEL
+        "U10/count_sel_rd_p1[1]" BEL "U10/count_sel_rd_p1[2]" BEL
+        "U10/count_sel_rd_p1[3]" BEL "U10/data_out_cross1[14]" BEL
+        "U10/data_out_cross1[15]" BEL "U10/data_out_cross1[16]" BEL
+        "U10/data_out_cross1[17]" BEL "U10/data_out_cross1[18]" BEL
+        "U10/data_out_cross1[19]" BEL "U10/data_out_cross1[20]" BEL
+        "U10/count_parents_p1[0]" BEL "U10/count_parents_p1[1]" BEL
+        "U10/count_parents_p1[2]" BEL "U10/count_parents_p1[3]" BEL
+        "U10/data_out_cross2[20]" BEL "U10/data_out_cross1[0]" BEL
+        "U10/data_out_cross1[1]" BEL "U10/data_out_cross1[2]" BEL
+        "U10/data_out_cross1[3]" BEL "U10/data_out_cross1[4]" BEL
+        "U10/data_out_cross1[5]" BEL "U10/data_out_cross1[6]" BEL
+        "U10/data_out_cross1[7]" BEL "U10/data_out_cross1[8]" BEL
+        "U10/data_out_cross1[9]" BEL "U10/data_out_cross1[10]" BEL
+        "U10/data_out_cross1[11]" BEL "U10/data_out_cross1[12]" BEL
+        "U10/data_out_cross1[13]" BEL "U10/data_out_cross2[5]" BEL
+        "U10/data_out_cross2[6]" BEL "U10/data_out_cross2[7]" BEL
+        "U10/data_out_cross2[8]" BEL "U10/data_out_cross2[9]" BEL
+        "U10/data_out_cross2[10]" BEL "U10/data_out_cross2[11]" BEL
+        "U10/data_out_cross2[12]" BEL "U10/data_out_cross2[13]" BEL
+        "U10/data_out_cross2[14]" BEL "U10/data_out_cross2[15]" BEL
+        "U10/data_out_cross2[16]" BEL "U10/data_out_cross2[17]" BEL
+        "U10/data_out_cross2[18]" BEL "U10/data_out_cross2[19]" BEL
+        "U10/loop1.incr[0]" BEL "U10/loop1.incr[1]" BEL "U10/loop1.incr[2]"
+        BEL "U10/loop1.incr[3]" BEL "U10/count_offs_p1[0]" BEL
+        "U10/count_offs_p1[1]" BEL "U10/count_offs_p1[2]" BEL
+        "U10/count_offs_p1[3]" BEL "U10/data_out_cross2[0]" BEL
+        "U10/data_out_cross2[1]" BEL "U10/data_out_cross2[2]" BEL
+        "U10/data_out_cross2[3]" BEL "U10/data_out_cross2[4]" BEL
+        "U10/sreg[2]" BEL "U10/sreg[1]" BEL "U10/sreg[0]" BEL "U10/sreg[8]"
+        BEL "U10/sreg[7]" BEL "U10/sreg[6]" BEL "U10/sreg[5]" BEL
+        "U10/sreg[4]" BEL "U10/sreg[3]" BEL "U10/notify_cnt_p[8]" BEL
+        "U10/notify_cnt_p[7]" BEL "U10/notify_cnt_p[6]" BEL
+        "U10/notify_cnt_p[5]" BEL "U10/notify_cnt_p[3]" BEL
+        "U10/notify_cnt_p[1]" BEL "U10/notify_cnt_p[0]" BEL "U10/data_valid"
+        BEL "U10/next_gene" BEL "U10/sel_out" BEL "U10/valid" BEL "U10/run2_1"
+        BEL "U10/cross_out" BEL "U10/ga_fin" BEL "U10/elite_null" BEL
+        "U10/load" BEL "U10/run3" BEL "U10/mut_out" BEL "U10/flag" BEL
+        "U10/count_gen_p1[0]" BEL "U10/count_gen_p1[1]" BEL
+        "U10/count_gen_p1[2]" BEL "U10/count_gen_p1[3]" BEL
+        "U10/count_gen_p1[4]" BEL "U10/count_gen_p1[5]" BEL
+        "U10/count_gen_p1[6]" BEL "U10/count_gen_p1[7]" BEL
+        "U10/count_gen_p1[8]" BEL "U10/fit_n_ret" BEL "U10/fit_n_ret_1" BEL
+        "U10/fit_n_ret_2" BEL "U10/fit_n_ret_3" BEL "U10/fit_n_ret_4" BEL
+        "U10/fit_n_ret_5" BEL "U10/fit_n_ret_6" BEL "U10/fit_n_ret_7" BEL
+        "U10/fit_n_ret_8" BEL "U10/selParent_p_ret_19" BEL "U10/addr_rom_1[3]"
+        BEL "U10/addr_rom_1[1]" BEL "U10/addr_rom_1[0]" BEL "U10/decode" BEL
+        "U10/addr_rom_1[2]" BEL "U10/count_cross_offs_p1[2]" BEL
+        "U10/count_cross_offs_p1[1]" BEL "U10/count_cross_offs_p1[0]" BEL
+        "U10/count_cross_offs_p1_ret" BEL "U10/notify_cnt_p[4]" BEL
+        "U10/notify_cnt_p[2]" BEL "U10/notify_cnt_p_ret" BEL
+        "U10/count_sel_wr_p1[3]" BEL "U10/count_sel_wr_p1[2]" BEL
+        "U10/count_sel_wr_p1[1]" BEL "U10/count_sel_wr_p1[0]" BEL
+        "U10/count_sel_wr_p1_ret" BEL "U10/decode_fast" BEL "U10/decode_rep1"
+        BEL "U10/decode_rep2" BEL "U10/decode_ret_1" BEL "U10/decode_ret_2"
+        BEL "U10/decode_ret_3" BEL "U10/decode_ret_4" BEL "U10/decode_ret_5"
+        BEL "U10/sreg_fast[0]" BEL "U10/sreg_0_rep1" BEL
+        "U11/case1.iwidth.iwidth.8.ilatency.ilatency.0.idin.intern_0[8]" BEL
+        "U11/case1.iwidth.iwidth.9.ilatency.ilatency.0.idin.intern_0[9]" BEL
+        "U11/case1.iwidth.iwidth.10.ilatency.ilatency.0.idin.intern_0[10]" BEL
+        "U11/case1.iwidth.iwidth.11.ilatency.ilatency.0.idin.intern_0[11]" BEL
+        "U11/case1.iwidth.iwidth.12.ilatency.ilatency.0.idin.intern_0[12]" BEL
+        "U11/case1.iwidth.iwidth.13.ilatency.ilatency.0.idin.intern_0[13]" BEL
+        "U11/case1.iwidth.iwidth.14.ilatency.ilatency.0.idin.intern_0[14]" BEL
+        "U11/case1.iwidth.iwidth.15.ilatency.ilatency.0.idin.intern_0[15]" BEL
+        "U11/case1.iwidth.iwidth.16.ilatency.ilatency.0.idin.intern_0[16]" BEL
+        "U11/case1.iwidth.iwidth.17.ilatency.ilatency.0.idin.intern_0[17]" BEL
+        "U11/case1.iwidth.iwidth.18.ilatency.ilatency.0.idin.intern_0[18]" BEL
+        "U11/case1.iwidth.iwidth.19.ilatency.ilatency.0.idin.intern_0[19]" BEL
+        "U11/case1.iwidth.iwidth.20.ilatency.ilatency.0.idin.intern_0[20]" BEL
+        "U11/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0]" BEL
+        "U11/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1]" BEL
+        "U11/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2]" BEL
+        "U11/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3]" BEL
+        "U11/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4]" BEL
+        "U11/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5]" BEL
+        "U11/case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0[6]" BEL
+        "U11/case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0[7]" BEL
+        "U12/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2]" BEL
+        "U12/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3]" BEL
+        "U12/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4]" BEL
+        "U12/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5]" BEL
+        "U12/case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0[6]" BEL
+        "U12/case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0[7]" BEL
+        "U12/case1.iwidth.iwidth.8.ilatency.ilatency.0.idin.intern_0[8]" BEL
+        "U12/case1.iwidth.iwidth.9.ilatency.ilatency.0.idin.intern_0[9]" BEL
+        "U12/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0]" BEL
+        "U12/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1]" BEL
+        "U13/case1.iwidth.iwidth.7.ilatency.ilatency.0.idin.intern_0[7]" BEL
+        "U13/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0]" BEL
+        "U13/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1]" BEL
+        "U13/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2]" BEL
+        "U13/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3]" BEL
+        "U13/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4]" BEL
+        "U13/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5]" BEL
+        "U13/case1.iwidth.iwidth.6.ilatency.ilatency.0.idin.intern_0[6]" BEL
+        "U14/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0]" BEL
+        "U14/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1]" BEL
+        "U14/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2]" BEL
+        "U14/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3]" BEL
+        "U14/case1.iwidth.iwidth.4.ilatency.ilatency.0.idin.intern_0[4]" BEL
+        "U14/case1.iwidth.iwidth.5.ilatency.ilatency.0.idin.intern_0[5]" BEL
+        "U15/case1.iwidth.iwidth.0.ilatency.ilatency.0.idin.intern_0[0]" BEL
+        "U15/case1.iwidth.iwidth.1.ilatency.ilatency.0.idin.intern_0[1]" BEL
+        "U15/case1.iwidth.iwidth.2.ilatency.ilatency.0.idin.intern_0[2]" BEL
+        "U15/case1.iwidth.iwidth.3.ilatency.ilatency.0.idin.intern_0[3]" BEL
+        "U16/intern_0[0]" BEL "U17/intern_0[0]" BEL
+        "U8/data.I_1/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_1/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_1/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_1/RAM16X2S1/RAM16X1S1" BEL
+        "U8/data.I_10/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_10/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_10/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_10/RAM16X2S1/RAM16X1S1" BEL
+        "U8/data.I_13/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_13/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_13/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_13/RAM16X2S1/RAM16X1S1" BEL
+        "U8/data.I_14/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_14/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_14/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_14/RAM16X2S1/RAM16X1S1" BEL
+        "U8/data.I_2/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_2/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_2/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_5/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_5/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_5/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_5/RAM16X2S1/RAM16X1S1" BEL
+        "U8/data.I_6/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_6/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_6/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_6/RAM16X2S1/RAM16X1S1" BEL
+        "U8/data.I_9/RAM16X2S0/RAM16X1S0" BEL
+        "U8/data.I_9/RAM16X2S0/RAM16X1S1" BEL
+        "U8/data.I_9/RAM16X2S1/RAM16X1S0" BEL
+        "U8/data.I_9/RAM16X2S1/RAM16X1S1";
+TS_clk = PERIOD TIMEGRP "clk" 12 ns HIGH 50%;
+SCHEMATIC END;

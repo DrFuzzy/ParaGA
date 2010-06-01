@@ -1,0 +1,757 @@
+Release 8.1.03i Map I.27
+Xilinx Mapping Report File for Design 'ga'
+
+Design Information
+------------------
+Command Line   : map.exe -bp -intstyle ise -p xc3s1500-fg676-4 -cm speed -detail
+-pr b -k 4 -c 100 -tx off -ol high -o ga_map.ncd ga.ngd ga.pcf 
+Target Device  : xc3s1500
+Target Package : fg676
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.5 $
+Mapped Date    : Wed Nov 22 19:55:03 2006
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    1
+Logic Utilization:
+  Number of Slice Flip Flops:         693 out of  26,624    2%
+  Number of 4 input LUTs:           1,047 out of  26,624    3%
+Logic Distribution:
+  Number of occupied Slices:                          780 out of  13,312    5%
+    Number of Slices containing only related logic:     780 out of     780  100%
+    Number of Slices containing unrelated logic:          0 out of     780    0%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:          1,075 out of  26,624    4%
+  Number used as logic:              1,047
+  Number used as a route-thru:           4
+  Number used as 16x1 RAMs:             24
+  Number of bonded IOBs:               59 out of     487   12%
+    IOB Flip Flops:                    57
+  Number of MULT18X18s:                1 out of      32    3%
+  Number of GCLKs:                     1 out of       8   12%
+
+Total equivalent gate count for design:  19,929
+Additional JTAG gate count for IOBs:  2,832
+Peak Memory Usage:  158 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Additional Device Resource Counts
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Map:122 - The command line option -ol can only be used when running in
+   timing mode (-timing option).  The option will be ignored.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:535 - The following Virtex BUFG(s) is/are being retargetted to
+   Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+   BUFGP symbol "clk_ibuf" (output signal=clk_c)
+INFO:MapLib:331 - Block RAM optimization summary:
+INFO:MapLib:333 - No optimization performed
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   8 block(s) optimized away
+ 488 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		U11/GND
+VCC 		U11/VCC
+GND 		U4/U1/GND
+VCC 		U4/U1/VCC
+GND 		U5/GND
+VCC 		U5/VCC
+VCC 		U8/VCC
+GND 		U9/GND
+
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		U4/U0/tempen[7]/LUT3_L_BUF
+LOCALBUF 		U4/U0/tempen[6]/LUT3_L_BUF
+LOCALBUF 		U4/U0/tempen[5]/LUT3_L_BUF
+LOCALBUF 		U4/U0/tempen[4]/LUT3_L_BUF
+LOCALBUF 		U4/U0/tempen[3]/LUT3_L_BUF
+LOCALBUF 		U4/U0/tempen[2]/LUT3_L_BUF
+LOCALBUF 		U4/U0/tempen[1]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[7]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[0]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[1]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[2]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[3]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[4]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[5]/LUT3_L_BUF
+LOCALBUF 		U4/U0/gene_0[6]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_0_5_1_i_o2[1]/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1066_i_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_1064_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_1064_i_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_1062_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_1062_i_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0[7]/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0_7_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0[6]/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0_6_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0[5]/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0_5_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0[4]/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0_4_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0[3]/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0_3_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0[2]/LUT4_L_BUF
+LOCALBUF 		U4/U1/fit_sum_6_1_0_2_rep1/LUT4_L_BUF
+LOCALBUF 		U4/U1/un65_valid_19/LUT4_L_BUF
+LOCALBUF 		U4/U1/un1_count_parents_19_1/LUT3_L_BUF
+LOCALBUF 		U4/U1/loop1.un12_valid_cry_1/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un12_valid_cry_2/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un12_valid_cry_3/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un12_valid_cry_4/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un12_valid_cry_5/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un12_valid_cry_6/MUXCY_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[7]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[6]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[5]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[4]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[3]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[2]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[1]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_1en[0]/LUT3_L_BUF
+LOCALBUF 		U4/U1/loop1.un20_valid_cry_0/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un20_valid_cry_1/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un20_valid_cry_2/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un20_valid_cry_3/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un20_valid_cry_4/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un20_valid_cry_5/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un20_valid_cry_6/MUXCY_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[7]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[6]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[5]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[4]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[3]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[2]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[1]/LUT3_L_BUF
+LOCALBUF 		U4/U1/temp2_0en[0]/LUT3_L_BUF
+LOCALBUF 		U4/U1/loop1.un18_valid_cry_0/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un18_valid_cry_1/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un18_valid_cry_2/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un18_valid_cry_3/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un18_valid_cry_4/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un18_valid_cry_5/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un18_valid_cry_6/MUXCY_L_BUF
+LOCALBUF 		U4/U1/N_1153_i_0_i/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2[0]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2[1]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2[2]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2[3]/LUT3_L_BUF
+LOCALBUF 		U4/U1/N_818_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_820_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_822_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_824_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_826_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_828_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_830_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_832_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_834_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_836_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_838_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_840_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_842_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_844_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_846_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_848_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_850_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_852_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_854_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_856_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_858_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_860_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_862_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_864_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_866_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_868_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_870_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_872_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_995_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_997_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_999_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1001_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1003_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1005_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1007_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1009_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1011_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1013_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1015_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1017_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1019_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1021_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1023_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1025_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1027_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1029_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1031_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1033_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1035_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1037_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1039_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1041_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1043_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1045_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1047_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1049_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1051_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1053_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1055_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1057_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_931_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_933_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_935_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_937_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_939_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_941_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_943_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_945_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_947_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_949_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_951_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_953_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_955_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_957_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_959_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_961_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_963_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_965_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_967_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_969_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_971_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_973_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_975_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_977_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_979_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_981_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_983_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_985_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_987_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_989_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_991_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_993_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[0]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[1]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[2]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[3]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[4]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[5]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[6]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2[7]/LUT3_L_BUF
+LOCALBUF 		U4/U1/N_915_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_917_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_919_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_921_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_923_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_925_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_927_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_929_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/N_1068_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_888_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_890_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_892_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[4]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[5]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[6]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[7]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[8]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[9]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[10]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[11]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[12]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[13]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[14]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[15]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[16]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[17]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[18]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[19]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[20]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[21]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[22]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[23]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[24]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[25]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[26]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[27]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[28]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[29]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[30]/LUT3_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_0_5_0_a2[31]/LUT3_L_BUF
+LOCALBUF 		U4/U1/best_fit_0_5_0_a2[0]/LUT3_L_BUF
+LOCALBUF 		U4/U1/N_874_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_876_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_878_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_880_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_882_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_884_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_886_i/LUT4_L_BUF
+LOCALBUF 		U4/U1/N_896_i/LUT3_L_BUF
+LOCALBUF 		U4/U1/N_472_i/LUT2_L_BUF
+LOCALBUF 		U4/U1/un1_elite_null_7_i_0_1[0]/LUT4_L_BUF
+LOCALBUF 		U4/U1/un1_elite_null_7_i_0_a2[0]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2_0[3]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2_0[4]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2_0[2]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2_0[1]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2_0[5]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2_0[7]/LUT4_L_BUF
+LOCALBUF 		U4/U1/best_fit_1_8_2_0[6]/LUT4_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2_0[1]/LUT4_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2_0[0]/LUT4_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2_0[3]/LUT4_L_BUF
+LOCALBUF 		U4/U1/elite_indexs_1_7_2_0[2]/LUT4_L_BUF
+LOCALBUF 		U4/U1/loop1.un16_valid_NE/LUT4_L_BUF
+LOCALBUF 		U4/U1/un1_sum_p_1_sqmuxa_i_0_a2_0_3[0]/LUT4_L_BUF
+LOCALBUF 		U4/U1/loop1.un16_valid_NE_1/LUT4_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_9/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_8/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_7/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_6/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_5/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_4/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_3/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_2/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_1/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r1_un1_sum_p_1_cry_0_0/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_9/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_8/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_7/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_6/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_5/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_4/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_3/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_2/MUXCY_L_BUF
+LOCALBUF 		U4/U1/r0_un1_sum_p_1_cry_1/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un14_valid_cry_6/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un14_valid_cry_5/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un14_valid_cry_4/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un14_valid_cry_3/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un14_valid_cry_2/MUXCY_L_BUF
+LOCALBUF 		U4/U1/loop1.un14_valid_cry_1/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un17_data_valid_0.I_27_sx/LUT4_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_9/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_8/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_7_0/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_6_0/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_5_0/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_4_0/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_3_0/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_2_0/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_1_0/MUXCY_L_BUF
+LOCALBUF 		U5/cumSum_p1_4_cry_0_0/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_10/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_9/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_8/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_7/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_6/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_5/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_4/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_3/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_2/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_1/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un20_data_valid_cry_0/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un17_data_valid_0.I_55/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un17_data_valid_0.I_46/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un17_data_valid_0.I_37/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un17_data_valid_0.I_28/MUXCY_L_BUF
+LOCALBUF 		U5/selection.un17_data_valid_0.I_19/MUXCY_L_BUF
+LOCALBUF 		U6/un3.G_6_i/LUT4_L_BUF
+LOCALBUF 		U6/un3.G_7_i/LUT3_L_BUF
+LOCALBUF 		U6/un3.G_4/LUT4_L_BUF
+LOCALBUF 		U6/un5.m7_0_03_0_a2_2/LUT2_L_BUF
+LOCALBUF 		U6/temp1_0_sn[0]/LUT3_L_BUF
+LOCALBUF 		U6/temp1_0_rn[0]/LUT4_L_BUF
+LOCALBUF 		U6/temp2_1_1[0]/LUT4_L_BUF
+LOCALBUF 		U6/un5.N_38_i_0_a2_0_d_0_1_0/LUT3_L_BUF
+LOCALBUF 		U6/crossover.temp2_2[2]/LUT4_L_BUF
+LOCALBUF 		U6/temp2_1[0]/LUT4_L_BUF
+LOCALBUF 		U6/un5.G_8_0_1/LUT4_L_BUF
+LOCALBUF 		U6/temp1_0[2]/LUT4_L_BUF
+LOCALBUF 		U6/crossout1[0]/LUT3_L_BUF
+LOCALBUF 		U6/crossout1[1]/LUT3_L_BUF
+LOCALBUF 		U6/crossout1[2]/LUT3_L_BUF
+LOCALBUF 		U6/crossout1[3]/LUT3_L_BUF
+LOCALBUF 		U6/crossout1[4]/LUT3_L_BUF
+LOCALBUF 		U6/crossout1[5]/LUT3_L_BUF
+LOCALBUF 		U6/crossout1[6]/LUT3_L_BUF
+LOCALBUF 		U6/crossout1[7]/LUT3_L_BUF
+LOCALBUF 		U6/temp1_0_0_bm[2]/LUT3_L_BUF
+LOCALBUF 		U6/un1_crosspoints_2_ac0_1/LUT4_L_BUF
+LOCALBUF 		U6/temp_0[2]/LUT4_L_BUF
+LOCALBUF 		U6/crossover.un19_cont_p4/LUT4_L_BUF
+LOCALBUF 		U6/crossover.un16_cont_p4/LUT4_L_BUF
+LOCALBUF 		U7/mutation.un18_mutout.G_13_0_a2/LUT4_L_BUF
+LOCALBUF 		U7/mutation.un18_mutout.G_10_0_a2/LUT4_L_BUF
+LOCALBUF 		U7/mutation.un18_mutout.G_11_0_a2/LUT4_L_BUF
+LOCALBUF 		U7/mutation.un18_mutout.G_12_0_a2/LUT3_L_BUF
+LOCALBUF 		U7/mutation.un18_mutout.G_14_0_a2/LUT4_L_BUF
+LOCALBUF 		U7/mutation.un18_mutout.G_15_0_a2/LUT4_L_BUF
+LOCALBUF 		U7/N_66_i/LUT3_L_BUF
+LOCALBUF 		U7/N_68_i/LUT4_L_BUF
+LOCALBUF 		U7/N_62_i/LUT2_L_BUF
+LOCALBUF 		U7/N_64_i/LUT3_L_BUF
+LOCALBUF 		U7/done_p_3_0/LUT4_L_BUF
+LOCALBUF 		U7/un1_done_p_1_0_o2/LUT2_L_BUF
+LOCALBUF 		U7/mutation.mutout7lto6/LUT4_L_BUF
+LOCALBUF 		U7/mutation.mutout7lto3/LUT4_L_BUF
+LOCALBUF 		U7/mutation.un8_rnglto4/LUT4_L_BUF
+LOCALBUF 		U8/handshake.un2_max_fitlto7/LUT4_L_BUF
+LOCALBUF 		U8/handshake.un2_max_fitlto7_4/LUT4_L_BUF
+LOCALBUF 		U11/un1_count_offs_p1_2_ac0/LUT4_L_BUF
+LOCALBUF 		U11/count_offs_f1_1[3]/LUT4_L_BUF
+LOCALBUF 		U11/un1_sreg_25_i/LUT3_L_BUF
+LOCALBUF 		U11/addr_1_c_sn_m5/LUT4_L_BUF
+LOCALBUF 		U11/notify_cnt_p_tr34_3_a3_i_o5/LUT4_L_BUF
+LOCALBUF 		U11/run3_c_0_i_o3_4/LUT4_L_BUF
+LOCALBUF 		U11/un1_incr_p1_inc_ac0_3/LUT2_L_BUF
+LOCALBUF 		U11/un1_sreg_21_i_a3/LUT4_L_BUF
+LOCALBUF 		U11/count_offs[2]/LUT4_L_BUF
+LOCALBUF 		U11/N_7_s0/LUT3_L_BUF
+LOCALBUF 		U11/incr_6[0]/LUT4_L_BUF
+LOCALBUF 		U11/count_offs_f1[3]/LUT4_L_BUF
+LOCALBUF 		U11/addr_1_c_0[1]/LUT4_L_BUF
+LOCALBUF 		U11/addr_1_c_0[0]/LUT4_L_BUF
+LOCALBUF 		U11/count_parents[1]/LUT3_L_BUF
+LOCALBUF 		U11/count_parents[2]/LUT4_L_BUF
+LOCALBUF 		U11/addr_1_c_1[2]/LUT4_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[0]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[1]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[2]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[3]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[4]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[5]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[6]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross2_p1[7]/LUT2_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[0]/LUT3_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[1]/LUT3_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[2]/LUT3_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[3]/LUT3_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[4]/LUT3_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[5]/LUT3_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[6]/LUT3_L_BUF
+LOCALBUF 		U11/data_out_cross1_p1[7]/LUT3_L_BUF
+LOCALBUF 		U11/count_sel_wr[0]/LUT4_L_BUF
+LOCALBUF 		U11/count_sel_wr[1]/LUT3_L_BUF
+LOCALBUF 		U11/count_sel_wr[2]/LUT4_L_BUF
+LOCALBUF 		U11/count_sel_wr[3]/LUT3_L_BUF
+LOCALBUF 		U11/count_offs[0]/LUT3_L_BUF
+LOCALBUF 		U11/count_offs[1]/LUT4_L_BUF
+LOCALBUF 		U11/count_offs_f0[3]/LUT4_L_BUF
+LOCALBUF 		U11/count_cross_offs[0]/LUT3_L_BUF
+LOCALBUF 		U11/count_cross_offs[1]/LUT3_L_BUF
+LOCALBUF 		U11/count_cross_offs[2]/LUT4_L_BUF
+LOCALBUF 		U11/count_sel_rd[0]/LUT3_L_BUF
+LOCALBUF 		U11/count_sel_rd[1]/LUT3_L_BUF
+LOCALBUF 		U11/count_sel_rd[2]/LUT4_L_BUF
+LOCALBUF 		U11/count_sel_rd[3]/LUT3_L_BUF
+LOCALBUF 		U11/incr_6[1]/LUT4_L_BUF
+LOCALBUF 		U11/incr_6[2]/LUT4_L_BUF
+LOCALBUF 		U11/incr_6[3]/LUT4_L_BUF
+LOCALBUF 		U11/count_parents[0]/LUT3_L_BUF
+LOCALBUF 		U11/count_parents[3]/LUT3_L_BUF
+LOCALBUF 		U11/sreg_ns_i[1]/LUT4_L_BUF
+LOCALBUF 		U11/N_1630_i/LUT4_L_BUF
+LOCALBUF 		U11/N_1385_i/LUT4_L_BUF
+LOCALBUF 		U11/sreg_ns_0_i[0]/LUT4_L_BUF
+LOCALBUF 		U11/N_1625_i/LUT4_L_BUF
+LOCALBUF 		U11/notify_cnt_p_ns_0_i[1]/LUT4_L_BUF
+LOCALBUF 		U11/N_1373_i/LUT3_L_BUF
+LOCALBUF 		U11/notify_cnt_p_ns_0_i[3]/LUT4_L_BUF
+LOCALBUF 		U11/N_1371_i/LUT4_L_BUF
+LOCALBUF 		U11/N_1497_i/LUT4_L_BUF
+LOCALBUF 		U11/N_1369_i/LUT4_L_BUF
+LOCALBUF 		U11/notify_cnt_p_ns_0_i[7]/LUT4_L_BUF
+LOCALBUF 		U11/N_1620_i/LUT4_L_BUF
+LOCALBUF 		U11/run3_c_0_i/LUT4_L_BUF
+LOCALBUF 		U11/m5_0/LUT4_L_BUF
+LOCALBUF 		U11/N_1351_i/LUT2_L_BUF
+LOCALBUF 		U11/N_1347_i/LUT4_L_BUF
+LOCALBUF 		U11/decode_c_f0_0/LUT4_L_BUF
+LOCALBUF 		U11/sel_out_c_iv/LUT4_L_BUF
+LOCALBUF 		U11/N_1353_i/LUT4_L_BUF
+LOCALBUF 		U11/next_sreg_3_sqmuxa_0_a3_0_a5_0_a4/LUT2_L_BUF
+LOCALBUF 		U11/N_1708_i/LUT4_L_BUF
+LOCALBUF 		U11/data_valid_c_f0/LUT4_L_BUF
+LOCALBUF 		U11/N_1436_i/LUT4_L_BUF
+LOCALBUF 		U11/N_1352_i/LUT2_L_BUF
+LOCALBUF 		U11/addr_2_c_1[0]/LUT4_L_BUF
+LOCALBUF 		U11/addr_2_c_1[1]/LUT4_L_BUF
+LOCALBUF 		U11/addr_2_c_1[2]/LUT4_L_BUF
+LOCALBUF 		U11/addr_2_c_1[3]/LUT4_L_BUF
+LOCALBUF 		U11/we1_c_iv_i/LUT2_L_BUF
+LOCALBUF 		U11/sreg_ns_i_4[1]/LUT4_L_BUF
+LOCALBUF 		U11/notify_cnt_p_ns_i_i_3[0]/LUT4_L_BUF
+LOCALBUF 		U11/un1_sreg_25_i_o3/LUT4_L_BUF
+LOCALBUF 		U11/sreg_ns_i_i_a4_2[2]/LUT4_L_BUF
+LOCALBUF 		U11/N_1363_i_0_o3/LUT3_L_BUF
+LOCALBUF 		U11/sreg_ns_0_i_a4_5[0]/LUT3_L_BUF
+LOCALBUF 		U11/sreg_ns_i_3[1]/LUT4_L_BUF
+LOCALBUF 		U11/sreg_ns_i_1[1]/LUT4_L_BUF
+LOCALBUF 		U11/notify_cnt_p_ns_i_i_1[5]/LUT4_L_BUF
+LOCALBUF 		U11/notify_cnt_p_ns_0_0_1[4]/LUT4_L_BUF
+LOCALBUF 		U11/un1_sreg_32_0_i_1_i_2/LUT4_L_BUF
+LOCALBUF 		U11/decode_c_f0_0_0/LUT4_L_BUF
+LOCALBUF 		U11/sreg_ns_0_i_a4_2_0[0]/LUT4_L_BUF
+LOCALBUF 		U11/notify_cnt_p_ns_i_i_0[5]/LUT3_L_BUF
+LOCALBUF 		U11/sreg_ns_i_i_o3_0_0[2]/LUT4_L_BUF
+LOCALBUF 		U11/next_sreg_0_o2[2]/LUT4_L_BUF
+LOCALBUF 		U11/sreg_ns_0_i_o3_0[0]/LUT4_L_BUF
+LOCALBUF 		U11/decode_c_f0_0_a2_0_0/LUT3_L_BUF
+LOCALBUF 		U11/count_gen_p1_cry[5]/MUXCY_L_BUF
+LOCALBUF 		U11/count_gen_p1_cry[4]/MUXCY_L_BUF
+LOCALBUF 		U11/count_gen_p1_cry[3]/MUXCY_L_BUF
+LOCALBUF 		U11/count_gen_p1_cry[2]/MUXCY_L_BUF
+LOCALBUF 		U11/count_gen_p1_cry[1]/MUXCY_L_BUF
+LOCALBUF 		U11/count_gen_p1_cry[0]/MUXCY_L_BUF
+LOCALBUF 		U11/un9_addr_1_c_cry_2/MUXCY_L_BUF
+LOCALBUF 		U11/un9_addr_1_c_cry_1/MUXCY_L_BUF
+LOCALBUF 		U11/un9_addr_1_c_cry_0/MUXCY_L_BUF
+LOCALBUF 		U11/un1_count_sel_wr_p1_6_p4/LUT4_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_136/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_127/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_118/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_109/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_100/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_91/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_82/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_73/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_64/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_55/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_46/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_37/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_19/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_10/MUXCY_L_BUF
+LOCALBUF 		U11/loop0.un7_dummy_cnt_adapt_0.I_1/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_136/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_127/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_118/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_109/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_100/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_91/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_82/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_73/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_64/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_55/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_46/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_37/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_19/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_10/MUXCY_L_BUF
+LOCALBUF 		U11/loop1.un20_dummy_cnt_adapt_0.I_1/MUXCY_L_BUF
+INV 		rst_n_c_i
+LUT1 		U4/U1/r0_un1_sum_p_1_axb_8
+LUT1 		U4/U1/r0_un1_sum_p_1_axb_9
+INV 		U4/U1/un65_valid_19_1
+INV 		U4/U1/N_1131_i
+LUT1 		U4/U1/r0_un1_sum_p_1_axb_10
+INV 		U6/cross_rd_dummy_i
+INV 		U9/wr_r_i
+INV 		U10/wr_r_i
+INV 		U11/term_out_i
+INV 		U11/sel_out_i
+INV 		U11/data_valid_dummy_i
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| best_fit(0)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_fit(1)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_fit(2)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_fit(3)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_fit(4)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_fit(5)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_fit(6)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_fit(7)                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(0)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(1)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(2)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(3)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(4)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(5)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(6)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| best_gene(7)                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| clk                                | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| crossMethod(0)                     | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| crossMethod(1)                     | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| fit_limit_reach                    | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| ga_fin                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| mutMethod(0)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| mutMethod(1)                       | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| rst_n                              | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| run_ga                             | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(0)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(1)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(2)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(3)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(4)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(5)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(6)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed(7)                            | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(0)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(1)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(2)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(3)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(4)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(5)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(6)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(7)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(8)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(9)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(10)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(11)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(12)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(13)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(14)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_1(15)                         | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(0)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(1)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(2)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(3)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(4)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_2(5)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(0)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(1)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(2)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
+| seed_3(3)                          | IOB     | INPUT     | LVCMOS25    |          |      | INFF1    |          | IFD   |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group Summary
+------------------------------
+No area groups were found in this design.
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+BUFGMUX "clk_ibuf/BUFG": Configuration String is:
+   "I0_USED:0 SINV:S_B DISABLE_ATTR:LOW"
+
+
+Section 13 - Additional Device Resource Counts
+----------------------------------------------
+Number of JTAG Gates for IOBs = 59
+Number of Equivalent Gates for Design = 19,929
+Number of RPM Macros = 0
+Number of Hard Macros = 0
+DCIRESETs = 0
+CAPTUREs = 0
+BSCANs = 0
+STARTUPs = 0
+DCMs = 0
+GCLKs = 1
+ICAPs = 0
+18X18 Multipliers = 1
+Block RAMs = 0
+Total Registers (Flops & Latches in Slices & IOBs) not driven by LUTs = 314
+IOB Dual-Rate Flops not driven by LUTs = 0
+IOB Dual-Rate Flops = 0
+IOB Slave Pads = 0
+IOB Master Pads = 0
+IOB Latches not driven by LUTs = 0
+IOB Latches = 0
+IOB Flip Flops not driven by LUTs = 57
+IOB Flip Flops = 57
+Unbonded IOBs = 0
+Bonded IOBs = 59
+XORs = 43
+CARRY_INITs = 67
+CARRY_SKIPs = 0
+CARRY_MUXes = 117
+Shift Registers = 0
+Static Shift Registers = 0
+Dynamic Shift Registers = 0
+16x1 ROMs = 0
+16x1 RAMs = 24
+32x1 RAMs = 0
+Dual Port RAMs = 0
+MUXFs = 28
+MULT_ANDs = 10
+4 input LUTs used as Route-Thrus = 4
+4 input LUTs = 1047
+Slice Latches not driven by LUTs = 0
+Slice Latches = 0
+Slice Flip Flops not driven by LUTs = 257
+Slice Flip Flops = 693
+SliceMs = 12
+SliceLs = 768
+Slices = 780
+Multiplier(11,4) = 1
+F6 Muxes = 0
+F5 Muxes = 28
+F8 Muxes = 0
+F7 Muxes = 0
+Number of LUT signals with 4 loads = 39
+Number of LUT signals with 3 loads = 42
+Number of LUT signals with 2 loads = 177
+Number of LUT signals with 1 load = 718
+NGM Average fanout of LUT = 2.22
+NGM Maximum fanout of LUT = 82
+NGM Average fanin for LUT = 3.2436
+Number of LUT symbols = 1047

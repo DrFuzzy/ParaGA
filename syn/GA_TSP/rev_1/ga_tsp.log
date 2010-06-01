@@ -1,0 +1,6 @@
+INFO:NgdBuild - Release 8.1.03i edif2ngd I.27
+INFO:NgdBuild - Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Applying constraints in "C:/Documents and
+Settings/delk/Documents/Designs/GA_eval/syn/ga_tsp/rev_1/ga_tsp.ncf" to module
+"ga_tsp"...
+Writing module to "_ngo/ga_tsp.ngo"...

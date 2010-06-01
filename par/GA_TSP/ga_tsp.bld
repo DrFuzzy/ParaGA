@@ -1,0 +1,32 @@
+Release 8.1.03i ngdbuild I.27
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc3s1500-fg676-4 -sd /Cores -dd _ngo -nt timestamp -uc
+ga_tsp.ucf -intstyle ise ../../syn/ga_tsp/rev_1/ga_tsp.edf ga_tsp.ngd 
+
+Executing edif2ngd -quiet "C:\Documents and
+Settings\delk\Documents\Designs\GA_eval\syn\ga_tsp\rev_1\ga_tsp.edf"
+"_ngo\ga_tsp.ngo"
+Release 8.1.03i - edif2ngd I.27
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Reading NGO file 'C:/Documents and
+Settings/delk/Documents/Designs/GA_eval/par/GA_TSP/_ngo/ga_tsp.ngo' ...
+
+Applying constraints in "ga_tsp.ucf" to the design...
+
+Checking timing specifications ...
+WARNING:XdmHelpers:681 - UCF definition of specification "TS_clk" overrides the
+   definition found in the netlist or NCF file:
+   UCF: PERIOD "clk" 12000.000000 pS HIGH 50.000000 %
+   netlist/NCF: PERIOD:clk:10000.000000:pS:HIGH:50.000000%
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 69544 kilobytes
+
+Writing NGD file "ga_tsp.ngd" ...
+
+Writing NGDBUILD log file "ga_tsp.bld"...
