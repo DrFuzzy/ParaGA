@@ -1,0 +1,12 @@
+@P:  Worst Slack : -1.568
+@P:  clk - Estimated Frequency : 101.0 MHz
+@P:  clk - Requested Frequency : 120.0 MHz
+@P:  clk - Estimated Period : 9.901
+@P:  clk - Requested Period : 8.333
+@P:  clk - Slack : -1.568
+@P: ga Part : xc3s1500fg676-4
+@P: ga I/O primitives : 58
+@P: ga I/O Register bits : 57
+@P: ga Register bits (Non I/O) : 693 (2%)
+@P: ga Single Port Rams (RAM16X4S) : 6
+@P: ga Total Luts : 1073 (4%)
